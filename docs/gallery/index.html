@@ -1,0 +1,292 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ギャラリー - ポートフォリオ</title>
+  <meta name="description" content="説明文">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@melon_manga">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <link rel="icon" href="../assets/images/icon/favicon-32x32.png" sizes="32x32">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="../assets/styles/vendors/lity.min.css" rel="stylesheet">
+  <link href="../assets/styles/vendors/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/styles/style.css" rel="stylesheet">
+
+</head>
+
+
+<script>
+  setTimeout(function () {
+    if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+      document.getElementsByTagName("html")[0].classList.add('loading-delay');
+    }
+  }, 3000);
+
+  (function (d) {
+    var config = {
+        kitId: 'zjh6uvk',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h = d.documentElement,
+      t = setTimeout(function () {
+        h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+      }, config.scriptTimeout),
+      tk = d.createElement("script"),
+      f = false,
+      s = d.getElementsByTagName("script")[0],
+      a;
+    h.className += " wf-loading";
+    tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+    tk.async = true;
+    tk.onload = tk.onreadystatechange = function () {
+      a = this.readyState;
+      if (f || a && a != "complete" && a != "loaded") return;
+      f = true;
+      clearTimeout(t);
+      try {
+        Typekit.load(config)
+      } catch (e) {}
+    };
+    s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+
+
+<body id="top" data-character="1">
+
+  <header class="l-header">
+    <div class="l-header__inner">
+
+      <h1 class="l-header__logo">
+        <a href="/">
+          <img src="https://placehold.jp/120x54.png" alt="会社名">
+        </a>
+      </h1>
+
+      <nav class="l-header__nav u-dp-pc" style="width: 100%;">
+        <ul class="l-header__list">
+          <li class="l-header__item--nav">
+            <a href="/">
+              HOME
+              <span>ホーム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#about">
+              story
+              <span>ストーリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/system">
+              SYSTEM
+              <span>システム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/character">
+              character
+              <span>キャラクター</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/gallery">
+              GALLERY
+              <span>ギャラリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#buy">
+              FAQ
+              <span>よくある質問</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <button class="l-drawer__trigger js-draw--trigger">
+    <span class="-line"></span>
+  </button>
+
+  <div class="l-drawer__bg js-draw--bg">&nbsp;</div>
+
+  <nav class="l-drawer__content js-draw--content">
+    <div class="l-drawer__wrap">
+      <ul class="l-drawer__list l-drawer__list--menu">
+        <li class="l-drawer__item">
+          <a href="/game_01">
+            トップ
+            <span>top</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#about">
+            ストーリー
+            <span>story</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/system">
+            ゲームシステム
+            <span>system</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/character">
+            キャラクター
+            <span>character</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/gallery">
+            ギャラリー
+            <span>GALLERY</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#buy">
+            よくある質問
+            <span>FAQ</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<main class="l-main">
+    <section id="exchange" class="c-sec p-gallery">
+        <div class="inview p-gallery__bg"></div>
+
+
+
+        <div class="p-gallery__inner">
+
+            <h2 class="c-sec__ttl inview js-scroll--fadeUp">
+                <span class="-en">GALLERY</span>
+                <span class="-ja">ギャラリー</span>
+            </h2>
+
+            <ul class="p-gallery__list">
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+            </ul>
+
+
+        </div>
+    </section>
+</main>
+
+<footer class="l-footer" id="footer">
+  <div class="container">
+    <a href="#" class="l-footer__logo">
+      TNBLOG
+    </a>
+    <p class="l-footer__copyright">
+      Copyright © tnblog, All rights reserved.<br />
+    </p>
+  </div>
+
+</footer>
+
+
+
+
+<!-- vendors -->
+<script src="../assets/scripts/vendors/jquery-3.6.0.min.js"></script>
+<script src="../assets/scripts/vendors/rellax.min.js"></script>
+<script src="../assets/scripts/vendors/lity.min.js"></script>
+<script src="../assets/scripts/vendors/jquery.matchHeight-min.js"></script>
+<script src="../assets/scripts/vendors/intersection-observer.js"></script>
+<script src="../assets/scripts/vendors/swiper-bundle.min.js"></script>
+
+<script>
+  var rellax = new Rellax('.js-rellax', {
+    center: true,
+  });
+</script>
+
+
+<!-- scripts -->
+<script src="../assets/scripts/swiper.js"></script>
+<script src="../assets/scripts/main.js"></script>
+
+<!-- 
+ -->
+
+</body>
+
+</html>

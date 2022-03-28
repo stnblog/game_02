@@ -1,0 +1,225 @@
+.p-story {
+    padding: 110px 0 150px;
+    z-index: 0;
+
+    .c-sec__ttl {
+        text-shadow: 1px 2px 6px #fff;
+
+        span {
+            color: $color-black;
+        }
+      }
+
+    &__bg {
+        @include absAll;
+        background: url(../../assets/images/main.jpg) center / cover;
+        filter: blur(4px);
+        margin: -4px;
+        width: calc(100% + 8px);
+        // filter: grayscale(100%);
+        
+        &::before {
+            content: "";
+            @include absAll;
+            backdrop-filter: blur(4px);
+            background: rgba($color: #fff, $alpha: 0.6);
+            z-index: 1;
+        }
+    }
+
+    &__inner {
+        @include maxWidth(1000px);
+        position: relative;
+        width: 90%;
+        z-index: 2;
+    }
+
+    &__row {
+        @include flex($justify:center);
+    }
+
+    &__head {
+        padding-bottom: 28%;
+        position: relative;
+    }
+
+    &__foot {
+
+        p {
+            color: $color-black;
+            line-height: 170%;
+            text-align: left;
+            margin: 0 0 30px;
+            font-weight: 700;
+            font-size: 16px;
+            text-shadow: 0px 4px 12px #fff;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__img {
+        width: 32%;
+        @include absCenter;
+        z-index: 3;
+
+
+        &.--1 {
+            top: 8%;
+            right: -10%;
+            left: initial;
+            outline: none !important;
+        }
+
+        &.--2 {
+            top: -53%;
+            left: 13%;
+            z-index: 2;
+            transform: rotate(12deg);
+        }
+
+        &.--3 {
+            top: -54%;
+            left: -4%;
+            z-index: 1;
+            transform: rotate(-8deg);
+        }
+    }
+
+    @include mq-target(sm) {
+
+        &__foot {
+            display: block;
+            p {
+                text-align: center;
+                // @include maxWidth(600px);
+                margin: 0 auto 40px;
+                font-size: 20px;
+            }
+        }
+
+        &__img {
+            width: 30%;
+            @include absCenter;
+            z-index: 3;
+    
+    
+            &.--1 {
+                width: 25%;
+                top: 40%;
+                right: 0;
+                left: initial;
+                outline: none !important;
+            }
+    
+            &.--2 {
+                top: -25%;
+                left: 23%;
+                z-index: 2;
+                transform: rotate(12deg);
+            }
+    
+            &.--3 {
+                top: -28%;
+                left: 5%;
+                z-index: 1;
+                transform: rotate(-8deg);
+            }
+        }
+    }
+
+    @include mq-target(md) {
+        &__row {
+            @include flex($justify:space-between);
+        }
+
+        &__img {
+            width: 80%;
+            @include absCenter;
+            z-index: 3;
+            transition: all .3s linear;
+            outline: 0px solid $color-key;
+            transition-delay: .6s;
+
+
+            img {
+                filter: grayscale(100%);
+                transition: all .6s ease;
+                transition-delay: .6s;
+            }
+
+            &.is-anim {
+                outline-offset: -40px;
+                outline: 6px solid $color-key;
+
+                img {
+                    filter: grayscale(0%);
+                }
+            }
+
+
+            &.--1 {
+                width: 70%;
+                top: 74%;
+                left: 60%;
+                outline: none !important;
+            }
+
+            &.--2 {
+                top: 23%;
+                left: 45%;
+                z-index: 2;
+                transform: rotate(12deg);
+            }
+
+            &.--3 {
+                top: 22%;
+                left: -6%;
+                z-index: 1;
+                transform: rotate(-8deg);
+            }
+        }
+
+        &__head {
+            width: 38%;
+            position: relative;
+            transition-delay: .4s;
+            padding: 0;
+        }
+
+        &__foot {
+            width: 54%;
+        }
+    }
+    
+}
+
+
+@include mq-target(lg) {
+    .p-story {
+        &__img {
+            width: 78%;
+
+            &.--1 {
+                width: 68%;
+            }
+
+            &.--2 {
+                top: 20%;
+            }
+
+            &.--3 {
+                top: 18%;
+            }
+        }
+
+        &__head {
+            width: 32%;
+        }
+
+        &__foot {
+            width: 56%;
+        }
+    }
+}

@@ -1,0 +1,389 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>システムについて - ポートフォリオ</title>
+  <meta name="description" content="説明文">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@melon_manga">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <link rel="icon" href="../assets/images/icon/favicon-32x32.png" sizes="32x32">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="../assets/styles/vendors/lity.min.css" rel="stylesheet">
+  <link href="../assets/styles/vendors/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/styles/style.css" rel="stylesheet">
+
+</head>
+
+
+<script>
+  setTimeout(function () {
+    if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+      document.getElementsByTagName("html")[0].classList.add('loading-delay');
+    }
+  }, 3000);
+
+  (function (d) {
+    var config = {
+        kitId: 'zjh6uvk',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h = d.documentElement,
+      t = setTimeout(function () {
+        h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+      }, config.scriptTimeout),
+      tk = d.createElement("script"),
+      f = false,
+      s = d.getElementsByTagName("script")[0],
+      a;
+    h.className += " wf-loading";
+    tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+    tk.async = true;
+    tk.onload = tk.onreadystatechange = function () {
+      a = this.readyState;
+      if (f || a && a != "complete" && a != "loaded") return;
+      f = true;
+      clearTimeout(t);
+      try {
+        Typekit.load(config)
+      } catch (e) {}
+    };
+    s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+
+
+<body id="top" data-character="1">
+
+  <header class="l-header">
+    <div class="l-header__inner">
+
+      <h1 class="l-header__logo">
+        <a href="/">
+          <img src="https://placehold.jp/120x54.png" alt="会社名">
+        </a>
+      </h1>
+
+      <nav class="l-header__nav u-dp-pc" style="width: 100%;">
+        <ul class="l-header__list">
+          <li class="l-header__item--nav">
+            <a href="/">
+              HOME
+              <span>ホーム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#about">
+              story
+              <span>ストーリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/system">
+              SYSTEM
+              <span>システム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/character">
+              character
+              <span>キャラクター</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/gallery">
+              GALLERY
+              <span>ギャラリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#buy">
+              FAQ
+              <span>よくある質問</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <button class="l-drawer__trigger js-draw--trigger">
+    <span class="-line"></span>
+  </button>
+
+  <div class="l-drawer__bg js-draw--bg">&nbsp;</div>
+
+  <nav class="l-drawer__content js-draw--content">
+    <div class="l-drawer__wrap">
+      <ul class="l-drawer__list l-drawer__list--menu">
+        <li class="l-drawer__item">
+          <a href="/game_01">
+            トップ
+            <span>top</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#about">
+            ストーリー
+            <span>story</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/system">
+            ゲームシステム
+            <span>system</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/character">
+            キャラクター
+            <span>character</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/gallery">
+            ギャラリー
+            <span>GALLERY</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#buy">
+            よくある質問
+            <span>FAQ</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<main class="l-main">
+    <section class="c-sec p-sys">
+
+        <h2 class="c-sec__ttl inview js-scroll--fadeUp">
+            <span class="-en">SYSTEM</span>
+            <span class="-ja">システム</span>
+        </h2>
+
+        <div class="p-sys__frag inview">
+            <img src="../assets/images/ribon.png" alt="">
+        </div>
+
+        <div class="p-sys__chara p-sys__chara--01 js-rellax" data-rellax-speed="0.5">
+            <img src="../assets/images/chara_04.png" alt="">
+        </div>
+        <div class="p-sys__chara p-sys__chara--02 js-rellax" data-rellax-speed="0.5">
+            <img src="../assets/images/chara_05.png" alt="">
+        </div>
+
+
+        <div class="p-sys__inner">
+            <div class="p-sys__bg inview"></div>
+
+
+            <!-- <div class="p-sys__head">
+    
+    
+    
+                    <p class="inview js-scroll--slideRight">
+                        <span>貴方は言葉に意味を登録することができます</span>
+                    </p>
+    
+                    <p class="inview js-scroll--slideLeft">
+                        <span>
+                            配置されているオブジェクトを触り、言語を認識してください
+                        </span>
+                    </p>
+    
+                    <p class="inview js-scroll--slideRight">
+                        <span>また、その人が何を言っているか、判断してみてください</span>
+                    </p>
+
+            </div> -->
+
+            <ul class="p-sys__list">
+                <li class="p-sys__item">
+                    <div class="p-sys__arrow p-sys__arrow--l"></div>
+                    <figure class="p-sys__img inview js-scroll--slideLeft">
+                        <a href="../assets/images/chara_bg_01.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_01.jpg" alt="" style="transform:rotate(3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            『八ツ裂き公』を名乗る<br class="u-dp-pc">
+                            謎の人物が起こした連続殺人事件により、
+                            １００人以上もの命が失われた。<br class="u-dp-pc">
+                            <br><br class="u-dp-sp">
+                            社会全体に混乱が広がりつつある中、<br class="u-dp-pc">
+                            政府は八ツ裂き公の対策として、<br class="u-dp-pc">
+                            例外的な措置を発表する。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-sys__item reverse">
+                    <div class="p-sys__arrow p-sys__arrow--r"></div>
+                    <figure class="p-sys__img inview js-scroll--slideRight">
+                        <a href="../assets/images/chara_bg_02.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_02.jpg" alt="" style="transform:rotate(-3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            それは優れた探偵を集めた組織<br class="u-dp-pc">
+                            『探偵同盟』への、捜査依頼。<br class="u-dp-pc">
+                            <br><br class="u-dp-sp">
+                            『探偵ネーム』と呼ばれるコードネームで
+                            呼び合うというその組織の探偵たちは、
+                            年々犯罪率が高まる社会の中で、英雄視されていた。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-sys__item">
+                    <figure class="p-sys__img inview js-scroll--slideLeft">
+                        <a href="../assets/images/chara_bg_03.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_03.jpg" alt="" style="transform:rotate(3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            平凡な高校生、<br class="u-dp-pc">
+                            北條和都も探偵同盟に憧れる一人。<br class="u-dp-pc">
+                            そんな彼の元に、ある日<br class="u-dp-pc">
+                            『老師探偵』を名乗る謎の男が現れ、<br class="u-dp-pc">
+                            「お前は探偵同盟の
+                            メンバーに選ばれた」
+                            と宣言する。
+                            更に、有無を言わさず眠らされ、
+                            名前も知らない島へと連行されてしまうのであった。
+
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+            <!-- <div id="swiper01" class="swiper-container p-sys__slider">
+                <div class="swiper-button-prev">
+                    <img src="../assets/images/arrow_l.png" alt="">
+                </div>
+                <div class="swiper-button-next">
+                    <img src="../assets/images/arrow_r.png" alt="">
+                </div>
+                <div class="swiper-wrapper p-sys__slidewrap">
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</main>
+
+<footer class="l-footer" id="footer">
+  <div class="container">
+    <a href="#" class="l-footer__logo">
+      TNBLOG
+    </a>
+    <p class="l-footer__copyright">
+      Copyright © tnblog, All rights reserved.<br />
+    </p>
+  </div>
+
+</footer>
+
+
+
+
+<!-- vendors -->
+<script src="../assets/scripts/vendors/jquery-3.6.0.min.js"></script>
+<script src="../assets/scripts/vendors/rellax.min.js"></script>
+<script src="../assets/scripts/vendors/lity.min.js"></script>
+<script src="../assets/scripts/vendors/jquery.matchHeight-min.js"></script>
+<script src="../assets/scripts/vendors/intersection-observer.js"></script>
+<script src="../assets/scripts/vendors/swiper-bundle.min.js"></script>
+
+<script>
+  var rellax = new Rellax('.js-rellax', {
+    center: true,
+  });
+</script>
+
+
+<!-- scripts -->
+<script src="../assets/scripts/swiper.js"></script>
+<script src="../assets/scripts/main.js"></script>
+
+<!-- 
+ -->
+
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <meta name="description" content="説明文">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@melon_manga">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <link rel="icon" href="./assets/images/icon/favicon-32x32.png" sizes="32x32">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="./assets/styles/vendors/lity.min.css" rel="stylesheet">
+  <link href="./assets/styles/vendors/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./assets/styles/style.css" rel="stylesheet">
+
+</head>
+
+
+<script>
+  setTimeout(function () {
+    if (document.getElementsByTagName("html")[0].classList.contains('wf-active') != true) {
+      document.getElementsByTagName("html")[0].classList.add('loading-delay');
+    }
+  }, 3000);
+
+  (function (d) {
+    var config = {
+        kitId: 'zjh6uvk',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h = d.documentElement,
+      t = setTimeout(function () {
+        h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+      }, config.scriptTimeout),
+      tk = d.createElement("script"),
+      f = false,
+      s = d.getElementsByTagName("script")[0],
+      a;
+    h.className += " wf-loading";
+    tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+    tk.async = true;
+    tk.onload = tk.onreadystatechange = function () {
+      a = this.readyState;
+      if (f || a && a != "complete" && a != "loaded") return;
+      f = true;
+      clearTimeout(t);
+      try {
+        Typekit.load(config)
+      } catch (e) {}
+    };
+    s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+
+
+<body id="top" data-character="1">
+
+  <header class="l-header">
+    <div class="l-header__inner">
+
+      <h1 class="l-header__logo">
+        <a href="/">
+          <img src="https://placehold.jp/120x54.png" alt="会社名">
+        </a>
+      </h1>
+
+      <nav class="l-header__nav u-dp-pc" style="width: 100%;">
+        <ul class="l-header__list">
+          <li class="l-header__item--nav">
+            <a href="/">
+              HOME
+              <span>ホーム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#about">
+              story
+              <span>ストーリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/system">
+              SYSTEM
+              <span>システム</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/character">
+              character
+              <span>キャラクター</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="/gallery">
+              GALLERY
+              <span>ギャラリー</span>
+            </a>
+          </li>
+          <li class="l-header__item--nav">
+            <a href="#buy">
+              FAQ
+              <span>よくある質問</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <button class="l-drawer__trigger js-draw--trigger">
+    <span class="-line"></span>
+  </button>
+
+  <div class="l-drawer__bg js-draw--bg">&nbsp;</div>
+
+  <nav class="l-drawer__content js-draw--content">
+    <div class="l-drawer__wrap">
+      <ul class="l-drawer__list l-drawer__list--menu">
+        <li class="l-drawer__item">
+          <a href="/game_01">
+            トップ
+            <span>top</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#about">
+            ストーリー
+            <span>story</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/system">
+            ゲームシステム
+            <span>system</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/character">
+            キャラクター
+            <span>character</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="/game_01/gallery">
+            ギャラリー
+            <span>GALLERY</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#buy">
+            よくある質問
+            <span>FAQ</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<section class="p-mv">
+    <div class="smoke smoke-r"></div>
+    <div class="smoke smoke-l"></div>
+    <div class="p-mv__inner">
+
+        <figure class="p-mv__img">
+            <img src="./assets/images/main.jpg" alt="メインビジュアル" class="u-dp-pc--sm">
+            <img src="./assets/images/mv_main_sp.jpg" alt="メインビジュアル" class="u-dp-sp--sm">
+        </figure>
+
+        <!-- <h2 class="p-mv__logo">
+            <span>
+                <img src="./assets/images/logo.png" alt="">
+            </span>
+        </h2> -->
+
+        <figure class="p-mv__chara inview js-scroll--fadeUp">
+            <img src="./assets/images/mv_main_title.png" alt="">
+        </figure>
+        <figure class="p-mv__chara p-mv__chara--02 inview js-scroll--fadeUp">
+            <img src="./assets/images/mv_main_title_02.png" alt="">
+        </figure>
+
+    </div>
+</section>
+
+<div class="p-news">
+
+    <div class="inview js-scroll--slideLeft">
+
+    <div class="p-news__inner">
+
+        <div class="swiper-container c-slider index__slider js-index-slider">
+            <div class="swiper-wrapper c-slider__wrap index__slideWrap">
+                <div class="swiper-slide c-slider__slide index__slide">
+                    <a href="/work/detail" class="inview">
+                        <figure class="c-picture__img index__img">
+                            <picture class="c-picture__img--inner">
+                                <img src="./assets/images/chara_bg_01.jpg" alt="メインビジュアル">
+                            </picture>
+                        </figure>
+                    </a>
+                </div>
+                <div class="swiper-slide c-slider__slide index__slide">
+                    <a href="/work/detail" class="inview">
+                        <figure class="c-picture__img index__img">
+                            <picture class="c-picture__img--inner">
+                                <img src="./assets/images/chara_bg_02.jpg" alt="メインビジュアル">
+                            </picture>
+                        </figure>
+                    </a>
+                </div>
+                <div class="swiper-slide c-slider__slide index__slide">
+                    <a href="/work/detail" class="inview">
+                        <figure class="c-picture__img index__img">
+                            <picture class="c-picture__img--inner">
+                                <img src="./assets/images/chara_bg_03.jpg" alt="メインビジュアル">
+                            </picture>
+                        </figure>
+                    </a>
+                </div>
+                <div class="swiper-slide c-slider__slide index__slide">
+                    <a href="/work/detail" class="inview">
+                        <figure class="c-picture__img index__img">
+                            <picture class="c-picture__img--inner">
+                                <img src="./assets/images/main.jpg" alt="メインビジュアル">
+                            </picture>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container index__foot">
+            <div class="row justify-center">
+        
+        
+                <div class="col-6__sm">
+                    <a href="/work">
+                        <span class="flex items-center justify-center">
+                            <span class="-btn"></span>
+                        </span>
+                    </a>
+                </div>
+        
+                <div class="col-6__sm index__column--slidebtn">
+                    <div class="swiper-button-prev index__btn--slider index__btn--sliderPrev js-slider-btnPrev"></div>
+                    <div class="swiper-button-next index__btn--slider index__btn--sliderNext js-slider-btnNext"></div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+<main class="l-main">
+
+    <section id="about" class="c-sec p-story">
+        <div class="smoke smoke-r"></div>
+        <div class="smoke smoke-l"></div>
+        <!-- <div class="smoke"></div> -->
+
+        <div class="p-story__bg"></div>
+
+        <div class="p-story__inner">
+
+
+            <div class="p-story__row">
+
+                <div class="p-story__head inview js-scroll--slideUp u-dp-pc">
+
+                    <figure class="p-story__img inview --1">
+                        <img src="./assets/images/girl_01.png" alt="">
+                    </figure>
+                    <figure class="p-story__img inview --2">
+                        <img src="./assets/images/stroy__album_02.png" alt="">
+                    </figure>
+                    <figure class="p-story__img inview --3">
+                        <img src="./assets/images/stroy__album.png" alt="">
+                    </figure>
+
+                </div>
+
+                <div class="p-story__foot">
+
+                    <h2 class="c-sec__ttl">
+                        <span class="-en">story</span>
+                        <span class="-ja">ストーリー</span>
+                    </h2>
+
+                    <div class="p-story__head u-dp-sp">
+
+                        <figure class="p-story__img inview --1">
+                            <img src="./assets/images/girl_01.png" alt="">
+                        </figure>
+                        <figure class="p-story__img inview --2">
+                            <img src="./assets/images/stroy__album_02.png" alt="">
+                        </figure>
+                        <figure class="p-story__img inview --3">
+                            <img src="./assets/images/stroy__album.png" alt="">
+                        </figure>
+
+                    </div>
+
+
+                    <p class="inview js-scroll--fadeUp">
+                        このゲームは、言語を推理して、物語を読み解く
+                        全く新しいジャンルのパズル＆ノベルゲームです
+                        物語はたった7日の短い物語です
+                        物語は7日で終わりを迎えます
+                    </p>
+
+
+
+                    <p class="inview js-scroll--fadeUp" style="transition-delay: .1s;">
+                        早ければ5分以内に観測することができる短い物語です
+                        その短い物語を、貴方の手で解読してみてください
+                        パズルのように、1ピースづつ推理してみてください
+                    </p>
+                    <p class="inview js-scroll--fadeUp" style="transition-delay: .2s;">
+                        早ければ5分以内に観測することができる短い物語です
+                        その短い物語を、貴方の手で解読してみてください
+                        パズルのように、1ピースづつ推理してみてください
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="c-sec p-spec">
+
+    </section>
+
+
+
+    <!-- <section id="about" class="p-about">
+
+        <div class="c-sec__inner">
+            <div class="c-sec__bg p-about__bg"></div>
+
+            <h2 class="c-sec__ttl">about<span>開催概要</span></h2>
+
+            <div class="c-sec__wrap p-about__wrap">
+
+                <dl>
+                    <dt>
+                        <span>開催期間</span>
+                    </dt>
+                    <dd>
+                        <span>店舗：2022/2/1～2022/3/31</span>
+                        <span>通販：2022/2/1～2022/3/31（景品交換は4/7迄）</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <span>対象店舗</span>
+                    </dt>
+                    <dd>
+                        <span>メロンブックス・フロマージュブックス全店（通販含む）</span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <span>対象商品</span>
+                    </dt>
+                    <dd>
+                        <span>メロンブックス・フロマージュブックスで販売する文庫・ノベルス・雑誌・画集・ムック本全て</span>
+                        <span>※同人誌・成年向け商材は除く</span>
+                    </dd>
+                </dl>
+
+                <div class="p-about__category">
+
+                    <h3>メロンブックスでお買い物</h3>
+                    <ul class="p-about__list">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+
+                    <h3>フロマージュブックスでお買い物</h3>
+                    <ul class="p-about__list">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+
+                </div>
+
+                <dl>
+                    <dt>
+                        <span>注意事項</span>
+                    </dt>
+                    <dd>
+                        <span>※景品はなくなり次第終了となります。</span>
+                        <span>※フェアポイントレシート(全店舗共通)は景品交換の際に必要となりますので、大切に保管頂きますようお願い致します。</span>
+                        <span>※フェアポイントレシートの第三者への譲渡、転売は固く禁止し、無効とさせていただきます。</span>
+                        <span>※通販フェアポイントは商品お受け取り後に付与されます。反映まで2～3日かかる場合もございますので、予めご了承ください。</span>
+                        <span>※フェアに関するお問い合わせは開催店舗までお願い致します。</span>
+                        <span>※店舗と通販フェアポイントは合算できかねます。予めご了承ください。</span>
+                        <span>※フェア内容は予告なく、中止・変更になる場合がございます。</span>
+                        <span>※景品画像はすべてイメージです。</span>
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- <section id="goods" class="p-goods">
+
+        <div class="c-sec__inner">
+            <div class="c-sec__bg p-goods__bg"></div>
+
+            <h2 class="c-sec__ttl">GOODS<span>景品＆参加作品</span></h2>
+
+            <div class="c-sec__wrap p-goods__wrap">
+                <div class="c-grid p-goods__box">
+                    <div class="one">
+                        <h3>10FP <span>A3メタルポスター</span></h3>
+                    </div>
+                    <div class="two">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                    <div class="three">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                    <div class="four">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-grid p-goods__box">
+                    <div class="one u-dp-sp">
+                        <h3>5FP <span>メロンブックスノベル祭り</span></h3>
+                    </div>
+                    <div class="two">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                    <div class="one u-dp-pc">
+                        <h3>5FP <span>メロンブックスノベル祭り</span></h3>
+                    </div>
+                    <div class="three">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                    <div class="four">
+                        <div>
+                            <figure style="background-image: url(https://placehold.jp/1320x1760.png);"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="points" class="p-points">
+
+        <div class="c-sec__inner">
+            <div class="c-sec__bg p-points__bg"></div>
+
+            <h2 class="c-sec__ttl">campaign<span>フェアポイント2倍</span></h2>
+
+            <div class="c-sec__wrap p-points__wrap">
+                <ul class="p-points__list">
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://placehold.jp/300x429.png" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section> -->
+
+</main>
+
+
+
+
+
+<footer class="l-footer" id="footer">
+  <div class="container">
+    <a href="#" class="l-footer__logo">
+      TNBLOG
+    </a>
+    <p class="l-footer__copyright">
+      Copyright © tnblog, All rights reserved.<br />
+    </p>
+  </div>
+
+</footer>
+
+
+
+
+<!-- vendors -->
+<script src="./assets/scripts/vendors/jquery-3.6.0.min.js"></script>
+<script src="./assets/scripts/vendors/rellax.min.js"></script>
+<script src="./assets/scripts/vendors/lity.min.js"></script>
+<script src="./assets/scripts/vendors/jquery.matchHeight-min.js"></script>
+<script src="./assets/scripts/vendors/intersection-observer.js"></script>
+<script src="./assets/scripts/vendors/swiper-bundle.min.js"></script>
+
+<script>
+  var rellax = new Rellax('.js-rellax', {
+    center: true,
+  });
+</script>
+
+
+<!-- scripts -->
+<script src="./assets/scripts/swiper.js"></script>
+<script src="./assets/scripts/main.js"></script>
+
+<!-- 
+ -->
+
+</body>
+
+</html>

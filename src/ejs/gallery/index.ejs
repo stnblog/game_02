@@ -1,0 +1,76 @@
+<% let pageId = 'gallery'; %>
+<% let filePath = jsonData.pages[pageId].filePath %>
+<%- include('./../_inc/_header', { pageId: pageId }) %>
+
+
+<main class="l-main">
+    <section id="exchange" class="c-sec p-gallery">
+        <div class="inview p-gallery__bg"></div>
+
+
+
+        <div class="p-gallery__inner">
+
+            <h2 class="c-sec__ttl inview js-scroll--fadeUp">
+                <span class="-en">GALLERY</span>
+                <span class="-ja">ギャラリー</span>
+            </h2>
+
+            <ul class="p-gallery__list">
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+                <li class="p-gallery__item">
+                    <figure class="p-gallery__img">
+                        <a href="">
+                            <img src="../assets/images/chara_bg_01.jpg" alt="">
+                        </a>
+                    </figure>
+                </li>
+            </ul>
+
+
+        </div>
+    </section>
+</main>
+
+<%- include('./../_inc/_footer', { pageId: pageId }) %>

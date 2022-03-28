@@ -1,0 +1,173 @@
+<% let pageId = 'system'; %>
+<% let filePath = jsonData.pages[pageId].filePath %>
+<%- include('./../_inc/_header', { pageId: pageId }) %>
+
+
+<main class="l-main">
+    <section class="c-sec p-sys">
+
+        <h2 class="c-sec__ttl inview js-scroll--fadeUp">
+            <span class="-en">SYSTEM</span>
+            <span class="-ja">システム</span>
+        </h2>
+
+        <div class="p-sys__frag inview">
+            <img src="../assets/images/ribon.png" alt="">
+        </div>
+
+        <div class="p-sys__chara p-sys__chara--01 js-rellax" data-rellax-speed="0.5">
+            <img src="../assets/images/chara_04.png" alt="">
+        </div>
+        <div class="p-sys__chara p-sys__chara--02 js-rellax" data-rellax-speed="0.5">
+            <img src="../assets/images/chara_05.png" alt="">
+        </div>
+
+
+        <div class="p-sys__inner">
+            <div class="p-sys__bg inview"></div>
+
+
+            <!-- <div class="p-sys__head">
+    
+    
+    
+                    <p class="inview js-scroll--slideRight">
+                        <span>貴方は言葉に意味を登録することができます</span>
+                    </p>
+    
+                    <p class="inview js-scroll--slideLeft">
+                        <span>
+                            配置されているオブジェクトを触り、言語を認識してください
+                        </span>
+                    </p>
+    
+                    <p class="inview js-scroll--slideRight">
+                        <span>また、その人が何を言っているか、判断してみてください</span>
+                    </p>
+
+            </div> -->
+
+            <ul class="p-sys__list">
+                <li class="p-sys__item">
+                    <div class="p-sys__arrow p-sys__arrow--l"></div>
+                    <figure class="p-sys__img inview js-scroll--slideLeft">
+                        <a href="../assets/images/chara_bg_01.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_01.jpg" alt="" style="transform:rotate(3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            『八ツ裂き公』を名乗る<br class="u-dp-pc">
+                            謎の人物が起こした連続殺人事件により、
+                            １００人以上もの命が失われた。<br class="u-dp-pc">
+                            <br><br class="u-dp-sp">
+                            社会全体に混乱が広がりつつある中、<br class="u-dp-pc">
+                            政府は八ツ裂き公の対策として、<br class="u-dp-pc">
+                            例外的な措置を発表する。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-sys__item reverse">
+                    <div class="p-sys__arrow p-sys__arrow--r"></div>
+                    <figure class="p-sys__img inview js-scroll--slideRight">
+                        <a href="../assets/images/chara_bg_02.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_02.jpg" alt="" style="transform:rotate(-3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            それは優れた探偵を集めた組織<br class="u-dp-pc">
+                            『探偵同盟』への、捜査依頼。<br class="u-dp-pc">
+                            <br><br class="u-dp-sp">
+                            『探偵ネーム』と呼ばれるコードネームで
+                            呼び合うというその組織の探偵たちは、
+                            年々犯罪率が高まる社会の中で、英雄視されていた。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-sys__item">
+                    <figure class="p-sys__img inview js-scroll--slideLeft">
+                        <a href="../assets/images/chara_bg_03.jpg" data-lity>
+                            <img src="../assets/images/chara_bg_03.jpg" alt="" style="transform:rotate(3deg);">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            平凡な高校生、<br class="u-dp-pc">
+                            北條和都も探偵同盟に憧れる一人。<br class="u-dp-pc">
+                            そんな彼の元に、ある日<br class="u-dp-pc">
+                            『老師探偵』を名乗る謎の男が現れ、<br class="u-dp-pc">
+                            「お前は探偵同盟の
+                            メンバーに選ばれた」
+                            と宣言する。
+                            更に、有無を言わさず眠らされ、
+                            名前も知らない島へと連行されてしまうのであった。
+
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+            <!-- <div id="swiper01" class="swiper-container p-sys__slider">
+                <div class="swiper-button-prev">
+                    <img src="../assets/images/arrow_l.png" alt="">
+                </div>
+                <div class="swiper-button-next">
+                    <img src="../assets/images/arrow_r.png" alt="">
+                </div>
+                <div class="swiper-wrapper p-sys__slidewrap">
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide p-sys__slide">
+                        <figure class="p-sys__img">
+                            <img src="../assets/images/sys_room_01.png" alt="">
+                        </figure>
+                        <div class="p-sys__detail">
+                            <h3>#00 システム紹介</h3>
+                            <p>
+                                『Voice of Cards できそこないの巫女』
+                                の舞台は、代々巫女が守ってきた辺境の島々。滅びゆく世界を救うべく、主人公は、巫女になれなかった少女「ラティ」と共に航海に旅立ちます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</main>
+
+<%- include('./../_inc/_footer', { pageId: pageId }) %>

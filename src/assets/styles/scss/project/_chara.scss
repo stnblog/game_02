@@ -1,0 +1,329 @@
+.p-chara {
+    padding-top: 70px;
+    background: $color-white;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    .smoke {
+        display: none;
+    }
+
+    .c-sec__ttl {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 4;
+
+        span {
+            color: $color-white;
+            line-height: 1;
+        }
+    }
+
+    &__inner {
+        height: 700px;
+        @include maxWidth(1000px);
+        position: relative;
+    }
+
+    &__item {
+        &--bg {
+            opacity: 0;
+            @include absAll;
+            // filter: grayscale(100%);
+            background: url(../../assets/images/chara_bg_03.jpg) no-repeat bottom / cover;
+            filter: blur(6px);
+            margin: -6px;
+            width: calc(100% + 12px);
+
+            &::before {
+                content: "";
+                @include absAll;
+                background: rgba($color: #000, $alpha: 0.55);
+            }
+
+            &02 {
+                background-image: url(../../assets/images/chara_bg_02.jpg);
+            }
+
+            &03 {
+                background-image: url(../../assets/images/chara_bg_01.jpg);
+            }
+        }
+    }
+
+    &__slider {
+        @include absAll;
+    }
+
+    &__slide {
+        @include absAll;
+        position: absolute;
+        opacity: 0 !important;
+        transition: opacity 0.5s ease 0s !important;
+    }
+
+    &__head {
+        position: absolute;
+        width: 236px;
+        top: 276px;
+        left: -30px;
+
+        &--02 {
+            width: 220px;
+            top: 246px;
+            left: -24px;
+        }
+    }
+
+    &__foot {
+        position: absolute;
+        top: 150px;
+        right: 2%;
+        width: 50%;
+        text-align: left;
+    }
+
+    &__tab {
+        @include absCenter;
+        top: initial;
+        bottom: -16px;
+        z-index: 10;
+        @include maxWidth(280px);
+    }
+
+    &__list {
+        &--data {
+            @include flex($wrap:wrap, $justify:space-between);
+        }
+
+        &--tab {
+            @include flex($wrap:wrap, $justify:center);
+        }
+    }
+
+    &__item {
+        &--data {
+            position: relative;
+            width: 47%;
+            margin: 0 0 10px;
+            border: 2px #fff solid;
+
+            dl {
+                position: relative;
+                z-index: 2;
+                @include flex($align:space-between);
+                padding: 0 4px;
+                font-size: 10px;
+
+                dt {
+                    width: 44px;
+                }
+
+                dd {
+                    flex: 1;
+                }
+            }
+        }
+
+        &--tab {
+            width: 33%;
+            cursor: pointer;
+            position: relative;
+
+
+            &.is-active {
+                &::before {
+                    content: "";
+                    @include absAll;
+                    top: -5px;
+                    border: 5px solid $color-green-light-3;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    &__name {
+        font-weight: 900;
+        font-size: 20px;
+
+        &--en {
+            font-size: 10px;
+            margin: 2px 0 16px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__txt {
+        margin: 4px 0 0;
+        text-align: left;
+        font-size: 12px;
+        line-height: 1.7;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+    }
+
+    @include mq-target(sm) {
+
+        .c-sec__ttl {
+            left: 20px;
+            max-width: initial;
+            width: initial;
+        }
+
+        &__inner {
+            height: 830px;
+        }
+
+        &__item {
+            &--data {
+                padding: 6px 2px;
+                dl {
+                    padding: 0 40px 0 10px;
+                    font-size: 14px;
+    
+                    dt {
+                        width: 68px;
+                    }
+    
+                    dd {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        &__head {
+            top: 260px;
+            left: 0;
+            width: 390px;
+
+            &--02 {
+                top: 184px;
+                left: -32px;
+            }
+        }
+
+        &__foot {
+            right: 6%;
+            width: 46%;
+        }
+
+        &__tab {
+            bottom: -20px;
+            @include maxWidth(400px);
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+    
+        &__name {
+            font-size: 32px;
+    
+            &--en {
+                font-size: 14px;
+                margin: 4px 0 24px;
+            }
+        }
+    
+        &__txt {
+            margin: 10px 0 0;
+            font-size: 16px;
+        }
+    }
+
+    @include mq-target(md) {
+        &__head {
+            left: 7%;
+
+            
+            &--02 {
+                left: 4%;
+            }
+        }
+    }
+    
+
+    @include mq-target(lg) {
+
+        .c-sec__ttl {
+            left: -10px;
+        }
+
+        &__slider {
+            position: relative;
+            left: 50%;
+            margin-left: -500px;
+        }
+
+        &__inner {
+            height: 800px;
+        }
+
+        &__item {
+            &--data {
+                dl {
+    
+                    dt {
+                        width: 100px;
+                    }
+
+                }
+            }
+        }
+
+        &__head {
+            width: 400px;
+            top: 230px;
+            left: 7%;
+
+            &--02 {
+                top: 170px;
+                left: 6%;
+            }
+        }
+
+        &__foot {
+            top: 160px;
+            right: 6%;
+            width: 46%;
+        }
+  
+        .smoke {
+            display: block;
+            height: 100%;
+            width: 15%;
+        }
+
+        .smoke-r {
+            background: linear-gradient(90deg, rgba(9, 8, 6, 0), rgba(0, 0, 0, 0.6) 32%);
+            right: 0;
+            left: initial;
+        }
+
+        .smoke-l {
+            background: linear-gradient(270deg, rgba(9, 8, 6, 0), rgba(0, 0, 0, 0.6) 32%);
+        }
+    }
+}
+
+[data-character="1"] .p-chara__item--bg:nth-child(1),
+[data-character="2"] .p-chara__item--bg:nth-child(2),
+[data-character="3"] .p-chara__item--bg:nth-child(3),
+[data-character="4"] .p-chara__item--bg:nth-child(4),
+[data-character="5"] .p-chara__item--bg:nth-child(5),
+[data-character="6"] .p-chara__item--bg:nth-child(6),
+[data-character="7"] .p-chara__item--bg:nth-child(7),
+[data-character="8"] .p-chara__item--bg:nth-child(8),
+[data-character="9"] .p-chara__item--bg:nth-child(9),
+[data-character="10"] .p-chara__item--bg:nth-child(10) {
+  opacity: 1;
+}
