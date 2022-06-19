@@ -2748,7 +2748,7 @@ textarea {
   margin: 20px auto;
 }
 .p-chara__inner {
-  padding: 60px 0 60px;
+  padding: 60px 0 100px;
   overflow: hidden;
   position: relative;
 }
@@ -2792,7 +2792,7 @@ textarea {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  margin: 80px auto 0;
+  margin: 60px auto 0;
 }
 .p-chara__slide {
   opacity: 0 !important;

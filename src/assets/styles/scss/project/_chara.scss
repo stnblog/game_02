@@ -26,7 +26,7 @@
     
     
     &__inner {
-        padding: 60px 0 60px;
+        padding: 60px 0 100px;
         overflow: hidden;
         position: relative;
     }
@@ -68,7 +68,7 @@
         user-select: none;
         position: relative;
         @include maxWidth(1100px);
-        margin: 80px auto 0;
+        margin: 60px auto 0;
     }
 
     &__slide {
