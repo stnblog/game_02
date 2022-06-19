@@ -348,7 +348,7 @@ body {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Cinzel", "Noto Serif JP", serif;
   line-height: 1.5;
   background: #000;
   letter-spacing: 0.05em;
@@ -1617,6 +1617,7 @@ textarea {
   margin: auto;
   position: absolute;
   top: 0;
+  font-family: "Cinzel";
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
@@ -1634,7 +1635,8 @@ textarea {
   opacity: 0.25;
 }
 .c-icon--scroll::after {
-  background: #eb2f64;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
   height: 20px;
   -webkit-animation: scrollPc 2s ease infinite;
   animation: scrollPc 2s ease infinite;
@@ -2467,7 +2469,7 @@ textarea {
   height: 100%;
 }
 .p-story__inner {
-  padding: 180px 0;
+  padding: 180px 0 120px;
   position: relative;
   z-index: 2;
   display: -webkit-box;
@@ -2489,7 +2491,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding-top: 6%;
@@ -2787,7 +2789,7 @@ textarea {
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   margin: 80px auto 0;

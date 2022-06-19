@@ -67,7 +67,7 @@
     &__slider {
         user-select: none;
         position: relative;
-        @include maxWidth(1200px);
+        @include maxWidth(1100px);
         margin: 80px auto 0;
     }
 
