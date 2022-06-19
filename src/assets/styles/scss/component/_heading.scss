@@ -1,3 +1,83 @@
-.c-heading {
-  
+.c-sec {
+    position: relative;
+    overflow: hidden;
+    @include flexCenter;
+
+    &__inner {
+        position: relative;
+        padding: 140px 0 14vw;
+        z-index: 1;
+    }
+
+    &__wrap {
+        background: $color-bg;
+        position: relative;
+        @include maxWidth(980px);
+        margin-top: 20px;
+        width: 90%;
+        padding: 6% 4%;
+        box-shadow: 8px 8px 0 rgb(0 0 0 / 25%);
+    }
+
+    &__bg {
+        overflow: hidden;
+        @include absolute($top:0, $left:0);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &::before {
+            content: '';
+            @include absolute($top:0, $left:0);
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__ttl {
+        position: relative;
+        @include maxWidth(840px);
+        margin: 0 auto 40px;
+        font-weight: 400;
+        text-align: center;
+        // font-family: "Cinzel", "Noto Serif JP", sans-serif;
+        text-transform: uppercase;
+        text-shadow: 1px 2px 4px #292929;
+        z-index: 1;
+
+        span {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .-en {
+            font-size: 40px;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .-ja {
+            padding: 10px 0 0;
+            font-size: 14px;
+        }
+    }
+
+    @include mq-target(sm) {
+        &__wrap {
+            width: 95%;
+            margin-top: 60px;
+            padding: 50px;
+        }
+
+        &__ttl {
+            .-en {
+                font-size: 60px;
+            }
+
+            .-ja {
+                font-size: 16px;
+            }
+        }
+    }
 }

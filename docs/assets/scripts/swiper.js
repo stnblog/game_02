@@ -23,8 +23,12 @@ if (elmIndexSwiper.length > 0) {
 
 var modalSwiper = new Swiper('.js-modal-slider', {
   slidesPerView: 'auto',
+  // loop: true,
+  grabCursor: true,
+  autoHeight: true,
   centeredSlides: true,
-  effect: 'fade',
+  effect: "slide",
+  speed: 800,
   navigation: {
     prevEl: '.js-modal--btnPrev',
     nextEl: '.js-modal--btnNext'
@@ -43,32 +47,43 @@ $('.js-modal-open').on('click', function () {
   $('.l-modal').fadeIn();
   $('body').addClass('is-lock');
 });
+modalSwiper.on('slideChange', function () {
+  $body.attr("data-character", modalSwiper.realIndex + 1);
+});
 $('.js-modal-close').on('click', function () {
   $('.l-modal').fadeOut();
   $('body').removeClass('is-lock');
-});
-var swiper01 = new Swiper('.p-sys__slider', {
-  slidesPerView: 'auto',
-  loop: 'true',
+}); // character
+// const swiper02 = new Swiper('.p-chara__slider--modal', {
+//   slidesPerView: 'auto',
+//   // loop: true,
+//   grabCursor: true,
+//   autoHeight: true,
+//   centeredSlides: true,
+//   effect: "slide",
+//   speed: 800,
+// })
+// swiper02.on('slideChange', function () {
+//   $body.attr("data-character", swiper02.realIndex + 1);
+// });
+
+var swiper03 = new Swiper('.p-chara__slider', {
+  // loop: true,
   grabCursor: true,
+  effect: 'slide',
+  centeredSlides: true,
+  slidesPerView: 2,
+  speed: 1000,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
   }
 });
-var swiper02 = new Swiper('.p-chara__slider', {
-  slidesPerView: 'auto',
-  loop: true,
-  grabCursor: true,
-  autoHeight: true,
-  effect: "fade",
-  speed: 800
-});
-swiper02.on('slideChange', function () {
-  $body.attr("data-character", swiper02.realIndex + 1);
+swiper03.on('slideChange', function () {
+  $body.attr("data-character", swiper03.realIndex + 1);
 });
 $(".js-chara-tab").on("click", function () {
   $('.p-chara__item--tab').removeClass('is-active');
   $(this).addClass('is-active');
-  swiper02.slideTo($(this).attr("data-num"));
+  swiper03.slideTo($(this).attr("data-num"));
 });

@@ -1,5 +1,6 @@
 .c-slider {
   user-select: none;
+  padding: 5px;
   // padding: 0 calc((100vw - 1400px) / 2);
 
   &__heading {
@@ -42,8 +43,6 @@
   &__slide {
     margin-right: 15px;
     width: 98%;
-    box-shadow: 0 8px 16px rgb(0 0 0 / 40%);
-    will-change: filter;
 
     @include mq-target(sm) {
       margin-right: 20px;

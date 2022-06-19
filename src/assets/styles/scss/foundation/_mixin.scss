@@ -1,16 +1,15 @@
-
 $mq-breakpoints-min: ('xxs': '0px',
-  'xs': '400px',
-  'sm': '767px',
-  'md': '1000px',
+  'xs': '576px',
+  'sm': '768px',
+  'md': '992px',
   'lg': '1200px',
 ) !default;
 
 $mq-breakpoints-max: ('xxs': '440px',
-  'xs': '399px',
-  'sm': '766px',
-  'md': '999px',
-  'lg': '1199px',
+  'xs': '575.98px',
+  'sm': '767.98px',
+  'md': '991.98px',
+  'lg': '1199.98px',
 ) !default;
 
 @mixin mq-target($breakpoint: md) {
@@ -37,6 +36,7 @@ $mq-breakpoints-max: ('xxs': '440px',
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 @mixin absAll {
   position: absolute;
   top: 0;
@@ -179,8 +179,8 @@ $mq-breakpoints-max: ('xxs': '440px',
 
 
 @mixin icon($fileName, $width, $height) {
-	background: url($fileName) no-repeat 50% 50%;
-	background-size: $width $height;
-	width: $width;
-	height: $height;
+  background: url($fileName) no-repeat 50% 50%;
+  background-size: $width $height;
+  width: $width;
+  height: $height;
 }

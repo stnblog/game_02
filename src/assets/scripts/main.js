@@ -5,11 +5,11 @@ var $body = $("body");
 $(document).ready(function () {
 
   $('.js-draw--trigger').on('click', function () {
-		$('.js-draw--trigger').toggleClass('is-active');
-		$('.js-draw--content').toggleClass('is-active');
-		$('.js-draw--bg').toggleClass('is-active');
-		$('body').toggleClass('lock');
-	})
+    $('.js-draw--trigger').toggleClass('is-active');
+    $('.js-draw--content').toggleClass('is-active');
+    $('.js-draw--bg').toggleClass('is-active');
+    $('body').toggleClass('lock');
+  })
 
   $('a[href^="#"]').on('click', function () {
     var href = $(this).attr('href');
@@ -21,12 +21,10 @@ $(document).ready(function () {
   })
 
   $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
-
 });
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
   {
     const el = document.querySelectorAll('.inview');
     const els = Array.prototype.slice.call(el);
@@ -34,14 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const cb = function (entries, observer) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-anim');
+          setTimeout(() => {
+            entry.target.classList.add('is-anim');
+          }, 200);
         } else {}
       });
     }
 
     const options = {
       root: null,
-      rootMargin: '-10% 0px',
+      rootMargin: '-20px 0px',
       threshold: 0
     };
     const io = new IntersectionObserver(cb, options);

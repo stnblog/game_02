@@ -25,11 +25,9 @@
   <meta name="twitter:image" content="">
 
   <link rel="icon" href="../assets/images/icon/favicon-32x32.png" sizes="32x32">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link href="../assets/styles/vendors/lity.min.css" rel="stylesheet">
   <link href="../assets/styles/vendors/swiper-bundle.min.css" rel="stylesheet">
   <link href="../assets/styles/style.css" rel="stylesheet">
@@ -89,9 +87,9 @@
       <nav class="l-header__nav u-dp-pc" style="width: 100%;">
         <ul class="l-header__list">
           <li class="l-header__item--nav">
-            <a href="/">
-              HOME
-              <span>ホーム</span>
+            <a href="#top">
+              TOP
+              <span>トップ</span>
             </a>
           </li>
           <li class="l-header__item--nav">
@@ -101,27 +99,21 @@
             </a>
           </li>
           <li class="l-header__item--nav">
-            <a href="/system">
+            <a href="#chara">
+              character
+              <span>キャラクター</span>
+            </a>
+          </li>
+                    <li class="l-header__item--nav">
+            <a href="#system">
               SYSTEM
               <span>システム</span>
             </a>
           </li>
           <li class="l-header__item--nav">
-            <a href="/character">
-              character
-              <span>キャラクター</span>
-            </a>
-          </li>
-          <li class="l-header__item--nav">
-            <a href="/gallery">
+            <a href="#gallery">
               GALLERY
               <span>ギャラリー</span>
-            </a>
-          </li>
-          <li class="l-header__item--nav">
-            <a href="#buy">
-              FAQ
-              <span>よくある質問</span>
             </a>
           </li>
         </ul>
@@ -140,7 +132,7 @@
     <div class="l-drawer__wrap">
       <ul class="l-drawer__list l-drawer__list--menu">
         <li class="l-drawer__item">
-          <a href="/game_01">
+          <a href="#top">
             トップ
             <span>top</span>
           </a>
@@ -152,19 +144,19 @@
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="/game_01/system">
+          <a href="/dist/system">
             ゲームシステム
             <span>system</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="/game_01/character">
+          <a href="#chara">
             キャラクター
             <span>character</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="/game_01/gallery">
+          <a href="/dist/gallery">
             ギャラリー
             <span>GALLERY</span>
           </a>
@@ -180,84 +172,149 @@
   </nav>
 
 
+
+  <p class="c-icon--scroll">
+    <span>scroll</span>
+  </p>
+
+  <!-- <div class="section__top inview"></div> -->
+
+  <!-- <div class="smoke smoke--chara smoke__right smoke__right--chara"></div>
+  <div class="smoke smoke--chara smoke__left smoke__left--chara"></div> -->
+
+
 <main class="l-main">
-    <section id="exchange" class="c-sec p-gallery">
-        <div class="inview p-gallery__bg"></div>
+    <section id="gallery" class="p-gallery" style="top: -10px;">
+
+        <!-- <div class="smoke smoke__right"></div>
+        <div class="smoke smoke__left"></div> -->
+
 
 
 
         <div class="p-gallery__inner">
 
-            <h2 class="c-sec__ttl inview js-scroll--fadeUp">
-                <span class="-en">GALLERY</span>
-                <span class="-ja">ギャラリー</span>
-            </h2>
+            <div class="p-gallery__main">
+                <div id="swiper03" class="swiper-container p-gallery__slider">
+                    <ul class="swiper-wrapper p-gallery__slidewrap">
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_03.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_03.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide p-gallery__slide">
+                            <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
 
-            <ul class="p-gallery__list">
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-                <li class="p-gallery__item">
-                    <figure class="p-gallery__img">
-                        <a href="">
-                            <img src="../assets/images/chara_bg_01.jpg" alt="">
-                        </a>
-                    </figure>
-                </li>
-            </ul>
-
-
+                <div class="p-gallery__tab">
+                    <ul class="p-gallery__list--tab">
+                        <li class="p-gallery__item--tab js-gallery-tab is-active" data-num="0">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="1">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="2">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_03.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="3">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="4">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="5">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_03.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="6">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_01.jpg" alt="">
+                            </figure>
+                        </li>
+                        <li class="p-gallery__item--tab js-gallery-tab" data-num="7">
+                            <figure>
+                                <img src="../../assets/images/chara_bg_02.jpg" alt="">
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+    <div class="section__bg p-sys__bg"></div>
 </main>
 
+
+
+
 <footer class="l-footer" id="footer">
-  <div class="container">
-    <a href="#" class="l-footer__logo">
-      TNBLOG
-    </a>
-    <p class="l-footer__copyright">
-      Copyright © tnblog, All rights reserved.<br />
-    </p>
+  <!-- <div class="section__bottom inview"></div> -->
+  <div class="l-footer__inner">
+
+
+    <!-- <div class="l-footer__head">
+      <div class="l-footer__spec">
+        <figure class="l-footer__img--app">
+          <img src="..//assets/images/app_icon.png" alt="">
+        </figure>
+        <div class="l-footer__detail--spec">
+          <dl>
+            <dt>タイトル</dt>
+            <dd>アプリ名</dd>
+            <dt>ジャンル</dt>
+            <dd>ジャンル名</dd>
+            <dt>対応OS</dt>
+            <dd>iOS / Android</dd>
+            <dt>リリース</dt>
+            <dd>2022年01月01日</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="l-footer__dl">
+        <ul class="l-footer__list--badge">
+          <li class="l-footer__item--badge">
+            <a href="">
+              <img src="..//assets/images/ios.png" alt="">
+            </a>
+          </li>
+          <li class="l-footer__item--badge">
+            <a href="">
+              <img src="..//assets/images/android.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
   </div>
 
 </footer>

@@ -32,14 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var cb = function cb(entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-anim');
+          setTimeout(function () {
+            entry.target.classList.add('is-anim');
+          }, 200);
         } else {}
       });
     };
 
     var options = {
       root: null,
-      rootMargin: '-10% 0px',
+      rootMargin: '-20px 0px',
       threshold: 0
     };
     var io = new IntersectionObserver(cb, options);

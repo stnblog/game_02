@@ -1,12 +1,16 @@
 .l-header {
   // position: relative;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: $color-white;
-  // backdrop-filter: blur(10px);
+  // background: url(../../assets/images/header_bg.png) 100% 0 repeat-x;
+  // background-size: 100%;
+  // height: 400px;
+  // background: $color-white;
+  // background: rgba($color: #fff, $alpha: 0.1);
+  // backdrop-filter: blur(13px);
   // box-shadow: $box-shadow-light-1;
   display: none;
 
@@ -15,13 +19,15 @@
   }
 
   &__inner {
+    top: 10px;
     height: 74px;
-    padding: 20px 32px 20px 35px;
+    // padding: 30px 32px 20px 35px;
     position: relative;
     @include maxWidth(1000px);
     @include flex($align:center,$justify:space-between);
 
     h1 {
+      opacity: 0;
       flex: 0 0 120px;
 
       a {
@@ -38,25 +44,30 @@
   }
 
   &__list {
-    @include flex($align:center, $justify:center);
+    @include flex($align:center, $justify:flex-end);
     margin-left: 10%;
+    width: 100%;
     
     li {
       position: relative;
-      width: 170px;
-      height: 50px;
+      width: 140px;
+      // height: 100px;
+      transition: .2s ease all;
+
+      &:hover {
+        transform: translateY(5px);
+      }
       
       a {
         font-weight: 700;
         display: block;
-        height: 100%;
-        padding: 8px 0;
-        color: $color-black;
+        padding: 10px 0;
+        // color: $color-black;
         text-transform: uppercase;
         line-height: 100%;
         text-align: center;
         font-size: 14px;
-        background: url(../../assets/images/heder_menu.png) no-repeat 0 0 /contain;
+        // background: url(../../assets/images/heder_menu.png) no-repeat 0 0 /contain;
 
         span {
           font-size: 10px;

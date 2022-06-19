@@ -46,7 +46,7 @@
 @keyframes kf-animate-chars {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(50%);
   }
 
   100% {
@@ -99,3 +99,50 @@
     transform: translateY(80px)
   }
 }
+
+@keyframes animation-glNav-bg {
+  from {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 50% -5px;
+  }
+  to {
+    background-position: 50% 0;
+  }
+}
+
+@keyframes animation-zoomImg {
+  from {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes animation-opt {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-100%, 0, 0); } 
+  }

@@ -1,14 +1,30 @@
 .p-sys {
     position: relative;
     // background: rgb(255, 253, 201);
-    background: #fff;
-    box-shadow: 0 2em 10em 0em rgb(0 0 0 / 40%), 0 0 4px 4px rgb(0 0 0 / 40%);
+    // background: #fff;
+    // box-shadow: 0 2em 10em 0em rgb(0 0 0 / 40%), 0 0 4px 4px rgb(0 0 0 / 40%);
     z-index: 1;
-    margin-top: -10px;
+    // margin-top: -10px;
     padding: $paddingSm;
+
     @include mq-target(md) {
         padding: 170px 0px 137px;
-      }
+    }
+
+
+    &__bg {
+        // background: url(../../assets/images/main.jpg) center !important;
+        // filter: grayscale(100%) !important;
+        // filter: blur(8px) !important;
+        // margin: -8px;
+        // width: calc(100% + 16px);
+
+        // &::before {
+        //     content: "";
+        //     @include absAll;
+        //     background: rgba($color: $color-white, $alpha: 0.65);
+        // }
+    }
 
 
     &__frag {
@@ -48,23 +64,23 @@
         }
     }
 
-    &__bg {
-        overflow: hidden;
-        border-radius: 20px;
-        @include absAll;
-        background: url(../../assets/images/sys_bg.png) center top -40px / 1040px no-repeat rgb(255, 255, 255);
-        margin-top: 110px;
-        opacity: 0;
-        z-index: -1;
-        // box-shadow: $box-shadow-light-1;
-        filter: grayscale(100%);
-        transition: margin 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    // &__bg {
+    //     overflow: hidden;
+    //     border-radius: 20px;
+    //     @include absAll;
+    //     background: url(../../assets/images/sys_bg.png) center top -40px / 1040px no-repeat rgba(255, 255, 255, 0.9);
+    //     margin-top: 110px;
+    //     opacity: 0;
+    //     z-index: -1;
+    //     // box-shadow: $box-shadow-light-1;
+    //     filter: grayscale(100%);
+    //     transition: margin 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 
-        &.is-anim {
-            margin-top: 0;
-            opacity: 1;
-        }
-    }
+    //     &.is-anim {
+    //         margin-top: 0;
+    //         opacity: 1;
+    //     }
+    // }
 
     &__inner {
         position: relative;
@@ -188,11 +204,12 @@
 
         &__chara {
             width: 26%;
+
             &--01 {
                 top: 29%;
                 right: 2%;
             }
-    
+
             &--02 {
                 bottom: 32%;
                 left: 2%;
@@ -236,7 +253,7 @@
             &--01 {
                 top: 30%;
             }
-    
+
             &--02 {
                 bottom: 28%;
             }
@@ -248,7 +265,7 @@
         }
 
         &__detail {
-    
+
             p {
                 font-size: 20px;
             }

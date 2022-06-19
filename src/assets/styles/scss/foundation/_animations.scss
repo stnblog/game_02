@@ -38,7 +38,7 @@ $slide in $slides {
     overflow: hidden;
     transform: ($slide);
     transition: opacity 1.4s, transform 1s;
-    transition-timing-function: cubic-bezier(0.23, 1, 0.4, 1);
+    transition-timing-function: cubic-bezier(0.23, 1, 0.6, 1);
 
     &.is-anim {
       opacity: 1;
@@ -68,7 +68,7 @@ $cover in $covers {
       @include absolute($left:0, $top:0);
       height: 100%;
       width: 100%;
-      transition: all cubic-bezier(0.33, 1, 0.68, 1) .8s .4s;
+      transition: all cubic-bezier(0.33, 1, 0.8, 1) .8s .4s;
     }
 
     &::before {
@@ -78,7 +78,7 @@ $cover in $covers {
     }
 
     &::after {
-      background: $color-key;
+      background: $color-white;
       z-index: 11;
     }
 
