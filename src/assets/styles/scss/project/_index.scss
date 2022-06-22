@@ -4,6 +4,7 @@
   display: block;
   position: relative;
   min-height: 100vh;
+  z-index: 500;
   background: url(../../assets/images/main_bg.png) top center no-repeat;
   background-size: cover;
 
@@ -50,7 +51,7 @@
     @include absAll;
     top: 30px;
     background: url(../../assets/images/main_bg.png) top center no-repeat;
-    background-size: 1500px auto;
+    background-size: 1560px auto;
 
     // &::before {
     //   content: "";

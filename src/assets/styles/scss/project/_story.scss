@@ -52,7 +52,7 @@
     &__list {
         display: flex;
         width: 100%;
-        @include maxWidth(1000px);
+        @include maxWidth(960px);
         padding-top: 6%;
         padding-bottom: 2%;
     }
@@ -69,15 +69,16 @@
         &--right {
             // width: 60%;
             font-size: 20px;
-            max-width: 60%;
+            max-width: 68%;
             margin: 0 auto;
             // letter-spacing: 0.17em;
             text-align: left;
             font-weight: 400;
+            font-size: 20px;
             line-height: 2.2;
-            text-shadow: 1px 2px 4px rgb(0, 0, 0);
+            text-shadow: 1px 2px 3px rgb(0, 0, 0);
             text-transform: uppercase;
-            animation: flicker 1.5s infinite alternate;
+            // animation: flicker 1.5s infinite alternate;
         }
     }
 }

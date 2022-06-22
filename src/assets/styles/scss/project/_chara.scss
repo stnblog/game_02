@@ -2,8 +2,6 @@
     position: relative;
     overflow: hidden;
     margin: -90px 0 0;
-    background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
-    background-size: cover;
     // z-index: 500;
     
     
@@ -16,17 +14,23 @@
         // left: calc(50% - 56%);
         // z-index: 1500;
         // transform: rotate(-7.4deg);
-        animation: animation-zoomImg 2s ease-in-out infinite;
+        // animation: animation-zoomImg 2s ease-in-out infinite;
 
         &--chara {
             max-width: 360px;
             margin: 20px auto;
         }
     }
+
+    &__bg {
+        @include absAll;
+        background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
+        // background-size: cover;
+    }
     
     
     &__inner {
-        padding: 60px 0 100px;
+        padding: 60px 0 170px;
         overflow: hidden;
         position: relative;
     }
@@ -68,7 +72,7 @@
         user-select: none;
         position: relative;
         @include maxWidth(1100px);
-        margin: 60px auto 0;
+        margin: 40px auto 0;
     }
 
     &__slide {
@@ -195,18 +199,21 @@
 
     &__img {
         &--title {
+            // display: none;
             position: absolute;
-            left: 0;
-            top: 60px;
+            left: -8.4%;
+            top: 110px;
             z-index: 500;
-            width: 340px;
+            width: 390px;
+            // z-index: -1;
         }
 
         &--name {
+            display: none;
             position: absolute;
-            left: 110px;
+            left: 130px;
             top: 220px;
-            width: 280px;
+            width: 260px;
         }
     }
 
