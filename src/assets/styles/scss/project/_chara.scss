@@ -1,8 +1,8 @@
 .p-chara {
     position: relative;
     overflow: hidden;
-    margin: -90px 0 0;
-    // z-index: 500;
+    // margin: -90px 0 0;
+    z-index: 500;
     
     
     &__heading {
@@ -24,13 +24,13 @@
 
     &__bg {
         @include absAll;
-        background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
+        // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
         // background-size: cover;
     }
     
     
     &__inner {
-        padding: 60px 0 170px;
+        padding: 80px 0 170px;
         overflow: hidden;
         position: relative;
     }
@@ -97,7 +97,7 @@
 
     &__tab {
         // min-height: 100vh;
-        padding-top: 120px;
+        // padding-top: 120px;
         // @include flexCenter;
 
         em {
@@ -416,18 +416,19 @@
     // background: rgb(2, 0, 9);
     // background: url(../../assets/images/gallery_bg.jpg) 50% 50% no-repeat;
     // background: url(../../assets/images/meani1.gif) top center no-repeat;
-    background-size: 1000px auto;
-    // filter: blur(2px);
-    // margin: -2px;
-    // width: calc(100% + 4px);
+    background: url(../../assets/images/story_bg.png) bottom no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    margin: -2px;
+    width: calc(100% + 4px);
     // filter: grayscale(100%);
-    z-index: -10;
+    z-index: -5;
 
-    // &::after {
-    //     content: "";
-    //     @include absAll;
-    //     background: rgba($color: #000, $alpha: 0.6);
-    // }
+    &::after {
+        content: "";
+        @include absAll;
+        background: rgba($color: #000, $alpha: 0.35);
+    }
 }
 
 
