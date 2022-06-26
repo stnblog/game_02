@@ -3,37 +3,6 @@
     overflow: hidden;
     @include flexCenter;
 
-    &__inner {
-        position: relative;
-        padding: 140px 0 14vw;
-        z-index: 1;
-    }
-
-    &__wrap {
-        background: $color-bg;
-        position: relative;
-        @include maxWidth(980px);
-        margin-top: 20px;
-        width: 90%;
-        padding: 6% 4%;
-        box-shadow: 8px 8px 0 rgb(0 0 0 / 25%);
-    }
-
-    &__bg {
-        overflow: hidden;
-        @include absolute($top:0, $left:0);
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-
-        &::before {
-            content: '';
-            @include absolute($top:0, $left:0);
-            width: 100%;
-            height: 100%;
-        }
-    }
-
     &__ttl {
         position: relative;
         @include maxWidth(840px);
@@ -63,16 +32,31 @@
         }
     }
 
-    @include mq-target(sm) {
-        &__wrap {
-            width: 95%;
-            margin-top: 60px;
-            padding: 50px;
+    &__bg {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: url(../../assets/images/story_bg.png) bottom no-repeat;
+        background-size: cover;
+        filter: blur(3px);
+        margin: -3px;
+        width: calc(100% + 6px);
+        z-index: 1;
+    
+        &::after {
+            content: "";
+            @include absAll;
+            // background: rgba($color: #000, $alpha: 0.4);
         }
+    }
+
+    @include mq-target(sm) {
 
         &__ttl {
             .-en {
-                font-size: 70px;
+                font-size: 62px;
             }
 
             .-ja {

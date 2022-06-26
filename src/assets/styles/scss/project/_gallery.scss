@@ -114,17 +114,17 @@
 .swiper-button-next,
 .swiper-button-prev {
   overflow: visible;
-  border: 2px solid #c0f0f0;
-  background: rgba($color: #0c5f92, $alpha: 0.25);
-  box-shadow: 1px 2px 12px rgba($color: #fdfdfd, $alpha: 1.0);
+  // border: 2px solid #c0f0f0;
+  // background: rgba($color: #0c5f92, $alpha: 0.25);
+  // box-shadow: 1px 2px 12px rgba($color: #fdfdfd, $alpha: 1.0);
   border-radius: 6px;
-  height: 3.74375vw;
-  width: 3.8625vw;
+  height: 4.14375vw;
+  width: 4.3625vw;
   &::after {
     content: "";
     background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
-    height: 3.74375vw;
-    width: 3.8625vw;
+    height: 4.14375vw;
+    width: 4.3625vw;
     display: block;
   }
 }

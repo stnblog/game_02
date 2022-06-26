@@ -19,12 +19,12 @@
 
     &__top {
         top: 0;
-        background: linear-gradient(360deg, rgba(9, 8, 6, 0), #010204 90%);
+        background: linear-gradient(360deg, rgba(9, 8, 6, 0), #010204 80%);
     }
 
     &__bottom {
         bottom: 0;
-        background: linear-gradient(180deg, rgba(9, 8, 6, 0), #010204 90%);
+        background: linear-gradient(180deg, rgba(9, 8, 6, 0), #010204 80%);
     }
 }
 
@@ -39,7 +39,7 @@
     height: 100px;
     left: 60px;
     top: 0;
-    z-index: 600;
+    z-index: 700;
   
     span {
       color: $color-main;

@@ -1,36 +1,18 @@
 .p-chara {
     position: relative;
     overflow: hidden;
-    // margin: -90px 0 0;
     z-index: 500;
-    // background: url(../../assets/images/story_bg.png) bottom no-repeat;
+
+    .c-sec__ttl {
+        margin-bottom: 0;
+    }
 
     &::before {
         content: "";
         @include absAll;
-        background: rgba($color: #000000, $alpha: 0.45);
-        // background: url(../../assets/images/redmist.png);
-        // opacity: 0.3;
-        // background-size: cover;
+        background: rgba($color: #000000, $alpha: 0.25);
     }
     
-    &__heading {
-        @include maxWidth(320px);
-        // max-width: 40.86145%;
-        text-align: center;
-        // position: absolute;
-        // top: -20px;
-        // left: calc(50% - 56%);
-        // z-index: 1500;
-        // transform: rotate(-7.4deg);
-        // animation: animation-zoomImg 2s ease-in-out infinite;
-
-        &--chara {
-            max-width: 360px;
-            margin: 20px auto;
-        }
-    }
-
     &__bg {
         @include absAll;
         // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
@@ -38,28 +20,31 @@
 
         &--slide {
             position: absolute;
+            top: 120px;
+            left: 52%;
+            @include maxWidth(250px);
             z-index: 2;
-            top: 80px;
             text-align: left;
-            left: 60%;
             // margin-left: 20px;
-            font-size: 54px;
+            font-size: 36px;
             font-weight: 500;
-            line-height: 0.6;
-            letter-spacing: 0.1em;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
+            line-height: 0.7;
+            // letter-spacing: 0.1em;
+            // writing-mode: vertical-rl;
+            // text-orientation: upright;
             // line-height: 0.6;
             text-shadow: 1px 8px 12px rgb(0, 0, 0);
+            border-bottom: 1px solid #fff;
 
             span {
                 // margin-top: 8px;
                 position: relative;
-                left: -10px;
-                top: 4px;
+                // left: -10px;
+                // top: 4px;
+                line-height: 1.6;
                 font-weight: 500;
                 font-size: 14px;
-                letter-spacing: 0;
+                letter-spacing: 0.1em;
                 text-shadow: 1px 2px 4px rgb(0, 0, 0);
             }
         }
@@ -67,35 +52,9 @@
     
     
     &__inner {
-        padding: 120px 0 60px;
+        padding: 140px 0 60px;
         overflow: hidden;
         position: relative;
-    }
-
-    &__hands {
-        position: absolute;
-        bottom: 180px;
-        left: -1%;
-        width: 18%;
-        z-index: 500;
-        // transform: rotate(-16deg);
-        
-        img {
-            transition-delay: 1s;
-        }
-    }
-
-    &__axe {
-        position: absolute;
-        top: 200px;
-        right: 5%;
-        width: 18%;
-        z-index: 500;
-        // transform: rotate(-16deg);
-        
-        img {
-            transition-delay: 1s;
-        }
     }
 
     &__main {
@@ -109,7 +68,7 @@
         user-select: none;
         position: relative;
         @include maxWidth(1100px);
-        margin: 0px auto 0;
+        margin: 0 auto 0;
     }
 
     &__slide {
@@ -149,22 +108,11 @@
     }
 
     &__list {
-        &--data {
-            max-width: 500px;
-            @include flex($wrap:wrap, $justify:space-between);
-        }
-
         &--tab {
-            @include absCenter;
-            top: 280px;
-            // top: -80px;
-            // position: absolute;
-            // top: 0;
-            // left: 20%;
-            // position: relative;
-            // top: -40px;
-            @include maxWidth(400px);
-            // width: 90%;
+            position: absolute;
+            bottom: 100px;
+            right: 20%;
+            @include maxWidth(480px);
             margin: 20px auto 0;
             @include flex($wrap:wrap, $justify:space-between);
             z-index: 5000;
@@ -243,14 +191,21 @@
         &--chara {
             position: relative;
             img {
-                width: 300px;
+                width: 280px;
             }
             
             .-front01 {
                 position: relative;
-                margin-right: 180px;
+                margin-right: 240px;
                 z-index: 2;
             }
+        }
+
+        &--txtFr {
+            position: absolute;
+            top: 180px;
+            right: -32%;
+            width: 480px;
         }
     }
 
@@ -407,64 +362,4 @@
 [data-character="9"] .p-chara__item--bg:nth-child(9),
 [data-character="10"] .p-chara__item--bg:nth-child(10) {
     opacity: 1;
-}
-
-
-
-
-.section__top {
-    @include absAll;
-    top: -20px;
-    z-index: 300;
-    background: url(../../assets/images/section__top.png) 100% 0 repeat-x;
-    background-size: 100%;
-    width: 100%;
-    // height: 100%;
-    // height: 1200px;
-    pointer-events: none;
-    animation: animation-glNav-bg 0.8s ease-in-out infinite;
-    // transition: margin 1s ease;
-
-    // &.is-anim {
-    //     margin-top: -41%;
-    // }
-}
-
-.section__bottom {
-    position: absolute;
-    z-index: 300;
-    bottom: 0;
-    left: 0;
-    background: url(../../assets/images/footer_bg.png) 100% 0 repeat-x;
-    background-size: 100%;
-    width: 100%;
-    height: 280px;
-    animation: animation-glNav-bg 2s ease-in-out infinite;
-}
-
-.section__bg {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    // top: 50px;
-    top: 0;
-    left: 0;
-    // animation: animation-opt 10s infinite alternate;   
-    // filter: grayscale(100%);
-    // background: rgb(2, 0, 9);
-    // background: url(../../assets/images/gallery_bg.jpg) 50% 50% no-repeat;
-    // background: url(../../assets/images/meani1.gif) top center no-repeat;
-    background: url(../../assets/images/story_bg.png) bottom no-repeat;
-    background-size: cover;
-    filter: blur(3px);
-    margin: -3px;
-    width: calc(100% + 6px);
-    // filter: grayscale(100%);
-    z-index: 1;
-
-    &::after {
-        content: "";
-        @include absAll;
-        // background: rgba($color: #000, $alpha: 0.4);
-    }
 }

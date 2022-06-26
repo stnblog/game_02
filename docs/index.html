@@ -339,9 +339,9 @@
         <img src="./assets/images/main_bg.png" alt="">
     </div>
     <h2 class="p-mv__logo">
-        <span>
-            <img src="./assets/images/top_mv_logo.png" alt="" class="inview js-scroll--slideRight">
-        </span>
+        <div class="inview js-scroll--slideRight">
+            <img src="./assets/images/top_mv_logo.png" alt="">
+        </div>
     </h2>
     <div class="p-mv__inner">
 
@@ -366,12 +366,16 @@
 </section>
 
 <section class="p-news">
-
+    <div class="smoke smoke__top"></div>
+    <div class="smoke smoke__bottom"></div>
+    <h2 class="c-sec__ttl">
+        <span class="-en">お知らせ</span>
+        <span class="-ja">- TOPICS -</span>
+    </h2>
 
     <div class="p-news__inner">
 
-
-        <div class="swiper-container c-slider index__slider js-index-slider">
+        <div class="swiper-container c-slider index__slider js-index-slider" style="overflow: hidden;">
             <div class="swiper-wrapper c-slider__wrap index__slideWrap">
                 <div class="swiper-slide c-slider__slide index__slide">
                     <a href="/work/detail" class="inview">
@@ -385,7 +389,10 @@
                             </div>
                         </figure>
                         <div class="p-news__detail">
-                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                            <p class="p-news__txt">
+                                2020年12月1日<br />
+                                アップデートファイル配信のお知らせ
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -401,7 +408,8 @@
                             </div>
                         </figure>
                         <div class="p-news__detail">
-                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                            <p class="p-news__txt">
+                                2020年12月1日<br />アップデートファイル配信のお知らせ</p>
                         </div>
                     </a>
                 </div>
@@ -417,7 +425,8 @@
                             </div>
                         </figure>
                         <div class="p-news__detail">
-                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                            <p class="p-news__txt">
+                                2020年12月1日<br />アップデートファイル配信のお知らせ</p>
                         </div>
                     </a>
                 </div>
@@ -433,7 +442,7 @@
                             </div>
                         </figure>
                         <div class="p-news__detail">
-                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                            <p class="p-news__txt">2020年12月1日<br />アップデートファイル配信のお知らせ</p>
                         </div>
                     </a>
                 </div>
@@ -449,7 +458,7 @@
                             </div>
                         </figure>
                         <div class="p-news__detail">
-                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                            <p class="p-news__txt">2020年12月1日<br />アップデートファイル配信のお知らせ</p>
                         </div>
                     </a>
                 </div>
@@ -492,11 +501,6 @@
 
         <div class="smoke smoke__top"></div>
         <div class="smoke smoke__bottom"></div>
-
-        <!-- <div class="p-mv__fog">
-            <div class="p-mv__fog--img p-mv__fog--first"></div>
-            <div class="p-mv__fog--img p-mv__fog--second"></div>
-        </div> -->
         <!-- <div class="p-chara__hands">
             <img src="./assets/images/hand.png" alt="" class="inview js-scroll--slideRight">
         </div> -->
@@ -555,7 +559,7 @@
 
             <div class="p-chara__tab">
 
-                <h2 class="c-sec__ttl" style="margin-top: 20px;">
+                <h2 class="c-sec__ttl">
                     <span class="-en">人物紹介</span>
                     <span class="-ja">- CHARACTERS -</span>
                 </h2>
@@ -567,16 +571,16 @@
 
 
                 <div class="swiper-container p-chara__slider">
-                
+
                     <div class="swiper-wrapper" style="align-items: flex-end;">
                         <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__bg--slide">
-                                清水恵<br />
-                                <span>Shimizu&nbsp;Megumi</span>
-                            </div>
                             <figure class="p-chara__img--chara">
                                 <img src="./assets/images/test_01.png" alt="" class="-front01">
                             </figure>
+                            <div class="p-chara__bg--slide">
+                                登場人物&nbsp;01<br />
+                                <span>Tojo Zinbutu</span>
+                            </div>
                         </div>
                         <div class="swiper-slide js-modal-open">
                             <div class="p-chara__bg--slide">
@@ -593,7 +597,7 @@
                                 <span>Maekawa&nbsp;Atsushi</span>
                             </div>
                             <figure class="p-chara__img--chara">
-                                <img src="./assets/images/test_03.png" alt="" class="-front01" style="width: 320px;">
+                                <img src="./assets/images/test_03.png" alt="" class="-front01" style="width: 300px;">
                             </figure>
                         </div>
                     </div>
@@ -603,7 +607,7 @@
 
 
                 </div>
-<!-- 
+
                 <ul class="p-chara__list--tab">
                     <li class="p-chara__item--tab js-chara-tab" data-num="0">
                         <figure>
@@ -630,7 +634,7 @@
                             <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
                         </figure>
                     </li>
-                </ul> -->
+                </ul>
 
             </div>
             <div class="smoke smoke__bottom"></div>
@@ -718,7 +722,7 @@
     <!-- <div class="smoke smoke__right"></div>
     <div class="smoke smoke__left"></div> -->
 
-    <div class="section__bg">
+    <div class="c-sec__bg">
         <div class="p-mv__fog">
             <div class="p-mv__fog--img p-mv__fog--first"></div>
             <div class="p-mv__fog--img p-mv__fog--second"></div>
