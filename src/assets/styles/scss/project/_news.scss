@@ -1,9 +1,20 @@
 .p-news {
   position: relative;
   overflow: hidden;
-  z-index: 0;
+  z-index: 3;
   background: #000;
+  padding: 20px 0 10px;
   // margin-bottom: 120px;
+
+
+  // &::before {
+  //   @include absAll;
+  //   content: "";
+  //   background: url(../../assets/images/redmist.png);
+  //   opacity: 0.1;
+  //   background-size: 2000px;
+  //   animation: animation-opt 4s infinite alternate;
+  // };
 
   a {
     display: block;

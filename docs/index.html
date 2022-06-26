@@ -335,7 +335,14 @@
 <section class="p-mv">
     <!-- <div class="smoke smoke__right"></div>
     <div class="smoke smoke__left"></div> -->
-    <div class="p-mv__bg"></div>
+    <div class="p-mv__bg">
+        <img src="./assets/images/main_bg.png" alt="">
+    </div>
+    <h2 class="p-mv__logo">
+        <span>
+            <img src="./assets/images/top_mv_logo.png" alt="" class="inview js-scroll--slideRight">
+        </span>
+    </h2>
     <div class="p-mv__inner">
 
         <!-- <figure class="p-mv__img inview">
@@ -343,11 +350,7 @@
             <img src="./assets/images/mv_main_sp.jpg" alt="メインビジュアル" class="u-dp-sp--sm inview">
         </figure> -->
 
-        <!-- <h2 class="p-mv__logo">
-            <span>
-                <img src="./assets/images/logo.png" alt="">
-            </span>
-        </h2> -->
+
 
         <!-- <figure class="p-mv__chara inview">
             <img src="./assets/images/mv_main_title.png" alt="inview">
@@ -356,16 +359,13 @@
             <img src="./assets/images/mv_main_title_02.png" alt="inview">
         </figure> -->
 
-        <div class="p-mv__fog">
-            <div class="p-mv__fog--img p-mv__fog--first"></div>
-            <div class="p-mv__fog--img p-mv__fog--second"></div>
-        </div>
 
-        <div class="smoke smoke__bottom"></div>
+
     </div>
+    <div class="smoke smoke__bottom"></div>
 </section>
 
-<!-- <section class="p-news">
+<section class="p-news">
 
 
     <div class="p-news__inner">
@@ -437,6 +437,22 @@
                         </div>
                     </a>
                 </div>
+                <div class="swiper-slide c-slider__slide index__slide">
+                    <a href="/work/detail" class="inview">
+                        <figure class="c-picture__img p-news__img">
+                            <picture class="c-picture__img--inner">
+                                <img src="./assets/images/gallery_img_1.png" alt="メインビジュアル">
+                            </picture>
+                            <div class="p-news__meta">
+                                <span class="-left">GAME</span>
+                                <span class="-right">2022.03.23</span>
+                            </div>
+                        </figure>
+                        <div class="p-news__detail">
+                            <p class="p-news__txt">アップデートファイル配信のお知らせ</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -463,7 +479,7 @@
         </div>
     </div>
 
-</section> -->
+</section>
 
 
 
@@ -472,7 +488,15 @@
 
     <section id="about" class="c-sec p-story inview">
 
+        <div class="p-story__bg inview js-scroll--fadeUp"></div>
+
         <div class="smoke smoke__top"></div>
+        <div class="smoke smoke__bottom"></div>
+
+        <!-- <div class="p-mv__fog">
+            <div class="p-mv__fog--img p-mv__fog--first"></div>
+            <div class="p-mv__fog--img p-mv__fog--second"></div>
+        </div> -->
         <!-- <div class="p-chara__hands">
             <img src="./assets/images/hand.png" alt="" class="inview js-scroll--slideRight">
         </div> -->
@@ -500,6 +524,8 @@
                     別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。<br />
                     <div class="" style="margin-top: 20px;"></div>
                     弱虫やーい。と囃したからである。<br />
+                    親譲りの無鉄砲で小供の時から損ばかりしている。<br />
+                    小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br />
                 </li>
             </ul>
 
@@ -512,7 +538,11 @@
 
     <section id="chara" class="p-chara">
 
-        <!-- <div class="smoke smoke__top"></div> -->
+        <!-- <div class="p-mv__fog">
+            <div class="p-mv__fog--img p-mv__fog--first"></div>
+            <div class="p-mv__fog--img p-mv__fog--second"></div>
+        </div> -->
+        <div class="smoke smoke__top"></div>
 
         <div class="p-chara__inner">
 
@@ -529,64 +559,78 @@
                     <span class="-en">人物紹介</span>
                     <span class="-ja">- CHARACTERS -</span>
                 </h2>
+                <!-- <em>
+                    夜に迷い込んだ子供たち
+                </em> -->
 
                 <div class="p-chara__bg"></div>
 
 
                 <div class="swiper-container p-chara__slider">
+                
                     <div class="swiper-wrapper" style="align-items: flex-end;">
                         <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__img--title">
-                                <img src="./assets/images/charaName_01.png" alt="">
+                            <div class="p-chara__bg--slide">
+                                清水恵<br />
+                                <span>Shimizu&nbsp;Megumi</span>
                             </div>
-                            <div class="p-chara__img--name">
-                                <img src="./assets/images/charaName_02.png" alt="">
-                            </div>
-                            <img src="./assets/images/test_01.png" alt="" style="width: 300px; margin-left: 280px;">
+                            <figure class="p-chara__img--chara">
+                                <img src="./assets/images/test_01.png" alt="" class="-front01">
+                            </figure>
                         </div>
                         <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__img--title">
-                                <img src="./assets/images/charaName_01.png" alt="">
+                            <div class="p-chara__bg--slide">
+                                前川敦<br />
+                                <span>Maekawa&nbsp;Atsushi</span>
                             </div>
-                            <div class="p-chara__img--name">
-                                <img src="./assets/images/charaName_02.png" alt="">
-                            </div>
-                            <img src="./assets/images/test_03.png" alt="" style="width: 320px; margin-left: 280px;">
+                            <figure class="p-chara__img--chara">
+                                <img src="./assets/images/test_02.png" alt="" class="-front01">
+                            </figure>
                         </div>
                         <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__img--title">
-                                <img src="./assets/images/charaName_01.png" alt="">
+                            <div class="p-chara__bg--slide">
+                                前川敦<br />
+                                <span>Maekawa&nbsp;Atsushi</span>
                             </div>
-                            <div class="p-chara__img--name">
-                                <img src="./assets/images/charaName_02.png" alt="">
-                            </div>
-                            <img src="./assets/images/test_01.png" alt="" style="width: 320px; margin-left: 280px;">
+                            <figure class="p-chara__img--chara">
+                                <img src="./assets/images/test_03.png" alt="" class="-front01" style="width: 320px;">
+                            </figure>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
 
 
-                    <ul class="p-chara__list--tab">
-                        <li class="p-chara__item--tab js-chara-tab" data-num="0">
-                            <figure>
-                                <img src="./assets/images/charaBoard_03.png" alt="" class="inview js-scroll--fadeUp">
-                            </figure>
-                        </li>
-                        <li class="p-chara__item--tab js-chara-tab" data-num="1">
-                            <figure>
-                                <img src="./assets/images/charaBoard_02.png" alt="" class="inview js-scroll--fadeUp">
-                            </figure>
-                        </li>
-                        <li class="p-chara__item--tab js-chara-tab" data-num="2">
-                            <figure>
-                                <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
-                            </figure>
-                        </li>
-                    </ul>
+
                 </div>
-
-
+<!-- 
+                <ul class="p-chara__list--tab">
+                    <li class="p-chara__item--tab js-chara-tab" data-num="0">
+                        <figure>
+                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                        </figure>
+                    </li>
+                    <li class="p-chara__item--tab js-chara-tab" data-num="1">
+                        <figure>
+                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                        </figure>
+                    </li>
+                    <li class="p-chara__item--tab js-chara-tab" data-num="2">
+                        <figure>
+                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                        </figure>
+                    </li>
+                    <li class="p-chara__item--tab js-chara-tab" data-num="2">
+                        <figure>
+                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                        </figure>
+                    </li>
+                    <li class="p-chara__item--tab js-chara-tab" data-num="2">
+                        <figure>
+                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                        </figure>
+                    </li>
+                </ul> -->
 
             </div>
             <div class="smoke smoke__bottom"></div>
@@ -594,8 +638,8 @@
     </section>
 
 
-    <section id="gallery" class="p-gallery">
-
+    <section id="system" class="p-gallery">
+        <div class="smoke smoke__top"></div>
         <!-- <div class="section__top inview"></div> -->
 
         <!-- <div class="smoke smoke__right"></div>
@@ -609,8 +653,8 @@
                 <img src="./assets/images/title_gallery.png" alt="">
             </h3> -->
             <h2 class="c-sec__ttl">
-                <span class="-en">システム</span>
-                <span class="-ja animate-heading">- SYSTEM -</span>
+                <span class="-en">あそびかた</span>
+                <span class="-ja">- SYSTEM -</span>
             </h2>
             <!-- <ul class="p-gallery__list">
                 <li class="p-gallery__item">
@@ -674,7 +718,12 @@
     <!-- <div class="smoke smoke__right"></div>
     <div class="smoke smoke__left"></div> -->
 
-    <div class="section__bg"></div>
+    <div class="section__bg">
+        <div class="p-mv__fog">
+            <div class="p-mv__fog--img p-mv__fog--first"></div>
+            <div class="p-mv__fog--img p-mv__fog--second"></div>
+        </div>
+    </div>
 </main>
 
 

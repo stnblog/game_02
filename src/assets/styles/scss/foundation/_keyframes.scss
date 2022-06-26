@@ -71,12 +71,12 @@
 
 @keyframes kf-animate-slide {
   0% {
-    opacity: 0;
-    transform: translateX(10%)
+    // opacity: 0.4;
+    transform: translateX(2%)
   }
 
   100% {
-    opacity: 1;
+    // opacity: 1;
     transform: translateX(0)
   }
 }
@@ -126,16 +126,16 @@
 
 @keyframes animation-opt {
   from {
-    opacity: 1;
+    opacity: 0.3;
   }
   25% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.1;
   }
   to {
-    opacity: 1;
+    opacity: 0.4;
   }
 }
 

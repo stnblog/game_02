@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
   // margin-top: -240px;
-  padding: 100px 0 140px;
   height: 1000px;
+  z-index: 50;
   // margin: 260px 0 140px;
   // padding: 120px 0 130px;
   &::before {
@@ -26,7 +26,7 @@
   
   &__inner {
     position: relative;
-    // min-height: 100vh;
+    padding: 140px 0 80px;
     @include maxWidth(1200px);
   }
 
@@ -71,29 +71,37 @@
 // }
 
 
-.swiper-slide-active {
-  cursor: pointer;
-  opacity: 1 !important;
-  pointer-events: initial !important;
 
+.p-chara__slider,
+.p-chara__slider--modal
+{
+  .swiper-slide-active {
+    cursor: pointer;
+    opacity: 1 !important;
+    pointer-events: initial !important;
   
-  img {
-    transform: scale(1) !important;
+    
+    img {
+      transform: scale(1) !important;
+    }
   }
+
+  .swiper-slide {
+    opacity: 0;
+    transition: all .6s ease;
+    pointer-events: none;
+  
+    
+    img {
+      cursor: pointer;
+      transition: all 1s ease;
+      transform: scale(0.7);
+    }
+  } 
+  
 }
 
-.swiper-slide {
-  opacity: 0;
-  transition: all .6s ease;
-  pointer-events: none;
 
-  
-  img {
-    cursor: pointer;
-    transition: all 1s ease;
-    transform: scale(0.7);
-  }
-} 
 
 
 .swiper-slide-shadow-left {
@@ -110,13 +118,13 @@
   background: rgba($color: #0c5f92, $alpha: 0.25);
   box-shadow: 1px 2px 12px rgba($color: #fdfdfd, $alpha: 1.0);
   border-radius: 6px;
-  height: 4.14375vw;
-  width: 4.3625vw;
+  height: 3.74375vw;
+  width: 3.8625vw;
   &::after {
     content: "";
     background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
-    height: 4.14375vw;
-    width: 4.3625vw;
+    height: 3.74375vw;
+    width: 3.8625vw;
     display: block;
   }
 }

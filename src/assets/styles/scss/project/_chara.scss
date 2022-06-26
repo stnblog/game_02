@@ -3,7 +3,16 @@
     overflow: hidden;
     // margin: -90px 0 0;
     z-index: 500;
-    
+    // background: url(../../assets/images/story_bg.png) bottom no-repeat;
+
+    &::before {
+        content: "";
+        @include absAll;
+        background: rgba($color: #000000, $alpha: 0.45);
+        // background: url(../../assets/images/redmist.png);
+        // opacity: 0.3;
+        // background-size: cover;
+    }
     
     &__heading {
         @include maxWidth(320px);
@@ -26,11 +35,39 @@
         @include absAll;
         // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
         // background-size: cover;
+
+        &--slide {
+            position: absolute;
+            z-index: 2;
+            top: 80px;
+            text-align: left;
+            left: 60%;
+            // margin-left: 20px;
+            font-size: 54px;
+            font-weight: 500;
+            line-height: 0.6;
+            letter-spacing: 0.1em;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            // line-height: 0.6;
+            text-shadow: 1px 8px 12px rgb(0, 0, 0);
+
+            span {
+                // margin-top: 8px;
+                position: relative;
+                left: -10px;
+                top: 4px;
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 0;
+                text-shadow: 1px 2px 4px rgb(0, 0, 0);
+            }
+        }
     }
     
     
     &__inner {
-        padding: 80px 0 170px;
+        padding: 120px 0 60px;
         overflow: hidden;
         position: relative;
     }
@@ -72,7 +109,7 @@
         user-select: none;
         position: relative;
         @include maxWidth(1100px);
-        margin: 40px auto 0;
+        margin: 0px auto 0;
     }
 
     &__slide {
@@ -103,7 +140,8 @@
         em {
             // color: #000;
             font-style: normal;
-            font-size: 18px;
+            font-size: 24px;
+            // letter-spacing: 0.2em;
             // color: $color-black;
             margin: 0 0 40px;
             text-shadow: 1px 2px 4px #000000;
@@ -117,14 +155,17 @@
         }
 
         &--tab {
-            position: absolute;
-            bottom: 60px;
-            right: -100px;
+            @include absCenter;
+            top: 280px;
+            // top: -80px;
+            // position: absolute;
+            // top: 0;
+            // left: 20%;
             // position: relative;
             // top: -40px;
-            @include maxWidth(350px);
+            @include maxWidth(400px);
             // width: 90%;
-            // margin: auto;
+            margin: 20px auto 0;
             @include flex($wrap:wrap, $justify:space-between);
             z-index: 5000;
         }
@@ -188,8 +229,8 @@
         }
 
         &--tab {
-            width: 33%;
-            // margin: 0 4px;
+            width: 19%;
+            margin: 0 2px;
             cursor: pointer;
             position: relative;
             transition-delay: .1s;
@@ -198,22 +239,18 @@
     }
 
     &__img {
-        &--title {
-            // display: none;
-            position: absolute;
-            left: -8.4%;
-            top: 110px;
-            z-index: 500;
-            width: 390px;
-            // z-index: -1;
-        }
 
-        &--name {
-            display: none;
-            position: absolute;
-            left: 130px;
-            top: 220px;
-            width: 260px;
+        &--chara {
+            position: relative;
+            img {
+                width: 300px;
+            }
+            
+            .-front01 {
+                position: relative;
+                margin-right: 180px;
+                z-index: 2;
+            }
         }
     }
 
@@ -409,7 +446,8 @@
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: 50px;
+    // top: 50px;
+    top: 0;
     left: 0;
     // animation: animation-opt 10s infinite alternate;   
     // filter: grayscale(100%);
@@ -418,33 +456,15 @@
     // background: url(../../assets/images/meani1.gif) top center no-repeat;
     background: url(../../assets/images/story_bg.png) bottom no-repeat;
     background-size: cover;
-    filter: blur(2px);
-    margin: -2px;
-    width: calc(100% + 4px);
+    filter: blur(3px);
+    margin: -3px;
+    width: calc(100% + 6px);
     // filter: grayscale(100%);
-    z-index: -5;
+    z-index: 1;
 
     &::after {
         content: "";
         @include absAll;
-        background: rgba($color: #000, $alpha: 0.35);
+        // background: rgba($color: #000, $alpha: 0.4);
     }
-}
-
-
-
-.sec__frame {
-    position: relative;
-    --x-gradient: linear-gradient(90deg, #fff 0 80px, transparent 0 calc(100% - 80px), #fff calc(100% - 80px));
-    --y-gradient: linear-gradient(#fff 0 80px, transparent 0 calc(100% - 80px), #fff calc(100% - 80px));
-    padding: 6px;
-    background-image:
-        var(--x-gradient),
-        var(--y-gradient),
-        var(--x-gradient),
-        var(--y-gradient);
-    background-repeat: no-repeat;
-    background-position: top, right, bottom, left;
-    background-size: 100% 7px, 7px 100%, 100% 7px, 7px 100%;
-    box-shadow: 0px 0px 40px 2px rgba(91, 114, 121, 0.5);
 }

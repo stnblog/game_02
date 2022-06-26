@@ -1,10 +1,10 @@
 .smoke {
     position: absolute;
     padding-top: 2.25%;
-    background: linear-gradient(180deg, rgba(9, 8, 6, 0), #010204 50%);
+    background: linear-gradient(180deg, rgba(6, 6, 9, 0), #010204 50%);
     z-index: 300;
     display: block;
-    height: 100px;
+    height: 80px;
     width: 100%;
 
     @include mq-target(sm) {
@@ -19,12 +19,12 @@
 
     &__top {
         top: 0;
-        background: linear-gradient(360deg, rgba(9, 8, 6, 0), #010204 80%);
+        background: linear-gradient(360deg, rgba(9, 8, 6, 0), #010204 90%);
     }
 
     &__bottom {
         bottom: 0;
-        background: linear-gradient(180deg, rgba(9, 8, 6, 0), #010204 80%);
+        background: linear-gradient(180deg, rgba(9, 8, 6, 0), #010204 90%);
     }
 }
 

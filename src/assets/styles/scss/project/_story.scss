@@ -1,11 +1,11 @@
 .p-story {
     position: relative;
-    min-height: 1000px;
+    min-height: 960px;
     overflow: hidden;
     // margin-bottom: 150px;
     // margin: -200px 0 0;
-    z-index: 2000;
-    
+    // z-index: 2000;
+
     .c-sec__ttl {
         // text-align: left;
         text-shadow: 1px 2px 6px $color-black;
@@ -16,10 +16,12 @@
     &::before {
         content: "";
         @include absAll;
-        // transform: translateY(-100%);
-        // background: url(../../assets/images/bg_2.webp) 50% 50% no-repeat;
+        background: url(../../assets/images/redmist.png);
+        opacity: 0.4;
         background-size: cover;
-        transition: all .4s cubic-bezier(.7,.1,.75,.4);
+        z-index: 6;
+        // animation: animation-opt 4s infinite alternate;
+
     }
 
     &.is-anim {
@@ -29,22 +31,24 @@
         }
     }
     
-    &::after {
-        content: "";
+    
+    &__bg {
         @include absAll;
-        // height: 90%;
-        // background: rgba($color: #000000, $alpha: 0.65);
-        
-        // animation: animation-opt 2s infinite alternate;   
+        // top: 20px;
+        background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
+        background-size: 1800px;
+        // transition: all .4s cubic-bezier(.7,.1,.75,.4);
+        animation: kf-animate-slide 4s infinite alternate;   
     }
         
     &__inner {
-        padding: 120px 0 0;
+        padding: 60px 0 0;
         // @include maxWidth(600px);
         position: relative;
         // width: 90%;
+        top: -50px;
         z-index: 2;
-        @include flexCenter;
+        // @include flexCenter;
         // display: flex;
         // align-items: center;
         // justify-content: space-between;
@@ -53,7 +57,7 @@
     &__list {
         display: flex;
         width: 100%;
-        @include maxWidth(960px);
+        @include maxWidth(900px);
         margin-top: 30px;
         // padding-bottom: 2%;
     }
@@ -64,20 +68,19 @@
             top: -40px;
             width: 200px;
             padding-right: 2%;
-            border-right: 1px solid rgba(255, 255, 255, 0.8);
+            border-right: 1px solid rgba(234, 31, 31, 0.8);
         }
 
         &--right {
             // width: 60%;
-            font-size: 20px;
-            max-width: 56%;
+            max-width: 58%;
             margin: 0 auto;
             // letter-spacing: 0.17em;
             // text-align: left;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 18px;
             line-height: 2.2;
-            text-shadow: 1px 2px 3px rgb(0, 0, 0);
+            text-shadow: 1px 8px 12px rgb(0, 0, 0);
             text-transform: uppercase;
             // animation: flicker 1.5s infinite alternate;
         }
