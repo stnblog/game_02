@@ -38,11 +38,11 @@
         background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
         background-size: 1800px;
         // transition: all .4s cubic-bezier(.7,.1,.75,.4);
-        animation: kf-animate-slide 4s infinite alternate;   
+        // animation: kf-animate-slide 4s infinite alternate;   
     }
         
     &__inner {
-        padding: 60px 0 0;
+        padding: 40px 0 0;
         // @include maxWidth(600px);
         position: relative;
         // width: 90%;
