@@ -32,17 +32,17 @@
   &__inner {
       // overflow: hidden;
     position: relative;
-    @include maxWidth(1400px);
+    @include maxWidth(1300px);
     padding: 0 15px;
-
+    
     @include mq-target(lg) {
       // padding-left: 8%;
       padding: 0 8%;
     }
   }
-
+  
   &__slider {
-    @include maxWidth(1400px);
+    // @include maxWidth(1600px);
   }
 
   &__img {

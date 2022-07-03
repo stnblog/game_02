@@ -52,7 +52,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="p-chara__foot inview js-scroll--fadeUp">
+                                        <div class="p-chara__foot">
                                             <div class="p-chara__footInner">
                                                 <figure class="p-chara__img">
                                                     <img src="./assets/images/test_01.png" alt="" class="">
@@ -88,7 +88,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="p-chara__foot inview js-scroll--fadeUp">
+                                        <div class="p-chara__foot">
                                             <div class="p-chara__footInner">
                                                 <figure class="p-chara__img">
                                                     <img src="./assets/images/test_02.png" alt="">
@@ -99,7 +99,7 @@
                                 </li>
                                 <li class="swiper-slide p-chara__slide">
                                     <div class="inview js-scroll--coverLeft">
-                                        <div class="p-chara__head p-chara__head--01 inview js-scroll--fadeUp">
+                                        <div class="p-chara__head p-chara__head--01">
                                             <p class="p-chara__title">“キャラクターの肩書”</p>
                                             <h3 class="p-chara__name">キャラクター03</h3>
                                             <p class="p-chara__txt">
@@ -124,7 +124,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="p-chara__foot inview js-scroll--fadeUp">
+                                        <div class="p-chara__foot">
                                             <div class="p-chara__footInner">
                                                 <figure class="p-chara__img">
                                                     <img src="./assets/images/test_03.png" alt="">
@@ -317,7 +317,7 @@
 
     <section id="about" class="c-sec p-story inview">
 
-        <div class="p-story__bg inview js-scroll--fadeUp"></div>
+        <div class="p-story__bg"></div>
 
         <div class="smoke smoke__top"></div>
         <div class="smoke smoke__bottom"></div>
@@ -325,36 +325,46 @@
             <img src="./assets/images/hand.png" alt="" class="inview js-scroll--slideRight">
         </div> -->
 
-        <!-- <div class="p-chara__axe">
-            <img src="./assets/images/axe.png" alt="" class="inview js-scroll--slideLeft">
-        </div> -->
+
+        <div class="p-story__obj inview">
+            <img src="./assets/images/story_obj_01.png" alt="" class="--one js-rellax" data-rellax-speed="1"
+                data-rellax-percentage="1">
+            <img src="./assets/images/story_obj_02.png" alt="" class="--two js-rellax" data-rellax-speed="1"
+                data-rellax-percentage="1">
+            <!-- <img src="./assets/images/story_obj_02.png" alt="" class="--three js-rellax" data-rellax-speed="0.5" data-rellax-percentage="1"> -->
+            <!-- <img src="./assets/images/story_obj_02.png" alt="" class="--four js-rellax" data-rellax-speed="0.5" data-rellax-percentage="1"> -->
+        </div>
         <div class="p-story__inner">
 
 
 
-            <h2 class="c-sec__ttl">
-                <span class="-en animate-heading">ものがたり</span>
-                <span class="-ja">- story -</span>
+            <h2 class="c-sec__ttl" style="margin-bottom: 40px;">
+                <img src="./assets/images/title_story.png" alt="" style="width: 30vw;">
+                <!-- <span class="-en animate-heading">ものがたり</span> -->
+                <!-- <span class="-ja">- story -</span> -->
             </h2>
 
             <ul class="p-story__list">
-                <!-- <li class="p-story__item--left">
-                    <img src="./assets/images/about-caption.png" alt="">
-                </li> -->
-                <li class="p-story__item--right">
-                    親譲りの無鉄砲で小供の時から損ばかりしている。<br />
-                    小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br />
-                    なぜそんな無闇をしたと聞く人があるかも知れぬ。<br />
-                    別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。<br />
-                    <div class="" style="margin-top: 20px;"></div>
-                    弱虫やーい。と囃したからである。<br />
-                    親譲りの無鉄砲で小供の時から損ばかりしている。<br />
-                    小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。<br />
-                </li>
-            </ul>
 
-            <div class="">
-            </div>
+                <li class="p-story__item--right">
+                    <p>
+                        親譲りの無鉄砲で小供の時から損ばかりしている。<br />
+                        小学校に居る時分学校の二階から飛び降りて<br />一週間ほど腰を抜かした事がある。
+                    </p>
+                    <p>
+                        なぜそんな無闇をしたと聞く人があるかも知れぬ。<br />
+                        <span>別段深い理由でもない。<br /></span>
+                        新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。
+                    </p>
+                    <p>
+                        <span>弱虫やーい。と囃したからである。<br /></span>
+                        この次は抜かさずに飛んで見せますと答えた。
+                    </p>
+                </li>
+                <!-- <li class="p-story__item--left">
+                    <img src="./assets/images/test_03_beta.png" alt="">
+                </li> -->
+            </ul>
         </div>
     </section>
 
@@ -362,72 +372,129 @@
 
     <section id="chara" class="p-chara">
 
-        <!-- <div class="p-mv__fog">
-            <div class="p-mv__fog--img p-mv__fog--first"></div>
-            <div class="p-mv__fog--img p-mv__fog--second"></div>
-        </div> -->
         <div class="smoke smoke__top"></div>
 
         <div class="p-chara__inner">
-
-
-
-            <!-- <div class="smoke smoke--chara smoke__right smoke__right--chara"></div>
-            <div class="smoke smoke--chara smoke__left smoke__left--chara"></div> -->
-
-
-
-            <div class="p-chara__tab">
-
-                <h2 class="c-sec__ttl">
-                    <span class="-en animate-heading">じんぶつ</span>
-                    <span class="-ja">- CHARACTERS -</span>
-                </h2>
-                <!-- <em>
+            <h2 class="c-sec__ttl" style="margin-top: 20px;">
+                <!-- <img src="./assets/images/title_story.png" alt="" style="width: 30vw;"> -->
+                <span class="-en animate-heading">人物紹介</span>
+                <span class="-ja">- characters -</span>
+            </h2>
+            <!-- <h2 class="c-sec__ttl" style="margin-bottom: 0; width: 38vw;">
+                <img src="./assets/images/title_story.png" alt="">
+            </h2> -->
+            <!-- <em>
                     夜に迷い込んだ子供たち
                 </em> -->
 
-                <div class="p-chara__bg"></div>
+            <!-- <div class="p-chara__bg"></div> -->
+
+            <div class="p-chara__bg inview js-scroll--fadeDown">
+                <ul class="p-chara__list--bg">
+                    <li class="p-chara__item--bg p-chara__item--bg01"></li>
+                    <li class="p-chara__item--bg p-chara__item--bg02"></li>
+                    <li class="p-chara__item--bg p-chara__item--bg03"></li>
+                </ul>
+            </div>
+
+            <div class="swiper-container p-chara__slider">
+
+                <div class="swiper-wrapper" style="align-items: flex-end;">
+                    <div class="swiper-slide js-modal-open">
 
 
-                <div class="swiper-container p-chara__slider">
 
-                    <div class="swiper-wrapper" style="align-items: flex-end;">
-                        <div class="swiper-slide js-modal-open">
-                            <figure class="p-chara__img--chara">
-                                <img src="./assets/images/test_01.png" alt="" class="-front01">
-                            </figure>
-                            <div class="p-chara__bg--slide">
+                        <div class="p-chara__head">
+
+                            <div class="p-chara__heading--name">
                                 登場人物&nbsp;01<br />
-                                <span>Tojo Zinbutu</span>
+                                <span>- Tojo Zinbutu</span>
                             </div>
+
+
+                            <div class="p-chara__content">
+                                <p class="p-chara__txt">
+                                    本作の主人公。一見、温厚で物静かな文学少年。<br>
+                                    過去の体験からか同年代の若者にくらべ、やや特異な死生観を持ってしまった。<br>
+                                    七年前に交通事故に巻き込まれ、昏睡状態から回復した彼の目には『モノの壊れやすい線』が見えるようになっていた。あらゆるモノに死をもたらす線。それを抑制する手段と、人生の在り方を『先生』に与えられた事で、本来あるべき日常生活へと復帰している。
+                                </p>
+                            </div>
+
                         </div>
-                        <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__bg--slide">
-                                前川敦<br />
-                                <span>Maekawa&nbsp;Atsushi</span>
+
+                        <div class="p-chara__foot">
+                            <figure class="p-chara__img--chara" style="width: 480px;">
+                                <img src="./assets/images/test_03.png" alt="" class="-front01">
+                            </figure>
+                        </div>
+
+                        <!-- <div class="p-chara__bg--slide">
+                            登場人物&nbsp;01<br />
+                            <span>Tojo Zinbutu</span>
+                        </div> -->
+
+
+
+                    </div>
+                    <div class="swiper-slide js-modal-open">
+                        <div class="p-chara__head">
+
+                            <div class="p-chara__heading--name">
+                                登場人物&nbsp;01<br />
+                                <span>- Tojo Zinbutu</span>
                             </div>
-                            <figure class="p-chara__img--chara">
+
+
+                            <div class="p-chara__content">
+                                <p class="p-chara__txt">
+                                    本作の主人公。一見、温厚で物静かな文学少年。<br>
+                                    過去の体験からか同年代の若者にくらべ、やや特異な死生観を持ってしまった。<br>
+                                    七年前に交通事故に巻き込まれ、昏睡状態から回復した彼の目には『モノの壊れやすい線』が見えるようになっていた。あらゆるモノに死をもたらす線。それを抑制する手段と、人生の在り方を『先生』に与えられた事で、本来あるべき日常生活へと復帰している。
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="p-chara__foot">
+                            <figure class="p-chara__img--chara" style="width: 460px;">
                                 <img src="./assets/images/test_02.png" alt="" class="-front01">
                             </figure>
                         </div>
-                        <div class="swiper-slide js-modal-open">
-                            <div class="p-chara__bg--slide">
-                                前川敦<br />
-                                <span>Maekawa&nbsp;Atsushi</span>
+                    </div>
+                    <div class="swiper-slide js-modal-open">
+                        <div class="p-chara__head">
+
+                            <div class="p-chara__heading--name">
+                                登場人物&nbsp;01<br />
+                                <span>- Tojo Zinbutu</span>
                             </div>
-                            <figure class="p-chara__img--chara">
-                                <img src="./assets/images/test_03.png" alt="" class="-front01" style="width: 300px;">
+
+
+                            <div class="p-chara__content">
+                                <p class="p-chara__txt">
+                                    本作の主人公。一見、温厚で物静かな文学少年。<br>
+                                    過去の体験からか同年代の若者にくらべ、やや特異な死生観を持ってしまった。<br>
+                                    七年前に交通事故に巻き込まれ、昏睡状態から回復した彼の目には『モノの壊れやすい線』が見えるようになっていた。あらゆるモノに死をもたらす線。それを抑制する手段と、人生の在り方を『先生』に与えられた事で、本来あるべき日常生活へと復帰している。
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="p-chara__foot">
+                            <figure class="p-chara__img--chara" style="width: 420px;">
+                                <img src="./assets/images/test_01.png" alt="" class="-front01">
                             </figure>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-
-
-
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
 
+
+
+
+            </div>
+            <div class="p-chara__tab">
                 <ul class="p-chara__list--tab">
                     <li class="p-chara__item--tab js-chara-tab" data-num="0">
                         <figure>
@@ -436,12 +503,12 @@
                     </li>
                     <li class="p-chara__item--tab js-chara-tab" data-num="1">
                         <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                            <img src="./assets/images/charaBoard_02.png" alt="" class="inview js-scroll--fadeUp">
                         </figure>
                     </li>
                     <li class="p-chara__item--tab js-chara-tab" data-num="2">
                         <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="" class="inview js-scroll--fadeUp">
+                            <img src="./assets/images/charaBoard_03.png" alt="" class="inview js-scroll--fadeUp">
                         </figure>
                     </li>
                     <li class="p-chara__item--tab js-chara-tab" data-num="2">
@@ -476,9 +543,10 @@
             <!-- <h3 class="p-chara__heading">
                 <img src="./assets/images/title_gallery.png" alt="">
             </h3> -->
-            <h2 class="c-sec__ttl">
-                <span class="-en animate-heading">あそびかた</span>
-                <span class="-ja">- SYSTEM -</span>
+            <h2 class="c-sec__ttl" style="margin-top: 20px;">
+                <!-- <img src="./assets/images/title_story.png" alt="" style="width: 30vw;"> -->
+                <span class="-en animate-heading">取扱説明</span>
+                <span class="-ja">- system -</span>
             </h2>
             <!-- <ul class="p-gallery__list">
                 <li class="p-gallery__item">

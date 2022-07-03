@@ -1,27 +1,33 @@
 .p-story {
     position: relative;
-    min-height: 960px;
+    min-height: 880px;
     overflow: hidden;
-    // margin-bottom: 150px;
-    // margin: -200px 0 0;
-    // z-index: 2000;
 
     .c-sec__ttl {
         // text-align: left;
         text-shadow: 1px 2px 6px $color-black;
         // width: 30%;
-        
+        z-index: 50;
+        animation: animation-zoomImg 1.4s ease-in-out infinite;
+
     }
-    
+
     &::before {
         content: "";
         @include absAll;
         background: url(../../assets/images/redmist.png);
-        opacity: 0.25;
+        opacity: 0.35;
         background-size: cover;
         z-index: 6;
         // animation: animation-opt 4s infinite alternate;
 
+    }
+
+    &::after {
+        content: "";
+        @include absAll;
+        background: rgba($color: #000000, $alpha: 0.25);
+        z-index: 5;
     }
 
     &.is-anim {
@@ -30,59 +36,97 @@
             transform: translateY(0);
         }
     }
-    
-    
+
+
     &__bg {
         @include absAll;
-        // top: 20px;
+        top: 20px;
         background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
-        background-size: 1800px;
-        // transition: all .4s cubic-bezier(.7,.1,.75,.4);
-        // animation: kf-animate-slide 4s infinite alternate;   
-    }
-        
-    &__inner {
-        padding: 40px 0 0;
-        // @include maxWidth(600px);
-        position: relative;
-        // width: 90%;
-        top: -50px;
-        z-index: 2;
-        // @include flexCenter;
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
+        background-size: cover;
+        z-index: 5;
     }
 
-    &__list {
-        display: flex;
+    &__obj {
+        position: absolute;
+        top: 0%;
+        left: 50%;
         width: 100%;
-        @include maxWidth(900px);
-        margin-top: 30px;
-        // padding-bottom: 2%;
+        height: 100%;
+        min-width: 1280px;
+        max-width: 1280px;
+        margin: 0px auto;
+        transform: translateX(-50%);
+        opacity: 0;
+        z-index: 4;
+
+        &.is-anim {
+            animation: 0.4s ease-in 0.45s 1 normal forwards running ffSPMP;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            width: 400px;
+        }
+        
+        & .--one {
+            top: 28%;
+            left: 8%;
+            // transform: rotate(-2deg);
+        }
+
+        & .--two {
+            top: 46%;
+            right: 8%;
+            // transform: rotate(2deg);
+        }
+    }
+
+    &__inner {
+        position: relative;
+        top: -40px;
+    }
+
+
+    &__list {
+        position: relative;
+        @include flexCenter;
+        z-index: 10;
+        @include maxWidth(680px);
     }
 
     &__item {
         &--left {
             position: relative;
-            top: -40px;
-            width: 200px;
-            padding-right: 2%;
-            border-right: 1px solid rgba(234, 31, 31, 0.8);
+            // top: -40px;
+            width: 220px;
+            left: 8%;
+            // padding-right: 1%;
+            // border-left: 1px solid rgba(244, 194, 194, 0.8);
         }
 
         &--right {
-            // width: 60%;
-            max-width: 58%;
+            position: relative;
+            max-width: 76%;
             margin: 0 auto;
-            // letter-spacing: 0.17em;
-            // text-align: left;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 2.2;
-            text-shadow: 1px 8px 12px rgb(0, 0, 0);
-            text-transform: uppercase;
-            // animation: flicker 1.5s infinite alternate;
+            
+            p {
+                margin: 0 0 30px;
+                font-size: 18px;
+                line-height: 2.2;
+                text-shadow: 1px 2px 4px rgb(0, 0, 0);
+                text-transform: uppercase;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            span {
+                color: #b50000;
+                font-weight: 900;
+                text-shadow: 1px 1px 2px #1a0606, -1px 1px 2px #1a0606, 1px -1px 2px #1a0606, -1px -1px 2px #1a0606;
+            }
         }
     }
 }

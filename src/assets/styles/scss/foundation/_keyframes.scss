@@ -46,13 +46,12 @@
 @keyframes kf-animate-chars {
   0% {
     opacity: 0;
-    transform: translateY(50%);
+    transform: translateY(-50%);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0);
-    // transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -145,4 +144,28 @@
     transform: translate3d(0, 0, 0); }
   100% {
     transform: translate3d(-100%, 0, 0); } 
+  }
+
+
+  @keyframes mvBlurAnime {
+    0% {
+background: rgba($color: #000000, $alpha: 0);
+    }
+    30% {
+      background: rgba($color: #000000, $alpha: 0);
+    }
+    50% {
+      background: rgba($color: #000000, $alpha: 1);
+    }
+    70% {
+      background: rgba($color: #000000, $alpha: 0);
+    }
+    100% {
+      background: rgba($color: #000000, $alpha: 0);
+    }
+  }
+
+
+  @keyframes ffSPMP { 
+    100% { opacity: 1; }
   }

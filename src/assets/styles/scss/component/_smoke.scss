@@ -34,7 +34,7 @@
 .c-icon--scroll {
     display: block;
     margin: auto;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     height: 100px;
     left: 60px;
@@ -69,7 +69,7 @@
     }
   
     &::after {
-        background-image: linear-gradient(to right bottom, rgba(41,152,255,0.85), rgba(86,67,250,0.85));
+        background-image: linear-gradient(to right bottom, rgba(216, 18, 18, 0.85), rgba(197, 17, 17, 0.85));
       height: 20px;
       animation: scrollPc 2s ease infinite;
     }
