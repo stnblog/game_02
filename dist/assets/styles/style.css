@@ -2499,7 +2499,7 @@ textarea {
 
 .p-story {
   position: relative;
-  min-height: 880px;
+  min-height: 800px;
   overflow: hidden;
 }
 .p-story .c-sec__ttl {
@@ -2574,7 +2574,7 @@ textarea {
   left: 8%;
 }
 .p-story__obj .--two {
-  top: 46%;
+  top: 50%;
   right: 8%;
 }
 .p-story__inner {
@@ -2630,47 +2630,8 @@ textarea {
 .p-sys {
   position: relative;
   z-index: 1;
-  padding: 100px 0 100px;
-}
-@media screen and (min-width: 992px) {
-  .p-sys {
-    padding: 170px 0px 137px;
-  }
-}
-.p-sys__frag {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  left: -1%;
-  width: 105%;
-  top: -5px;
-  z-index: 3;
-  margin-top: -200px;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: margin 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-  transition: margin 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s, opacity 1700ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
-}
-.p-sys__frag.is-anim {
-  margin-top: 0px;
-  opacity: 1;
-}
-.p-sys__arrow {
-  position: absolute;
-  bottom: 38px;
-  width: 100%;
-  height: 100px;
-}
-.p-sys__arrow--l {
-  left: 0px;
-  background: url(../../assets/images/sys_arrow_l.png) center center/auto 100% no-repeat;
-}
-.p-sys__arrow--r {
-  right: 0;
-  background: url(../../assets/images/sys_arrow_r.png) center center/auto 100% no-repeat;
+  z-index: 500;
+  padding: 80px 0 0;
 }
 .p-sys__inner {
   position: relative;
@@ -2719,20 +2680,22 @@ textarea {
   padding-bottom: 4%;
 }
 .p-sys__item.reverse {
-  text-align: right;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
+.p-sys__item:nth-child(2) .p-sys__detail {
+  padding: 8px 4% 20px 0;
+}
 .p-sys__img {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+  border: 6px solid #830404;
 }
 .p-sys__img img {
-  -webkit-box-shadow: rgba(106, 104, 104, 0.25) 0px 5px 10px;
-  box-shadow: rgba(106, 104, 104, 0.25) 0px 5px 10px;
-  border: 8px solid #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   overflow: hidden;
 }
 .p-sys__chara {
@@ -2751,8 +2714,7 @@ textarea {
   left: 0;
 }
 .p-sys__detail {
-  padding: 8px 3% 20px;
-  color: #000;
+  padding: 8px 0 20px 4%;
 }
 .p-sys__detail h3 {
   font-size: 24px;
@@ -2760,20 +2722,8 @@ textarea {
   display: inline-block;
   z-index: 1;
 }
-.p-sys__detail h3::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  height: 24px;
-  top: 16px;
-  background: #fdd17a;
-  z-index: -1;
-}
 .p-sys__detail p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 20px 0 0;
 }
 @media screen and (min-width: 768px) {
@@ -2819,7 +2769,7 @@ textarea {
     height: 160px;
   }
   .p-sys__item {
-    padding-bottom: 18.53846%;
+    padding-bottom: 10.53846%;
   }
   .p-sys__chara {
     width: 260px;
@@ -2834,7 +2784,7 @@ textarea {
     width: 54.53846%;
   }
   .p-sys__detail p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -2874,7 +2824,6 @@ textarea {
   width: 100%;
   height: 100%;
   content: "";
-  background: rgba(0, 0, 0, 0.4);
   z-index: 4;
 }
 .p-chara__slider {
@@ -2898,21 +2847,21 @@ textarea {
 }
 .p-chara__head {
   position: absolute;
-  width: 70%;
-  top: 150px;
+  width: 78%;
+  top: 130px;
   text-align: left;
-  left: -14%;
+  left: -16%;
 }
 .p-chara__foot {
   position: absolute;
   top: 0;
   right: 0;
-  width: 260px;
+  width: 230px;
   z-index: 2;
 }
 .p-chara__list--tab {
   position: relative;
-  top: -10px;
+  top: -20px;
   position: relative;
   max-width: 540px;
   width: 100%;
@@ -2982,8 +2931,8 @@ textarea {
 }
 .p-chara__txt {
   margin-top: 20px;
-  font-size: 16px;
-  line-height: 2;
+  font-size: 18px;
+  line-height: 1.8;
   text-shadow: 1px 3px 4px black;
 }
 
@@ -3033,7 +2982,7 @@ textarea {
 }
 .p-news__inner {
   position: relative;
-  max-width: 1300px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -3203,7 +3152,7 @@ textarea {
 }
 .p-mv__fog {
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100%;
   width: 100%;
@@ -3212,7 +3161,7 @@ textarea {
 .p-mv__fog--img {
   pointer-events: none;
   z-index: 5;
-  opacity: 0.6;
+  opacity: 0.85;
   position: absolute;
   height: 100%;
   width: 600vw;

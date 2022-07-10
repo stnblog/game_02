@@ -28,7 +28,7 @@
         &::before {
             @include absAll;
             content: "";
-            background: rgba($color: $color-black, $alpha: 0.4);
+            // background: rgba($color: $color-black, $alpha: 0.4);
             z-index: 4;
         }
     }
@@ -50,17 +50,17 @@
 
     &__head {
         position: absolute;
-        width: 70%;
-        top: 150px;
+        width: 78%;
+        top: 130px;
         text-align: left;
-        left: -14%;
+        left: -16%;
     }
 
     &__foot {
         position: absolute;
         top: 0;
         right: 0;
-        width: 260px;
+        width: 230px;
         z-index: 2;
     }
 
@@ -68,7 +68,7 @@
         &--tab {
             position: relative;
             // @include absCenter;
-            top: -10px;
+            top: -20px;
             // right: 9%;
             position: relative;
             @include maxWidth(540px);
@@ -141,8 +141,8 @@
 
     &__txt {
         margin-top: 20px;
-        font-size: 16px;
-        line-height: 2;
+        font-size: 18px;
+        line-height: 1.8;
         text-shadow: 1px 3px 4px rgb(0, 0, 0);
     }
 }

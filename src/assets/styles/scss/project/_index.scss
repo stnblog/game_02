@@ -21,7 +21,7 @@
 
   &__fog {
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
@@ -30,7 +30,7 @@
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0.6;
+      opacity: 0.85;
       position: absolute;
       height: 100%;
       width: 600vw;

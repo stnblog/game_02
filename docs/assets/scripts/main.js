@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (entry.isIntersecting) {
           setTimeout(function () {
             entry.target.classList.add('is-anim');
-          }, 200);
+          }, 400);
         } else {}
       });
     };

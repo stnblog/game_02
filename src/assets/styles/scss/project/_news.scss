@@ -32,7 +32,7 @@
   &__inner {
       // overflow: hidden;
     position: relative;
-    @include maxWidth(1300px);
+    @include maxWidth(1400px);
     padding: 0 15px;
     
     @include mq-target(lg) {
