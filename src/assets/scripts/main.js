@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('is-anim');
-          }, 200);
+          }, 300);
         } else {}
       });
     }
 
     const options = {
       root: null,
-      rootMargin: '-20px 0px',
+      rootMargin: '-0px 0px',
       threshold: 0
     };
     const io = new IntersectionObserver(cb, options);
