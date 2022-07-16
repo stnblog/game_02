@@ -39,7 +39,7 @@
         top: 0;
         left: 0;
         background: url(../../assets/images/story_bg.png) bottom no-repeat;
-        background-size: cover;
+        background-size: contain;
         // filter: blur(3px);
         margin: -3px;
         width: calc(100% + 6px);
