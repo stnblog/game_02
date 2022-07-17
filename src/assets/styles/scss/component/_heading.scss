@@ -11,12 +11,13 @@
         text-align: center;
         // font-family: "Cinzel", "Noto Serif JP", sans-serif;
         text-transform: uppercase;
-        text-shadow: 1px 2px 4px #292929;
         z-index: 1;
+
 
         span {
             display: block;
             line-height: 1.5;
+            text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
         }
 
         .-en {
@@ -27,28 +28,35 @@
         }
 
         .-ja {
-            padding: 0px 0 0;
             font-size: 14px;
         }
     }
 
     &__bg {
-        width: 100%;
+        display: block;
+        width: 100vw;
+        max-width: 1920px;
+        min-height: 760px;
         height: 100vh;
         position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
-        left: 0;
-        background: url(../../assets/images/story_bg.png) bottom no-repeat;
-        background-size: contain;
-        // filter: blur(3px);
-        margin: -3px;
-        width: calc(100% + 6px);
+        opacity: 1;
+        pointer-events: none;
         z-index: 1;
-    
-        &::after {
+
+        &::before {
             content: "";
             @include absAll;
-            // background: rgba($color: #000, $alpha: 0.4);
+            background: url(../../assets/images/story_bg.jpg) top center no-repeat;
+            // background-position: 50% 75%;
+            background-color: $color-black;
+            background-size: auto 100%;
+            // background-size: auto 150%;
+            @include maxWidth(1920px);
+            height: 100%;
+            pointer-events: none;
         }
     }
 

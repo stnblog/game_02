@@ -19,9 +19,7 @@ z-index: 5000;
   }
 
   .c-sec__ttl {
-    @include absCenter;
-    z-index: 5000000;
-    top: 0;
+    margin: 0 auto 20px;
 
     .-en {
       font-size: 40px;
@@ -32,7 +30,7 @@ z-index: 5000;
   &__inner {
       // overflow: hidden;
     position: relative;
-    @include maxWidth(1400px);
+    @include maxWidth(1200px);
     padding: 0 15px;
     
     @include mq-target(lg) {
@@ -90,7 +88,7 @@ z-index: 5000;
   }
 
   &__txt {
-    font-weight: 700;
+    font-weight: 500;
     text-align: left;
     font-size: 14px;
     // box-shadow: 0 8px 16px rgb(0 0 0 / 40%);

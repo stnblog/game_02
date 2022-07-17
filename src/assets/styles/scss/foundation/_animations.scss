@@ -204,7 +204,7 @@ $cover in $covers {
 
   @for $i from 1 through 30 {
     &:nth-child(#{$i}) {
-      animation-delay: $i * 0.04s;
+      animation-delay: $i * 0.08s;
     }
   }
 }
