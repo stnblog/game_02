@@ -13,7 +13,7 @@
   // background: url(../../assets/images/main_bg.png) top center no-repeat;
   // background-size: cover;
 
-  
+
 
   @include mq-target(lg) {
     // height: 100vh;
@@ -26,17 +26,17 @@
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 50;
+    z-index: 500;
     overflow: hidden;
 
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0.85;
+      opacity: 0.45;
       position: absolute;
       height: 100%;
       width: 600vw;
-      
+
     }
 
     &--first {
@@ -53,12 +53,11 @@
   }
 
   &__bg {
-    display: none;
+    // display: none;
     position: relative;
     opacity: 1;
-    @include maxWidth(1500px);
-    
-    
+    z-index: 50000;
+
     &::before {
       content: "";
       @include absAll;
@@ -66,26 +65,7 @@
       animation: mvBlurAnime 5s linear infinite alternate;
       transition: background-color 1s linear, -webkit-filter 1s linear;
     }
-    
-    &::after {
-      content: "";
-      @include absAll;
-      background: url(../../assets/images/main_bg_beta.png) 50% 50% no-repeat;
-      background-size: contain;
-    }
-    // max-width: 1600px;
-    // margin: auto;
-    // @include absAll;
-    // top: 0;
-    // background: url(../../assets/images/main_bg.png) top center no-repeat;
-    // background-size: 1700px;
 
-    // &::before {
-    //   content: "";
-    //   @include absAll;
-    //   // background: rgba($color: rgb(0, 0, 0), $alpha: 0.25);
-    //   z-index: 1;
-    // }
   }
 
   &__inner {
@@ -128,14 +108,13 @@
   }
 
   &__logo {
-    // width: 1%;
-    // animation-zoomImg
-    // font-size: 90px;
-    
-    @include mq-target(sm) {
-      @include absCenter;
-      top: 60%;
-      width: 30%;
+    @include absCenter;
+    top: 70%;
+
+    figure {
+      height: 150px;
+      width: 48%;
+      margin: auto;
     }
   }
 
@@ -184,5 +163,37 @@
         right: 17%;
       }
     }
+  }
+}
+
+
+.p-banner {
+  position: relative;
+  z-index: 500;
+
+  // top: -160px;
+  &__inner {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1% auto 2%;
+    max-width: 440px;
+  }
+
+  &__list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    width: 32.2%;
+    // width: 140px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   }
 }

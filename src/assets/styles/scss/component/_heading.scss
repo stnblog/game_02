@@ -6,7 +6,7 @@
     &__ttl {
         position: relative;
         @include maxWidth(840px);
-        margin: 0 auto 40px;
+        margin: 0 auto 30px;
         font-weight: 400;
         text-align: center;
         // font-family: "Cinzel", "Noto Serif JP", sans-serif;
@@ -28,7 +28,7 @@
         }
 
         .-ja {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
@@ -64,11 +64,13 @@
 
         &__ttl {
             .-en {
-                font-size: 52px;
+                font-size: 40px;
             }
 
             .-ja {
-                font-size: 16px;
+                position: relative;
+                top: -4px;
+                font-size: 12px;
             }
         }
     }

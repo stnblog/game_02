@@ -14,7 +14,7 @@
         content: "";
         @include absAll;
         background: url(../../assets/images/redmist.png);
-        opacity: 0.35;
+        opacity: 0.25;
         background-size: cover;
         z-index: 6;
         // animation: animation-opt 4s infinite alternate;
@@ -88,7 +88,7 @@
     }
 
     &__inner {
-        padding: 100px 0;
+        padding: 120px 0 100px;
         position: relative;
         top: -20px;
 
@@ -119,9 +119,9 @@
             margin: 0 auto;
             
             p {
-                margin: 0 0 30px;
+                margin: 0 0 24px;
                 font-size: 17px;
-                line-height: 2.4;
+                line-height: 2.2;
                 text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                 text-transform: uppercase;
 

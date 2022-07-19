@@ -77,7 +77,7 @@
 
 <body id="top" data-character="1">
 
-  <header class="l-header">
+  <!-- <header class="l-header">
     <div class="l-header__inner">
 
       <h1 class="l-header__logo">
@@ -122,7 +122,7 @@
       </nav>
 
     </div>
-  </header>
+  </header> -->
 
   <button class="l-drawer__trigger js-draw--trigger">
     <span class="-line"></span>
@@ -337,30 +337,87 @@
     <div class="c-sec__bg"></div>
 
     <section class="p-mv">
+        <!-- <div class="p-mv__bg">
+            <img src="./assets/images/story_bg.jpg" alt="">
+        </div> -->
         <!-- <div class="smoke smoke__right"></div>
     <div class="smoke smoke__left"></div> -->
         <h2 class="p-mv__logo">
-            <div class="inview js-scroll--slideRight">
+            <figure class="inview js-scroll--slideRight">
                 <img src="./assets/images/typo.png" alt="">
-            </div>
+            </figure>
+
+            <section class="p-banner">
+                <div class="p-banner__inner">
+                    <div class="p-banner__list">
+                        <li class="p-banner__item">
+                            <a href="">
+                                <img src="./assets/images/banner_01.png" alt="">
+                            </a>
+                        </li>
+                        <li class="p-banner__item">
+                            <a href="">
+                                <img src="./assets/images/ps4.png" alt="">
+                            </a>
+                        </li>
+                        <li class="p-banner__item">
+                            <a href="">
+                                <img src="./assets/images/steam.png" alt="">
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </section>
         </h2>
         <div class="p-mv__inner">
-
 
         </div>
         <!-- <div class="smoke smoke__bottom"></div> -->
     </section>
 
 
+
+
+    <menu style="position: relative;">
+        <ul>
+            <li>
+                <a href="#top">
+                    TOP
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    STORY
+                </a>
+            </li>
+            <li>
+                <a href="#chara">
+                    CHARACTERS
+                </a>
+            </li>
+            <li>
+                <a href="#system">
+                    SYSTEM
+                </a>
+            </li>
+            <li>
+                <a href="#faq">
+                    FAQ
+                </a>
+            </li>
+        </ul>
+    </menu>
+
+
     <section class="p-news">
         <!-- <div class="smoke smoke__top"></div> -->
-        <div class="smoke smoke__bottom"></div>
-        <!-- <h2 class="c-sec__ttl">
-            <span class="-en animate-heading">TOPICS</span>
-            <span class="-ja">- お知らせ -</span>
-        </h2> -->
+
 
         <div class="p-news__inner">
+            <h2 class="c-sec__ttl">
+                <span class="-en animate-heading">TOPICS</span>
+                <!-- <span class="-ja">- お知らせ -</span> -->
+            </h2>
 
             <div class="swiper-container c-slider index__slider js-index-slider">
                 <div class="swiper-wrapper c-slider__wrap index__slideWrap">
@@ -370,14 +427,14 @@
                                 <picture class="c-picture__img--inner">
                                     <img src="./assets/images/gallery_img_1.png" alt="メインビジュアル">
                                 </picture>
-                                <div class="p-news__meta">
+                                <!-- <div class="p-news__meta">
                                     <span class="-left">GAME</span>
                                     <span class="-right">2022.03.23</span>
-                                </div>
+                                </div> -->
                             </figure>
                             <div class="p-news__detail">
                                 <p class="p-news__txt">
-                                    2020年12月1日<br />
+                                    <span>2020年12月1日</span>
                                     アップデートファイル配信のお知らせ
                                 </p>
                             </div>
@@ -396,7 +453,9 @@
                             </figure>
                             <div class="p-news__detail">
                                 <p class="p-news__txt">
-                                    2020年12月1日<br />アップデートファイル配信のお知らせ</p>
+                                    <span>2020年12月1日</span>
+                                    アップデートファイル配信のお知らせ
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -413,7 +472,9 @@
                             </figure>
                             <div class="p-news__detail">
                                 <p class="p-news__txt">
-                                    2020年12月1日<br />アップデートファイル配信のお知らせ</p>
+                                    <span>2020年12月1日</span>
+                                    アップデートファイル配信のお知らせ
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -429,7 +490,10 @@
                                 </div>
                             </figure>
                             <div class="p-news__detail">
-                                <p class="p-news__txt">2020年12月1日<br />アップデートファイル配信のお知らせ</p>
+                                <p class="p-news__txt">
+                                    <span>2020年12月1日</span>
+                                    アップデートファイル配信のお知らせ
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -445,7 +509,10 @@
                                 </div>
                             </figure>
                             <div class="p-news__detail">
-                                <p class="p-news__txt">2020年12月1日<br />アップデートファイル配信のお知らせ</p>
+                                <p class="p-news__txt">
+                                    <span>2020年12月1日</span>
+                                    アップデートファイル配信のお知らせ
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -474,7 +541,7 @@
 
             </div>
         </div>
-
+        <div class="smoke smoke__bottom"></div>
     </section>
 
 
@@ -497,16 +564,22 @@
 
 
 
-            <h2 class="c-sec__ttl" style="margin-bottom: 40px;">
-                <img src="./assets/images/title_story.png" alt="" style="width: 28vw;">
-                <!-- <span class="-en animate-heading">ものがたり</span> -->
-                <!-- <span class="-ja">- story -</span> -->
+            <h2 class="c-sec__ttl">
+                <span class="-en animate-heading">
+                    story
+                </span>
+                <span class="-ja">- モノガタリ -</span>
             </h2>
 
             <ul class="p-story__list">
 
                 <li class="p-story__item--right">
                     <p>
+                        幽霊を視認することができる青年「恭司」は、<br />
+                        ある日、町で見かけた少女を好きになる。<br />
+                        「僕は人間が嫌いだ」<br />
+                        クラスのお調子者、サッカー部のキャプテン、
+
                         親譲りの無鉄砲で小供の時から損ばかりしている。<br />
                         小学校に居る時分学校の二階から飛び降りて<br />一週間ほど腰を抜かした事がある。
                     </p>
@@ -547,14 +620,14 @@
                 </em> -->
 
             <!-- <div class="p-chara__bg"></div> -->
-
+            <!-- 
             <div class="p-chara__bg inview js-scroll--fadeDown">
                 <ul class="p-chara__list--bg">
                     <li class="p-chara__item--bg p-chara__item--bg01"></li>
                     <li class="p-chara__item--bg p-chara__item--bg02"></li>
                     <li class="p-chara__item--bg p-chara__item--bg03"></li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="swiper-container p-chara__slider">
 
