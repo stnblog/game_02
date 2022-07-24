@@ -77,7 +77,7 @@
             animation-direction: alternate;
             animation-duration: 2s;
             background: url(../../assets/images/main_obj.png) 50% 50% no-repeat;
-            background-size: 150% auto;
+            background-size: 130% auto;
             // left: calc(0.3921875 * min(100vw, 1920px));
             z-index: 1999;
             @include mq-target(sm) {
