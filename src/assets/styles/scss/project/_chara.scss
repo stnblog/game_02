@@ -21,7 +21,7 @@
     }
 
     &__inner {
-        padding: 100px 0 40px;
+        padding: 80px 0 40px;
         overflow: hidden;
         position: relative;
 
@@ -35,12 +35,10 @@
 
     &__slider {
         height: 540px;
-        top: -40px;
         z-index: 60;
         user-select: none;
         position: relative;
-        @include maxWidth(1200px);
-        margin: 0 auto 0;
+        @include maxWidth(1100px);
     }
 
     &__slide {
@@ -50,17 +48,17 @@
 
     &__head {
         position: absolute;
-        width: 74%;
-        top: 150px;
+        width: 70%;
+        top: 104px;
         text-align: left;
-        left: -16%;
+        left: -10%;
     }
 
     &__foot {
         position: absolute;
         top: 0;
-        right: 0;
-        width: 260px;
+        right: -70px;
+        width: 273px;
         z-index: 2;
     }
 
@@ -71,7 +69,7 @@
             top: -20px;
             // right: 9%;
             position: relative;
-            @include maxWidth(540px);
+            @include maxWidth(560px);
             // margin: 20px auto 0;
             @include flex($wrap:wrap, $justify:space-between);
             z-index: 5000;
@@ -89,8 +87,8 @@
             transition: opacity 0.5s ease;
             background: url(../../assets/images/chara_bg_03.png) 50% 50% no-repeat;
             background-size: 1200px;
-            // filter: blur(2px);
-            // transform: rotate(-2deg);
+            // filter: blur(6px);
+            // transform: rotate(-24deg);
 
 
 
@@ -106,7 +104,8 @@
         }
 
         &--tab {
-            width: 19.4%;
+            width: 18.4%;
+            margin: 0 4px;
             // margin: 0 1%;
             cursor: pointer;
             position: relative;
@@ -121,7 +120,7 @@
             margin: 0;
             z-index: 2;
             text-align: left;
-            font-size: 34px;
+            font-size: 30px;
             font-weight: 500;
             line-height: 0.7;
             text-shadow: 1px 8px 12px rgb(0, 0, 0);
@@ -141,7 +140,7 @@
 
     &__txt {
         margin-top: 20px;
-        font-size: 17px;
+        // font-size: 14px;
         line-height: 1.8;
         text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
     }

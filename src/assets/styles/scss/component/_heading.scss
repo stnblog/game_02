@@ -60,6 +60,33 @@
         }
     }
 
+    &__obj {
+        display: block;
+        @include absCenter;
+        top: 52%;
+        width: 100%;
+        height: 100%;
+        max-width: 622px;
+        max-height: 794px;        
+        div {
+            width: 100%;
+            height: 100%;
+            animation-name: updown;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 2s;
+            background: url(../../assets/images/main_obj.png) 50% 50% no-repeat;
+            background-size: 150% auto;
+            // left: calc(0.3921875 * min(100vw, 1920px));
+            z-index: 1999;
+            @include mq-target(sm) {
+                background-size: 100% auto;
+            }
+
+        }
+    }
+
     @include mq-target(sm) {
 
         &__ttl {
