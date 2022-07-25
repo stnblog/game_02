@@ -115,8 +115,12 @@
 
         &--right {
             position: relative;
-            max-width: 76%;
             margin: 0 auto;
+            max-width: 98%;
+            
+            @include mq-target(sm) {
+                max-width: 76%;
+            }
             
             p {
                 font-size: 14px;

@@ -2706,8 +2706,13 @@ textarea {
 }
 .p-story__item--right {
   position: relative;
-  max-width: 76%;
   margin: 0 auto;
+  max-width: 98%;
+}
+@media screen and (min-width: 768px) {
+  .p-story__item--right {
+    max-width: 76%;
+  }
 }
 .p-story__item--right p {
   font-size: 14px;
