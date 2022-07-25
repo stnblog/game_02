@@ -198,7 +198,7 @@ $cover in $covers {
 .animate-heading.inview .char {
   @include animation(
     $name: kf-animate-chars,
-    $duration: 0.75s,
+    $duration: 1.2s,
     $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
     $fill-mode: both);
 

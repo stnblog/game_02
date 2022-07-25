@@ -23,9 +23,23 @@
   .c-sec__ttl {
     text-align: left;
     margin: 0 0 20px;
-
+    
+    
     .-en {
-      font-size: 28px;
+      position: relative;
+      display: inline-block;
+      // font-size: 28px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        background: rgb(255, 255, 255);
+        height: 1px;
+        width: min(7.8125vw, 150px);
+        transform: translateY(-50%);
+        background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+        right: min(-7.8125vw, -150px);
+      }
     }
   }
 
@@ -35,6 +49,7 @@
     position: relative;
     @include maxWidth(1200px);
     padding: 0 15px;
+    z-index: 50;
 
     @include mq-target(lg) {
       // padding-left: 8%;
@@ -47,9 +62,9 @@
   }
 
   &__img {
-    // box-shadow: 0 8px 16px rgb(0 0 0 / 40%);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 40%);
     will-change: filter;
-    // outline: 5px solid $color-black;
+    // outline: 2px solid $color-black;
 
     &::before {
       padding-top: 60%;
@@ -142,7 +157,7 @@ menu {
   position: sticky;
   /* top: 910px; */
   top: 0;
-  height: 70px;
+  height: 64px;
   background-color: #000;
   z-index: 3;
   left: 0;

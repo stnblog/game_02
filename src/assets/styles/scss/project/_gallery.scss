@@ -118,13 +118,13 @@
   // background: rgba($color: #0c5f92, $alpha: 0.25);
   // box-shadow: 1px 2px 12px rgba($color: #fdfdfd, $alpha: 1.0);
   border-radius: 6px;
-  height: 4.54375vw;
-  width: 4.7625vw;
+  height: 70px;
+  width: 70px;
   &::after {
     content: "";
     background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
-    height: 4.54375vw;
-    width: 4.7625vw;
+    height: 70px;
+    width: 70px;
     display: block;
   }
 }

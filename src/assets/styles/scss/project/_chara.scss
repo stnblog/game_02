@@ -6,7 +6,7 @@
     &::before {
         content: "";
         @include absAll;
-        background: rgba($color: #000000, $alpha: 0.5);
+        // background: rgba($color: #000000, $alpha: 0.5);
     }
 
     .c-sec__ttl {
@@ -21,7 +21,7 @@
     }
 
     &__inner {
-        padding: 80px 0 40px;
+        padding: 60px 0 140px;
         overflow: hidden;
         position: relative;
 
@@ -52,27 +52,30 @@
         top: 104px;
         text-align: left;
         left: -10%;
+        display: none;
     }
 
     &__foot {
-        position: absolute;
-        top: 0;
-        right: -70px;
-        width: 273px;
+        @include absAll;
+        // position: absolute;
+        // top: 0;
+        margin-left: 2%;
+        // right: -70px;
+        // width: 273px;
         z-index: 2;
+    }
+
+    &__tab {
+        z-index: 5000;
     }
 
     &__list {
         &--tab {
             position: relative;
-            // @include absCenter;
-            top: -20px;
-            // right: 9%;
-            position: relative;
-            @include maxWidth(560px);
+            @include maxWidth(500px);
             // margin: 20px auto 0;
             @include flex($wrap:wrap, $justify:space-between);
-            z-index: 5000;
+            // margin: 14px auto 0;
         }
     }
 
@@ -85,27 +88,29 @@
             left: 0;
             top: 20px;
             transition: opacity 0.5s ease;
-            background: url(../../assets/images/chara_bg_03.png) 50% 50% no-repeat;
-            background-size: 1200px;
-            // filter: blur(6px);
+            background: url(../../assets/images/charaBg_01.jpg) 50% 50% no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            // filter: blur(2px);
             // transform: rotate(-24deg);
 
 
 
             &02 {
-                background: url(../../assets/images/chara_bg_02.png) 50% 50% no-repeat;
-                background-size: 1200px;
+                background: url(../../assets/images/charaBg_02.jpg) 50% 50% no-repeat;
+                background-size: cover;
             }
 
             &03 {
-                background: url(../../assets/images/chara_bg_01.png) 50% 50% no-repeat;
-                background-size: 1200px;
+                background: url(../../assets/images/charaBg_03.jpg) 50% 50% no-repeat;
+                background-size: cover;
             }
         }
 
         &--tab {
             width: 18.4%;
-            margin: 0 4px;
+            // margin: 0 4px;
             // margin: 0 1%;
             cursor: pointer;
             position: relative;

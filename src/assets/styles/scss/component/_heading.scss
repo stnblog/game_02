@@ -39,7 +39,7 @@
         min-height: 760px;
         height: 100vh;
         position: fixed;
-        left: 50%;
+        left: 49%;
         transform: translateX(-50%);
         top: 0;
         opacity: 1;
@@ -81,7 +81,7 @@
             // left: calc(0.3921875 * min(100vw, 1920px));
             z-index: 1999;
             @include mq-target(sm) {
-                background-size: 100% auto;
+                background-size: 105% auto;
             }
 
         }
@@ -91,13 +91,13 @@
 
         &__ttl {
             .-en {
-                font-size: 40px;
+                font-size: 62px;
             }
 
             .-ja {
                 position: relative;
                 top: -4px;
-                font-size: 12px;
+                font-size: 16px;
             }
         }
     }

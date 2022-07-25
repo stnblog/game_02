@@ -6,7 +6,7 @@
         text-shadow: 1px 2px 6px $color-black;
         // width: 30%;
         z-index: 50;
-        animation: animation-zoomImg 1.4s ease-in-out infinite;
+        // animation: animation-zoomImg 1.4s ease-in-out infinite;
 
     }
 
@@ -25,11 +25,11 @@
         position: absolute;
         content: "";
         top: 3.802vw;
-        right: 6%;
+        right: 10%;
         background: url(../../assets/images/test_03_beta.png) no-repeat;
         background-size: contain;
-        width: 32.01vw;
-        height: 88.469vw;
+        width: 34.01vw;
+        height: 82.469vw;
         z-index: 3;
     }
 
@@ -88,7 +88,7 @@
     }
 
     &__inner {
-        padding: 120px 0 80px;
+        padding: 120px 0 100px;
         position: relative;
         top: -20px;
 
@@ -119,14 +119,18 @@
             margin: 0 auto;
             
             p {
+                font-size: 14px;
                 margin: 0 0 20px;
-                font-size: 16px;
                 line-height: 2.2;
                 text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                 text-transform: uppercase;
-
+                
                 &:last-child {
                     margin: 0;
+                }
+                
+                @include mq-target(sm) {
+                    font-size: 16px;
                 }
             }
 
