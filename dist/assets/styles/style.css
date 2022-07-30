@@ -2687,8 +2687,6 @@ textarea {
   top: 0;
   max-width: 86vw;
   z-index: 6;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
 }
 .p-story__obj img {
   -webkit-animation: swing 10s infinite alternate;
@@ -3346,8 +3344,13 @@ menu ul li:last-child a::after {
 }
 .p-gallery__slide {
   overflow: hidden;
-  margin: 0 20px;
-  max-width: 68.41%;
+  margin: 0 2%;
+  max-width: 85.41%;
+}
+@media screen and (min-width: 768px) {
+  .p-gallery__slide {
+    max-width: 68.41%;
+  }
 }
 .p-gallery__slide.swiper-slide-active.l-hero__slide::after {
   opacity: 0;
