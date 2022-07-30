@@ -13,7 +13,7 @@ $fade in $fades {
     z-index: 2;
     opacity: 0;
     transform: ($fade);
-    transition: opacity 1.4s, transform 1s;
+    transition: opacity 1.6s, transform 1.4s;
 
     &.is-anim {
       opacity: 1;
@@ -204,7 +204,7 @@ $cover in $covers {
 
   @for $i from 1 through 30 {
     &:nth-child(#{$i}) {
-      animation-delay: $i * 0.08s;
+      animation-delay: $i * 0.1s;
     }
   }
 }

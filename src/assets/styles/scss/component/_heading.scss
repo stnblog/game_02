@@ -5,7 +5,7 @@
 
     &__ttl {
         position: relative;
-        @include maxWidth(840px);
+        // @include maxWidth(840px);
         margin: 0 auto 30px;
         font-weight: 400;
         text-align: center;
@@ -22,13 +22,35 @@
 
         .-en {
             font-size: 40px;
-            letter-spacing: 0.05em;
-            line-height: 0;
+            letter-spacing: 0.04em;
+            // line-height: 0;
             font-weight: 700;
         }
 
         .-ja {
-            font-size: 12px;
+            display: inline-block;
+            font-size: 14px;
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              background: rgb(255, 255, 255);
+              height: 1px;
+              width: min(7.8125vw, 150px);
+              transform: translateY(-50%);
+            }
+    
+            &::before {
+              background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+              left: min(-7.8125vw, -150px);
+            }
+    
+            &::after {
+              background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+              right: min(-7.8125vw, -150px);
+            }
         }
     }
 
@@ -57,6 +79,7 @@
             @include maxWidth(1920px);
             height: 100%;
             pointer-events: none;
+            filter: blur(2px);
         }
     }
 
@@ -91,12 +114,12 @@
 
         &__ttl {
             .-en {
-                font-size: 62px;
+                font-size: 58px;
             }
 
             .-ja {
                 position: relative;
-                top: -4px;
+                top: -10px;
                 font-size: 16px;
             }
         }

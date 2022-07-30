@@ -16,7 +16,7 @@ $(document).ready(function () {
     var position = $(href).offset().top;
     $('html, body').animate({
       'scrollTop': position
-    }, 500);
+    }, 400);
     return false;
   })
 

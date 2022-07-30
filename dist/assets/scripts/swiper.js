@@ -53,20 +53,7 @@ modalSwiper.on('slideChange', function () {
 $('.js-modal-close').on('click', function () {
   $('.l-modal').fadeOut();
   $('body').removeClass('is-lock');
-}); // character
-// const swiper02 = new Swiper('.p-chara__slider--modal', {
-//   slidesPerView: 'auto',
-//   // loop: true,
-//   grabCursor: true,
-//   autoHeight: true,
-//   centeredSlides: true,
-//   effect: "slide",
-//   speed: 800,
-// })
-// swiper02.on('slideChange', function () {
-//   $body.attr("data-character", swiper02.realIndex + 1);
-// });
-
+});
 var swiper03 = new Swiper('.p-chara__slider', {
   // loop: true,
   grabCursor: true,
@@ -86,4 +73,12 @@ $(".js-chara-tab").on("click", function () {
   $('.p-chara__item--tab').removeClass('is-active');
   $(this).addClass('is-active');
   swiper03.slideTo($(this).attr("data-num"));
+});
+var swiper04 = new Swiper('.p-gallery__slider', {
+  loop: true,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  touchEventsTarget: true,
+  centeredSlides: true,
+  loopAdditionalSlides: 1
 });

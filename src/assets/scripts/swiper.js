@@ -70,23 +70,6 @@ $('.js-modal-close').on('click', function () {
 
 });
 
-// character
-
-// const swiper02 = new Swiper('.p-chara__slider--modal', {
-//   slidesPerView: 'auto',
-//   // loop: true,
-//   grabCursor: true,
-//   autoHeight: true,
-//   centeredSlides: true,
-//   effect: "slide",
-//   speed: 800,
-// })
-
-// swiper02.on('slideChange', function () {
-//   $body.attr("data-character", swiper02.realIndex + 1);
-// });
-
-
 const swiper03 = new Swiper('.p-chara__slider', {
   // loop: true,
   grabCursor: true,
@@ -109,3 +92,12 @@ $(".js-chara-tab").on("click", function () {
   $(this).addClass('is-active');
   swiper03.slideTo($(this).attr("data-num"));
 });
+
+const swiper04 = new Swiper('.p-gallery__slider', {
+  loop: true,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  touchEventsTarget: true,
+  centeredSlides: true,
+  loopAdditionalSlides: 1,
+})

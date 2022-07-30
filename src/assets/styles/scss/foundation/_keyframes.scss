@@ -46,12 +46,30 @@
 @keyframes kf-animate-chars {
   0% {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(0%)
+  }
+  25% {
+    transform: translateX(10%)
+  }
+  50% {
+      transform: rotate(0deg);
+  }
+  75% {
+    transform: translateX(-10%)
+  }
+  100% {
+    transform: translateX(0%)
   }
 }
 

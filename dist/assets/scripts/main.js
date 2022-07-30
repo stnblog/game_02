@@ -19,7 +19,7 @@ $(document).ready(function () {
     var position = $(href).offset().top;
     $('html, body').animate({
       'scrollTop': position
-    }, 500);
+    }, 400);
     return false;
   });
   $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
