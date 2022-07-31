@@ -16,7 +16,7 @@ $(document).ready(function () {
     var position = $(href).offset().top;
     $('html, body').animate({
       'scrollTop': position
-    }, 400);
+    }, 500);
     return false;
   })
 
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const cb = function (entries, observer) {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('is-anim');
-          }, 300);
+          // setTimeout(() => {
+          // }, 400);
+          entry.target.classList.add('is-anim');
         } else {}
       });
     }

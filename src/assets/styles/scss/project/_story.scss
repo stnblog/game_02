@@ -14,9 +14,10 @@
         content: "";
         @include absAll;
         background: url(../../assets/images/redmist.png);
-        opacity: 0.35;
+        opacity: 0.2;
         background-size: cover;
         z-index: 6;
+        
         // animation: animation-opt 4s infinite alternate;
 
     }
@@ -59,12 +60,12 @@
 
     &__bg {
         @include absAll;
-        top: 20px;
+        // top: 20px;
         background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
         background-size: cover;
         // animation: kf-animate-slide 4s infinite alternate;
         z-index: 7;
-        // filter: blur(2px);
+
     }
 
 

@@ -449,8 +449,8 @@
                 </a>
             </li>
             <li>
-                <a href="#faq">
-                    FAQ
+                <a href="#gallery">
+                    GALLERY
                 </a>
             </li>
         </ul>
@@ -595,7 +595,11 @@
 
         <div class="p-story__bg"></div>
         <div class="p-story__obj">
-            <img src="./assets/images/test_01_back.png" alt="">
+            <div class="inview js-scroll--slideDown" style="transition-delay: 1s;">
+                <figure class="js-rellax" data-rellax-speed="1.5" data-rellax-percentage="1">
+                    <img src="./assets/images/test_01_back.png" alt="">
+                </figure>
+            </div>
         </div>
 
         <div class="smoke smoke__top"></div>
@@ -646,69 +650,6 @@
         </div>
     </section>
 
-    <section id="system" class="c-sec p-sys">
-        <div class="smoke smoke__top"></div>
-        <h2 class="c-sec__ttl" style="margin-top: 20px;">
-            <!-- <img src="./assets/images/title_story.png" alt="" style="width: 30vw;"> -->
-            <span class="-en">SYSTEM</span>
-            <span class="-ja">システム</span>
-        </h2>
-
-        <div class="p-sys__inner">
-
-
-            <ul class="p-sys__list">
-
-                <li class="p-sys__item reverse">
-                    <div class="p-sys__arrow p-sys__arrow--r"></div>
-                    <figure class="p-sys__img inview js-scroll--slideRight">
-                        <a href="./assets/images/chara_bg_02.jpg" data-lity>
-                            <img src="./assets/images/system_01.jpg" alt="">
-                        </a>
-                    </figure>
-                    <div class="p-sys__detail">
-                        <h3>
-                            <span>#00 システム紹介</span>
-                        </h3>
-                        <p>
-                            それは優れた探偵を集めた組織<br class="u-dp-pc">
-                            『探偵同盟』への、捜査依頼。<br class="u-dp-pc">
-                            <br><br class="u-dp-sp">
-                            『探偵ネーム』と呼ばれるコードネームで
-                            呼び合うというその組織の探偵たちは、
-                            年々犯罪率が高まる社会の中で、英雄視されていた。
-                        </p>
-                    </div>
-                </li>
-                <li class="p-sys__item">
-                    <figure class="p-sys__img inview js-scroll--slideLeft">
-                        <a href="./assets/images/chara_bg_03.jpg" data-lity>
-                            <img src="./assets/images/system_01.jpg" alt="">
-                        </a>
-                    </figure>
-                    <div class="p-sys__detail">
-                        <h3>
-                            <span>#00 システム紹介</span>
-                        </h3>
-                        <p>
-                            平凡な高校生、<br class="u-dp-pc">
-                            北條和都も探偵同盟に憧れる一人。<br class="u-dp-pc">
-                            そんな彼の元に、ある日<br class="u-dp-pc">
-                            『老師探偵』を名乗る謎の男が現れ、<br class="u-dp-pc">
-                            「お前は探偵同盟の
-                            メンバーに選ばれた」
-                            と宣言する。
-                            更に、有無を言わさず眠らされ、
-                            名前も知らない島へと連行されてしまうのであった。
-
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="smoke smoke__bottom"></div>
-    </section>
-
     <section id="chara" class="p-chara">
 
         <div class="smoke smoke__top"></div>
@@ -729,7 +670,7 @@
                 </em> -->
 
             <!-- <div class="p-chara__bg"></div> -->
-            
+
             <div class="p-chara__bg inview js-scroll--fadeDown">
                 <ul class="p-chara__list--bg">
                     <li class="p-chara__item--bg p-chara__item--bg01"></li>
@@ -864,13 +805,13 @@
                             </figure>
                         </li>
                     </ul>
-    
+
                 </div>
 
             </div>
 
 
-            
+
             <div class="smoke smoke__bottom"></div>
         </div>
     </section>
@@ -887,20 +828,87 @@
             <div class="p-gallery__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide p-gallery__slide">
-                        <img src="./assets/images/charaBg_01.jpg" alt="">
+                        <img src="./assets/images/kv.jpg" alt="">
                     </div>
                     <div class="swiper-slide p-gallery__slide">
-                        <img src="./assets/images/charaBg_02.jpg" alt="">
+                        <img src="./assets/images/kv.jpg" alt="">
                     </div>
                     <div class="swiper-slide p-gallery__slide">
-                        <img src="./assets/images/charaBg_03.jpg" alt="">
+                        <img src="./assets/images/kv.jpg" alt="">
                     </div>
                 </div>
             </div>
-    
+
         </div>
         <!-- <div class="smoke smoke__bottom"></div> -->
     </section>
+
+    <section id="system" class="c-sec p-sys">
+        <!-- <div class="smoke smoke__top"></div> -->
+        <h2 class="c-sec__ttl" style="margin-top: 20px;">
+            <!-- <img src="./assets/images/title_story.png" alt="" style="width: 30vw;"> -->
+            <span class="-en">SYSTEM</span>
+            <span class="-ja">システム</span>
+        </h2>
+
+        <div class="p-sys__inner">
+
+
+            <ul class="p-sys__list">
+
+                <li class="p-sys__item reverse">
+                    <div class="p-sys__arrow p-sys__arrow--r"></div>
+                    <figure class="p-sys__img inview js-scroll--slideRight">
+                        <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                            <img src="./assets/images/system_01.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            それは優れた探偵を集めた組織<br class="u-dp-pc">
+                            『探偵同盟』への、捜査依頼。<br class="u-dp-pc">
+                            <br><br class="u-dp-sp">
+                            『探偵ネーム』と呼ばれるコードネームで
+                            呼び合うというその組織の探偵たちは、
+                            年々犯罪率が高まる社会の中で、英雄視されていた。
+                        </p>
+                    </div>
+                </li>
+                <li class="p-sys__item">
+                    <figure class="p-sys__img inview js-scroll--slideLeft">
+                        <a href="./assets/images/chara_bg_03.jpg" data-lity>
+                            <img src="./assets/images/system_01.jpg" alt="">
+                        </a>
+                    </figure>
+                    <div class="p-sys__detail">
+                        <h3>
+                            <span>#00 システム紹介</span>
+                        </h3>
+                        <p>
+                            平凡な高校生、<br class="u-dp-pc">
+                            北條和都も探偵同盟に憧れる一人。<br class="u-dp-pc">
+                            そんな彼の元に、ある日<br class="u-dp-pc">
+                            『老師探偵』を名乗る謎の男が現れ、<br class="u-dp-pc">
+                            「お前は探偵同盟の
+                            メンバーに選ばれた」
+                            と宣言する。
+                            更に、有無を言わさず眠らされ、
+                            名前も知らない島へと連行されてしまうのであった。
+
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="smoke smoke__bottom"></div> -->
+    </section>
+
+
+
+
 
 
 

@@ -37,8 +37,8 @@ $slide in $slides {
     opacity: 0;
     overflow: hidden;
     transform: ($slide);
-    transition: opacity 1.4s, transform 1s;
-    transition-timing-function: cubic-bezier(0.23, 1, 0.6, 1);
+    transition: opacity 1.8s, transform 1.4s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.6, 1.4);
 
     &.is-anim {
       opacity: 1;

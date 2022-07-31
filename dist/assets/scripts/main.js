@@ -19,7 +19,7 @@ $(document).ready(function () {
     var position = $(href).offset().top;
     $('html, body').animate({
       'scrollTop': position
-    }, 400);
+    }, 500);
     return false;
   });
   $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var cb = function cb(entries, observer) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          setTimeout(function () {
-            entry.target.classList.add('is-anim');
-          }, 300);
+          // setTimeout(() => {
+          // }, 400);
+          entry.target.classList.add('is-anim');
         } else {}
       });
     };
