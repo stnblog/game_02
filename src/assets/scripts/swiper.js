@@ -7,25 +7,44 @@ const elmIndexSwiper = document.querySelectorAll('.js-index-slider');
 const elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
 const elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
 
-if (elmIndexSwiper.length > 0) {
-  for (let i = 0; i < elmIndexSwiper.length; i++) {
+// if (elmIndexSwiper.length > 0) {
+//   for (let i = 0; i < elmIndexSwiper.length; i++) {
 
-    elmIndexSwiper[i].className += i;
+//     elmIndexSwiper[i].className += i;
 
-    elmIndexBtnP[i].className += i;
-    elmIndexBtnN[i].className += i;
+//     elmIndexBtnP[i].className += i;
+//     elmIndexBtnN[i].className += i;
 
-    var swiper = new Swiper('.js-index-slider' + i, {
-      slidesPerView: 'auto',
-      grabCursor: true,
-      touchEventsTarget: true,
-      navigation: {
-        prevEl: '.js-slider-btnPrev' + i,
-        nextEl: '.js-slider-btnNext' + i,
-      },
-    });
-  }
-}
+//     var swiper = new Swiper('.js-index-slider' + i, {
+//       slidesPerView: 'auto',
+//       grabCursor: true,
+//       touchEventsTarget: true,
+//       navigation: {
+//         prevEl: '.js-slider-btnPrev' + i,
+//         nextEl: '.js-slider-btnNext' + i,
+//       },
+//     });
+//   }
+// }
+
+
+const swiper01 = new Swiper('.js-index-slider', {
+  slidesPerView: 'auto',
+  grabCursor: true,
+  touchEventsTarget: true,
+  navigation: {
+    prevEl: '.js-slider-btnPrev',
+    nextEl: '.js-slider-btnNext',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar', // スクロールバーとして認識させるクラス
+    hide: false, // ユーザー操作後にスクロールバーを非表示にしない
+    draggable: true, // ドラッグ操作を可能にする
+    dragClass: 'drag', // ドラッグ可能なクラスの指定
+    dragSize: 1, // ドラッグのサイズ指定
+    snapOnRelease: false // スクロールバーを離したときにスライダーの位置を固定しないようにする
+  },
+});
 
 
 
@@ -75,7 +94,7 @@ const swiper03 = new Swiper('.p-chara__slider', {
   grabCursor: true,
   effect: 'slide',
   centeredSlides: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   speed: 1000,
   navigation: {
     nextEl: ".swiper-button-next",
