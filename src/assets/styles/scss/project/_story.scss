@@ -1,3 +1,5 @@
+@use "../foundation" as *;
+
 .p-story {
     position: relative;
     // @include maxWidth(1920px);
@@ -14,12 +16,20 @@
         content: "";
         @include absAll;
         background: url(../../assets/images/redmist.png);
-        opacity: 0.2;
+        opacity: 0;
         background-size: cover;
         z-index: 6;
+        transition: all 1s ease;
+        transition-delay: 2.6s;
         
         // animation: animation-opt 4s infinite alternate;
+    }
 
+
+    &.is-anim {
+        &::before {
+            opacity: 0.25;
+        }
     }
 
     // &::after {
@@ -64,6 +74,8 @@
 
     &__bg {
         @include absAll;
+        right: 0;
+        // @include maxWidth(1262px);
         // top: 20px;
         background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
         background-size: cover;

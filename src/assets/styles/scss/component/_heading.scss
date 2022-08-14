@@ -1,3 +1,5 @@
+@use "../foundation" as *;
+
 .c-sec {
     position: relative;
     overflow: hidden;
@@ -56,8 +58,8 @@
 
     &__bg {
         display: block;
-        width: 100vw;
-        max-width: 1920px;
+        width: 100%;
+        // max-width: 1262px;
         min-height: 760px;
         height: 100vh;
         position: fixed;
@@ -73,13 +75,14 @@
             @include absAll;
             background: url(../../assets/images/story_bg.jpg) top center no-repeat;
             // background-position: 50% 75%;
+            width: 100%;
             background-color: $color-black;
-            background-size: auto 100%;
+            background-size: cover;
             // background-size: auto 150%;
-            @include maxWidth(1920px);
+            // @include maxWidth(1920px);
             height: 100%;
             pointer-events: none;
-            filter: blur(2px);
+            // filter: blur(2px);
         }
     }
 
@@ -114,7 +117,7 @@
 
         &__ttl {
             .-en {
-                font-size: 64px;
+                font-size: 62px;
             }
 
             .-ja {

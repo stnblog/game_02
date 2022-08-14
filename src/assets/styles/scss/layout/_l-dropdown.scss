@@ -1,3 +1,5 @@
+@use "../foundation" as *;
+
 .l-dropdown {
   overflow: hidden;
   @include absolute($top:82px, $left:0);

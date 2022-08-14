@@ -1,55 +1,55 @@
 //  --------------------
 //  foundation
 //  --------------------
-@import "./scss/foundation/ress";
-@import "./scss/foundation/variables";
-@import "./scss/foundation/mixin";
-@import "./scss/foundation/base";
-@import "./scss/foundation/keyframes";
-@import "./scss/foundation/grid";
-@import "./scss/foundation/animations";
+@use './scss/foundation/ress';
+@use './scss/foundation/variables' as *;
+@use './scss/foundation/mixin' as *;
+@use './scss/foundation/base';
+@use './scss/foundation/keyframes';
+@use './scss/foundation/grid';
+@use './scss/foundation/animations';
 
 //  --------------------
 //  component
 //  --------------------
-@import "./scss/component/heading";
-@import "./scss/component/button";
-@import "./scss/component/slider";
-@import "./scss/component/modal";
-@import "./scss/component/box";
-@import "./scss/component/picture";
-@import "./scss/component/smoke";
+@use './scss/component/heading';
+@use './scss/component/button';
+@use './scss/component/slider';
+@use './scss/component/modal';
+@use './scss/component/box';
+@use './scss/component/picture';
+@use './scss/component/smoke';
 
 //  --------------------
 //  layout
 //  --------------------
-@import "./scss/layout/l-header";
-@import "./scss/layout/l-main";
-@import "./scss/layout/l-drawer";
-@import "./scss/layout/l-sidebar";
-@import "./scss/layout/l-section";
-@import "./scss/layout/l-dropdown";
-@import "./scss/layout/l-modal";
-@import "./scss/layout/l-footer";
+@use './scss/layout/l-header';
+@use './scss/layout/l-main';
+@use './scss/layout/l-drawer';
+@use './scss/layout/l-sidebar';
+@use './scss/layout/l-section';
+@use './scss/layout/l-dropdown';
+@use './scss/layout/l-modal';
+@use './scss/layout/l-footer';
 
 //  --------------------
 //  js
 //  --------------------
-@import "./scss/js/accordion";
-@import "./scss/js/tab";
-@import "./scss/js/pageTopScroll";
+@use './scss/js/accordion';
+@use './scss/js/tab';
+@use './scss/js/pageTopScroll';
 
 //  --------------------
 //  utility
 //  --------------------
-@import "./scss/utility/display";
+@use './scss/utility/display';
 
 //  --------------------
 //  project
 //  --------------------
-@import "./scss/project/story";
-@import "./scss/project/system";
-@import "./scss/project/chara";
-@import "./scss/project/news";
-@import "./scss/project/gallery";
-@import "./scss/project/index";
+@use './scss/project/story';
+@use './scss/project/system';
+@use './scss/project/chara';
+@use './scss/project/news';
+@use './scss/project/gallery';
+@use './scss/project/index';

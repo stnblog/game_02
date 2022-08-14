@@ -1,3 +1,5 @@
+@use "../foundation" as *;
+
 .l-drawer {
   &__trigger {
     position: fixed;
