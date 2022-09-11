@@ -3,35 +3,36 @@
 .p-chara {
     background: #000;
     position: relative;
-    // overflow: hidden;
     z-index: 500;
-
+    
     &::before {
         content: "";
         @include absAll;
         // background: rgba($color: #000000, $alpha: 0.5);
     }
-
+    
     .c-sec__ttl {
         margin-bottom: 0;
         z-index: 500;
-        top: -60px;
+        top: -100px;
         position: absolute;
         right: 14%;
         text-align: center
     }
-
+    
     &__bg {
         @include absAll;
         top: 0;
         z-index: 4;
+        filter: blur(4px);
         // width: 1240px;
         // height: 1240px;
         // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
         // background-size: cover;
     }
-
+    
     &__inner {
+        overflow: hidden;
         // @include maxWidth(1240px);
         padding: 20px 0 120px;
         position: relative;
@@ -49,7 +50,7 @@
 
     &__slider {
         @include maxWidth(1200px);
-        height: 660px;
+        height: 640px;
         z-index: 20;
         user-select: none;
         position: relative;
@@ -68,18 +69,18 @@
         right: -4%;
         z-index: 2;
         // overflow: hidden;
-        top: 60px;
+        top: 20px;
         // display: none;
     }
     
     &__foot {
         width: 42%;
         // @include absAll;
-        top: 200px;
+        top: 160px;
         position: absolute;
         // margin-left: 2%;
         text-align: left;
-        left: 10%;
+        left: 12%;
         z-index: 3;
         // width: ;
     }
@@ -124,7 +125,7 @@
         &--bg {
             // width: 1262px;
             // height: 1240px;
-            // @include maxWidth(1920px);
+            @include maxWidth(1600px);
             --chara-bg-opacity: 0.8;
             opacity: 0;
             @include absCenter;
@@ -252,7 +253,7 @@
             font-weight: 600;
             // text-transform: capitalize;
             line-height: 1;
-            text-shadow: 1px 8px 12px rgb(0, 0, 0);
+            // text-shadow: 1px 8px 12px rgb(0, 0, 0);
             border-bottom: 1px solid $color-white;
 
             span {
@@ -265,7 +266,7 @@
                 // font-weight: 400;
                 font-size: 16px;
                 letter-spacing: 0.1em;
-                text-shadow: 1px 2px 4px rgb(0, 0, 0);
+                // text-shadow: 1px 2px 4px rgb(0, 0, 0);
             }
         }
     }
@@ -284,7 +285,7 @@
         // font-weight: 600;
         // text-align: center;
         // text-shadow: 2px 2px 5px #830404, 2px 2px 5px #830404, 2px 2px 5px #830404, 2px 2px 5px #830404;
-        text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
+        // text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
 
         &::before {
             content: "";

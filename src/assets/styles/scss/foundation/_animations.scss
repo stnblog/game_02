@@ -77,13 +77,13 @@ $cover in $covers {
     }
 
     &::before {
-      background: $color-white;
+      background: $color-black;
       transition-delay: .2s;
       z-index: 10;
     }
 
     &::after {
-      background: $color-white;
+      background: $color-black;
       z-index: 11;
     }
 
@@ -98,6 +98,24 @@ $cover in $covers {
   }
 }
 
+
+@keyframes swing2 {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(4deg);
+  }
+  50% {
+      transform: rotate(0deg);
+  }
+  75% {
+      transform: rotate(-4deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
 
 // rotate
 //--------------------------------------------------------------------

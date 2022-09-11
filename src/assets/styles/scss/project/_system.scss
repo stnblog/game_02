@@ -1,4 +1,4 @@
-@use "../foundation" as *;
+@use "../foundation"as *;
 
 .p-sys {
     position: relative;
@@ -79,38 +79,49 @@
 
         &::before {
             display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    -webkit-box-shadow: 0px 0px 25px rgb(255 255 255 / 60%) inset;
-    box-shadow: 0px 0px 25px rgb(255 255 255 / 60%) inset;
-    content: "";
-    z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            z-index: 1;
+            box-shadow: 0px 0px 25px rgb(255 255 255 / 60%) inset;
         }
-        
+
+
         img {
-            box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);        
-            border: 6px solid rgb(0, 0, 0);
+            // box-shadow: 0 0 10px 0 rgba(239, 239, 239, 0.5);        
+            // border: 3px solid rgb(0, 0, 0);
             // border: 6px solid #fff;
             // overflow: hidden;
             // transform: rotate(-2deg);
 
         }
 
-        
+
 
         & .-obj {
+            box-shadow: none;
             border: none;
             position: absolute;
             right: 0;
-            bottom: -20px;
-            width: 56%;
+            bottom: -30px;
+            width: 24%;
+            z-index: 1;
+            // animation: swing2 10s infinite alternate;
+
+            &-left {
+                // right: initial;
+                // left: 0;
+            }
 
             &2 {
                 right: initial;
-                left: 0;
+                left: 5%;
+                bottom: -20px;
+                transform: rotate(-20deg);
+                width: 16%;
             }
         }
     }
@@ -133,8 +144,8 @@
     }
 
     &__detail {
-    //     top: -40px;
-    // position: relative;
+        //     top: -40px;
+        // position: relative;
         padding: 0 4% 20px 0;
         // color: $color-black;
 
@@ -154,7 +165,8 @@
             // margin: 20px 0 0;
             // line-height: 2;
             padding-bottom: 10px;
-            border-bottom: 1px solid rgb(203, 36, 36);;
+            border-bottom: 1px solid rgb(203, 36, 36);
+            ;
         }
     }
 

@@ -39,7 +39,7 @@
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0.45;
+      opacity: 0.25;
       position: absolute;
       height: 100%;
       width: 600vw;
@@ -47,13 +47,13 @@
     }
 
     &--first {
-      // background: url(../../assets/images/fog_1.png) top repeat-x;
+      background: url(../../assets/images/fog_1.png) top repeat-x;
       background-size: contain;
       animation: marquee 180s linear infinite;
     }
 
     &--second {
-      // background: url(../../assets/images/fog_2.png) top repeat-x;
+      background: url(../../assets/images/fog_2.png) top repeat-x;
       background-size: contain;
       animation: marquee 120s linear infinite;
     }
@@ -97,7 +97,7 @@
     // @include absCenter;
     // top: 72%;
     // left: 52%;
-    bottom: 60px;
+    bottom: 70px;
     right: 0;
     width: 100%;
     // left: 22%;
