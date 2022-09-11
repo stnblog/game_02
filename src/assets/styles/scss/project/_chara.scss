@@ -1,9 +1,9 @@
 @use "../foundation"as *;
 
 .p-chara {
-    // background: #000;
+    background: #000;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 500;
 
     &::before {
@@ -14,13 +14,17 @@
 
     .c-sec__ttl {
         margin-bottom: 0;
-        z-index: 60;
+        z-index: 500;
+        top: -60px;
+        position: absolute;
+        right: 14%;
+        text-align: center
     }
 
     &__bg {
         @include absAll;
         top: 0;
-        // z-index: -1000000;
+        z-index: 4;
         // width: 1240px;
         // height: 1240px;
         // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
@@ -29,10 +33,11 @@
 
     &__inner {
         // @include maxWidth(1240px);
-        padding: 80px 0 120px;
-        overflow: hidden;
+        padding: 20px 0 120px;
         position: relative;
-        z-index: 100000;
+        // transform: skewX(-10deg);
+        // overflow: hidden;
+        // z-index: 100000;
         // @include maxWidth(1100px);
         &::before {
             @include absAll;
@@ -43,9 +48,9 @@
     }
 
     &__slider {
-        @include maxWidth(1240px);
-        height: 600px;
-        z-index: 50;
+        @include maxWidth(1200px);
+        height: 660px;
+        z-index: 20;
         user-select: none;
         position: relative;
 
@@ -59,42 +64,46 @@
 
     &__head {
         position: absolute;
-        width: 42%;
-        top: 10px;
         text-align: left;
-        left: 17%;
-        z-index: 3;
+        right: -4%;
+        z-index: 2;
+        // overflow: hidden;
+        top: 60px;
         // display: none;
     }
-
+    
     &__foot {
+        width: 42%;
         // @include absAll;
+        top: 200px;
         position: absolute;
-        top: -60px;
         // margin-left: 2%;
-        right: 11%;
+        text-align: left;
+        left: 10%;
+        z-index: 3;
         // width: ;
-        z-index: 2;
     }
 
     &__tab {
         position: relative;
-        z-index: 5000;
+        z-index: 100;
+        top: 120px;
     }
 
     &__list {
         &--tab {
             position: relative;
-            @include maxWidth(540px);
+            @include maxWidth(700px);
             // margin: 20px auto 0;
             // top: 0;
-            @include flex($wrap:wrap, $justify:space-between);
+            @include flex($justify:space-between);
             // margin: 14px auto 0;
         }
 
         &--info {
-            bottom: 200px;
-            right: 4%;
+            display: none;
+            top: 450px;
+            left: 6%;
             position: absolute;
             // margin-top: 20px;
             // display: flex;
@@ -103,8 +112,8 @@
         }
 
         &--thumb {
-            // width: 540px;
-            margin-top: 30px;
+            // width: 500px;
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
         }
@@ -121,24 +130,24 @@
             @include absCenter;
             // top: -40px;
             transition: opacity 0.5s ease;
-            background-size: cover;
             width: 100%;
             height: 100%;
             background: url(../../assets/images/charaBg_02.jpg) 50% 50% no-repeat;
+            background-size: cover;
             // filter: blur(2px);
             // transform: rotate(-24deg);
 
             &::before {
                 content: "";
                 @include absAll;
-                background: rgba($color: #000000, $alpha: 0.45);
+                // background: rgba($color: #000000, $alpha: 0.8);
             }
 
             &::after {
                 content: "";
                 @include absCenter;
-                top: 36%;
-                background-image: url(../../assets/images/chara_obj.png);
+                top: 38%;
+                // background-image: url(../../assets/images/chara_obj.png);
                 width: 1240px;
                 height: 891px;
                 display: block;
@@ -146,7 +155,7 @@
                 background-position: 0 0;
                 background-position: center;
                 background-size: 1240px 891px;
-                // opacity: 0.75;
+                opacity: 0.65;
             }
 
 
@@ -162,9 +171,9 @@
         }
 
         &--tab {
-            width: 18.4%;
+            width: 22%;
             // margin: 0 4px;
-            // margin: 0 1%;
+            margin: 0 -2%;
             cursor: pointer;
             position: relative;
             transition-delay: .1s;
@@ -179,12 +188,12 @@
 
             & .-right {
                 display: block;
-                width: 120px;
+                width: 110px;
                 padding: min(0.1041666667vw, 2px) min(0.5208333333vw, 10px);
                 margin: 0 min(0.2604166667vw, 5px) min(0.5208333333vw, 10px) 0;
-                background: #000;
+                background: rgb(42, 42, 42);
                 box-sizing: border-box;
-                color: #c82424;
+                // background: rgb(235, 6, 6);
                 font-size: 14px;
                 text-align: right;
             }
@@ -233,11 +242,12 @@
             // text-align: center;
             // @include maxWidth(370px);
             // width: 460px;
-            width: 90%;
+            text-align: left;
+            width: 98%;
             padding-bottom: 4px;
             z-index: 2;
             // text-align: left;
-            font-size: 30px;
+            font-size: 38px;
             // letter-spacing: 0.12em;
             font-weight: 600;
             // text-transform: capitalize;
@@ -253,7 +263,7 @@
                 // line-height: 2;
                 opacity: 0.65;
                 // font-weight: 400;
-                font-size: 20px;
+                font-size: 16px;
                 letter-spacing: 0.1em;
                 text-shadow: 1px 2px 4px rgb(0, 0, 0);
             }
@@ -261,12 +271,14 @@
     }
 
     &__txt {
-        padding-left: 3%;
+        // padding-left: 3%;
         position: relative;
         // color: #dd0909;
+        // text-align: center;
+        text-align: left;
         // text-transform:lowercase;
-        margin: 20px 0 20px;
-        font-size: 22px;
+        margin: 10px 0 14px;
+        font-size: 20px;
         line-height: 1.4;
         font-weight: 400;
         // font-weight: 600;
@@ -281,7 +293,7 @@
             left: -10px;
             width: 0.8px;
             height: 100%;
-            background: $color-white;
+            // background: $color-white;
         }
     }
 }

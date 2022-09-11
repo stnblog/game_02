@@ -70,26 +70,22 @@
         pointer-events: none;
         z-index: 1;
 
-        &::before {
-            content: "";
-            @include absAll;
-            background: url(../../assets/images/story_bg.jpg) top center no-repeat;
-            // background-position: 50% 75%;
-            width: 100%;
+        &--img {
+            background: url(../../assets/images/story_bg_2.png) top center no-repeat;
             background-color: $color-black;
             background-size: cover;
-            // background-size: auto 150%;
-            // @include maxWidth(1920px);
+            width: 100%;
             height: 100%;
             pointer-events: none;
-            // filter: blur(2px);
         }
+    
     }
 
     &__obj {
-        display: block;
+        // display: none;
         @include absCenter;
-        top: 52%;
+        top: 56%;
+        left: 51%;
         width: 100%;
         height: 100%;
         max-width: 622px;
@@ -107,7 +103,7 @@
             // left: calc(0.3921875 * min(100vw, 1920px));
             z-index: 1999;
             @include mq-target(sm) {
-                background-size: 105% auto;
+                background-size: 90% auto;
             }
 
         }
@@ -117,7 +113,7 @@
 
         &__ttl {
             .-en {
-                font-size: 62px;
+                font-size: 76px;
             }
 
             .-ja {

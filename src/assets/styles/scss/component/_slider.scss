@@ -2,8 +2,9 @@
 
 .c-slider {
   user-select: none;
+  overflow: hidden;
   padding: 5px;
-  padding: 0 calc((100vw - 1600px) / 2);
+  // padding: 0 calc((100vw - 1600px) / 2);
 
   &__heading {
     margin: 0 0 20px;

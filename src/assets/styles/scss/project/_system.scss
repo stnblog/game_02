@@ -9,13 +9,13 @@
     // opacity: 0.5;
     // margin-top: -10px;
     z-index: 500;
-    padding: 120px 0;
+    padding: 120px 0 160px;
 
     &__inner {
         position: relative;
         z-index: 10;
         // transform: skewY(5deg);
-        @include maxWidth(1200px);
+        @include maxWidth(1400px);
         padding: 0 20px;
     }
 
@@ -44,6 +44,7 @@
         text-align: left;
         position: relative;
         @include flex($justify:center);
+        align-items: center;
         flex-flow: row-reverse wrap;
         padding-bottom: 10.53846%;
 
@@ -61,6 +62,12 @@
             .p-sys__detail {
                 padding: 0 0 20px 4%;
             }
+
+            .p-sys__img {
+                img {
+                    // transform: rotate(2deg);
+                }
+            }
         }
     }
 
@@ -69,20 +76,37 @@
         transition-delay: .2s;
         // outline-offset: -1px;
         // outline: 2px solid #B12330;
+
+        &::before {
+            display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 25px rgb(255 255 255 / 60%) inset;
+    box-shadow: 0px 0px 25px rgb(255 255 255 / 60%) inset;
+    content: "";
+    z-index: 1;
+        }
         
         img {
-            box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);            
-            border: 2px solid rgb(131, 4, 4);
+            box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);        
+            border: 6px solid rgb(0, 0, 0);
+            // border: 6px solid #fff;
             // overflow: hidden;
+            // transform: rotate(-2deg);
 
         }
+
+        
 
         & .-obj {
             border: none;
             position: absolute;
             right: 0;
-            bottom: -40px;
-            width: 64%;
+            bottom: -20px;
+            width: 56%;
 
             &2 {
                 right: initial;
@@ -118,17 +142,19 @@
             font-size: 24px;
             position: relative;
             display: inline-block;
+            color: rgb(203, 36, 36);
             z-index: 1;
             font-weight: 600;
         }
 
         p {
+            text-shadow: black 1px 1px 7px, black -1px 1px 7px, black 1px -1px 7px, black -1px -1px 7px;
             font-size: 18px;
             // font-weight: 600;
             // margin: 20px 0 0;
             // line-height: 2;
             padding-bottom: 10px;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid rgb(203, 36, 36);;
         }
     }
 
@@ -148,7 +174,7 @@
         }
 
         &__detail {
-            width: 44.61538%;
+            width: 40.61538%;
         }
 
         &__chara {
@@ -197,7 +223,7 @@
         }
 
         &__item {
-            padding-bottom: 12.53846%;
+            padding-bottom: 10.53846%;
         }
 
         &__chara {
@@ -214,7 +240,7 @@
 
 
         &__img {
-            width: 50.53846%;
+            width: 54.53846%;
         }
 
         &__detail {

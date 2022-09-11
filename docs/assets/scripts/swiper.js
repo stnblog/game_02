@@ -101,5 +101,9 @@ var swiper04 = new Swiper('.p-gallery__slider', {
   grabCursor: true,
   touchEventsTarget: true,
   centeredSlides: true,
-  loopAdditionalSlides: 1
+  loopAdditionalSlides: 1,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
 });

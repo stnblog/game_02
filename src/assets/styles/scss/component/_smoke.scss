@@ -6,7 +6,7 @@
   background: linear-gradient(180deg, rgba(6, 6, 9, 0), #000 50%);
   z-index: 30;
   display: block;
-  height: 80px;
+  height: 60px;
   width: 100%;
 
   @include mq-target(sm) {

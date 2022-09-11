@@ -1,36 +1,50 @@
 @use "../foundation" as *;
 
 .p-story {
+    overflow: visible;
     position: relative;
-    // @include maxWidth(1920px);
+    background: #000;
+    z-index: 50;
+    @include maxWidth(1920px);
     .c-sec__ttl {
         // text-align: left;
         text-shadow: 1px 2px 6px $color-black;
         // width: 30%;
         z-index: 50;
+
         // animation: animation-zoomImg 1.4s ease-in-out infinite;
 
     }
 
-    &::before {
-        content: "";
-        @include absAll;
-        background: url(../../assets/images/redmist.png);
-        opacity: 0;
-        background-size: cover;
-        z-index: 6;
-        transition: all 1s ease;
-        transition-delay: 2.6s;
-        
-        // animation: animation-opt 4s infinite alternate;
-    }
 
 
-    &.is-anim {
+    &__red {
         &::before {
-            opacity: 0.25;
+            content: "";
+            @include absAll;
+            position: absolute !important;
+            // background: url(../../assets/images/redmist.png) top center no-repeat;
+            opacity: 0;
+            background-size: cover;
+            z-index: 6;
+            width: 100%;
+            height: 100%;
+            transition: all 1s linear;
+            transition-delay: 1s;
+            z-index: -1;
+            
+            // animation: animation-opt 4s infinite alternate;
+        }
+
+        &.is-anim {
+            &::before {
+                opacity: 0.2;
+            }
         }
     }
+
+
+
 
     // &::after {
     //     position: absolute;
@@ -54,12 +68,12 @@
     }
 
     &__obj {
-        // @include absCenter;
-        position: absolute;
-        top: 0;
-        max-width: 82vw;
+        @include absCenter;
+        // position: absolute;
+        top: 56%;
+        width: 30%;
         // width: 28%;
-        z-index: 6;
+        z-index: 1;
         // filter: blur(2px);
 
         div {
@@ -73,11 +87,12 @@
 
 
     &__bg {
+        // @include maxWidth(1600px);
         @include absAll;
         right: 0;
         // @include maxWidth(1262px);
         // top: 20px;
-        background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
+        // background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
         background-size: cover;
         // animation: kf-animate-slide 4s infinite alternate;
         z-index: 7;
@@ -88,27 +103,29 @@
 
     &__inner {
         @include flexCenter;
-        // padding: 147px 0 140px;
-        position: relative;
-        top: -20px;
-        height: 760px;
+        padding: 140px 0 180px;
+        // position: relative;
+        top: -60px;
+        // height: 1000px;
+        @include maxWidth(1400px);
+        
         
         @include mq-target(sm) {
-            height: 870px;
+            // height: 1200px;
         }
     }
 
 
     &__list {
-        position: relative;
+        // position: relative;
         @include flexCenter;
         z-index: 10;
-        @include maxWidth(680px);
+        @include maxWidth(1000px);
     }
 
     &__item {
         &--left {
-            position: relative;
+            // position: relative;
             // top: -40px;
             width: 220px;
             left: 8%;
@@ -117,7 +134,7 @@
         }
 
         &--right {
-            position: relative;
+            // position: relative;
             max-width: 90%;
             margin: 0 auto;
             
@@ -128,17 +145,17 @@
             p {
                 font-size: 14px;
                 font-weight: 500;
-                margin: 0 0 24px;
+                margin: 40px 0 0;
                 line-height: 2;
                 text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                 text-transform: uppercase;
                 
-                &:last-child {
-                    margin: 0;
-                }
+                // &:last-child {
+                //     margin: 0;
+                // }
                 
                 @include mq-target(sm) {
-                    font-size: 16px;
+                    font-size: 22px;
                 }
             }
 

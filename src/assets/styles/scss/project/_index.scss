@@ -1,19 +1,24 @@
 @use "../foundation" as *;
 
 .p-mv {
-  overflow: hidden;
-  width: 100%;
-  display: block;
   position: relative;
-  // min-height: 100vh;
-  // padding-bottom: 100px;
-  z-index: 500;
-  // height: 780px;
-  height: 100vh;
-  // background: #000;
-  // background: #000;
-  // background: url(../../assets/images/main_bg.png) top center no-repeat;
-  // background-size: cover;
+  width: 100%;
+  height: 940px;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    @include absAll;
+    // background: url(../../assets/images/main_bg.png) top no-repeat;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    // height: 900px;
+    z-index: -100;
+  }
 
 
 
@@ -42,13 +47,13 @@
     }
 
     &--first {
-      background: url(../../assets/images/fog_1.png) top repeat-x;
+      // background: url(../../assets/images/fog_1.png) top repeat-x;
       background-size: contain;
       animation: marquee 180s linear infinite;
     }
 
     &--second {
-      background: url(../../assets/images/fog_2.png) top repeat-x;
+      // background: url(../../assets/images/fog_2.png) top repeat-x;
       background-size: contain;
       animation: marquee 120s linear infinite;
     }
@@ -79,33 +84,36 @@
       margin: auto;
 
       @include mq-target(sm) {
-        width: 70.8%;
+        width: 54.8%;
       }
     }
   }
 
   &__heading {
+    position: absolute;
     // position: absolute;
     // bottom: 4vw;
     // left: 0;
-    @include absCenter;
-    top: 70%;
-    width: 100%;
+    // @include absCenter;
+    // top: 72%;
+    // left: 52%;
+    bottom: 60px;
+    right: 0;
     width: 100%;
     // left: 22%;
 
     @include mq-target(sm) {
-      width: 45%;
+      width: 44%;
     }
 
     h1 {
-      height: 200px;
+      height: 130px;
       margin: auto;
     }
   }
 
   &__banner {
-    width: 44vh;
+    width: 50vh;
     // display: flex;
     margin: auto;
     position: absolute;
@@ -141,8 +149,8 @@
         margin: auto;
         height: 100%;
         background: url(../../assets/images/play.png) 50% 50% no-repeat;
-        background-size: 80% auto;
-        opacity: 0.3;
+        background-size: 50% auto;
+        opacity: 0.5;
       }
     }
   }

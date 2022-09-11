@@ -26,6 +26,23 @@ $(document).ready(function () {
 });
 document.addEventListener('DOMContentLoaded', function () {
   {
+    var tabTriggers = document.querySelectorAll('.js-tab--trigger');
+    var tabContents = document.querySelectorAll('.js-tab--content');
+    tabTriggers.forEach(function (trigger) {
+      return trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        tabTriggers.forEach(function (trigger) {
+          trigger.classList.remove('is-active');
+        });
+        trigger.classList.add('is-active');
+        tabContents.forEach(function (content) {
+          return content.classList.remove('is-active');
+        });
+        document.getElementById(trigger.dataset.tab).classList.add('is-active');
+      });
+    });
+  }
+  {
     var el = document.querySelectorAll('.inview');
     var els = Array.prototype.slice.call(el);
 
@@ -41,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var options = {
       root: null,
-      rootMargin: '-0px 0px',
+      rootMargin: '-50px 0px',
       threshold: 0
     };
     var io = new IntersectionObserver(cb, options);
