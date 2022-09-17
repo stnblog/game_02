@@ -50,7 +50,7 @@
 
     &__slider {
         @include maxWidth(1200px);
-        height: 640px;
+        height: 600px;
         z-index: 20;
         user-select: none;
         position: relative;
@@ -69,14 +69,14 @@
         right: -4%;
         z-index: 2;
         // overflow: hidden;
-        top: 20px;
+        top: -20;
         // display: none;
     }
     
     &__foot {
         width: 42%;
         // @include absAll;
-        top: 160px;
+        top: 130px;
         position: absolute;
         // margin-left: 2%;
         text-align: left;

@@ -1,11 +1,13 @@
-@use "../foundation" as *;
+@use "../foundation"as *;
 
 .p-story {
     overflow: visible;
     position: relative;
-    background: #000;
-    z-index: 50;
+    z-index: 3;
+    background: #fff;
     @include maxWidth(1920px);
+    margin-top: -200px;
+
     .c-sec__ttl {
         // text-align: left;
         text-shadow: 1px 2px 6px $color-black;
@@ -14,6 +16,18 @@
 
         // animation: animation-zoomImg 1.4s ease-in-out infinite;
 
+    }
+
+    &__bg {
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        padding-top: 12.375%;
+        margin-bottom: -1%;
+        background-size: 100% auto;
+        background-position: bottom;
+        // background-repeat: repeat-x;
+        background-image: url(../../assets/images/smoke.png);
     }
 
 
@@ -32,7 +46,7 @@
             transition: all 1s linear;
             transition-delay: 1s;
             z-index: -1;
-            
+
             // animation: animation-opt 4s infinite alternate;
         }
 
@@ -46,18 +60,20 @@
 
 
 
-    // &::after {
-    //     position: absolute;
-    //     content: "";
-    //     top: 3.802vw;
-    //     right: 10%;
-    //     background: url(../../assets/images/test_03_beta.png) no-repeat;
-    //     background-size: contain;
-    //     width: 34.01vw;
-    //     height: 82.469vw;
-    //     z-index: 3;
-    // }
-    
+    &::after {
+        position: absolute;
+        content: "";
+        top: 6.802vw;
+        animation: swing 10s infinite alternate;
+
+        right: 10%;
+        background: url(../../assets/images/test_01_back.png) no-repeat;
+        background-size: contain;
+        width: 20.01vw;
+        height: 100%;
+        z-index: 3;
+    }
+
 
 
     &.is-anim {
@@ -83,33 +99,18 @@
         img {
             animation: swing 10s infinite alternate;
         }
-      }
-
-
-    &__bg {
-        // @include maxWidth(1600px);
-        @include absAll;
-        right: 0;
-        // @include maxWidth(1262px);
-        // top: 20px;
-        // background: url(../../assets/images/keepout.png) 50% 50% no-repeat;
-        background-size: cover;
-        // animation: kf-animate-slide 4s infinite alternate;
-        z-index: 7;
-
     }
-
 
 
     &__inner {
         @include flexCenter;
-        padding: 140px 0 180px;
+        padding: 200px 0 80px;
         // position: relative;
         top: -60px;
         // height: 1000px;
-        @include maxWidth(1400px);
-        
-        
+        @include maxWidth(1000px);
+
+
         @include mq-target(sm) {
             // height: 1200px;
         }
@@ -137,23 +138,25 @@
             // position: relative;
             max-width: 90%;
             margin: 0 auto;
-            
+
             @include mq-target(sm) {
                 max-width: 80%;
             }
-            
+
             p {
                 font-size: 14px;
                 font-weight: 500;
                 margin: 40px 0 0;
                 line-height: 2;
-                text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
-                text-transform: uppercase;
+                color: $color-black;
                 
+                // text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
+                text-transform: uppercase;
+
                 // &:last-child {
                 //     margin: 0;
                 // }
-                
+
                 @include mq-target(sm) {
                     font-size: 22px;
                 }
