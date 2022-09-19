@@ -10,9 +10,18 @@
 
     .c-sec__ttl {
         // text-align: left;
-        text-shadow: 1px 2px 6px $color-black;
+        // text-shadow: 1px 2px 6px $color-black;
         // width: 30%;
         z-index: 50;
+        color: $color-black;
+
+        & .-en {
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
 
         // animation: animation-zoomImg 1.4s ease-in-out infinite;
 
@@ -44,15 +53,15 @@
             width: 100%;
             height: 100%;
             transition: all 1s linear;
-            transition-delay: 1s;
+            transition-delay: 1.8s;
             z-index: -1;
+            animation: animation-opt 4s infinite alternate;
 
-            // animation: animation-opt 4s infinite alternate;
         }
-
+        
         &.is-anim {
             &::before {
-                opacity: 0.2;
+                opacity: 0.5;
             }
         }
     }
@@ -61,15 +70,16 @@
 
 
     &::after {
-        position: absolute;
         content: "";
-        top: 6.802vw;
+        display: none;
         animation: swing 10s infinite alternate;
+        position: absolute;
+        top: 1.802vw;
 
-        right: 10%;
+        right: 34%;
         background: url(../../assets/images/test_01_back.png) no-repeat;
         background-size: contain;
-        width: 20.01vw;
+        width: 30.01vw;
         height: 100%;
         z-index: 3;
     }
@@ -81,6 +91,34 @@
             content: "";
             transform: translateY(0);
         }
+    }
+
+    &__hand {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        width: 24%;
+        height: 100%;
+
+        img {
+            transform: rotate(24deg)
+        }
+
+    }
+
+    &__hand2 {
+        position: absolute;
+        top: 300px;
+        // left: 0;
+        right: 0;
+        // z-index: 500;
+        width: 27%;
+        height: 100%;
+
+        img {
+            transform: rotate(-29deg)
+        }
+
     }
 
     &__obj {
@@ -103,8 +141,9 @@
 
 
     &__inner {
+        position: relative;
         @include flexCenter;
-        padding: 200px 0 80px;
+        padding: 200px 0 70px;
         // position: relative;
         top: -60px;
         // height: 1000px;
@@ -118,6 +157,7 @@
 
 
     &__list {
+        position: relative;
         // position: relative;
         @include flexCenter;
         z-index: 10;
@@ -149,7 +189,7 @@
                 margin: 40px 0 0;
                 line-height: 2;
                 color: $color-black;
-                
+
                 // text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                 text-transform: uppercase;
 

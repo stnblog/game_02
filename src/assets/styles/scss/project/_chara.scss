@@ -14,9 +14,11 @@
     .c-sec__ttl {
         margin-bottom: 0;
         z-index: 500;
-        top: -100px;
+        // top: -100px;
         position: absolute;
+        // @include absCenter;
         right: 14%;
+        top: -100px;
         text-align: center
     }
     
@@ -24,7 +26,7 @@
         @include absAll;
         top: 0;
         z-index: 4;
-        filter: blur(4px);
+
         // width: 1240px;
         // height: 1240px;
         // background: url(../../assets/images/story_bg.png) 50% 50% no-repeat;
@@ -34,7 +36,7 @@
     &__inner {
         overflow: hidden;
         // @include maxWidth(1240px);
-        padding: 20px 0 120px;
+        // padding: 20px 0 120px;
         position: relative;
         // transform: skewX(-10deg);
         // overflow: hidden;
@@ -50,12 +52,12 @@
 
     &__slider {
         @include maxWidth(1200px);
-        height: 600px;
+        height: 860px;
         z-index: 20;
         user-select: none;
         position: relative;
 
-        margin-top: 60px;
+        // margin-top: 60px;
     }
 
     &__slide {
@@ -66,29 +68,37 @@
     &__head {
         position: absolute;
         text-align: left;
-        right: -4%;
+        right: 24%;
         z-index: 2;
         // overflow: hidden;
-        top: -20;
+        top: 100px;
         // display: none;
     }
     
     &__foot {
-        width: 42%;
+        width: 40%;
+        display: none;
         // @include absAll;
-        top: 130px;
+        top: 260px;
         position: absolute;
         // margin-left: 2%;
         text-align: left;
         left: 12%;
         z-index: 3;
         // width: ;
+
+        p {
+            text-shadow: 0 0 0.4em #000, 0 0 0.4em #000;
+        }
     }
 
     &__tab {
-        position: relative;
+        // position: relative;
         z-index: 100;
-        top: 120px;
+        @include absCenter;
+        bottom: -130px;
+        top: initial;
+        // top: 140px;
     }
 
     &__list {
@@ -103,8 +113,8 @@
 
         &--info {
             display: none;
-            top: 450px;
-            left: 6%;
+            top: 600px;
+            right: 6%;
             position: absolute;
             // margin-top: 20px;
             // display: flex;
@@ -133,15 +143,16 @@
             transition: opacity 0.5s ease;
             width: 100%;
             height: 100%;
-            background: url(../../assets/images/charaBg_02.jpg) 50% 50% no-repeat;
+            background: url(../../assets/images/story_bg.jpg) 50% 50% no-repeat;
             background-size: cover;
+            // filter: blur(2px);
             // filter: blur(2px);
             // transform: rotate(-24deg);
 
             &::before {
                 content: "";
                 @include absAll;
-                // background: rgba($color: #000000, $alpha: 0.8);
+                background: rgba($color: #000000, $alpha: 0.35);
             }
 
             &::after {
@@ -195,7 +206,7 @@
                 background: rgb(42, 42, 42);
                 box-sizing: border-box;
                 // background: rgb(235, 6, 6);
-                font-size: 14px;
+                font-size: 16px;
                 text-align: right;
             }
 
@@ -207,7 +218,7 @@
                 background: #000;
                 box-sizing: border-box;
                 color: #fff;
-                font-size: 14px;
+                font-size: 16px;
                 text-align: left;
             }
         }
@@ -248,7 +259,7 @@
             padding-bottom: 4px;
             z-index: 2;
             // text-align: left;
-            font-size: 38px;
+            font-size: 30px;
             // letter-spacing: 0.12em;
             font-weight: 600;
             // text-transform: capitalize;
@@ -278,15 +289,12 @@
         // text-align: center;
         text-align: left;
         // text-transform:lowercase;
-        margin: 10px 0 14px;
-        font-size: 20px;
+        margin: 10px 0 10px;
+        font-size: 18px;
         line-height: 1.4;
         font-weight: 400;
         // font-weight: 600;
         // text-align: center;
-        // text-shadow: 2px 2px 5px #830404, 2px 2px 5px #830404, 2px 2px 5px #830404, 2px 2px 5px #830404;
-        // text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
-
         &::before {
             content: "";
             position: absolute;

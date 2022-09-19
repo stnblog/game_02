@@ -1,0 +1,61 @@
+@use "../foundation"as *;
+
+
+.p-product {
+    position: relative;
+    z-index: 500;
+    // height: 1000px;
+
+    &__inner {
+        position: relative;
+        @include maxWidth(1200px);
+        padding: 0px 20px 0;
+    }
+
+    &__list {
+        @include flex($align:center, $justify:center);
+        padding: 6%;
+        box-shadow: 1px 1px 12px rgb(210 210 210 / 10%), -1px 1px 12px rgb(210 210 210 / 10%), 1px -1px 12px rgb(210 210 210 / 10%), -1px -1px 12px rgb(210 210 210 / 10%);
+
+        &--detail {
+            text-align: left;
+            line-height: 1;
+            display: flex;
+            align-items: top;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            dt {
+                font-size: 16px;
+                color: #b50000;
+                font-weight: 900;
+                text-shadow: 1px 1px 2px #1a0606, -1px 1px 2px #1a0606, 1px -1px 2px #1a0606, -1px -1px 2px #1a0606;
+                width: 24%;
+                margin-bottom: 16px;
+                line-height: 1.6;
+            }
+
+            dd {
+                font-size: 16px;
+                width: 76%;
+                margin-bottom: 16px;
+                line-height: 1.6;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__item {
+        &--left {
+            width: 58%;
+            margin: 0 20px;
+        }
+
+        &--right {
+            width: 42%;
+            margin: 0 20px;
+        }
+    }
+}

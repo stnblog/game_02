@@ -214,34 +214,45 @@
         <div class="p-mv__inner">
 
         </div>
-        <div class="smoke smoke__bottom"></div>
+        <!-- <div class="smoke smoke__bottom"></div> -->
     </section>
 
     <menu style="position: relative;">
         <ul>
             <li>
                 <a href="#top">
-                    TOP
+                    <span class="-en">TOP</span>
+                    <span class="-jp">トップ</span>
                 </a>
             </li>
             <li>
                 <a href="#about">
-                    STORY
+                    <span class="-en">STORY</span>
+                    <span class="-jp">ストーリー</span>
                 </a>
             </li>
             <li>
                 <a href="#chara">
-                    CHARACTERS
+                    <span class="-en">CHARACTERS</span>
+                    <span class="-jp">キャラクター</span>
                 </a>
             </li>
             <li>
                 <a href="#system">
-                    SYSTEM
+                    <span class="-en">SYSTEM</span>
+                    <span class="-jp">システム</span>
                 </a>
             </li>
             <li>
                 <a href="#gallery">
-                    GALLERY
+                    <span class="-en">GALLERY</span>
+                    <span class="-jp">ギャラリー</span>
+                </a>
+            </li>
+            <li>
+                <a href="#product">
+                    <span class="-en">PRODUCT</span>
+                    <span class="-jp">製品情報</span>
                 </a>
             </li>
         </ul>
@@ -282,8 +293,8 @@
                 <img src="./assets/images/typo_news.png" alt="" style="width: 520px;">
             </h2> -->
             <h2 class="c-sec__ttl">
-                <span class="-en">NEWS</span>
-                <span class="-ja">- お知らせ -</span>
+                <img src="./assets/images/title_chara.png" alt="" style="width: 360px;">
+
             </h2>
 
             <div class="swiper-container c-slider index__slider js-index-slider">
@@ -376,11 +387,45 @@
 
     <section id="about" class="c-sec p-story inview">
 
+        <div class="p-story__red inview"></div>
 
+        <div class="p-story__hand">
+            <div class="inview js-scroll--view">
+                <img src="./assets/images/hand_2.png" alt="">
+                <!-- <img src="./assets/images/hand_2.png" alt=""> -->
+            </div>
+        </div>
+        <div class="p-story__hand2">
+            <div class="inview js-scroll--view">
+                <img src="./assets/images/hand_1.png" alt="">
+                <!-- <img src="./assets/images/hand_2.png" alt=""> -->
+            </div>
+        </div>
         <!-- <div class="smoke smoke__top"></div> -->
         <!-- <div class="smoke smoke__bottom"></div> -->
         <div class="p-story__inner">
+            <!-- <div class="inview js-scroll--fadeUp">
+                        <figure style="position: relative; overflow: hidden;">
+                            <img src="./assets/images/story_obj_01.png" alt="">
+                            <div class="p-story__obj">
+                                <div class="inview js-scroll--slideDown" style="transition-delay: 1.2s;">
+                                    <figure class="js-rellax" data-rellax-speed="1.5" data-rellax-percentage="1">
+                                        <img src="./assets/images/test_01_back.png" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </figure>
+                    </div> -->
+
+
+            <!-- <h2 class="c-sec__ttl" style="margin-top: 20px;">
+                <span class="-en">STORY</span>
+                <span class="-ja">人物紹介</span>
+            </h2> -->
+
             <ul class="p-story__list">
+
+
 
                 <li class="p-story__item--right">
                     <p class="inview js-scroll--fadeUp" style="font-size: 32px;">
@@ -393,11 +438,11 @@
                     <p class="inview js-scroll--fadeUp">
                         <!-- <img src="./assets/images/story_obj_01.png" alt="" /> -->
                     </p>
-                    <div class="p-story__red inview">
-                        <p class="inview js-scroll--fadeUp" style="font-size: 54px; padding: 140px 0;">
-                            <span>死が、</span>待ち受けていた
-                        </p>
-                    </div>
+
+                    <p class="inview js-scroll--fadeUp" style="font-size: 54px; padding: 140px 0;">
+                        <span>死が、</span>待ち受けていた
+                    </p>
+
                     <!-- <div class="inview js-scroll--fadeUp">
                         <figure style="position: relative; overflow: hidden;">
                             <img src="./assets/images/story_obj_01.png" alt="">
@@ -422,12 +467,13 @@
                 </li>
             </ul>
         </div>
-        
+
         <div class="p-story__bg" style="transform: scale(1, -1);"></div>
-        
-        
+
+
     </section>
     <!-- <div class="p-story__bg"></div> -->
+
     <section id="chara" class="p-chara">
 
         <div class="smoke smoke__top"></div>
@@ -435,10 +481,17 @@
 
 
         <h2 class="c-sec__ttl" style="margin-top: 20px;">
-            <img src="./assets/images/title_chara.png" alt="" style="width: 480px;">
+            <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 440px;"> -->
             <!-- <span class="-en">characters</span>
             <span class="-ja">人物紹介</span> -->
         </h2>
+
+        <div class="p-story__hand2">
+            <div class="inview js-scroll--view">
+                <img src="./assets/images/chara_name.png" alt="">
+                <!-- <img src="./assets/images/hand_2.png" alt=""> -->
+            </div>
+        </div>
 
         <div class="p-chara__inner">
             <div class="p-chara__bg">
@@ -473,7 +526,7 @@
 
                         <div class="p-chara__head inview js-scroll--slideRight">
 
-                            <figure class="p-chara__img--chara" style="width:890px; margin: auto;">
+                            <figure class="p-chara__img--chara" style="width:760px; margin: auto;">
                                 <img src="./assets/images/test_04.png" alt="" class="-front01">
                             </figure>
                             <ul class="p-chara__list--info">
@@ -513,7 +566,7 @@
                                 「&nbsp;僕は欲望のために<br />
                                 その手を汚すことができるのか…？&nbsp;」
                             </p>
-                            <p style="font-size: 16px; line-height: 26px;
+                            <p style="font-size: 14px; line-height: 26px;
                             ">
                                 主人公。港町ゴリアテが暗黒騎士団に襲撃された際、父・プランシーを連れ去られてしまう。以後、ウォルスタ解放軍の一員として、姉のカチュア、幼なじみのヴァイスと共にバクラム、ガルガスタン陣営に対してゲリラ活動を行う。
                                 正義感が強く、また、理想をかなえるための実行力を持つ。その一方で思慮深くもあり、戦う意味について思い悩むこともある。
@@ -591,7 +644,7 @@
                                 「&nbsp;僕は欲望のために<br />
                                 その手を汚すことができるのか…？&nbsp;」
                             </p>
-                            <p style="font-size: 16px; line-height: 26px; text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
+                            <p style="font-size: 14px; line-height: 26px; text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                             ">
                                 主人公。港町ゴリアテが暗黒騎士団に襲撃された際、父・プランシーを連れ去られてしまう。以後、ウォルスタ解放軍の一員として、姉のカチュア、幼なじみのヴァイスと共にバクラム、ガルガスタン陣営に対してゲリラ活動を行う。
                                 正義感が強く、また、理想をかなえるための実行力を持つ。その一方で思慮深くもあり、戦う意味について思い悩むこともある。
@@ -710,48 +763,47 @@
             </div>
 
 
-            <div class="p-chara__tab" style="z-index: 100;">
-                <ul class="p-chara__list--tab">
-                    <li class="p-chara__item--tab js-chara-tab" data-num="0">
-                        <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="">
-                        </figure>
-                    </li>
-                    <li class="p-chara__item--tab js-chara-tab" data-num="1">
-                        <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="">
-                        </figure>
-                    </li>
-                    <li class="p-chara__item--tab js-chara-tab" data-num="2">
-                        <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="">
-                        </figure>
-                    </li>
-                    <li class="p-chara__item--tab js-chara-tab" data-num="1">
-                        <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="">
-                        </figure>
-                    </li>
-                    <li class="p-chara__item--tab js-chara-tab" data-num="2">
-                        <figure>
-                            <img src="./assets/images/charaBoard_01.png" alt="">
-                        </figure>
-                    </li>
-                </ul>
-
-            </div>
 
 
             <div class="smoke smoke__bottom"></div>
         </div>
-    </section>
 
+        <div class="p-chara__tab" style="z-index: 100;">
+            <ul class="p-chara__list--tab">
+                <li class="p-chara__item--tab js-chara-tab" data-num="0">
+                    <figure>
+                        <img src="./assets/images/charaBoard_01.png" alt="">
+                    </figure>
+                </li>
+                <li class="p-chara__item--tab js-chara-tab" data-num="1">
+                    <figure>
+                        <img src="./assets/images/charaBoard_01.png" alt="">
+                    </figure>
+                </li>
+                <li class="p-chara__item--tab js-chara-tab" data-num="2">
+                    <figure>
+                        <img src="./assets/images/charaBoard_01.png" alt="">
+                    </figure>
+                </li>
+                <li class="p-chara__item--tab js-chara-tab" data-num="1">
+                    <figure>
+                        <img src="./assets/images/charaBoard_01.png" alt="">
+                    </figure>
+                </li>
+                <li class="p-chara__item--tab js-chara-tab" data-num="2">
+                    <figure>
+                        <img src="./assets/images/charaBoard_01.png" alt="">
+                    </figure>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <div class="p-story__bg" style=""></div>
 
     <section id="system" class="c-sec p-sys">
-        <div class="smoke smoke__top"></div>
-        <!-- <div class="smoke smoke__top"></div> -->
+
         <h2 class="c-sec__ttl" style="margin-top: 20px;">
-            <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 480px;"> -->
             <span class="-en">SYSTEM</span>
             <span class="-ja">システム</span>
         </h2>
@@ -764,7 +816,6 @@
                 <li class="p-sys__item reverse">
                     <div class="p-sys__detail">
                         <h3 class="">
-                            <!-- <img src="./assets/images/title_story.png" alt=""> -->
                             <img src="./assets/images/title_story.png" alt="" class="-obj">
                         </h3>
                         <p>
@@ -780,7 +831,7 @@
                         <a href="./assets/images/chara_bg_02.jpg" data-lity>
                             <img src="./assets/images//charaBg_01.jpg" alt="">
                         </a>
-                        <!-- <img src="./assets/images/rantan.png" alt="" class="-obj"> -->
+
                     </figure>
 
                 </li>
@@ -789,11 +840,9 @@
                         <a href="./assets/images/chara_bg_02.jpg" data-lity>
                             <img src="./assets/images/system_01.jpg" alt="">
                         </a>
-                        <!-- <img src="./assets/images/axe.png" alt="" class="-obj -obj2 -obj-left"> -->
                     </figure>
                     <div class="p-sys__detail">
                         <h3>
-                            <!-- <img src="./assets/images/title_story.png" alt=""> -->
                             <img src="./assets/images/hunt.png" alt="" class="-obj">
                         </h3>
                         <p>
@@ -809,7 +858,6 @@
                 <li class="p-sys__item reverse">
                     <div class="p-sys__detail">
                         <h3>
-                            <!-- <img src="./assets/images/title_story.png" alt=""> -->
                             <img src="./assets/images/title_story.png" alt="" class="-obj">
                         </h3>
                         <p>
@@ -825,28 +873,26 @@
                         <a href="./assets/images/chara_bg_02.jpg" data-lity>
                             <img src="./assets/images/kv.jpg" alt="">
                         </a>
-                        <!-- <img src="./assets/images/title_story.png" alt="" class="-obj"> -->
                     </figure>
 
                 </li>
             </ul>
         </div>
-        <!-- <div class="smoke smoke__bottom"></div> -->
     </section>
 
 
 
 
 
-
+    <div class="p-story__bg" style="transform: scale(1, -1);"></div>
     <section id="gallery" class="p-gallery">
-        <!-- <div class="smoke smoke__top"></div> -->
         <div class="p-gallery__inner">
-            <h2 class="c-sec__ttl" style="margin-top: 20px;">
-                <img src="./assets/images/title_chara.png" alt="" style="width: 480px;">
+            <h2 class="c-sec__ttl">
+                <span class="-en">GALLERY</span>
+                <span class="-ja">ギャラリー</span>
             </h2>
 
-            <div class="p-gallery__tab">
+            <!-- <div class="p-gallery__tab">
 
                 <ul class="p-gallery__list">
                     <li class="p-gallery__item js-tab--trigger is-active" data-tab="tab-content01">
@@ -856,7 +902,7 @@
                         <a href="">MOVIE</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             <div class="p-about__content">
 
@@ -865,10 +911,10 @@
                     <div class="p-gallery__slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
+                                <img src="./assets/images/charaBg_01.jpg" alt="">
                             </div>
                             <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
+                                <img src="./assets/images/system_01.jpg" alt="">
                             </div>
                             <div class="swiper-slide p-gallery__slide">
                                 <img src="./assets/images/kv.jpg" alt="">
@@ -902,17 +948,68 @@
 
 
         </div>
-        <!-- <div class="smoke smoke__bottom"></div> -->
+        <div class="smoke smoke__top"></div>
+        <div class="smoke smoke__bottom"></div>
     </section>
+    <div class="p-story__bg" style=""></div>
 
 
-    <section id="gallery" class="p-gallery">
-        <div class="p-gallery__inner">
+    <section id="product" class="p-product">
+        <div class="p-product__inner">
             <h2 class="c-sec__ttl" style="margin-top: 20px;">
                 <!-- <img src="./assets/images/title_story.png" alt="" style="width: 30vw;"> -->
                 <span class="-en">PRODUCT</span>
                 <span class="-ja">プロダクト</span>
             </h2>
+
+            <ul class="p-product__list">
+                <li class="p-product__item--left">
+                    <figure class="p-product__img">
+                        <img src="./assets/images/Front.png" alt="">
+                    </figure>
+                </li>
+                <li class="p-product__item--right">
+                    <dl class="p-product__list--detail">
+                        <dt>タイトル</dt>
+                        <dd>作品タイトル</dd>
+                        <dt>ジャンル</dt>
+                        <dd>サイコホラー</dd>
+                        <dt>機種</dt>
+                        <dd>Nintendo Switch™PlayStation®4</dd>
+                        <dt>発売日</dt>
+                        <dd>4100年1月1日</dd>
+                        <dt>価格</dt>
+                        <dd>
+                            <span>通常版：9,999円</span>
+                            <span>ダウンロード版：9,999円</span>
+                        </dd>
+                        <dt>CERO</dt>
+                        <dd>Z（18才以上対象）</dd>
+                    </dl>
+                </li>
+            </ul>
+
+            <div class="p-mv__info" style="width: 600px; margin: 40px auto 0;">
+
+                <!-- <p><span>4100.01.01 ON SALE</span></p> -->
+                <ul class="p-banner__list">
+                    <li class="p-banner__item">
+                        <a href="">
+                            <img src="./assets/images/banner_01.png" alt="">
+                        </a>
+                    </li>
+                    <li class="p-banner__item">
+                        <a href="">
+                            <img src="./assets/images/ps4.png" alt="">
+                        </a>
+                    </li>
+                    <li class="p-banner__item">
+                        <a href="">
+                            <img src="./assets/images/steam.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
         <!-- <div class="smoke smoke__bottom"></div> -->

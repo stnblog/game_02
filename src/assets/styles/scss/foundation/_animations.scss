@@ -1,4 +1,4 @@
-@use "../foundation" as *;
+@use "../foundation"as *;
 @use "sass:math";
 
 // fade
@@ -101,19 +101,23 @@ $cover in $covers {
 
 @keyframes swing2 {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   25% {
-      transform: rotate(4deg);
+    transform: rotate(4deg);
   }
+
   50% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   75% {
-      transform: rotate(-4deg);
+    transform: rotate(-4deg);
   }
+
   100% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -148,6 +152,20 @@ $cover in $covers {
         }
       }
     }
+  }
+}
+
+.js-scroll--view {
+  opacity: 0;
+  transform: scale(0.9);
+  filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 2s;
+
+  &.is-anim {
+    opacity: 1;
+    transform: translateY(60px);
+    filter: blur(0);
   }
 }
 
@@ -219,8 +237,7 @@ $cover in $covers {
 }
 
 .animate-heading.inview .char {
-  @include animation(
-    $name: kf-animate-chars,
+  @include animation($name: kf-animate-chars,
     $duration: 1.2s,
     $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
     $fill-mode: both);
@@ -236,26 +253,25 @@ $cover in $covers {
 //--------------------------------------------------------------------
 
 @function rand($min, $max) {
-  @return random() * ($max - $min) + $min;
+  @return random() * ($max - $min)+$min;
 }
 
 $animation-duration: 3s;
 $glitch-duration: 20%;
 $glitch-frequency: 10;
-$glitch-interval: math.div($glitch-duration,$glitch-frequency);
+$glitch-interval: math.div($glitch-duration, $glitch-frequency);
 
 @mixin rgb-shift($name) {
   @keyframes rgb-shift-#{$name} {
     @for $i from 0 to $glitch-frequency {
       #{$i * $glitch-interval} {
-        transform: translate(
-          #{rand(-2, 2) * 1%},
-          #{rand(-0.5, 0.5) * 1%}
-        );
+        transform: translate(#{rand(-2, 2) * 1%},
+          #{rand(-0.5, 0.5) * 1%});
       }
     }
 
-    #{$glitch-duration}, 100% {
+    #{$glitch-duration},
+    100% {
       transform: none;
     }
   }
@@ -272,20 +288,17 @@ $glitch-interval: math.div($glitch-duration,$glitch-frequency);
       $bottom: $top + rand(1, 10) * 1%;
 
       #{$i * $glitch-interval} {
-        clip-path: polygon(
-          $left $top,
-          $right $top,
-          $right $bottom,
-          $left $bottom
-        );
-        transform: translate(
-          #{rand(-8, 8) * 1%},
-          #{rand(-0.5, 0.5) * 1%}
-        );
+        clip-path: polygon($left $top,
+            $right $top,
+            $right $bottom,
+            $left $bottom);
+        transform: translate(#{rand(-8, 8) * 1%},
+          #{rand(-0.5, 0.5) * 1%});
       }
     }
 
-    #{$glitch-duration}, 100% {
+    #{$glitch-duration},
+    100% {
       clip-path: none;
       transform: none;
     }
