@@ -122,7 +122,8 @@
         }
 
         &--tab {
-            width: 50%;
+            // width: 50%;
+            width: 100%;
             // margin: 0 4px;
             // margin: 0 -2%;
             cursor: pointer;
@@ -134,9 +135,9 @@
 
     &__img {
         @include absCenter;
-        top: 720px;
-        left: calc(50% - 50px);
-        width: 840px;
+        top: 500px;
+        left: calc(50% - 70px);
+        width: 760px;
     }
 
     &__name {
