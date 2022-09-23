@@ -8,7 +8,7 @@
     &__ttl {
         position: relative;
         // @include maxWidth(840px);
-        margin: 0 auto 30px;
+        margin: 0 auto 10px;
         font-weight: 400;
         text-align: center;
         // font-family: "Cinzel", "Noto Serif JP", sans-serif;
@@ -123,8 +123,8 @@
 
             .-ja {
                 position: relative;
-                top: -10px;
-                font-size: 20px;
+                top: -16px;
+                font-size: 18px;
             }
         }
     }

@@ -3,8 +3,8 @@
 .p-news {
   position: relative;
   z-index: 7;
-  padding: 80px 0 20px;
-  background: rgba($color: $color-black, $alpha: 0.85);
+  padding: 20px 0 20px;
+  background: rgba($color: $color-black, $alpha: 0.55);
 
   a {
     display: block;
@@ -13,19 +13,22 @@
   &__inner {
     // overflow: hidden;
     position: relative;
-    @include maxWidth(1460px);
+    @include maxWidth(1480px);
     padding: 0 15px;
     z-index: 50;
 
     @include mq-target(lg) {
       // padding-left: 8%;
-      padding: 0 6%;
+      padding: 0 5.4%;
     }
   }
 
   &__img {
-    &::before {
-      padding-top: 60%;
+    filter: drop-shadow(0px 0px 66px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.66));
+    // box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+        &::before {
+      padding-top: 54%;
     }
   }
 

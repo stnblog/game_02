@@ -4,9 +4,11 @@
     overflow: visible;
     position: relative;
     z-index: 3;
-    background: #fff;
+    // background: #fff;
+    // background: url(../../assets/images/redmist.png) center bottom no-repeat;
     @include maxWidth(1920px);
-    margin-top: -200px;
+    backdrop-filter: brightness(1.5);
+    margin-top: -220px;
 
     .c-sec__ttl {
         // text-align: left;
@@ -45,23 +47,21 @@
         &::before {
             content: "";
             @include absAll;
-            position: absolute !important;
-            // background: url(../../assets/images/redmist.png) top center no-repeat;
+            background: url(../../assets/images/redmist.png) top center no-repeat;
             opacity: 0;
             background-size: cover;
             z-index: 6;
             width: 100%;
             height: 100%;
-            transition: all 1s linear;
-            transition-delay: 1.8s;
+            transition: opacity .4s linear;
+            transition-delay: 2s;
             z-index: -1;
-            animation: animation-opt 4s infinite alternate;
-
+            // animation: animation-opt 4s infinite alternate;
         }
         
         &.is-anim {
             &::before {
-                opacity: 0.5;
+                opacity: 1 !important;
             }
         }
     }
@@ -143,7 +143,7 @@
     &__inner {
         position: relative;
         @include flexCenter;
-        padding: 200px 0 70px;
+        padding: 280px 0 40px;
         // position: relative;
         top: -60px;
         // height: 1000px;
@@ -157,6 +157,7 @@
 
 
     &__list {
+        margin-top: 80px;
         position: relative;
         // position: relative;
         @include flexCenter;
@@ -188,7 +189,7 @@
                 font-weight: 500;
                 margin: 40px 0 0;
                 line-height: 2;
-                color: $color-black;
+                color: $color-white;
 
                 // text-shadow: 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000, 2px 2px 5px #000;
                 text-transform: uppercase;
