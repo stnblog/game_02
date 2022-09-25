@@ -140,7 +140,7 @@ $cover in $covers {
     // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 
     &.is-anim {
-      opacity: 1;
+      opacity: 0.5;
       @include animation($name: kf-img-rotate,
         $duration: 1.2s,
         $timing-function: cubic-bezier(0.23, 1, 0.32, 1),

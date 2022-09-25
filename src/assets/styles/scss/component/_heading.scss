@@ -14,6 +14,7 @@
         // font-family: "Cinzel", "Noto Serif JP", sans-serif;
         text-transform: uppercase;
         z-index: 1;
+        font-family: "Teko", 'M PLUS 1', Arial, sans-serif;
 
 
         span {
@@ -28,29 +29,30 @@
             letter-spacing: 0.04em;
             // line-height: 0;
             display: inline-block;
-            font-weight: 600;
 
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                background: rgb(255, 255, 255);
-                height: 2px;
-                max-width: 450px;
-                width: 350px;
-                transform: translateY(-50%);
-            }
 
-            &::before {
-                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(179, 182, 254) 100%);
-                left: -400px;
-            }
 
-            &::after {
-                background: linear-gradient(90deg, rgb(179, 182, 254) 0%, rgba(255, 255, 255, 0) 100%);
-                right: -400px;
-            }
+            // &::before,
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 50%;
+            //     background: rgb(255, 255, 255);
+            //     height: 2px;
+            //     max-width: 450px;
+            //     width: 350px;
+            //     transform: translateY(-50%);
+            // }
+
+            // &::before {
+            //     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(179, 182, 254) 100%);
+            //     left: -400px;
+            // }
+
+            // &::after {
+            //     background: linear-gradient(90deg, rgb(179, 182, 254) 0%, rgba(255, 255, 255, 0) 100%);
+            //     right: -400px;
+            // }
         }
 
         .-ja {
@@ -66,7 +68,7 @@
         min-height: 760px;
         height: 100vh;
         position: fixed;
-        left: 49%;
+        left: 50%;
         transform: translateX(-50%);
         top: 0;
         opacity: 1;
@@ -76,7 +78,7 @@
         &--img {
             background: url(../../assets/images/story_bg_2.png) top center no-repeat;
             background-color: $color-black;
-            background-size: cover;
+            background-size: 100% auto;
             width: 100%;
             height: 100%;
             pointer-events: none;
@@ -108,7 +110,7 @@
             z-index: 1999;
 
             @include mq-target(sm) {
-                background-size: 90% auto;
+                background-size: 80% auto;
             }
 
         }
@@ -117,14 +119,77 @@
     @include mq-target(sm) {
 
         &__ttl {
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+
             .-en {
-                font-size: 64px;
+                // background-color: #BB1020;
+                background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+                -webkit-background-clip: text;
+                color: transparent;
+                background-position: left top;
+                background-size: cover;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: rgba(0, 0, 0, 0);
+                display: inline-block;
+                filter: drop-shadow(5px 0 10px rgba(0, 0, 0, 0.8));
+                font-weight: 500;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.2em;
             }
 
             .-ja {
-                position: relative;
-                top: -16px;
-                font-size: 18px;
+
+                font-size: 50px;
+
+                font-weight: 700;
+                // display: none;
+            }
+        }
+    }
+}
+
+
+.index {
+    &__bg {
+        display: block;
+        width: 100vw;
+        max-width: 1920px;
+        min-height: 800px;
+        height: 100vh;
+        position: fixed;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 1;
+        pointer-events: none;
+
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            background: url(../img/bg_top.jpg) 50% 0% no-repeat;
+            background-color: black;
+            background-size: 90% auto;
+            width: 100%;
+            max-width: 1920px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            margin: 0 auto;
+            background-image: url(../../assets/images/storyBg_01.jpg);
+            transition: none;
+            transition-delay: 0s;
+            transition: background-position 2500ms ease-in-out;
+        }
+
+        &.is-anim {
+            &::before {
+                background-position: 50% 100%;
             }
         }
     }
