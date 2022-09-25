@@ -77,7 +77,7 @@ $('.js-modal-close').on('click', function () {
 });
 var swiper03 = new Swiper('.p-chara__slider', {
   // loop: true,
-  grabCursor: true,
+  // grabCursor: true,
   effect: 'slide',
   centeredSlides: true,
   slidesPerView: 1,
