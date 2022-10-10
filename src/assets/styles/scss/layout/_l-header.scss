@@ -6,15 +6,27 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(150, 5, 5, 0.2));
+  // background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(235, 235, 235, 0.1));
 
   &__inner {
-    @include flex($align:center,$justify:flex-end);
+    @include flex($align:center,$justify:space-between);
     position: relative;
     z-index: 1;
-    width: min(88.5416666667vw, 1700px);
-    height: min(7.8125vw,70px);
+    width: min(88.5416666667vw, 1500px);
+    height: min(7.8125vw,97px);
     margin: 0 auto;
+  }
+
+  &__logo {
+    width: 200px;
+    width: min(vw(130px, 768),200px);
+
+    a {
+      img {
+        margin-top: 0.6vw;
+        vertical-align: middle;
+      }
+    }
   }
 
   &__nav {
@@ -26,14 +38,16 @@
 
     a {
       font-weight: 700;
-      @include flex($align:center,$justify:center);
-      height: min(7.8125vw,70px);
+      @include flex($align:center);
+      height: min(7.8125vw,97px);
       padding: 0 min(1.5625vw, 20px);
-      font-size: min(2.34375vw, 16px);
+      font-size: min(2.34375vw, 18px);
       cursor: pointer;
       position: relative;
       white-space: nowrap;
-      transition: all .3s;
+      background-image: linear-gradient(to bottom, #d5cac9, #444241);
+      -webkit-background-clip: text;
+      color: transparent;
     }
   }
 

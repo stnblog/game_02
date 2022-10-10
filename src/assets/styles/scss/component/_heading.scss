@@ -74,42 +74,50 @@
 
 .index {
     &__bg {
-        display: block;
-        width: 100vw;
-        width: min(100vw,1920px);
-        height: min(56.25vw,1080px);
-        height: 100vh;
+        background-image: url(../../assets/images/storyBg_01.jpg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: min(153.1942633638vw, 720px);
         position: fixed;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
         top: 0;
-        opacity: 1;
-        pointer-events: none;
+        left: 0;
 
-        &::before {
-            display: block;
-            position: absolute;
-            content: "";
-            background: url(../img/bg_top.jpg) 50% 0% no-repeat;
-            background-color: black;
-            background-size: 90% auto;
-            width: min(100vw,1920px);
-            height: min(56.25vw,880px);
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            margin: 0 auto;
-            background-image: url(../../assets/images/storyBg_01.jpg);
-            transition: none;
-            transition-delay: 0s;
-            transition: background-position 2500ms ease-in-out;
+        @include mq-target(sm) {
+            height: min(56.25vw, 880px);
         }
 
-        &.is-anim {
-            &::before {
-                background-position: 50% 100%;
-            }
-        }
+        // transform: translate(-50%, -50%);
+        // transition: 1.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+        // filter: blur(10px);
+        // }
+        // &::before {
+        //     display: block;
+        //     position: absolute;
+        //     content: "";
+        //     background: url(../img/bg_top.jpg) 50% 0% no-repeat;
+        //     background-color: black;
+        //     background-size: cover;
+        //     width: min(100vw,1920px);
+        //     height: min(153.1942633638vw,1175px);
+        //     @include mq-target(sm) {
+        //       height: min(56.25vw, 880px);
+        //     }
+        //     top: 0;
+        //     left: 0;
+        //     pointer-events: none;
+        //     margin: 0 auto;
+        //     background-image: url(../../assets/images/storyBg_01.jpg);
+        //     transition: none;
+        //     transition-delay: 0s;
+        //     transition: background-position 2500ms ease-in-out;
+        // }
+
+        // &.is-anim {
+        //     &::before {
+        //         background-position: center top;
+        //     }
+        // }
     }
 }

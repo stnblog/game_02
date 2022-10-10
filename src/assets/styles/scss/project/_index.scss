@@ -3,7 +3,12 @@
 .p-mv {
   position: relative;
   width: 100%;
-  height: min(56.25vw, 880px);
+  height: min(153.1942633638vw, 720px);
+
+  @include mq-target(sm) {
+    height: min(56.25vw, 880px);
+  }
+
   overflow: hidden;
   z-index: 1;
 
@@ -39,24 +44,51 @@
     }
   }
 
+  &__bg {
+    background-image: url(../../assets/images/storyBg_01.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: min(153.1942633638vw, 720px);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @include mq-target(sm) {
+      height: min(56.25vw, 1100px);
+    }
+  }
+
   &-logo {
     @include absCenter;
-    top: min(vw(335px, 768), 670px);
-    left: 78%;
     display: block;
+    top: min(vw(440px, 365),580px);
+    // top: 440px;
+    // top: 580px;
+    // top: min(78.2268578879vw,900px);
+    @include mq-target(sm) {
+      top: min(vw(335px, 768), 670px);
+      left: 77vw;
+    }
 
     &__heading {
-      width: min(vw(250px,768),500px);
       margin: auto;
-      transition-delay: 3s;
+      // width: 340px;
+      // width: 420px;
+      width: min(vw(340px, 365),420px);
+      
+      @include mq-target(sm) {
+        width: min(vw(250px, 768), 500px);
+      }
     }
 
     &__txt {
       position: relative;
-      margin-top: -7%;
-      left: -8%;
-      font-size: min(vw(7.2px,768), 14px);
-      transition-delay: 3s;
+      // margin-top: -7%;
+      left: 4%;
+      font-size: min(vw(7.2px, 768), 14px);
+      // transition-delay: 3s;
     }
   }
 }

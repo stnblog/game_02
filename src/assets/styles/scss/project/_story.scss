@@ -4,8 +4,7 @@
     overflow: visible;
     position: relative;
     z-index: 3;
-    padding-top: 180px;
-    // padding-top: 10rem;
+
     // background: #fff;
     // background: url(../../assets/images/keepout.png) center bottom no-repeat;
     @include maxWidth(1920px);
@@ -139,9 +138,10 @@
 
 
     &__inner {
+        // padding-top: 10rem;
         position: relative;
         @include flexCenter;
-        // padding: 180px 0 40px;
+        padding: 200px 0 80px;
         // position: relative;
         top: -60px;
         // height: 1000px;
