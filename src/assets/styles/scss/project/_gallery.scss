@@ -18,7 +18,7 @@
     background-image: url(../../assets/images/bg_gallery.jpg);
     background-size: cover;
     background-position: center top;
-    // filter: blur(2px);
+    filter: blur(2px);
   }
 
   .c-sec__ttl {
@@ -34,7 +34,7 @@
     // display: none;
     user-select: none;
     position: relative;
-    @include maxWidth(760px);
+    @include maxWidth(660px);
   }
 
   &__slide {

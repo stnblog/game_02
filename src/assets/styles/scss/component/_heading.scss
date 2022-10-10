@@ -2,19 +2,19 @@
 
 .c-sec {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     @include flexCenter;
 
     &__ttl {
         position: relative;
         // @include maxWidth(840px);
-        margin: 0 auto 10px;
+        margin: 0 auto 20px;
         font-weight: 400;
         text-align: center;
         // font-family: "Cinzel", "Noto Serif JP", sans-serif;
         text-transform: uppercase;
         z-index: 1;
-        font-family: "Teko", 'M PLUS 1', Arial, sans-serif;
+        // font-family: "Teko", 'M PLUS 1', Arial, sans-serif;
 
 
         span {
@@ -29,90 +29,12 @@
             letter-spacing: 0.04em;
             // line-height: 0;
             display: inline-block;
-
-
-
-            // &::before,
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     top: 50%;
-            //     background: rgb(255, 255, 255);
-            //     height: 2px;
-            //     max-width: 450px;
-            //     width: 350px;
-            //     transform: translateY(-50%);
-            // }
-
-            // &::before {
-            //     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(179, 182, 254) 100%);
-            //     left: -400px;
-            // }
-
-            // &::after {
-            //     background: linear-gradient(90deg, rgb(179, 182, 254) 0%, rgba(255, 255, 255, 0) 100%);
-            //     right: -400px;
-            // }
         }
 
         .-ja {
+            text-shadow: 1px 1px 2px #ba2929, -1px 1px 2px #cc2929, 1px -1px 2px #ba2222, -1px -1px 2px #c52929;
             font-size: 14px;
-
-        }
-    }
-
-    &__bg {
-        display: block;
-        width: 100%;
-        // max-width: 1262px;
-        min-height: 760px;
-        height: 100vh;
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        opacity: 1;
-        pointer-events: none;
-        z-index: 1;
-
-        &--img {
-            background: url(../../assets/images/story_bg_2.png) top center no-repeat;
-            background-color: $color-black;
-            background-size: 100% auto;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-    }
-
-    &__obj {
-        // display: none;
-        @include absCenter;
-        top: 56%;
-        left: 51%;
-        width: 100%;
-        height: 100%;
-        max-width: 622px;
-        max-height: 794px;
-
-        div {
-            width: 100%;
-            height: 100%;
-            animation-name: updown;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-duration: 2s;
-            background: url(../../assets/images/main_obj.png) 50% 50% no-repeat;
-            background-size: 130% auto;
-            // left: calc(0.3921875 * min(100vw, 1920px));
-            z-index: 1999;
-
-            @include mq-target(sm) {
-                background-size: 80% auto;
-            }
-
+            color: $color-black;
         }
     }
 
@@ -141,9 +63,7 @@
             }
 
             .-ja {
-
-                font-size: 50px;
-
+                font-size: 44px;
                 font-weight: 700;
                 // display: none;
             }
@@ -156,8 +76,8 @@
     &__bg {
         display: block;
         width: 100vw;
-        max-width: 1920px;
-        min-height: 800px;
+        width: min(100vw,1920px);
+        height: min(56.25vw,1080px);
         height: 100vh;
         position: fixed;
         left: 50%;
@@ -174,9 +94,8 @@
             background: url(../img/bg_top.jpg) 50% 0% no-repeat;
             background-color: black;
             background-size: 90% auto;
-            width: 100%;
-            max-width: 1920px;
-            height: 100%;
+            width: min(100vw,1920px);
+            height: min(56.25vw,880px);
             top: 0;
             left: 0;
             pointer-events: none;

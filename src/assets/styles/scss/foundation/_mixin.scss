@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $mq-breakpoints-min: ('xxs': '0px',
   'xs': '576px',
   'sm': '768px',
@@ -22,6 +24,13 @@ $mq-breakpoints-max: ('xxs': '440px',
   @media screen and (max-width: #{map-get($mq-breakpoints-max, $breakpoint)}) {
     @content;
   }
+}
+
+$vw-viewport: 1920;
+@function vw($size,$vw-viewport){
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return math.div($size, $vw-context) * 1vw;
+  @return $size;
 }
 
 @mixin bgCover {

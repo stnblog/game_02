@@ -4,7 +4,7 @@
     background: $color-black;
     position: relative;
     z-index: 500;
-    
+
     .c-sec__ttl {
         // position: absolute;
         // @include absCenter;
@@ -14,7 +14,7 @@
         top: 0px;
         text-align: center
     }
-    
+
     &__bg {
         @include absAll;
         top: 0;
@@ -42,30 +42,36 @@
     }
 
     &__tab {
-        // position: relative;
-        z-index: 100;
-        // @include absCenter;
-        // bottom: -100px;
-        // top: initial;
         text-align: left;
         position: absolute;
         top: 0;
-        left: 10%;
+        left: 0;
         // top: 140px;
-        
+
         h3 {
             position: relative;
             line-height: 1.9;
             font-size: 14px;
             opacity: 0.65;
 
+            &::before {
+                content: "";
+                position: absolute;
+                top: 30px;
+                left: 0;
+                width: 30px;
+                height: 2px;
+                background: #fff;
+            }
+
             &::after {
                 content: "";
                 @include absAll;
                 top: 30px;
-                height: 1px;
-                width: 200px;
-                background: $color-white;
+                height: 2px;
+                left: 34px;
+                width: 180px;
+                background: rgba(255,255,255,.5);
             }
         }
     }
@@ -86,7 +92,7 @@
             @include maxWidth(220px);
             margin: 20px auto 0;
             // top: 0;
-            @include flex($justify:space-between,$wrap:wrap);
+            @include flex($justify:space-between, $wrap:wrap);
             // margin: 14px auto 0;
         }
     }
@@ -101,7 +107,7 @@
             height: 100%;
             background: url(../../assets/images/story_bg_2.png) 50% 50% no-repeat;
             background-size: cover;
-            filter: blur(2px);
+            // filter: blur(2px);
 
             // &::after {
             //     content: "";
@@ -118,26 +124,29 @@
 
             &02 {
                 background: url(../../assets/images/charaBg_04.jpg) 50% 50% no-repeat;
+                background-size: cover;
             }
 
             &03 {
                 background: url(../../assets/images/charaBg_02.jpg) 50% 50% no-repeat;
+                background-size: cover;
             }
         }
 
         &--contents {
 
             &-L {
+                position: relative;
                 width: 16%;
                 // -ms-writing-mode: tb-rl;
                 // writing-mode: vertical-rl;
                 // font-size: 30px;
             }
-            
+
             &-R {
                 position: relative;
-                padding-top: 20px;
-                width: 28%;
+                // padding-top: 20px;
+                width: 29%;
                 text-align: right;
 
                 dl {
@@ -146,6 +155,7 @@
                     flex-wrap: wrap;
                     // font-size: 16px;
                     margin-top: 30px;
+
                     dt {
                         background: rgba($color: #520505, $alpha: 0.25);
                         text-align: right;
@@ -156,7 +166,7 @@
                         margin: 0 5px 5px 0;
 
                     }
-                    
+
                     dd {
                         text-align: left;
                         border: 1px solid #fff;
@@ -181,7 +191,7 @@
             transition-delay: .1s;
             // transition: opacity 0.2s ease;
             font-weight: 900;
-            font-size: 22px;
+            font-size: 20px;
             text-align: left;
             opacity: 0.5;
             letter-spacing: 0.2em;
@@ -196,8 +206,8 @@
     &__img {
         @include absCenter;
         top: 350px;
-        width: 720px;
-        
+        width: 700px;
+
         &--one {
             left: calc(50% - 64px);
         }
@@ -214,10 +224,10 @@
     }
 
     &__name {
-            background-image: linear-gradient(to bottom, #d81c03, #352e2c);
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+        background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
         font-size: 40px;
         font-weight: 900;
     }
@@ -228,7 +238,13 @@
     }
 
     &__txt {
+        // width: 280px;
+        // max-width: 300px;
+        font-weight: 700;
+        text-align: left;
+        font-size: 1.4rem;
         line-height: 1.8;
+        margin-left: auto;
     }
 
     // &__head {

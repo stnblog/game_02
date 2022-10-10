@@ -1,12 +1,11 @@
-@use "../foundation" as *;
+@use "../foundation"as *;
 
 .p-mv {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: min(56.25vw, 880px);
   overflow: hidden;
   z-index: 1;
-  // height: calc(100vh - 66px);
 
   &__fog {
     pointer-events: none;
@@ -20,7 +19,7 @@
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0.35;
+      opacity: 0;
       position: absolute;
       height: 100%;
       width: 600vw;
@@ -40,35 +39,24 @@
     }
   }
 
-  &__bg {
-    // display: none;
-    position: relative;
-    opacity: 1;
-    z-index: 50000;
+  &-logo {
+    @include absCenter;
+    top: min(vw(335px, 768), 670px);
+    left: 78%;
+    display: block;
 
-    &::before {
-      content: "";
-      @include absAll;
-      background: rgba($color: #000000, $alpha: 1);
-      animation: mvBlurAnime 5s linear infinite alternate;
-      transition: background-color 1s linear, -webkit-filter 1s linear;
-    }
-
-  }
-
-  &__inner {
-    // min-height: 100vh;
-    position: relative;
-
-    &--heading {
-      width: 84%;
+    &__heading {
+      width: min(vw(250px,768),500px);
       margin: auto;
+      transition-delay: 3s;
+    }
 
-      @include mq-target(sm) {
-        width: 54.8%;
-      }
+    &__txt {
+      position: relative;
+      margin-top: -7%;
+      left: -8%;
+      font-size: min(vw(7.2px,768), 14px);
+      transition-delay: 3s;
     }
   }
-
-
 }
