@@ -6,9 +6,10 @@
     background: $color-black;
     position: relative;
     z-index: 500;
+    padding-top: min(vw(20px,768),40px);
+    // padding-top: 80px;
 
     &__inner {
-        padding-top: 80px;
         width: 90%;
         margin: 0 auto;
         display: block;

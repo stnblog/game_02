@@ -17,9 +17,9 @@
         // text-shadow: 1px 2px 6px $color-black;
         // width: 30%;
         z-index: 50;
-        color: $color-black;
-
+        
         & .-ja {
+            color: $color-black;
             text-shadow: 1px 1px 2px #ba2929, -1px 1px 2px #cc2929, 1px -1px 2px #ba2222, -1px -1px 2px #c52929;
             font-family: 'Cinzel', 'Noto Serif JP', serif;
         }
