@@ -25,7 +25,7 @@
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0;
+      opacity: 0.25;
       position: absolute;
       height: 100%;
       width: 600vw;
@@ -77,11 +77,12 @@
       margin: auto;
       
       @include mq-target(sm) {
-        width: min(vw(250px, 768), 500px);
+        width: min(vw(250px, 768), 600px);
       }
     }
 
     &__txt {
+          font-family: 'Noto Serif JP', serif;
       position: relative;
       left: 4%;
       font-size: min(vw(12px, 365),18px);
@@ -90,4 +91,37 @@
       }
     }
   }
+}
+
+
+.killer {
+  position: absolute;
+  width: 76vw;
+  top: -2vw;
+  left: -6vw;
+  background-image: url(../../assets/images/test_04.png);
+  background-size: 74vw;
+  width: 100%;
+  height: 100%;
+  background-position: top;
+  transform: rotate(10deg);
+  img {
+    // transform: rotate(37deg);
+    // transition: all 1s linear;
+    // transition-delay: 1s;
+    // &.is-anim {
+    //   transform: rotate(50deg);
+    // }
+  }
+
+  &__bg {
+    margin-top: -14vw;
+    transition-delay: 2s;
+    transition: all 2s ease;
+
+    &.is-anim {
+      margin-top: 0;
+    }
+  }
+
 }

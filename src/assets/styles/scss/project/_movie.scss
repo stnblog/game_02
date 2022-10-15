@@ -6,14 +6,8 @@
     background: $color-black;
     position: relative;
     z-index: 500;
-    padding-top: min(vw(20px,768),40px);
+    padding-top: min(vw(20px, 768), 40px);
     // padding-top: 80px;
-
-    &__inner {
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-    }
 
     &__wrap {
         position: relative;
@@ -24,19 +18,25 @@
             width: 100%;
             position: relative;
             display: block;
-            // border: 2px solid rgb(131, 4, 4);
-
             &::after {
                 content: "";
                 display: block;
                 @include absAll;
-                width: 100%;
                 margin: auto;
-                height: 100%;
                 background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 50% auto;
+                background-size: 64% auto;
                 opacity: 1;
             }
+        }
+    }
+
+    &__obj {
+        &--rantan {
+            position: absolute;
+            bottom: vw(-20px, 768);
+            right: vw(-40px, 768);
+            width: min(vw(110px,768),220px);
+            z-index: 50;
         }
     }
 }

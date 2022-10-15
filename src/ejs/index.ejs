@@ -183,30 +183,18 @@
     <div class="p-story__bg" style="transform: scale(1, -1); margin-top: -11%;"></div>
     <section class="p-movie">
         <div class="p-movie__inner">
-            <!-- <h2 class="c-sec__ttl" style="margin-top: 20px;">
-                <img src="./assets/images/typo_movie.png" alt="" style="width: 580px;">
-            </h2> -->
-            <!-- <h2 class="c-sec__ttl">
-                <span class="-en">MOVIE</span>
-                <span class="-ja">- ゲームトレイラー -</span>
-            </h2> -->
             <div class="p-movie__wrap">
                 <div class="smoke smoke__top"></div>
                 <a href="">
                     <img src="./assets/images/monitor.png" alt="">
                 </a>
+                <figure class="p-movie__obj--rantan">
+                    <img src="./assets/images/rantan.png" alt="" class="inview js-scroll--scale">
+                </figure>
             </div>
         </div>
         <div class="smoke smoke__bottom smoke__bottom--movie"></div>
     </section>
-
-    <!-- <dl class="p-mv__banner u-dp-pc">
-        <dt>ゲームトレイラー</dt>
-        <dd class="p-mv__pv">
-            <a href="#">
-            </a>
-        </dd>
-    </dl> -->
 
     <section class="p-news" id="news">
         <div class="smoke smoke__top"></div>
@@ -404,10 +392,15 @@
         </div>
 
         <div class="smoke smoke__bottom"></div>
-        
+
     </section>
-    <div class="p-story__bg"></div>
-    <div class="p-story__bg" style="transform: scale(1, -1);"></div>
+    <div class="" style="position: relative;">
+        <figure class="killer">
+            <!-- <img src="./assets/images/test_04.png" alt="" class="inview"> -->
+        </figure>
+        <div class="p-story__bg"></div>
+        <div class="p-story__bg killer__bg inview" style="transform: scale(1, -1);"></div>
+    </div>
 
     <section id="chara" class="p-chara">
 
@@ -421,7 +414,7 @@
             <h2 class="c-sec__ttl">
                 <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 440px;"> -->
                 <span class="-en">characters</span>
-                <span class="-ja">人物紹介</span>
+                <span class="-ja">登場人物</span>
             </h2>
             <div class="p-chara__bg">
                 <ul class="p-chara__list--bg">
@@ -451,40 +444,42 @@
                 <div class="swiper-wrapper" style="align-items: flex-end;">
                     <div class="swiper-slide js-modal-open">
 
+                        
                         <div class="p-chara__contents">
-                            <figure class="p-chara__img p-chara__img--one">
-                                <img src="./assets/images/test_04.png" alt="">
+                            <figure class="p-chara__img p-chara__img--three">
+                                <img src="./assets/images/chara01.webp" alt="">
                             </figure>
                             <ul class="p-chara__list--contents">
                                 <li class="p-chara__item--contents-L">
                                 </li>
                                 <li class="p-chara__item--contents-R">
-                                    <h3 class="p-chara__name">ガスマスクの男</h3>
+                                    <h3 class="p-chara__name">その一</h3>
                                     <p class="p-chara__cv">
                                         CV：&nbsp;田中&nbsp;太郎
                                     </p>
 
                                     <p class="p-chara__txt">
-                                        図書室に隠された日誌を読むと姿を現す<br />
-                                        日誌を読んだ人間を外界と途絶された四方塚町に閉じ込め、命を狙い続ける怪人物<br />
-                                        性格が悪く、獲物はすぐに殺さず寝かせるタイプ。<br />
-                                        異界に取り込まれてしまった人々と協力して立ち向かおう
+                                        プロフィール：<br />
+                                        相撲を「わあるどわいど」にするため闘う力士。
+                                        実力は横綱級だが、本場所そっちのけで世界を飛び回る破天荒さゆえ、番付は張出大関である。
+                                        料理は玄人裸足の腕前で、ちゃんこ鍋が絶品。
                                     </p>
                                     <dl>
                                         <dt>性別：</dt>
-                                        <dd>？</dd>
+                                        <dd>男 / male</dd>
                                         <dt>年齢：</dt>
-                                        <dd>？
+                                        <dd>32
                                         </dd>
                                         <dt>職業：</dt>
-                                        <dd>？</dd>
-                                        <dt>武器：</dt>
-                                        <dd>オノ</dd>
+                                        <dd>教師</dd>
                                     </dl>
                                 </li>
                             </ul>
                         </div>
+
+
                     </div>
+
                     <div class="swiper-slide js-modal-open">
 
                         <div class="p-chara__contents">
@@ -495,7 +490,7 @@
                                 <li class="p-chara__item--contents-L">
                                 </li>
                                 <li class="p-chara__item--contents-R">
-                                    <h3 class="p-chara__name">旧校舎の少女</h3>
+                                    <h3 class="p-chara__name">その二</h3>
                                     <p class="p-chara__cv">
                                         CV：&nbsp;田中&nbsp;太郎
                                     </p>
@@ -524,42 +519,38 @@
 
 
                         <div class="p-chara__contents">
-                            <figure class="p-chara__img p-chara__img--three">
-                                <img src="./assets/images/c02_1.png" alt="">
+                            <figure class="p-chara__img p-chara__img--one">
+                                <img src="./assets/images/test_04.png" alt="">
                             </figure>
                             <ul class="p-chara__list--contents">
                                 <li class="p-chara__item--contents-L">
                                 </li>
                                 <li class="p-chara__item--contents-R">
-                                    <h3 class="p-chara__name">志藤連</h3>
+                                    <h3 class="p-chara__name">その三</h3>
                                     <p class="p-chara__cv">
                                         CV：&nbsp;田中&nbsp;太郎
                                     </p>
 
                                     <p class="p-chara__txt">
-                                        プロフィール：<br />
-                                        相撲を「わあるどわいど」にするため闘う力士。
-                                        実力は横綱級だが、本場所そっちのけで世界を飛び回る破天荒さゆえ、番付は張出大関である。
-                                        料理は玄人裸足の腕前で、ちゃんこ鍋が絶品。
+                                        図書室に隠された日誌を読むと姿を現す<br />
+                                        日誌を読んだ人間を外界と途絶された四方塚町に閉じ込め、命を狙い続ける怪人物<br />
+                                        性格が悪く、獲物はすぐに殺さず寝かせるタイプ。<br />
+                                        異界に取り込まれてしまった人々と協力して立ち向かおう
                                     </p>
                                     <dl>
                                         <dt>性別：</dt>
-                                        <dd>男 / male</dd>
+                                        <dd>？</dd>
                                         <dt>年齢：</dt>
-                                        <dd>32
+                                        <dd>？
                                         </dd>
                                         <dt>職業：</dt>
-                                        <dd>無職</dd>
+                                        <dd>？</dd>
+                                        <dt>武器：</dt>
+                                        <dd>オノ</dd>
                                     </dl>
                                 </li>
                             </ul>
                         </div>
-                        <!-- <div class="p-chara__bg--slide">
-                            登場人物&nbsp;01<br />
-                            <span>Tojo Zinbutu</span>
-                        </div> -->
-
-
 
                     </div>
                 </div>
@@ -574,29 +565,19 @@
                             <!-- <figure>
                                 <img src="./assets/images/charaBoard_01.png" alt="">
                             </figure> -->
-                            ガスマスクの男
+                            登場人物その一
                             <span class="">
                             </span>
                         </li>
                         <li class="p-chara__item--tab js-chara-tab inview" data-num="1">
                             <figure>
                             </figure>
-                            旧校舎の少女
+                            登場人物その二
                         </li>
                         <li class="p-chara__item--tab js-chara-tab inview" data-num="2">
                             <figure>
                             </figure>
-                            志藤蓮
-                        </li>
-                        <li class="p-chara__item--tab js-chara-tab inview" data-num="2">
-                            <figure>
-                            </figure>
-                            繁華街の青年
-                        </li>
-                        <li class="p-chara__item--tab js-chara-tab inview" data-num="1">
-                            <figure>
-                            </figure>
-                            家出少女
+                            登場人物その三
                         </li>
                     </ul>
 
