@@ -9,7 +9,7 @@
     // background: url(../../assets/images/keepout.png) center bottom no-repeat;
 
 
-    backdrop-filter: brightness(1.5);
+    // backdrop-filter: brightness(1.5);
     // margin-top: -220px;
 
     .c-sec__ttl {
@@ -46,7 +46,7 @@
         &::before {
             content: "";
             @include absAll;
-            filter: blur(4px);
+            filter: blur(2px);
             background: url(../../assets/images/story_bg02.jpg) top center no-repeat;
             background-size: cover;
             // background: #fff;

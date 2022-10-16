@@ -11,7 +11,7 @@
 
     &__wrap {
         position: relative;
-        width: max(32vw, 300px);
+        width: max(32vw, 370px);
         margin: auto;
 
         a {
@@ -36,8 +36,13 @@
             position: absolute;
             bottom: -1.604167vw;
             right: -5.2083333333vw;
-            width: min(vw(100px, 768), 200px);
             z-index: 50;
+            width: 200px;
+            width: min(vw(120px, 365), 200px);
+            
+            @include mq-target(sm) {
+                width: min(vw(100px, 768), 200px);
+            }
         }
     }
 }

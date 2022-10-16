@@ -41,9 +41,9 @@
 
     &__slide {
       // margin-right: 15px;
-      // width: 98%;
+      width: 98%;
       margin-right: 10px;
-      width: calc((100% - 20px) / 2);
+      // width: calc((100% - 20px) / 2);
       
 
       @include mq-target(sm) {
@@ -88,7 +88,10 @@
 
     &__info {
       flex: 1;
-      padding: min(vw(8px, 768), 14px);
+      padding: min(vw(12px, 365), 14px);
+      @include mq-target(sm) {
+        padding: min(vw(8px, 768), 14px);
+      }
     }
 
     &__labels {
@@ -98,7 +101,11 @@
       margin: 0 -8px 8px;
       padding: 0 8px 8px;
       border-bottom: 0.1rem solid hsla(0, 0%, 100%, .12);
-      font-size: min(vw(8px, 768), 12px);
+      font-size: min(vw(10px, 365), 14px);
+      
+      @include mq-target(sm) {
+        font-size: min(vw(8px, 768), 12px);
+      }
 
       li {
         @include flex($align:center, $justify:center);
@@ -120,7 +127,10 @@
     &__heading {
       display: block;
       text-align: left;
-      font-size: min(vw(10px, 768), 14px);
+      font-size: min(vw(12px, 365), 16px); 
+      @include mq-target(sm) {
+        font-size: min(vw(10px, 768), 14px);
+      }
     }
   }
 }
