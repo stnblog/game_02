@@ -414,14 +414,12 @@
                 <span class="-ja">更新情報</span>
             </h2>
 
-            <div class="swiper-container c-slider index__slider js-index-slider">
-                <div class="swiper-wrapper c-slider__wrap index__slideWrap">
-                    <div class="swiper-slide c-slider__slide index__slide">
+            <div class="swiper-container p-news-slider__container">
+                <div class="swiper-wrapper p-news-slider__wrap">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="c-picture__img p-news-figure__img">
-                                <picture class="c-picture__img--inner">
-                                    <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
-                                </picture>
+                            <figure class="p-news-figure__img">
+                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -434,12 +432,10 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide c-slider__slide index__slide">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="#chara" class="inview p-news-figure__link">
-                            <figure class="c-picture__img p-news-figure__img">
-                                <picture class="c-picture__img--inner">
-                                    <img src="./assets/images/thumb_02.jpg" alt="メインビジュアル">
-                                </picture>
+                            <figure class="p-news-figure__img">
+                                <img src="./assets/images/thumb_02.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -452,12 +448,10 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide c-slider__slide index__slide">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="c-picture__img p-news-figure__img">
-                                <picture class="c-picture__img--inner">
-                                    <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
-                                </picture>
+                            <figure class="p-news-figure__img">
+                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -470,12 +464,10 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide c-slider__slide index__slide">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="c-picture__img p-news-figure__img">
-                                <picture class="c-picture__img--inner">
-                                    <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
-                                </picture>
+                            <figure class="p-news-figure__img">
+                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -488,12 +480,10 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide c-slider__slide index__slide">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="c-picture__img p-news-figure__img">
-                                <picture class="c-picture__img--inner">
-                                    <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
-                                </picture>
+                            <figure class="p-news-figure__img">
+                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -507,18 +497,21 @@
                         </a>
                     </div>
                 </div>
-                <div class="swiper-button-prev index__btn--slider index__btn--sliderPrev js-slider-btnPrev">
+                <!-- <div class="swiper-button-prev p-news-slider__btnPrev">
                 </div>
-                <div class="swiper-button-next index__btn--slider index__btn--sliderNext js-slider-btnNext">
-                </div>
+                <div class="swiper-button-next p-news-slider__btnNext">
+                </div> -->
             </div>
 
             <div class="swiper-scrollbar"></div>
         </div>
         <div class="smoke smoke__bottom"></div>
     </section>
+    <div class="" style="position: relative;">
 
-    <!-- <div class="p-story__bg"></div> -->
+        <div class="p-story__bg"></div>
+        <div class="p-story__bg" style="transform: scale(1, -1);"></div>
+    </div>
 
     <section id="about" class="c-sec p-story inview">
 
@@ -560,7 +553,7 @@
                         <!-- <img src="./assets/images/story_obj_01.png" alt="" /> -->
                     </p>
 
-                    <p class="inview js-scroll--fadeUp" style="font-size: 54px; padding: 80px 0;">
+                    <p class="inview js-scroll--fadeUp" style="font-size: 54px; padding: 80px 0; text-align: center;">
                         <span>死が、</span>待ち受けていた
                     </p>
 
@@ -662,13 +655,14 @@
                                     <p class="p-chara__cv">
                                         CV：&nbsp;田中&nbsp;太郎
                                     </p>
-
+ 
                                     <p class="p-chara__txt">
                                         プロフィール：<br />
                                         相撲を「わあるどわいど」にするため闘う力士。
                                         実力は横綱級だが、本場所そっちのけで世界を飛び回る破天荒さゆえ、番付は張出大関である。
                                         料理は玄人裸足の腕前で、ちゃんこ鍋が絶品。
                                     </p>
+           
                                     <dl>
                                         <dt>性別：</dt>
                                         <dd>男 / male</dd>

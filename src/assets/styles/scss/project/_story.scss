@@ -7,7 +7,7 @@
 
     // background: #fff;
     // background: url(../../assets/images/keepout.png) center bottom no-repeat;
-    @include maxWidth(1920px);
+
 
     backdrop-filter: brightness(1.5);
     // margin-top: -220px;
@@ -141,7 +141,7 @@
         // padding-top: 10rem;
         position: relative;
         @include flexCenter;
-        padding: 200px 0 80px;
+        padding: 100px 0 0;
         // position: relative;
         top: -60px;
         // height: 1000px;
@@ -180,13 +180,14 @@
     font-family: 'Cinzel', 'Noto Serif JP', serif;
 
             @include mq-target(sm) {
-                max-width: 80%;
+                max-width: 74%;
             }
 
             p {
+                // text-align: left;
                 font-size: 14px;
                 font-weight: 500;
-                margin: 40px 0 0;
+                margin: 30px 0 0;
                 line-height: 2;
                 // text-shadow: 1px 1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff, -1px -1px 2px #fbf4f4;
 

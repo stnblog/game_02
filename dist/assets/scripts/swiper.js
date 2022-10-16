@@ -19,13 +19,13 @@ var elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext'); // if (elmIn
 //   }
 // }
 
-var swiper01 = new Swiper('.js-index-slider', {
+var swiper01 = new Swiper('.p-news-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
   touchEventsTarget: true,
   navigation: {
-    prevEl: '.js-slider-btnPrev',
-    nextEl: '.js-slider-btnNext'
+    prevEl: '.p-news-slider__btnPrev',
+    nextEl: '.p-news-slider__btnNext'
   },
   scrollbar: {
     el: '.swiper-scrollbar',

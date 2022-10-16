@@ -3,8 +3,7 @@
 .c-slider {
   user-select: none;
   overflow: hidden;
-  padding: 5px;
-  // padding: 0 calc((100vw - 1600px) / 2);
+  padding: 4vw;
 
   &__heading {
     margin: 0 0 20px;
@@ -44,12 +43,12 @@
   }
 
   &__slide {
-    margin-right: 15px;
-    width: 98%;
+    // margin-right: 15px;
+    // width: 98%;
+    margin-right: 10px;
+    width: calc((100% - 20px) / 2);
 
     @include mq-target(sm) {
-      margin-right: 20px;
-      width: calc((100% - 40px) / 2);
     }
 
     @include mq-target(md) {

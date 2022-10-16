@@ -8,33 +8,31 @@
     &__ttl {
         position: relative;
         // @include maxWidth(840px);
-        margin: 0 auto 20px;
+        margin-bottom: min(vw(20px, 365),30px);
         font-weight: 400;
         text-align: center;
-        // font-family: "Cinzel", "Noto Serif JP", sans-serif;
         text-transform: uppercase;
         z-index: 1;
-        // font-family: "Teko", 'M PLUS 1', Arial, sans-serif;
-
 
         span {
             display: block;
-            line-height: 1.5;
-            // text-shadow: 1px 2px 2px #000, 2px 2px 5px #000, 2px 2px 2px #000, 1px 1px 2px #000;
+            line-height: 1.2;
         }
 
         .-en {
             position: relative;
-            font-size: 60px;
+            font-size: min(vw(40px, 365),60px);
+            font-weight: 600;
             letter-spacing: 0.04em;
-            // line-height: 0;
             display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.45));
         }
 
         .-ja {
-            // text-shadow: 1px 1px 2px #ba2929, -1px 1px 2px #cc2929, 1px -1px 2px #ba2222, -1px -1px 2px #c52929;
-            font-size: 14px;
+            font-size: min(vw(10px, 365),14px);
+            font-weight: 700;
             color: $color-white;
+            letter-spacing: 0.06em;
         }
     }
 
@@ -43,31 +41,7 @@
         &__ttl {
             transform: translate3d(0, 0, 0);
             will-change: transform;
-
-            .-en {
-                // background-color: #BB1020;
-                background-image: linear-gradient(to bottom, #d81c03, #352e2c);
-                -webkit-background-clip: text;
-                color: transparent;
-                background-position: left top;
-                background-size: cover;
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: rgba(0, 0, 0, 0);
-                display: inline-block;
-                filter: drop-shadow(5px 0 10px rgba(0, 0, 0, 0.8));
-                font-weight: 500;
-                font-size: 18px;
-                font-weight: 600;
-                letter-spacing: 0.06em;
-            }
-
-            .-ja {
-                font-size: 50px;
-                font-weight: 700;
-                letter-spacing: 0.06em;
-                // display: none;
-            }
+            margin-bottom: min(vw(20px, 768),30px);
         }
     }
 }
