@@ -207,7 +207,7 @@
     &__img {
         @include absCenter;
         top: 350px;
-        width: 700px;
+        width: 680px;
 
         &--one {
             top: 376px;
@@ -215,8 +215,9 @@
         }
 
         &--second {
-            width: 450px;
-            top: 580px;
+            width: 390px;
+            top: 660px;
+            left: calc(50% - 1%);
         }
 
         &--three {

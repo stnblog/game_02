@@ -4,7 +4,7 @@
   position: relative;
   z-index: 7;
   // padding: 2rem 0 2rem;
-  padding: min(vw(30px, 768),60px) 0;
+  padding: min(vw(20px, 768), 40px) 0;
   background: rgba($color: $color-black, $alpha: 0.85);
 
   &__inner {
@@ -14,19 +14,24 @@
     // padding: 0 min(vw(20px, 768), 60px);
     z-index: 50;
     width: 92%;
-    
+
     @include mq-target(sm) {
-      width: min(vw(720px,768),1400px);
+      width: 92%;
       margin: auto;
+    }
+
+    @include mq-target(md) {
+      width: 84%;
     }
   }
 
   &-slider {
     &__container {
       user-select: none;
-      padding: 5px;
+      padding: 10px;
+
       @include mq-target(sm) {
-        overflow: hidden;
+        // overflow: hidden;
       }
     }
 
@@ -44,12 +49,60 @@
       width: 98%;
       margin-right: 10px;
       // width: calc((100% - 20px) / 2);
-      
+
+      &:nth-child(1) {
+        transition: all 0.6s;
+      }
+
+      &:nth-child(2) {
+        transition: all 1s;
+      }
+
+      &:nth-child(1),&:nth-child(2) {
+        a {
+          figcaption {
+            ul {
+              .date {
+                &::after {
+                  content: "";
+                  @include absCenter;
+                  background: #BB1020;
+                  border-radius: 100%;
+                  display: block;
+                  height: 6px;
+                  left: 50%;
+                  position: absolute;
+                  transform: translateX(-50%);
+                  width: 6px;
+                  z-index: 1;
+                  top: 40%;
+                  // top: 6px;
+                  left: -4%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        transition: all 1.4s;
+      }
+
+      &:nth-child(4) {
+        transition: all 1.8s;
+      }
+
+      &:nth-child(5) {
+        transition: all 2s;
+      }
+
 
       @include mq-target(sm) {
         margin-right: 1.6%;
-        width: calc((100% - 3.2%) / 3);
+        width: calc((100% - 1.6%) / 2);
       }
+
       @include mq-target(md) {
         margin-right: 1.6%;
         width: calc((100% - 4.8%) / 4);
@@ -63,12 +116,10 @@
 
   &-figure {
     &__link {
-      transition-property: all;
-      transition-duration: .4s;
-      transition-timing-function: ease-in-out;
-      // display: block;
+      filter: drop-shadow(0 0 min(0.5208333333vw, 3px) rgba(198, 27, 44, 0.5));
       overflow: hidden;
-      border-radius: 1rem;
+      // border-radius: 1rem;
+      display: block;
       // background-color: #1e0101;
 
       &:hover {
@@ -78,7 +129,7 @@
 
     &__img {
 
-      filter: drop-shadow(0 0 min(0.5208333333vw, 3px) rgba(198, 27, 44, 0.5));
+      // filter: drop-shadow(0 0 min(0.5208333333vw, 3px) rgba(198, 27, 44, 0.5));
 
       // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.66));
       &::before {
@@ -89,45 +140,58 @@
     &__info {
       flex: 1;
       padding: min(vw(12px, 365), 14px);
+
       @include mq-target(sm) {
-        padding: min(vw(8px, 768), 14px);
+        padding: 4px min(vw(6px, 768), 10px);
       }
     }
 
     &__labels {
       position: relative;
       @include flex($wrap:wrap);
+      align-items: center;
       overflow: hidden;
-      margin: 0 -8px 8px;
-      padding: 0 8px 8px;
-      border-bottom: 0.1rem solid hsla(0, 0%, 100%, .12);
+      margin: 0 -8px 10px;
+      padding: 0 8px 0;
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.12);
       font-size: min(vw(10px, 365), 14px);
-      
+
       @include mq-target(sm) {
         font-size: min(vw(8px, 768), 12px);
       }
 
       li {
         @include flex($align:center, $justify:center);
-        margin: 0 8px 4px 0;
+        margin: 0 8px 0 0;
         padding: 2px 8px;
         border: 0.1rem solid transparent;
         // background-color: #71131b;
         // font-family: 'M PLUS 1';
         filter: brightness(1.5);
+
+
+      }
+
+      .date {
+        position: relative;
+        top: 2px;
+        font-size: 34px;
+
       }
 
       .info {
         border-color: #be1924;
         background-color: transparent;
         color: #d62c37;
+        height: 26px;
       }
     }
 
     &__heading {
       display: block;
       text-align: left;
-      font-size: min(vw(12px, 365), 16px); 
+      font-size: min(vw(12px, 365), 16px);
+
       @include mq-target(sm) {
         font-size: min(vw(10px, 768), 14px);
       }
@@ -140,8 +204,8 @@
   position: relative;
   background-color: transparent;
   @include maxWidth(500px);
-  margin-top: 40px;
-  border: 1px solid #605993;
+  margin-top: 20px;
+  border: 1px solid #92290c69;
   background: #15120e !important;
   border-radius: initial !important;
 }

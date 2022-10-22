@@ -77,7 +77,7 @@
       margin: auto;
       
       @include mq-target(sm) {
-        width: min(vw(250px, 768), 600px);
+        width: min(vw(250px, 768), 500px);
       }
     }
 

@@ -3,10 +3,10 @@
 
 // fade
 //--------------------------------------------------------------------
-$fades:("Up": translateY(40px),
-  "Down": translateY(-40px),
-  "Left": translateX(40px),
-  "Right": translateX(-40px));
+$fades:("Up": translateY(20%),
+  "Down": translateY(-20%),
+  "Left": translateX(20%),
+  "Right": translateX(-20%));
 
 @each $key,
 $fade in $fades {
@@ -16,12 +16,13 @@ $fade in $fades {
     z-index: 2;
     opacity: 0;
     transform: ($fade);
-    transition: opacity 1.6s, transform 1.4s;
-    transition-delay: .2s;
+    filter: blur(4px);
+    transition: all 1s;
 
     &.is-anim {
       opacity: 1;
       transform: translate(0);
+      filter: blur(0px);
     }
   }
 }

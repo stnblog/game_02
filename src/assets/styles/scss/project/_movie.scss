@@ -11,7 +11,8 @@
 
     &__wrap {
         position: relative;
-        width: max(32vw, 370px);
+        // width: max(38vw, 370px);
+        width: min(vw(500px, 768), 660px);
         margin: auto;
 
         a {
@@ -28,6 +29,12 @@
                 opacity: 1;
             }
         }
+    }
+
+    &__bg {
+        background-image: url(../../assets/images/keepout.png);
+        background-size: cover;
+        z-index: 5000;
     }
 
     &__obj {
