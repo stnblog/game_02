@@ -77,14 +77,14 @@
       margin: auto;
       
       @include mq-target(sm) {
-        width: min(vw(250px, 768), 500px);
+        width: min(vw(200px, 768), 400px);
       }
     }
 
     &__txt {
           font-family: 'Noto Serif JP', serif;
       position: relative;
-      left: 4%;
+      line-height: 1;
       font-size: min(vw(12px, 365),18px);
       @include mq-target(sm) {
         font-size: min(vw(10px, 768), 16px);

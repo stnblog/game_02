@@ -111,12 +111,17 @@ html.is-locked {
 	height: 100%;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
 	background: $color-black;
 	color: $color-main; 
     font-family: 'teko', 'Noto Serif JP', serif;
 	// font-family: "teko", 'M PLUS 1', Arial, sans-serif;
-	line-height: 1.5;
 	letter-spacing: 0.05em;
 	min-height: 100vh;
 	text-align: center;
