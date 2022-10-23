@@ -22,6 +22,13 @@ $(document).ready(function () {
     }, 500);
     return false;
   });
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 600) {
+      $('.sc-inview').addClass('is-anim');
+    } else {
+      $('.sc-inview').removeClass('is-anim');
+    }
+  });
   $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
 });
 document.addEventListener('DOMContentLoaded', function () {
