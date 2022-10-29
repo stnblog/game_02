@@ -12,11 +12,11 @@
     &__wrap {
         position: relative;
         // width: max(38vw, 370px);
-        width: 82%;
+        width: 90%;
         margin: auto;
 
         @include mq-target(sm) {
-            width: min(vw(450px, 768), 660px);
+            width: min(vw(450px, 768), 600px);
         }
 
         a {

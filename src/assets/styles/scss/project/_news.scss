@@ -265,6 +265,7 @@
   &__btn {
     position: relative;
     display: block;
+    line-height: 1;
     filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
     &:hover {
       opacity: 0.35;
@@ -274,8 +275,12 @@
     }
 
     span {
-      width: 40px;
-      height: 38px;
+      width: min(vw(30px, 365), 40px);
+      height: min(vw(28px, 365), 38px);
+      @include mq-target(sm) {
+        width: 40px;
+        height: 38px;
+      }
       cursor: pointer;
       position: relative;
       display: inline-block;
