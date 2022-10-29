@@ -33,15 +33,22 @@
 
     &__slide {
 
+      width: 100%;
+      margin-right: 20px;
+
       @include mq-target(sm) {
-        margin-right: 20px;
         width: calc((100% - 40px) / 2);
       }
       
       @include mq-target(md) {
 
-        width: calc((100% - 40px) / 3);
+        width: calc((100% - 60px) / 3);
       }
+
+      @include mq-target(lg) {
+        width: calc((100% - 80px) / 4);
+      }
+
 
       &:last-child {
         margin-right: 0;
@@ -97,8 +104,13 @@
     }
 
     &__controller {
-      margin-top: 30px;
-      gap: 16px;
+      // margin-top: 30px;
+      margin: min(vw(15px, 768), 30px) 0 0;
+
+      // @include mq-target(sm) {
+      //   margin: min(vw(15px, 768), 30px) 0 0;
+      // }
+      // gap: 16px;
       @include flex($align:center, $justify:space-between);
     }
 
@@ -110,7 +122,12 @@
 
       .swiper-pagination-bullet {
         background: rgb(240, 240, 240);;
-        width: 1.6rem;
+        // width: 1.6rem;
+        width: min(vw(10px,365), 20px);
+        @include mq-target(sm) {
+          width: min(vw(20px,768), 40px);
+        }
+        // width: 16px;
         height: 3px;
         border-radius: 0;
         transition: width .8s cubic-bezier(.2, 1, .2, 1);
@@ -118,7 +135,10 @@
       }
 
       .swiper-pagination-bullet-active {
-        width: 4rem;
+        width: min(vw(20px,365), 40px);
+        @include mq-target(sm) {
+          width: min(vw(40px,768), 80px);
+        }
       }
     }
 
@@ -148,6 +168,7 @@
         background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
       }
     }
+    
 
     &__btnPrev {
       &::after {
@@ -244,7 +265,7 @@
   &__btn {
     position: relative;
     display: block;
-
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
     &:hover {
       opacity: 0.35;
       span::after {
@@ -254,11 +275,11 @@
 
     span {
       width: 40px;
-      height: 36px;
+      height: 38px;
       cursor: pointer;
       position: relative;
       display: inline-block;
-      top: -1px;
+      // top: -1px;
 
       &::before,
       &::after {
@@ -285,4 +306,9 @@
       }
     }
   }
+}
+
+
+.swiper-button-disabled {
+  opacity: 0.35;
 }
