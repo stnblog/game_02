@@ -23,24 +23,19 @@ var swiper01 = new Swiper('.p-news-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
   touchEventsTarget: true,
+  pagination: {
+    el: '.p-news-slider__pagi',
+    clickable: true
+  },
   navigation: {
     prevEl: '.p-news-slider__btnPrev',
     nextEl: '.p-news-slider__btnNext'
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    // スクロールバーとして認識させるクラス
-    hide: false,
-    // ユーザー操作後にスクロールバーを非表示にしない
-    draggable: true,
-    // ドラッグ操作を可能にする
-    dragClass: 'drag',
-    // ドラッグ可能なクラスの指定
-    dragSize: 1,
-    // ドラッグのサイズ指定
-    snapOnRelease: false // スクロールバーを離したときにスライダーの位置を固定しないようにする
+  } // breakpoints: {
+  //   1025: {
+  //     spaceBetween: 32,
+  //   }
+  // },
 
-  }
 });
 var modalSwiper = new Swiper('.js-modal-slider', {
   slidesPerView: 'auto',

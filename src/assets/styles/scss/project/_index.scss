@@ -5,6 +5,8 @@
   width: 100%;
   z-index: 250;
   height: min(153.1942633638vw, 720px);
+  width: min(100vw,1920px);
+  margin: auto;
 
   @include mq-target(sm) {
     height: min(56.25vw, 880px);
@@ -50,13 +52,16 @@
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: min(153.1942633638vw, 720px);
+    width: min(100vw,1920px);
+    height: 100%;
+    // @include absCenter;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     filter: blur(0);
     transition: filter .4s ease;
+    // margin: auto;
 
     @include mq-target(sm) {
       height: min(56.25vw, 880px);
@@ -77,7 +82,8 @@
     
     @include mq-target(sm) {
       // width: 21%;
-      width: 20vw;
+      top: min(vw(240px, 768), 460px);
+      width: min(vw(180px, 768), 360px);
     }
 
     img {
@@ -130,30 +136,6 @@
       @include mq-target(sm) {
         font-size: min(vw(10px, 768), 16px);
       }
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: 50%;
-      //   width: min(9.8958333333vw, 140px);
-      //   height: 1px;
-      //   background: #fff;
-      //   transform: translateY(-50%);
-      //   left: calc(50% - min(15.625vw, 240px));
-      //   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
-      // }
-
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   top: 50%;
-      //   right: calc(50% - min(15.625vw, 240px));
-      //   width: min(9.8958333333vw, 140px);
-      //   height: 1px;
-      //   background: #fff;
-      //   transform: translateY(-50%);
-      //   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
-      // }
     }
   }
 }
@@ -170,15 +152,6 @@
   height: 100%;
   background-position: top;
   transform: rotate(10deg);
-
-  img {
-    // transform: rotate(37deg);
-    // transition: all 1s linear;
-    // transition-delay: 1s;
-    // &.is-anim {
-    //   transform: rotate(50deg);
-    // }
-  }
 
   &__bg {
     margin-top: -14vw;
