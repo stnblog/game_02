@@ -8,7 +8,7 @@
     &__ttl {
         position: relative;
         // @include maxWidth(840px);
-        margin-bottom: min(vw(20px, 365),30px);
+        margin-bottom: min(vw(10px, 365),20px);
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
@@ -20,20 +20,37 @@
         }
 
         .-en {
-            position: relative;
-            font-size: min(vw(40px, 365),60px);
+            // font-size: min(vw(10px, 365),14px);
             font-weight: 600;
+            font-size: 100px;
+            font-size: min(vw(70px, 768), 100px);
+            color: $color-white;
             letter-spacing: 0.04em;
-            display: inline-block;
-            filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
+            line-height: 1;
+            opacity: 0.35;
+            background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
         .-ja {
-            font-size: min(vw(10px, 365),14px);
-            font-weight: 700;
-            color: $color-white;
-            letter-spacing: 0.06em;
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            // bottom: 25px;
+            margin: auto;
+            position: absolute;
+            text-align: center;
+            font-size: min(vw(26px, 768), 34px);
+            line-height: 1;
+            letter-spacing: 2px;
+            @include flex($justify:center,$align:center);
+            font-weight: 600;
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
         }
+
+
     }
 
     @include mq-target(sm) {
@@ -41,7 +58,7 @@
         &__ttl {
             transform: translate3d(0, 0, 0);
             will-change: transform;
-            margin-bottom: min(vw(20px, 768),30px);
+            // margin-bottom: min(vw(20px, 768),30px);
         }
     }
 }

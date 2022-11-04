@@ -178,7 +178,7 @@
     </section>
 
     <div class="p-story__bg" style="transform: scale(1, -1); margin-top: -11%;"></div>
-    <section class="p-movie">
+    <!-- <section class="p-movie">
         <div class="p-movie__inner">
             <div class="p-movie__wrap">
                 <div class="smoke smoke__top"></div>
@@ -191,18 +191,22 @@
             </div>
         </div>
         <div class="smoke smoke__bottom smoke__bottom--movie"></div>
-    </section>
+    </section> -->
 
     <section class="p-news" id="news">
         <div class="smoke smoke__top"></div>
 
+
+        <div class="p-news__bg">
+            <!-- <img src="./assets/images/charaBg_04.jpg" alt=""> -->
+        </div>
 
         <div class="p-news__inner">
             <!-- <h2 class="c-sec__ttl">
              <img src="./assets/images/title_chara.png" alt="" style="width: 400px;">
             </h2> -->
             <h2 class="c-sec__ttl">
-                <span class="-en">news</span>
+                <span class="-en inview js-scroll--slideDown">news</span>
                 <span class="-ja">更新情報</span>
             </h2>
 
@@ -243,7 +247,7 @@
                     <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
-                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
+                                <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -259,7 +263,7 @@
                     <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
-                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
+                                <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -310,6 +314,40 @@
         <div class="p-story__bg" style="transform: scale(1, -1);"></div>
     </div>
 
+    <section class="p-movie">
+
+        
+        <!-- <h2 class="c-sec__ttl">
+            <span class="-en inview js-scroll--slideLeft">ABOUT</span>
+            <span class="-ja">概要</span>
+        </h2> -->
+        <div class="p-movie__inner">
+            <div class="p-movie__wrap">
+                <div class="p-movie__heading">
+                    <h2>
+                        <img src="./assets/images/heading.png" alt="">
+                    </h2>
+                    <p>狂った世界ヲ<br />目撃せよ</p>
+                </div>
+                
+                <a href="">
+                    <div class="smoke smoke__top"></div>
+                    <img src="./assets/images/monitor.webp" alt="">
+                    <div class="smoke smoke__bottom smoke__bottom--movie"></div>
+                </a>
+            </div>
+            <div class="p-movie-obj__key">
+            <img src="./assets/images/keyboard.png" alt="">
+        </div>
+        </div>
+    </section>
+
+    <!-- <div class="" style="position: relative;">
+
+        <div class="p-story__bg"></div>
+        <div class="p-story__bg" style="transform: scale(1, -1);"></div>
+    </div> -->
+
     <section id="about" class="c-sec p-story inview">
 
         <div class="p-story__red inview"></div>
@@ -318,72 +356,45 @@
         <div class="p-story__inner">
 
 
-            <!-- <h2 class="c-sec__ttl" style="margin-top: 20px;">
-                <span class="-en">STORY</span>
-                <span class="-ja">人物紹介</span>
-            </h2> -->
-
-            <ul class="p-story__list">
-
-                <div class="p-story__hand">
-                    <div class="inview js-scroll--view">
-                        <!-- <img src="./assets/images/hand_2.png" alt=""> -->
-                        <!-- <img src="./assets/images/hand_2.png" alt=""> -->
-                    </div>
+            <div class="p-story-contents">
+                <div class="p-story-contents__txt">
+                    <h2 class="c-sec__ttl">
+                        <span class="-en inview js-scroll--slideLeft">STORY</span>
+                        <span class="-ja">第一章</span>
+                    </h2>
+                    <!-- <h3>
+                        <img src="./assets/images/title.png" alt="">
+                    </h3> -->
+                    <h4>
+                        「殺人鬼と幽霊」
+                    </h4>
+                    <p>
+                        2018年に発売され、 全世界出荷＋ダウンロードが300万本を突破した<br />
+                        「オクトパストラベラー」のシリーズ完全新作RPG。
+                    </p>
+                    <p>
+                        ドット絵と3DCGを融合した 「HD-2D」のグラフィックが、<br />
+                        さらなる進化を遂げて登場。<br />
+                        “ソリスティア”と呼ばれる新たな大地で、<br />
+                        新たな時代に、新たな8人の旅が始まる。
+                    </p>
+                    <p>
+                        何処に行くのか、何をするのか、 そしてどの物語の主人公となるのか、<br />
+                        全ては君に託される。<br />
+                        旅立とう、君だけの物語へ——
+                    </p>
                 </div>
+            </div>
 
-                <h2 class="c-sec__ttl">
-                    <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 440px;"> -->
-                    <span class="-en">STORY</span>
-                    <span class="-ja">学校の怪談</span>
-                </h2>
+            <div class="p-story-bg">
 
-                <li class="p-story__item--right">
-                    <p class="inview js-scroll--fadeUp" style="font-size: 32px;">
-                        きっかけは一冊の<span>手記</span>だった。
-                    </p>
-                    <p class="inview js-scroll--fadeUp">
-                        偶然手に入れた手書きの手記に記されていた&nbsp;<span>"閉鎖された旧校舎の秘密"</span>
-                    </p>
-                    <p class="inview js-scroll--fadeUp">そこには―――</p>
-                    <p class="inview js-scroll--fadeUp">
-                        <!-- <img src="./assets/images/story_obj_01.png" alt="" /> -->
-                    </p>
+                <div class="p-story-bg__img">
+                    <img src="./assets/images/story_bg2.jpg" alt="">
+                </div>
+            </div>
 
-                    <p class="inview js-scroll--fadeUp" style="font-size: 54px; padding: 80px 0; text-align: center;">
-                        <span>死が、</span>待ち受けていた
-                    </p>
 
-                    <p class="inview js-scroll--fadeUp">
-                        死に至る原因は超常的であっても過程は物理的な現象によるものである。
-                    </p>
-                    <p class="inview js-scroll--fadeUp">
-                        死の運命に翻弄される人々の群像劇がはじまる
-                    </p>
 
-                    <!-- <div class="inview js-scroll--fadeUp">
-                        <figure style="position: relative; overflow: hidden;">
-                            <img src="./assets/images/story_obj_01.png" alt="">
-                            <div class="p-story__obj">
-                                <div class="inview js-scroll--slideDown" style="transition-delay: 1.2s;">
-                                    <figure class="js-rellax" data-rellax-speed="1.5" data-rellax-percentage="1">
-                                        <img src="./assets/images/test_01_back.png" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-                        </figure>
-                    </div> -->
-                    <!-- <p class="inview js-scroll--fadeUp">
-                        なすすべもなく、<span>つるし首にされた少女</span>
-                    </p>
-                    <p class="inview js-scroll--fadeUp">
-                        薄れゆく意識の中、少女は思う―――
-                    </p>
-                    <p class="inview js-scroll--fadeUp" style="font-size: 28px;">
-                        この男の世界を、<span>「非日常」</span>へと変貌させてやる
-                    </p> -->
-                </li>
-            </ul>
         </div>
 
         <div class="smoke smoke__bottom"></div>
@@ -392,7 +403,7 @@
 
     <div class="" style="position: relative;">
         <figure class="killer">
-            <!-- <img src="./assets/images/test_04.png" alt="" class="inview"> -->
+
         </figure>
         <div class="p-story__bg"></div>
         <div class="p-story__bg killer__bg inview" style="transform: scale(1, -1);"></div>
@@ -409,7 +420,7 @@
 
             <h2 class="c-sec__ttl">
                 <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 440px;"> -->
-                <span class="-en">characters</span>
+                <span class="-en inview js-scroll--slideRight">characters</span>
                 <span class="-ja">登場人物</span>
             </h2>
             <div class="p-chara__bg">

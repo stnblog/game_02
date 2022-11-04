@@ -2,15 +2,38 @@
 
 .p-news {
   position: relative;
-  z-index: 7;
+  z-index: 50;
   // padding: 2rem 0 2rem;
-  padding: min(vw(20px, 768), 40px) 0;
-  background: rgba($color: $color-black, $alpha: 0.85);
+  padding: min(vw(30px, 768), 60px) 0 30px;
+
+  &::before {
+    content: "";
+    @include absAll;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $color-black, $alpha: 0.65);
+  }
+
+  &__bg {
+    @include absAll;
+    // @include absCenter;
+    // filter: blur(2px);
+    background-image: url(../../assets/images/charaBg_04.jpg);
+    background-position: center;
+    background-size: cover;
+    // background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;  
+  }
+
+
 
   &__inner {
     z-index: 50;
     position: relative;
-    max-width: 1480px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
@@ -33,20 +56,21 @@
 
     &__slide {
 
-      width: 100%;
+      width: 98%;
+      margin:  auto;
       margin-right: 20px;
 
       @include mq-target(sm) {
-        width: calc((100% - 40px) / 2);
+        width: calc((100% - 20px) / 2);
       }
-      
-      @include mq-target(md) {
 
+      @include mq-target(md) {
+        margin-right: 30px;
         width: calc((100% - 60px) / 3);
       }
 
       @include mq-target(lg) {
-        width: calc((100% - 80px) / 4);
+        // width: calc((100% - 80px) / 4);
       }
 
 
@@ -121,12 +145,15 @@
       // margin: 0 auto 0 0;
 
       .swiper-pagination-bullet {
-        background: rgb(240, 240, 240);;
+        background: rgb(240, 240, 240);
+        ;
         // width: 1.6rem;
-        width: min(vw(10px,365), 20px);
+        width: min(vw(10px, 365), 20px);
+
         @include mq-target(sm) {
-          width: min(vw(20px,768), 40px);
+          width: min(vw(20px, 768), 40px);
         }
+
         // width: 16px;
         height: 3px;
         border-radius: 0;
@@ -135,9 +162,10 @@
       }
 
       .swiper-pagination-bullet-active {
-        width: min(vw(20px,365), 40px);
+        width: min(vw(20px, 365), 40px);
+        background: #be1924;
         @include mq-target(sm) {
-          width: min(vw(40px,768), 80px);
+          width: min(vw(40px, 768), 80px);
         }
       }
     }
@@ -168,7 +196,7 @@
         background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
       }
     }
-    
+
 
     &__btnPrev {
       &::after {
@@ -181,7 +209,7 @@
 
   &-figure {
     &__link {
-      filter: drop-shadow(0 0 min(0.5208333333vw, 3px) rgba(255, 58, 77, 0.5));
+
       overflow: hidden;
       // border-radius: 1rem;
       display: block;
@@ -193,12 +221,26 @@
     }
 
     &__img {
-
-      // filter: drop-shadow(0 0 min(0.5208333333vw, 3px) rgba(198, 27, 44, 0.5));
-
-      // filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.66)) drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.66));
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      // border: 2px solid rgba(95, 7, 7, 0.3);
+      // filter: drop-shadow(0 0 min(0.5208333333vw, 6px) rgba(212, 19, 64, 0.75));
       &::before {
         padding-top: 54%;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 0;
+        border-bottom: solid 55px rgba(0, 0, 0, 0.75);
+        border-right: solid 55px transparent;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 5000;
       }
     }
 
@@ -216,13 +258,13 @@
       @include flex($wrap:wrap);
       align-items: center;
       overflow: hidden;
-      margin: 0 -8px 10px;
+      margin: 0 -8px 0;
       padding: 0 8px 0;
-      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.12);
+      // border-bottom: 0.1rem solid rgba(255, 255, 255, 0.12);
       font-size: min(vw(10px, 365), 14px);
 
       @include mq-target(sm) {
-        font-size: min(vw(8px, 768), 12px);
+        font-size: min(vw(8px, 768), 10px);
       }
 
       li {
@@ -240,7 +282,7 @@
       .date {
         position: relative;
         top: 2px;
-        font-size: 28px;
+        font-size: 32px;
 
       }
 
@@ -266,9 +308,11 @@
     position: relative;
     display: block;
     line-height: 1;
-    filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.45));
+
     &:hover {
       opacity: 0.35;
+
       span::after {
         transform: rotate(90deg);
       }
@@ -277,10 +321,12 @@
     span {
       width: min(vw(30px, 365), 40px);
       height: min(vw(28px, 365), 38px);
+
       @include mq-target(sm) {
         width: 40px;
         height: 38px;
       }
+
       cursor: pointer;
       position: relative;
       display: inline-block;
@@ -293,13 +339,13 @@
         position: absolute;
         background: #fff;
         display: block;
-        height: 2px;
+        height: 1px;
         width: 100%;
         // top: 50%;
       }
 
       &::before {
-        height: 2px;
+        height: 1px;
         width: 100%;
         top: 50%;
       }

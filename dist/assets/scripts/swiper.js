@@ -22,6 +22,7 @@ var elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext'); // if (elmIn
 var swiper01 = new Swiper('.p-news-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
+  // loop: true,
   touchEventsTarget: true,
   pagination: {
     el: '.p-news-slider__pagi',

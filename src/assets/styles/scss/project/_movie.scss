@@ -6,31 +6,49 @@
     background: $color-black;
     position: relative;
     z-index: 500;
-    padding-top: min(vw(20px, 768), 40px);
+    padding: min(vw(40px, 768), 80px) 0 min(vw(20px, 768), 40px);
+    // padding-top: min(vw(20px, 768), 40px);
     // padding-top: 80px;
+
+    &__inner {
+        padding-top: min(vw(30px, 768),60px);
+    }
 
     &__wrap {
         position: relative;
         // width: max(38vw, 370px);
-        width: 90%;
+        // width: 90%;
+        max-width: 1300px;
+        width: 100%;
+        padding-right: 5.85652vw;
+        padding-left: 4.45652vw;
+    
         margin: auto;
 
-        @include mq-target(sm) {
-            width: min(vw(450px, 768), 600px);
-        }
+        // @include mq-target(sm) {
+        //     width: min(vw(450px, 768), 600px);
+        // }
 
         a {
-            width: 100%;
-            position: relative;
+            // animation: ttl-blink 4s infinite alternate;
+            // width: 600px;
+            width: min(vw(390px, 768), 700px);
+            margin: auto;
+            @include absCenter;
             display: block;
+
             &::after {
                 content: "";
                 display: block;
                 @include absAll;
                 margin: auto;
                 background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 64% auto;
+                background-size: 50% auto;
                 opacity: 1;
+            }
+
+            .smoke__bottom {
+                height: 100px;
             }
         }
     }
@@ -41,19 +59,43 @@
         z-index: 5000;
     }
 
-    &__obj {
-        &--rantan {
-            // animation: updown 4s infinite alternate;
-            position: absolute;
-            bottom: -1.604167vw;
-            right: -5.2083333333vw;
-            z-index: 50;
-            width: 200px;
-            width: min(vw(120px, 365), 200px);
+    &__heading {
+        text-align: left;
+        position: relative;
+        // z-index: 500;
+        font-size: 60px;
+        @include flex($align:flex-start, $justify:space-between);
+
+        h2 {
+            @include mq-target(sm) {
+                width: min(vw(120px, 768), 200px);
+            }
+
+        }
+
+        p {
+            line-height: 1.2;
+            font-weight: 400;
+            writing-mode: vertical-rl;
+            @include mq-target(sm) {
+                font-size: min(vw(42px, 768), 72px);
+            }
+            // font-size: 72px;
+
+        }
+    }
+
+    &-obj {
+        &__key {
+            // animation: marquee 4s infinite alternate;
+            position: relative;
+            // transform: rotate(1deg);
+            margin: 0 auto 0;
             
             @include mq-target(sm) {
-                width: min(vw(170px, 768), 250px);
+                width: min(vw(380px, 768), 640px);
             }
         }
     }
+
 }
