@@ -30,7 +30,7 @@
         z-index: 500;
         width: 100%;
         min-width: 1280px;
-        margin: 100vw 0 20vw; 
+        margin: 90vw 0 20vw; 
         @include mq-target(sm) {
             margin: 0;
             padding: min(vw(40px,768),160px) 0 min(vw(80px,768),160px) min(vw(360px,768),660px);
@@ -60,12 +60,12 @@
                 }
             }
             p {
-                font-size: min(vw(8px,365),16px);
+                font-size: min(vw(10px,365),16px);
                 line-height: 2;
                 margin-top: min(vw(10px,365),20px);
 
                 @include mq-target(sm) {
-                    font-size: min(vw(8px,768),16px);
+                    font-size: min(vw(10px,768),16px);
                     margin-top: min(vw(20px,768),40px);
                 }
             }

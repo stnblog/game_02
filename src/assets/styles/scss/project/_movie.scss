@@ -6,9 +6,13 @@
     background: $color-black;
     position: relative;
     z-index: 500;
-    padding: min(vw(40px, 768), 80px) 0 min(vw(20px, 768), 40px);
     // padding-top: min(vw(20px, 768), 40px);
     // padding-top: 80px;
+    padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
+    
+    @include mq-target(sm) {
+        padding: min(vw(40px, 768), 80px) 0 min(vw(20px, 768), 40px);
+    }
 
     &__inner {
         padding-top: min(vw(30px, 768), 60px);
@@ -30,12 +34,13 @@
     &__heading {
         text-align: left;
         position: relative;
-        // z-index: 500;
+        z-index: 500;
         font-size: 60px;
         transition-delay: 1.8s !important;
         @include flex($align:flex-start, $justify:space-between);
 
         h2 {
+            width: min(vw(90px, 365), 156px);
             @include mq-target(sm) {
                 width: min(vw(120px, 768), 200px);
             }
@@ -45,11 +50,10 @@
         p {
             line-height: 1.2;
             font-weight: 400;
-
-            width: min(vw(120px, 768), 200px);
-            writing-mode: vertical-rl;
-
+            width: min(vw(90px, 365), 154px);
+            
             @include mq-target(sm) {
+                width: min(vw(120px, 768), 200px);
                 font-size: min(vw(42px, 768), 72px);
             }
 
@@ -62,7 +66,10 @@
 
         &__monitor {
             @include absCenter;
-            width: min(vw(390px, 768), 700px);
+            width: min(vw(340px, 365), 620px);
+            @include mq-target(sm) {
+                width: min(vw(400px, 768), 700px);
+            }
             margin: auto;
 
             a {
@@ -101,6 +108,7 @@
             // animation: marquee 4s infinite alternate;
             position: relative;
             // transform: rotate(1deg);
+            width: min(vw(300px, 365), 500px);
             margin: 0 auto 0;
 
             @include mq-target(sm) {
