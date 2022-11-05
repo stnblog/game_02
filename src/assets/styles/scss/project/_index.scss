@@ -27,7 +27,7 @@
     &--img {
       pointer-events: none;
       z-index: 5;
-      opacity: 0.2;
+      opacity: 0.15;
       position: absolute;
       height: 100%;
       width: 600vw;
@@ -144,19 +144,23 @@
 .killer {
   position: absolute;
   width: 76vw;
-  top: -2vw;
+  top: 20vw;
   left: 0;
   background-image: url(../../assets/images/chara03.webp);
-  background-size: 66vw;
+  background-size: 50vw;
   width: 100%;
   height: 100%;
   background-position: top;
   transform: rotate(10deg);
 
+  &.is-anim {
+    top: 4vw;
+  }
+
   &__bg {
     margin-top: -14vw;
     transition-delay: 2s;
-    transition: all 2s ease;
+    transition: all 3s ease;
 
     &.is-anim {
       margin-top: 0;

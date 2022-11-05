@@ -24,6 +24,7 @@ var swiper01 = new Swiper('.p-news-slider__container', {
   grabCursor: true,
   // loop: true,
   touchEventsTarget: true,
+  loopAdditionalSlides: 1,
   pagination: {
     el: '.p-news-slider__pagi',
     clickable: true

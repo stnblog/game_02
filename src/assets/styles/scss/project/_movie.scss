@@ -6,24 +6,38 @@
     background: $color-black;
     position: relative;
     z-index: 500;
-    // padding-top: min(vw(20px, 768), 40px);
-    // padding-top: 80px;
     padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
-    
+
     @include mq-target(sm) {
         padding: min(vw(40px, 768), 80px) 0 min(vw(20px, 768), 40px);
     }
 
+    &__bg {
+        @include absAll;
+        // @include absCenter;
+        // filter: blur(2px);
+        background-image: url(../../assets/images/movie_bg01.jpg);
+        background-position: center;
+        background-size: cover;
+        // background: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;  
+      }
+    
+
     &__inner {
         padding-top: min(vw(30px, 768), 60px);
     }
+
 
     &__wrap {
 
         position: relative;
         // width: max(38vw, 370px);
         // width: 90%;
-        max-width: 1300px;
+        max-width: 1200px;
         width: 100%;
         padding-right: 4.75652vw;
         padding-left: 4.45652vw;
@@ -41,6 +55,7 @@
 
         h2 {
             width: min(vw(90px, 365), 156px);
+
             @include mq-target(sm) {
                 width: min(vw(120px, 768), 200px);
             }
@@ -51,7 +66,7 @@
             line-height: 1.2;
             font-weight: 400;
             width: min(vw(90px, 365), 154px);
-            
+
             @include mq-target(sm) {
                 width: min(vw(120px, 768), 200px);
                 font-size: min(vw(42px, 768), 72px);
@@ -67,9 +82,11 @@
         &__monitor {
             @include absCenter;
             width: min(vw(340px, 365), 620px);
+
             @include mq-target(sm) {
                 width: min(vw(400px, 768), 700px);
             }
+
             margin: auto;
 
             a {
@@ -83,6 +100,7 @@
                 -webkit-mask-size: 100% 0%;
                 -webkit-mask-position: center top;
                 transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
                 &::after {
                     content: "";
                     display: block;
@@ -92,6 +110,10 @@
                     background-size: 50% auto;
                     opacity: 1;
                 }
+
+                // .smoke__top {
+                //     height: 100px;
+                // }
 
                 .smoke__bottom {
                     height: 100px;
@@ -116,5 +138,4 @@
             }
         }
     }
-
 }
