@@ -11,52 +11,20 @@
     // padding-top: 80px;
 
     &__inner {
-        padding-top: min(vw(30px, 768),60px);
+        padding-top: min(vw(30px, 768), 60px);
     }
 
     &__wrap {
+
         position: relative;
         // width: max(38vw, 370px);
         // width: 90%;
         max-width: 1300px;
         width: 100%;
-        padding-right: 5.85652vw;
+        padding-right: 4.75652vw;
         padding-left: 4.45652vw;
-    
+
         margin: auto;
-
-        // @include mq-target(sm) {
-        //     width: min(vw(450px, 768), 600px);
-        // }
-
-        a {
-            // animation: ttl-blink 4s infinite alternate;
-            // width: 600px;
-            width: min(vw(390px, 768), 700px);
-            margin: auto;
-            @include absCenter;
-            display: block;
-
-            &::after {
-                content: "";
-                display: block;
-                @include absAll;
-                margin: auto;
-                background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 50% auto;
-                opacity: 1;
-            }
-
-            .smoke__bottom {
-                height: 100px;
-            }
-        }
-    }
-
-    &__bg {
-        background-image: url(../../assets/images/keepout.png);
-        background-size: cover;
-        z-index: 5000;
     }
 
     &__heading {
@@ -64,6 +32,7 @@
         position: relative;
         // z-index: 500;
         font-size: 60px;
+        transition-delay: 1.8s !important;
         @include flex($align:flex-start, $justify:space-between);
 
         h2 {
@@ -76,22 +45,64 @@
         p {
             line-height: 1.2;
             font-weight: 400;
+
+            width: min(vw(120px, 768), 200px);
             writing-mode: vertical-rl;
+
             @include mq-target(sm) {
                 font-size: min(vw(42px, 768), 72px);
             }
+
             // font-size: 72px;
 
         }
     }
 
     &-obj {
+
+        &__monitor {
+            @include absCenter;
+            width: min(vw(390px, 768), 700px);
+            margin: auto;
+
+            a {
+                display: block;
+                height: 100%;
+                position: relative;
+                z-index: 10;
+                -webkit-mask-image: url(../../assets/images/mask.png);
+                -webkit-mask-mode: alpha;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-size: 100% 0%;
+                -webkit-mask-position: center top;
+                transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                &::after {
+                    content: "";
+                    display: block;
+                    @include absAll;
+                    margin: auto;
+                    background: url(../../assets/images/play.png) 50% 50% no-repeat;
+                    background-size: 50% auto;
+                    opacity: 1;
+                }
+
+                .smoke__bottom {
+                    height: 100px;
+                }
+
+                &.is-anim {
+                    -webkit-mask-size: 100% 300%;
+                    transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                }
+            }
+        }
+
         &__key {
             // animation: marquee 4s infinite alternate;
             position: relative;
             // transform: rotate(1deg);
             margin: 0 auto 0;
-            
+
             @include mq-target(sm) {
                 width: min(vw(380px, 768), 640px);
             }

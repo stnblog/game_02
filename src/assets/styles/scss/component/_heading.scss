@@ -8,7 +8,7 @@
     &__ttl {
         position: relative;
         // @include maxWidth(840px);
-        margin-bottom: min(vw(10px, 365),20px);
+        margin-bottom: min(vw(8px, 365),20px);
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
@@ -22,8 +22,10 @@
         .-en {
             // font-size: min(vw(10px, 365),14px);
             font-weight: 600;
-            font-size: 100px;
-            font-size: min(vw(70px, 768), 100px);
+            font-size: min(vw(50px, 365), 100px);
+            @include mq-target(sm) {
+                font-size: min(vw(50px, 768), 100px);
+            }
             color: $color-white;
             letter-spacing: 0.04em;
             line-height: 1;
@@ -42,7 +44,11 @@
             margin: auto;
             position: absolute;
             text-align: center;
-            font-size: min(vw(26px, 768), 34px);
+            
+            font-size: min(vw(18px,365),34px);
+            @include mq-target(sm) {
+                font-size: min(vw(18px, 768), 34px);
+            }
             line-height: 1;
             letter-spacing: 2px;
             @include flex($justify:center,$align:center);

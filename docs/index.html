@@ -410,14 +410,16 @@
             <!-- <h2 class="c-sec__ttl">
              <img src="./assets/images/title_chara.png" alt="" style="width: 400px;">
             </h2> -->
-            <h2 class="c-sec__ttl">
-                <span class="-en inview js-scroll--slideDown">news</span>
-                <span class="-ja">更新情報</span>
-            </h2>
+            <div class="inview js-scroll--scaleUp">
+                <h2 class="c-sec__ttl">
+                    <span class="-en">news</span>
+                    <span class="-ja">更新情報</span>
+                </h2>
+            </div>
 
             <div class="swiper-container p-news-slider__container">
                 <div class="swiper-wrapper p-news-slider__wrap">
-                    <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
                                 <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
@@ -433,10 +435,10 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="#chara" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
-                                <img src="./assets/images/thumb_02.jpg" alt="メインビジュアル">
+                                <img src="./assets/images/system_01.jpg" alt="メインビジュアル">
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -449,7 +451,7 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
                                 <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
@@ -465,7 +467,7 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
                                 <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
@@ -481,7 +483,7 @@
                             </figcaption>
                         </a>
                     </div>
-                    <div class="swiper-slide p-news-slider__slide inview js-scroll--fadeUp">
+                    <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
                             <figure class="p-news-figure__img">
                                 <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
@@ -521,29 +523,34 @@
 
     <section class="p-movie">
 
-        
+
         <!-- <h2 class="c-sec__ttl">
             <span class="-en inview js-scroll--slideLeft">ABOUT</span>
             <span class="-ja">概要</span>
         </h2> -->
         <div class="p-movie__inner">
             <div class="p-movie__wrap">
-                <div class="p-movie__heading">
+                <div class="p-movie__heading inview js-scroll--scaleUp">
                     <h2>
                         <img src="./assets/images/heading.png" alt="">
                     </h2>
-                    <p>狂った世界ヲ<br />目撃せよ</p>
+                    <!-- <p>狂った世界ヲ<br />目撃せよ</p> -->
+                    <p>
+                        <img src="./assets/images/heading02.png" alt="">
+                    </p>
                 </div>
-                
-                <a href="">
-                    <div class="smoke smoke__top"></div>
-                    <img src="./assets/images/monitor.webp" alt="">
-                    <div class="smoke smoke__bottom smoke__bottom--movie"></div>
-                </a>
+                <div class="p-movie-obj__monitor">
+                    <a href="#" class="inview">
+                        <div class="smoke smoke__top"></div>
+                        <img src="./assets/images/monitor.webp" alt="">
+                        <div class="smoke smoke__bottom smoke__bottom--movie"></div>
+                    </a>
+                </div>
+
             </div>
             <div class="p-movie-obj__key">
-            <img src="./assets/images/keyboard.png" alt="">
-        </div>
+                <img src="./assets/images/keyboard.png" alt="" class="inview js-scroll--slideRight">
+            </div>
         </div>
     </section>
 
@@ -563,10 +570,12 @@
 
             <div class="p-story-contents">
                 <div class="p-story-contents__txt">
-                    <h2 class="c-sec__ttl">
-                        <span class="-en inview js-scroll--slideLeft">STORY</span>
-                        <span class="-ja">第一章</span>
-                    </h2>
+                    <div class="inview js-scroll--scaleUp">
+                        <h2 class="c-sec__ttl">
+                            <span class="-en">STORY</span>
+                            <span class="-ja">第一章</span>
+                        </h2>
+                    </div>
                     <!-- <h3>
                         <img src="./assets/images/title.png" alt="">
                     </h3> -->
@@ -594,7 +603,13 @@
             <div class="p-story-bg">
 
                 <div class="p-story-bg__img">
-                    <img src="./assets/images/story_bg2.jpg" alt="">
+                    <picture>
+                        <source type="image/jpg" media="(min-width:768px)"
+                            srcset="./assets/images/story_bg2.jpg">
+                        <source media="(min-width:768px)" srcset="./assets/images/story_bg2.jpg">
+                        <img src="./assets/images/story_bg3.jpg" alt="">
+                    </picture>
+                    <!-- <img src="./assets/images/story_bg2.jpg" alt=""> -->
                 </div>
             </div>
 
@@ -1078,6 +1093,8 @@
 <script src="./assets/scripts/vendors/jquery.matchHeight-min.js"></script>
 <script src="./assets/scripts/vendors/intersection-observer.js"></script>
 <script src="./assets/scripts/vendors/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
 
 <script>
   var rellax = new Rellax('.js-rellax', {
@@ -1087,6 +1104,7 @@
 
 
 <!-- scripts -->
+<script src="./assets/scripts/anim.js"></script>
 <script src="./assets/scripts/swiper.js"></script>
 <script src="./assets/scripts/main.js"></script>
 

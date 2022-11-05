@@ -5,7 +5,7 @@
     position: relative;
     z-index: 3;
     background: #000;
-    min-height: 640px;
+    // min-height: 640px;
 
     &__bg {
         position: relative;
@@ -30,7 +30,11 @@
         z-index: 500;
         width: 100%;
         min-width: 1280px;
-        padding: min(vw(40px,768),160px) 0 160px min(vw(300px,768),660px);
+        margin: 100vw 0 20vw; 
+        @include mq-target(sm) {
+            margin: 0;
+            padding: min(vw(40px,768),160px) 0 min(vw(80px,768),160px) min(vw(360px,768),660px);
+        }
 
         &__txt {
             font-family:'Noto Serif JP', serif;
@@ -49,14 +53,21 @@
                 background-image: linear-gradient(to bottom, #d81c03, #352e2c);
                 -webkit-background-clip: text;
                 color: transparent;
-                font-size: min(vw(36px,768),62px);
                 // font-weight: 500;
+                font-size: min(vw(32px,365),62px);
+                @include mq-target(sm) {
+                    font-size: min(vw(32px,768),62px);
+                }
             }
             p {
-                // text-align: left;
-                font-size: min(vw(10px,768),14px);
+                font-size: min(vw(8px,365),16px);
                 line-height: 2;
-                margin-top: min(vw(20px,768),40px);
+                margin-top: min(vw(10px,365),20px);
+
+                @include mq-target(sm) {
+                    font-size: min(vw(8px,768),16px);
+                    margin-top: min(vw(20px,768),40px);
+                }
             }
         }
     }
