@@ -49,7 +49,7 @@ function images() {
     .pipe($.changed('./dist/assets/images/'))
     .pipe(imagemin([
       pngquant({
-        quality: [0.8, 0.9],
+        quality: [1, 1],
         speed: 1
       }),
       mozjpeg({

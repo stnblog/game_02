@@ -84,7 +84,7 @@
             width: min(vw(340px, 365), 620px);
 
             @include mq-target(sm) {
-                width: min(vw(400px, 768), 700px);
+                width: min(vw(400px, 768), 800px);
             }
 
             margin: auto;
@@ -131,7 +131,7 @@
             position: relative;
             // transform: rotate(1deg);
             width: min(vw(300px, 365), 500px);
-            margin: 0 auto 0;
+            margin: 10px auto 0;
 
             @include mq-target(sm) {
                 width: min(vw(380px, 768), 640px);

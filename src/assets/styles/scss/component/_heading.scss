@@ -22,9 +22,9 @@
         .-en {
             // font-size: min(vw(10px, 365),14px);
             font-weight: 600;
-            font-size: min(vw(50px, 365), 100px);
+            font-size: min(vw(50px, 365), 90px);
             @include mq-target(sm) {
-                font-size: min(vw(50px, 768), 100px);
+                font-size: min(vw(50px, 768), 90px);
             }
             color: $color-white;
             letter-spacing: 0.04em;
@@ -47,7 +47,7 @@
             
             font-size: min(vw(18px,365),34px);
             @include mq-target(sm) {
-                font-size: min(vw(18px, 768), 34px);
+                font-size: min(vw(18px, 768), 26px);
             }
             line-height: 1;
             letter-spacing: 2px;

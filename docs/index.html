@@ -82,7 +82,7 @@
 <body id="top" data-character="1">
 
 
-  <header class="l-header">
+  <!-- <header class="l-header">
     <div class="l-header__inner">
     <h1 class="l-header__logo">
       <a href="">
@@ -119,51 +119,50 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
 
-  <button class="l-drawer__trigger js-draw--trigger" style="display: none;">
+  <button class="l-drawer__trigger js-draw--trigger">
     <span class="-line"></span>
   </button>
 
-  <div class="l-drawer__bg js-draw--bg" style="display: none;">&nbsp;</div>
+  <div class="l-drawer__bg js-draw--bg">&nbsp;</div>
 
   <nav class="l-drawer__content js-draw--content">
+    <a href="">
+      <figure class="l-drawer__logo">
+        <img src="./assets/images/title.png" alt="">
+      </figure>
+    </a>
     <div class="l-drawer__wrap">
       <ul class="l-drawer__list l-drawer__list--menu">
         <li class="l-drawer__item">
-          <a href="#top">
+          <a href="#top" class="js-draw--trigger">
             トップ
             <span>top</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="#about">
+          <a href="#about" class="js-draw--trigger">
             ストーリー
             <span>story</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="/dist/system">
+          <a href="#system" class="js-draw--trigger">
             ゲームシステム
             <span>system</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="#chara">
+          <a href="#chara" class="js-draw--trigger">
             キャラクター
             <span>character</span>
           </a>
         </li>
         <li class="l-drawer__item">
-          <a href="/dist/gallery">
+          <a href="#gallery" class="js-draw--trigger">
             ギャラリー
             <span>GALLERY</span>
-          </a>
-        </li>
-        <li class="l-drawer__item">
-          <a href="#buy">
-            よくある質問
-            <span>FAQ</span>
           </a>
         </li>
       </ul>
@@ -654,7 +653,7 @@
 
             <h2 class="c-sec__ttl">
                 <!-- <img src="./assets/images/title_chara.png" alt="" style="width: 440px;"> -->
-                <span class="-en inview js-scroll--slideRight">characters</span>
+                <span class="-en inview js-scroll--slideRight">character</span>
                 <span class="-ja">登場人物</span>
             </h2>
             <div class="p-chara__bg">
@@ -798,7 +797,7 @@
 
     <div class="p-story__bg"></div>
 
-    <section id="system" class="c-sec p-sys">
+    <!-- <section id="system" class="c-sec p-sys">
 
         <h2 class="c-sec__ttl" style="margin-top: 20px;">
             <span class="-en">SYSTEM</span>
@@ -842,7 +841,6 @@
                     <div class="p-sys__detail">
                         <h3 style="font-size: 36px;">
                             狩猟・捕縛パート
-                            <!-- <img src="./assets/images/hunt.png" alt="" class="-obj"> -->
                         </h3>
                         <p class="p-sys__txt">
                             -&nbsp;HUNTING PART
@@ -877,7 +875,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
     <div class="p-story__bg" style="transform: scale(1, -1);"></div>
 

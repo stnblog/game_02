@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   @include flexCenter;
+  background: #000;
 
   // margin-top: -240px;
   z-index: 50;
@@ -15,7 +16,7 @@
   &::before {
     content: "";
     @include absAll;
-    background-image: url(../../assets/images/bg_gallery.jpg);
+    // background-image: url(../../assets/images/bg_gallery.jpg);
     background-size: cover;
     background-position: center top;
     filter: blur(2px);
