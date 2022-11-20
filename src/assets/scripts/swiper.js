@@ -6,48 +6,50 @@
 const elmIndexSwiper = document.querySelectorAll('.js-index-slider');
 const elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
 const elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
+const elmIndexPagi = document.querySelectorAll('.js-slider-pagi');
 
-// if (elmIndexSwiper.length > 0) {
-//   for (let i = 0; i < elmIndexSwiper.length; i++) {
+if (elmIndexSwiper.length > 0) {
+  for (let i = 0; i < elmIndexSwiper.length; i++) {
 
-//     elmIndexSwiper[i].className += i;
+    elmIndexSwiper[i].className += i;
 
-//     elmIndexBtnP[i].className += i;
-//     elmIndexBtnN[i].className += i;
+    elmIndexBtnP[i].className += i;
+    elmIndexBtnN[i].className += i;
+    elmIndexPagi[i].className += i;
 
-//     var swiper = new Swiper('.js-index-slider' + i, {
-//       slidesPerView: 'auto',
-//       grabCursor: true,
-//       touchEventsTarget: true,
-//       navigation: {
-//         prevEl: '.js-slider-btnPrev' + i,
-//         nextEl: '.js-slider-btnNext' + i,
-//       },
-//     });
-//   }
-// }
+    var swiper01 = new Swiper('.js-index-slider' + i, {
+      slidesPerView: 'auto',
+      grabCursor: true,
+      // loop: true,
+      touchEventsTarget: true,
+      loopAdditionalSlides: 1,
+      pagination: {
+        el: '.js-slider-pagi' + i,
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.js-slider-btnPrev' + i,
+        nextEl: '.js-slider-btnNext' + i,
+      },
+    });
+  }
+}
 
 
-const swiper01 = new Swiper('.p-news-slider__container', {
-  slidesPerView: 'auto',
-  grabCursor: true,
-    // loop: true,
-  touchEventsTarget: true,
-  loopAdditionalSlides: 1,
-  pagination: {
-    el: '.p-news-slider__pagi',
-    clickable: true,
-  },
-  navigation: {
-    prevEl: '.p-news-slider__btnPrev',
-    nextEl: '.p-news-slider__btnNext',
-  },
-  // breakpoints: {
-  //   1025: {
-  //     spaceBetween: 32,
-  //   }
-  // },
-});
+// const swiper01 = new Swiper('.p-news-slider__container', {
+//   slidesPerView: 'auto',
+//   grabCursor: true,
+//   touchEventsTarget: true,
+//   loopAdditionalSlides: 1,
+//   pagination: {
+//     el: '.p-news-slider__pagi',
+//     clickable: true,
+//   },
+//   navigation: {
+//     prevEl: '.p-news-slider__btnPrev',
+//     nextEl: '.p-news-slider__btnNext',
+//   },
+// });
 
 
 
@@ -115,15 +117,35 @@ $(".js-chara-tab").on("click", function () {
   swiper03.slideTo($(this).attr("data-num"));
 });
 
-const swiper04 = new Swiper('.p-gallery__slider', {
-  loop: true,
-  slidesPerView: 'auto',
-  grabCursor: true,
-  touchEventsTarget: true,
-  centeredSlides: true,
-  loopAdditionalSlides: 1,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+
+const thumb = document.querySelectorAll('.gallery02 .thumb-media');
+
+const switchThumb = (index) => {
+  document.querySelector('.gallery02 .thumb-media-active').classList.remove('thumb-media-active');
+  thumb[index].classList.add('thumb-media-active');
+}
+
+const mySwiper = new Swiper('.gallery02 .swiper', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
   },
-})
+  speed: 500,
+  navigation: {
+    nextEl: '.gallery02 .swiper-button-next',
+    prevEl: '.gallery02 .swiper-button-prev',
+  },
+  on: {
+    afterInit: (swiper) => {
+      thumb[swiper.realIndex].classList.add('thumb-media-active');
+      for (let i = 0; i < thumb.length; i++) {
+        thumb[i].onclick = () => {
+          swiper.slideTo(i);
+        };
+      }
+    },
+    slideChange: (swiper) => {
+      switchThumb(swiper.realIndex);
+    },
+  }
+});

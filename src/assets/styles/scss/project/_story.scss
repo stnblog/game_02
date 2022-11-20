@@ -35,7 +35,7 @@
 
         @include mq-target(sm) {
             margin: 0;
-            padding: min(vw(40px, 768), 160px) 0 min(vw(80px, 768), 160px) min(vw(360px, 768), 660px);
+            padding: min(vw(80px, 768), 160px) 0 min(vw(80px, 768), 200px) min(vw(360px, 768), 660px);
         }
 
         &__txt {
@@ -93,7 +93,7 @@
         z-index: 300;
         
         @include mq-target(sm) {
-            padding-top: 200px;
+            padding-top: 100px;
             width: 100vw;
             min-width: 1280px;
         }
@@ -113,8 +113,8 @@
             }
             
             @include mq-target(sm) {
-                margin-left: 18.229vw;
-                top: -1.823vw;
+                margin-left: 14.229vw;
+                // top: -1.823vw;
             }
         }
 

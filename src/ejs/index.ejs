@@ -38,14 +38,14 @@
                                             <ul class="p-chara__list--ss">
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_01.jpg" alt="">
                                                         </picture>
                                                     </figure>
                                                 </li>
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_02.jpg" alt="">
                                                         </picture>
                                                     </figure>
@@ -74,14 +74,14 @@
                                             <ul class="p-chara__list--ss inview">
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_01.jpg" alt="">
                                                         </picture>
                                                     </figure>
                                                 </li>
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_02.jpg" alt="">
                                                         </picture>
                                                     </figure>
@@ -110,14 +110,14 @@
                                             <ul class="p-chara__list--ss inview">
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_01.jpg" alt="">
                                                         </picture>
                                                     </figure>
                                                 </li>
                                                 <li class="p-chara__item--ss">
                                                     <figure class="c-picture__img">
-                                                        <picture class="c-picture__img--inner">
+                                                        <picture>
                                                             <img src="./assets/images/charaBg_02.jpg" alt="">
                                                         </picture>
                                                     </figure>
@@ -153,6 +153,8 @@
 
 
 <main class="l-main">
+
+
     <div class="p-mv__bg sc-inview glitch">
         <!-- <img src="./assets/images/storyBg_01.jpg" alt=""> -->
         <div class="channel r"></div>
@@ -164,6 +166,16 @@
     </div>
 
     <section class="p-mv">
+
+        <!-- <div class="p-movie__heading inview js-scroll--scaleUp">
+            <h2>
+                <img src="./assets/images/heading.png" alt="">
+            </h2>
+            <p>
+                <img src="./assets/images/heading02.png" alt="">
+            </p>
+        </div> -->
+
         <div class="p-mv-logo">
             <h1 class="inview js-scroll--fadeUp p-mv-logo__heading">
                 <img src="./assets/images/title.png" alt="ロゴ">
@@ -193,10 +205,51 @@
         <div class="smoke smoke__bottom smoke__bottom--movie"></div>
     </section> -->
 
+
+    <section class="p-movie">
+        <div class="p-movie__bg"></div>
+
+        <h2 class="c-sec__ttl">
+            <span class="-en inview js-scroll--slideLeft">CONCEPT</span>
+            <span class="-ja">概要</span>
+        </h2>
+        <p style="margin-bottom: 20px;">
+            このゲームには暴力シーンやグロテスクな表現が含まれています。<br />
+            18歳未満のご視聴はご自重ください。
+        </p>
+
+        <div class="p-movie__inner">
+            <div class="p-movie__wrap">
+                <a href="#">
+                    <div class="p-movie__heading inview js-scroll--scaleUp">
+                        <h2>
+                            <img src="./assets/images/heading.png" alt="">
+                        </h2>
+                        <p>
+                            <img src="./assets/images/heading02.png" alt="">
+                        </p>
+                    </div>
+                </a>
+                <div class="p-movie-obj__monitor">
+                    <a href="#" class="inview">
+                        <div class="smoke smoke__top"></div>
+                        <img src="./assets/images/monitor2.png" alt="">
+                        <div class="smoke smoke__bottom smoke__bottom--movie"></div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="p-movie-obj__key">
+                <img src="./assets/images/keyboard.png" alt="" class="inview js-scroll--slideRight">
+            </div>
+        </div>
+        <div class="smoke smoke__bottom"></div>
+    </section>
+
     <section class="p-news" id="news">
+
+
         <div class="smoke smoke__top"></div>
-
-
         <div class="p-news__bg"></div>
 
         <div class="p-news__inner">
@@ -210,12 +263,15 @@
                 </h2>
             </div>
 
-            <div class="swiper-container p-news-slider__container">
+            <div class="swiper-container p-news-slider__container js-index-slider">
                 <div class="swiper-wrapper p-news-slider__wrap">
                     <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="p-news-figure__img">
-                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
+
+                            <figure class="c-picture__img p-news-figure__img">
+                                <picture>
+                                    <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
+                                </picture>
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -230,8 +286,10 @@
                     </div>
                     <div class="swiper-slide p-news-slider__slide">
                         <a href="#chara" class="inview p-news-figure__link">
-                            <figure class="p-news-figure__img">
-                                <img src="./assets/images/system_01.jpg" alt="メインビジュアル">
+                            <figure class="c-picture__img p-news-figure__img">
+                                <picture>
+                                    <img src="./assets/images/thumb_02.jpg" alt="メインビジュアル">
+                                </picture>
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -246,8 +304,10 @@
                     </div>
                     <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="p-news-figure__img">
-                                <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
+                            <figure class="c-picture__img p-news-figure__img">
+                                <picture>
+                                    <img src="./assets/images/system_01.jpg" alt="メインビジュアル">
+                                </picture>
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -262,8 +322,10 @@
                     </div>
                     <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="p-news-figure__img">
-                                <img src="./assets/images/charaBg_01.jpg" alt="メインビジュアル">
+                            <figure class="c-picture__img p-news-figure__img">
+                                <picture>
+                                    <img src="./assets/images/story_bg2.jpg" alt="メインビジュアル">
+                                </picture>
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -278,8 +340,10 @@
                     </div>
                     <div class="swiper-slide p-news-slider__slide">
                         <a href="/work/detail" class="inview p-news-figure__link">
-                            <figure class="p-news-figure__img">
-                                <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル">
+                            <figure class="c-picture__img p-news-figure__img">
+                                <picture>
+                                    <img src="./assets/images/system_01.jpg" alt="メインビジュアル">
+                                </picture>
                             </figure>
                             <figcaption class="p-news-figure__info">
                                 <ul class="p-news-figure__labels">
@@ -294,65 +358,34 @@
                     </div>
                 </div>
                 <div class="swiper-controller p-news-slider__controller">
-                    <div class="swiper-pagination p-news-slider__pagi" style="width: 30%"></div>
-                    <a href="" class="p-news__btn" style="width: 30%">
+                    <div class="swiper-pagination p-news-slider__pagi js-slider-pagi" style="width: 30%"></div>
+                    <a href="" class="p-news__btn">
                         <span></span>
                     </a>
                     <div class="" style="width: 30%; display: flex; flex-direction: row-reverse;">
-                        <div class="p-news-slider__btnNext"></div>
-                        <div class="p-news-slider__btnPrev"></div>
+                        <div class="p-news-slider__btnNext js-slider-btnNext"></div>
+                        <div class="p-news-slider__btnPrev js-slider-btnPrev"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="smoke smoke__bottom"></div>
     </section>
+<!-- 
+    <div class="" style="position: relative;">
+
+        <div class="p-story__bg"></div>
+        <div class="p-story__bg" style="transform: scale(1, -1);"></div>
+    </div> -->
+
+
+
 
     <div class="" style="position: relative;">
 
         <div class="p-story__bg"></div>
         <div class="p-story__bg" style="transform: scale(1, -1);"></div>
     </div>
-
-    <section class="p-movie">
-        <div class="p-movie__bg"></div>
-
-        <!-- <h2 class="c-sec__ttl">
-            <span class="-en inview js-scroll--slideLeft">ABOUT</span>
-            <span class="-ja">概要</span>
-        </h2> -->
-        <div class="p-movie__inner">
-            <div class="p-movie__wrap">
-                <div class="p-movie__heading inview js-scroll--scaleUp">
-                    <h2>
-                        <img src="./assets/images/heading.png" alt="">
-                    </h2>
-                    <!-- <p>狂った世界ヲ<br />目撃せよ</p> -->
-                    <p>
-                        <img src="./assets/images/heading02.png" alt="">
-                    </p>
-                </div>
-                <div class="p-movie-obj__monitor">
-                    <a href="#" class="inview">
-                        <div class="smoke smoke__top"></div>
-                        <img src="./assets/images/monitor.webp" alt="">
-                        <div class="smoke smoke__bottom smoke__bottom--movie"></div>
-                    </a>
-                </div>
-
-            </div>
-            <div class="p-movie-obj__key">
-                <img src="./assets/images/keyboard.png" alt="" class="inview js-scroll--slideRight">
-            </div>
-        </div>
-        <div class="smoke smoke__bottom"></div>
-    </section>
-
-    <!-- <div class="" style="position: relative;">
-
-        <div class="p-story__bg"></div>
-        <div class="p-story__bg" style="transform: scale(1, -1);"></div>
-    </div> -->
 
     <section id="about" class="c-sec p-story inview">
 
@@ -372,20 +405,20 @@
                     <!-- <h3>
                         <img src="./assets/images/title.png" alt="">
                     </h3> -->
-                    <h4>
+                    <h4 class="inview js-scroll--scaleUp">
                         「殺人鬼と幽霊」
                     </h4>
-                    <p>
+                    <p class="inview js-scroll--scaleUp">
                         2018年に発売され、 全世界出荷＋ダウンロードが300万本を突破した<br />
                         「オクトパストラベラー」のシリーズ完全新作RPG。
                     </p>
-                    <p>
+                    <p class="inview js-scroll--scaleUp">
                         ドット絵と3DCGを融合した 「HD-2D」のグラフィックが、<br />
                         さらなる進化を遂げて登場。<br />
                         “ソリスティア”と呼ばれる新たな大地で、<br />
                         新たな時代に、新たな8人の旅が始まる。
                     </p>
-                    <p>
+                    <p class="inview js-scroll--scaleUp">
                         何処に行くのか、何をするのか、 そしてどの物語の主人公となるのか、<br />
                         全ては君に託される。<br />
                         旅立とう、君だけの物語へ——
@@ -397,8 +430,7 @@
 
                 <div class="p-story-bg__img">
                     <picture>
-                        <source type="image/jpg" media="(min-width:768px)"
-                            srcset="./assets/images/story_bg2.jpg">
+                        <source type="image/jpg" media="(min-width:768px)" srcset="./assets/images/story_bg2.jpg">
                         <source media="(min-width:768px)" srcset="./assets/images/story_bg2.jpg">
                         <img src="./assets/images/story_bg3.jpg" alt="">
                     </picture>
@@ -431,9 +463,9 @@
     </section>
 
     <div class="" style="position: relative;">
-        <figure class="killer inview">
+        <!-- <figure class="killer inview">
 
-        </figure>
+        </figure> -->
         <div class="p-story__bg"></div>
         <div class="p-story__bg killer__bg inview" style="transform: scale(1, -1);"></div>
     </div>
@@ -681,6 +713,10 @@
                 <span class="-en">GALLERY</span>
                 <span class="-ja">図書室</span>
             </h2>
+            <p>
+                シリーズ独自の、懐かしさと新しさが共存した表現が、<br />
+                より精彩なドット絵と、カメラワークで更なる進化を遂げた。
+            </p>
 
             <!-- <div class="p-gallery__tab">
 
@@ -694,47 +730,49 @@
                 </ul>
             </div> -->
 
-            <div class="p-about__content">
+            <div id="demo08" class="gallery02 l-section">
+                <div class="l-inner">
 
-                <div id="tab-content01" class="p-about__box js-tab--content is-active">
-
-                    <div class="p-gallery__slider">
+                    <div class="swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/charaBg_01.jpg" alt="">
+                            <div class="swiper-slide">
+                                <figure class="slide">
+                                    <div class="slide-media"><img src="./assets/images/story__ss.jpg" alt=""></div>
+                                </figure>
                             </div>
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/system_01.jpg" alt="">
+                            <div class="swiper-slide">
+                                <figure class="slide">
+                                    <div class="slide-media"><img src="./assets/images/story_ss01.jpg" alt=""></div>
+                                </figure>
                             </div>
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
+                            <div class="swiper-slide">
+                                <figure class="slide">
+                                    <div class="slide-media"><img src="https://picsum.photos/id/1023/800/500" alt="">
+                                    </div>
+                                </figure>
                             </div>
+                            <div class="swiper-slide">
+                                <figure class="slide">
+                                    <div class="slide-media"><img src="https://picsum.photos/id/1047/800/500" alt="">
+                                    </div>
+                                </figure>
+                            </div>
+                        </div><!-- /swiper-wrapper -->
+                        <div class="swiper-controller">
+                            <div class="swiper-button-prev p-news-slider__btnPrev"></div>
+                            <div class="swiper-button-next p-news-slider__btnNext"></div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+                    </div><!-- /swiper-main -->
+
+                    <div class="thumb-wrapper" style="padding-top: 20px;">
+                        <div class="thumb-media"><img src="./assets/images/story__ss.jpg" alt=""></div>
+                        <div class="thumb-media"><img src="./assets/images/story_ss01.jpg" alt=""></div>
+                        <div class="thumb-media"><img src="https://picsum.photos/id/1023/800/500" alt=""></div>
+                        <div class="thumb-media"><img src="https://picsum.photos/id/1047/800/500" alt=""></div>
+                    </div><!-- /thumb -->
 
                 </div>
-
-                <div id="tab-content02" class="p-about__box js-tab--content">
-
-                    <div class="p-gallery__slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide p-gallery__slide">
-                                <img src="./assets/images/kv.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-
 
 
         </div>

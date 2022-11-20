@@ -7,6 +7,9 @@
   height: min(153.1942633638vw, 720px);
   width: min(100vw,1920px);
   margin: auto;
+  padding-top: 9vw;
+  padding-right: 9.75652vw;
+  padding-left: 9.45652vw;
 
   @include mq-target(sm) {
     height: min(56.25vw, 880px);
@@ -48,7 +51,7 @@
   }
 
   &__bg {
-    background-image: url(../../assets/images/storyBg_01.jpg);
+    background-image: url(../../assets/images/movie_bg01.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,8 +85,8 @@
     
     @include mq-target(sm) {
       // width: 21%;
-      top: min(vw(240px, 768), 460px);
-      width: min(vw(180px, 768), 360px);
+      top: min(vw(240px, 768), 440px);
+      width: min(vw(180px, 768), 500px);
     }
 
     img {
@@ -104,13 +107,13 @@
     display: block;
     z-index: 250;
     @include absCenter;
-    top: 74%;
+    // top: 70%;
     
     @include mq-target(sm) {
-      top: min(vw(280px, 768),580px);
-      right: calc(50% - min(vw(340px, 768),680px));
-      left: initial;
-      transform: initial;
+      // top: min(vw(400px, 768),660px);
+      // right: calc(50% - min(vw(340px, 768),700px));
+      // left: initial;
+      // transform: initial;
     }
 
     &__heading {
@@ -119,7 +122,7 @@
 
       @include mq-target(sm) {
         // width: 550px;
-        width: min(vw(300px, 768), 550px);
+        width: min(vw(300px, 768), 670px);
         // width: min(vw(200px, 768), 900px);
       }
     }

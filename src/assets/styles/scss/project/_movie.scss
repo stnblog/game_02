@@ -6,6 +6,7 @@
     background: $color-black;
     position: relative;
     z-index: 500;
+    min-height: 800px;
     padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
 
     @include mq-target(sm) {
@@ -16,7 +17,7 @@
         @include absAll;
         // @include absCenter;
         // filter: blur(2px);
-        background-image: url(../../assets/images/movie_bg01.jpg);
+        // background-image: url(../../assets/images/movie_bg01.jpg);
         background-position: center;
         background-size: cover;
         // background: #fff;
@@ -37,10 +38,10 @@
         position: relative;
         // width: max(38vw, 370px);
         // width: 90%;
-        max-width: 1200px;
+        max-width: 1400px;
         width: 100%;
-        padding-right: 4.75652vw;
-        padding-left: 4.45652vw;
+        padding-right: 9.75652vw;
+        padding-left: 9.45652vw;
 
         margin: auto;
     }
@@ -84,7 +85,7 @@
             width: min(vw(340px, 365), 620px);
 
             @include mq-target(sm) {
-                width: min(vw(400px, 768), 800px);
+                width: min(vw(400px, 768), 740px);
             }
 
             margin: auto;
@@ -131,7 +132,7 @@
             position: relative;
             // transform: rotate(1deg);
             width: min(vw(300px, 365), 500px);
-            margin: 10px auto 0;
+            margin: -30px auto 0;
 
             @include mq-target(sm) {
                 width: min(vw(380px, 768), 640px);
