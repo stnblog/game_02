@@ -35,7 +35,7 @@
 
         @include mq-target(sm) {
             margin: 0;
-            padding: min(vw(80px, 768), 160px) 0 min(vw(80px, 768), 200px) min(vw(360px, 768), 660px);
+            padding: min(vw(80px, 768), 140px) 0 min(vw(80px, 768), 200px) min(vw(360px, 768), 660px);
         }
 
         &__txt {

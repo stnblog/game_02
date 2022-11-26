@@ -9,26 +9,10 @@
   &::before {
     content: "";
     @include absAll;
-    width: 100%;
-    height: 100%;
-    background: rgba($color: $color-black, $alpha: 0.45);
-  }
-
-  &__bg {
-    @include absAll;
-    // @include absCenter;
-    // filter: blur(2px);
-    background-image: url(../../assets/images/charaBg_04.jpg);
+    background-image: linear-gradient(rgba($color-bg, 0.65)), url("../../assets/images/charaBg_04.jpg");
     background-position: center;
     background-size: cover;
-    // background: #fff;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;  
   }
-
-
 
   &__inner {
     z-index: 50;
@@ -57,7 +41,7 @@
     &__slide {
       transition: 1.4s 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
       width: 98%;
-      margin:  auto;
+      margin: auto;
       margin-right: 20px;
 
       @include mq-target(sm) {
@@ -164,6 +148,7 @@
       .swiper-pagination-bullet-active {
         width: min(vw(20px, 365), 40px);
         background: #be1924;
+
         @include mq-target(sm) {
           width: min(vw(40px, 768), 80px);
         }
