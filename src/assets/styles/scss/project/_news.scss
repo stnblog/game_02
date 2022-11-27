@@ -8,7 +8,7 @@
   &::before {
     content: "";
     @include absAll;
-    background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_04.jpg");
+    background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
     background-position: center;
     background-size: cover;
   }
@@ -101,7 +101,7 @@
 
       .swiper-pagination-bullet-active {
         width: min(vw(20px, 365), 40px);
-        background: $color-key;
+        background: $color-red;
 
         @include mq-target(sm) {
           width: min(vw(40px, 768), 80px);
@@ -119,20 +119,24 @@
       place-content: center;
       position: relative;
       overflow: visible;
-      width: 60px;
-      height: 60px;
+      // width: 60px;
+      // height: 60px;
       border-radius: 50%;
+
+      width: min(vw(42px, 365), 60px);
+      height: min(vw(42px, 365), 60px);
 
       &::after {
         content: "";
-        width: 60px;
-        height: 60px;
+        width: min(vw(42px, 365), 60px);
+        height: min(vw(42px, 365), 60px);
         // content: "";
         background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
       }
     }
 
     &__btnPrev {
+      margin-right: 4px;
       &::after {
         background: url(../../assets/images/arrow_prev.png) no-repeat center/contain;
       }
@@ -223,7 +227,8 @@
     position: relative;
     display: block;
     line-height: 1;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.45));
+    filter: drop-shadow(0 0 2px rgba(247, 247, 247, 0.45));
+    width: min(vw(90px, 365), 130px);
 
     &:hover {
       opacity: 0.35;
