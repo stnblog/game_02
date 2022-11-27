@@ -43,7 +43,7 @@
 
       @include mq-target(md) {
         margin-right: 24px;
-        width: calc((100% - 48px) / 3);
+        width: calc((100% - 72px) / 4);
       }
 
       &:last-child {
