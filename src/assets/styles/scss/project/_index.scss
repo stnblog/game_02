@@ -122,7 +122,7 @@
 
       @include mq-target(sm) {
         // width: 550px;
-        width: min(vw(300px, 768), 670px);
+        width: min(vw(300px, 768), 620px);
         // width: min(vw(200px, 768), 900px);
       }
     }
