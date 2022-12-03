@@ -48,10 +48,10 @@ function images() {
   return src('./src/assets/images/**')
     .pipe($.changed('./dist/assets/images/'))
     .pipe(imagemin([
-      pngquant({
-        quality: [1, 1],
-        speed: 1
-      }),
+      // pngquant({
+      //   quality: [1, 1],
+      //   speed: 1
+      // }),
       mozjpeg({
         quality: 90
       }),

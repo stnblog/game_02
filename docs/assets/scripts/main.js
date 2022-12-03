@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var options = {
       root: null,
-      rootMargin: '-20% 0px',
+      rootMargin: '-10% 0px',
       threshold: 0
     };
     var io = new IntersectionObserver(cb, options);

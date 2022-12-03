@@ -193,12 +193,12 @@
 
     &__img {
         @include absCenter;
-        top: 350px;
-        width: 680px;
-
+        top: 460px;
+        
         &--one {
-            top: 376px;
-            // left: calc(50% - 64px);
+            top: 580px;
+            width: 750px;
+            left: calc(50% - 2.2%);
         }
 
         &--second {

@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const options = {
       root: null,
-      rootMargin: '-20% 0px',
+      rootMargin: '-10% 0px',
       threshold: 0
     };
     const io = new IntersectionObserver(cb, options);

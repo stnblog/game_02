@@ -5,11 +5,12 @@
     position: relative;
     overflow: hidden;
     z-index: 500;
+    @include maxWidth(1920px);
     // min-height: 800px;
     // height: 600px;
     height: min(vw(360px, 365), 760px);
     padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
-    
+
     @include mq-target(sm) {
         height: min(vw(460px, 768), 800px);
         padding: min(vw(40px, 768), 80px) 0 min(vw(40px, 768), 100px);
@@ -18,17 +19,33 @@
     &::before {
         content: "";
         @include absAll;
-        background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/story_bg.jpg");
+        background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_01.jpg");
         background-position: center;
         background-size: auto 100%;
-      }
-    
+    }
+
+    &__bg {
+        @include absAll;
+        background-image: linear-gradient(rgba($color-bg, 0)), url("../../assets/images/fence.png");
+        // background-position: center;
+        background-size: auto 100%;
+        background-repeat: repeat-x;
+        z-index: 3;
+        transition: all 2s linear;
+        opacity: 0;
+
+        &.is-anim {
+            opacity: 1;
+            background-position: 100% 0;
+        }
+    }
+
 
     &__wrap {
         position: relative;
         @include maxWidth(1400px);
         padding: 0 20px;
-    
+
         @include mq-target(sm) {
             padding: 0 vw(90px, 768) 0;
         }
@@ -39,7 +56,7 @@
         &__wrap {
             position: relative;
             z-index: 500;
-            transition-delay: 1.8s !important;
+            transition-delay: 2.6s !important;
             @include flex($align:flex-start, $justify:space-between);
         }
 
@@ -66,14 +83,15 @@
         width: min(vw(360px, 365), 700px);
         margin: auto;
         top: 48vw;
-        
+        left: 42%;
+
         @include mq-target(sm) {
             top: 28vw;
             width: min(vw(460px, 768), 760px);
         }
-        
+
         @include mq-target(md) {
-            top: 22vw;
+            top: 33vw;
         }
 
         &__img {
@@ -108,6 +126,7 @@
         &__txt {
             display: inline-block;
             width: 100%;
+            z-index: 500;
             font-size: min(vw(10px, 768), 14px);
             @include absCenter;
         }
