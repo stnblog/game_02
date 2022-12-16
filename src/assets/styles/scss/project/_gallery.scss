@@ -13,11 +13,11 @@
 
 
 .p-gallery {
-  padding-top: 100px;
+  padding-top: 160px;
   position: relative;
   overflow: hidden;
   @include flexCenter;
-  background: #000;
+  // background: #000;
 
   // margin-top: -240px;
   z-index: 50;
@@ -37,7 +37,7 @@
   &::before {
     content: "";
     @include absAll;
-    background-image: url(../../assets/images/charaBg_04.jpg);
+    // background-image: url(../../assets/images/charaBg_04.jpg);
     background-size: cover;
     background-position: center top;
     // filter: blur(2px);
