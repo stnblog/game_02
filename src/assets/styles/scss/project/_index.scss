@@ -146,27 +146,30 @@
 
 .killer {
   position: absolute;
-  width: 76vw;
-  top: 20vw;
+  width: 80vw;
+  top: -10vw;
   left: 0;
-  background-image: url(../../assets/images/chara03.webp);
+  background-image: url(../../assets/images/test_05.png);
   background-size: 50vw;
   width: 100%;
   height: 100%;
   background-position: top;
   transform: rotate(10deg);
+  opacity: 1;
+  transition: opacity 10s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
   &.is-anim {
     top: 4vw;
+    opacity: 0;
   }
 
   &__bg {
-    margin-top: -14vw;
-    transition-delay: 2s;
-    transition: all 3s ease;
+    margin-top: 17vw;
+    // transition-delay: 3s;
+    transition: all 1.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 
     &.is-anim {
-      margin-top: 0;
+      margin-top: -17vw;
     }
   }
 

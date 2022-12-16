@@ -33,13 +33,14 @@
             background-image: linear-gradient(to bottom, #d81c03, #352e2c);
             -webkit-background-clip: text;
             color: transparent;
+            font-family: 'teko', Arial, sans-serif;
         }
 
         .-ja {
             height: 100%;
             left: 0;
             right: 0;
-            top: 0;
+            top: -6px;
             // bottom: 25px;
             margin: auto;
             position: absolute;

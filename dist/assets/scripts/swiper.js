@@ -1,48 +1,19 @@
 "use strict";
 
-var elmIndexSwiper = document.querySelectorAll('.js-index-slider');
-var elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
-var elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
-var elmIndexPagi = document.querySelectorAll('.js-slider-pagi');
-
-if (elmIndexSwiper.length > 0) {
-  for (var i = 0; i < elmIndexSwiper.length; i++) {
-    elmIndexSwiper[i].className += i;
-    elmIndexBtnP[i].className += i;
-    elmIndexBtnN[i].className += i;
-    elmIndexPagi[i].className += i;
-    var swiper01 = new Swiper('.js-index-slider' + i, {
-      slidesPerView: 'auto',
-      grabCursor: true,
-      // loop: true,
-      touchEventsTarget: true,
-      loopAdditionalSlides: 1,
-      pagination: {
-        el: '.js-slider-pagi' + i,
-        clickable: true
-      },
-      navigation: {
-        prevEl: '.js-slider-btnPrev' + i,
-        nextEl: '.js-slider-btnNext' + i
-      }
-    });
+var swiper01 = new Swiper('.p-news-slider__container', {
+  slidesPerView: 'auto',
+  grabCursor: true,
+  touchEventsTarget: true,
+  loopAdditionalSlides: 1,
+  pagination: {
+    el: '.p-news-slider__pagi',
+    clickable: true
+  },
+  navigation: {
+    prevEl: '.p-news-slider__btnPrev',
+    nextEl: '.p-news-slider__btnNext'
   }
-} // const swiper01 = new Swiper('.p-news-slider__container', {
-//   slidesPerView: 'auto',
-//   grabCursor: true,
-//   touchEventsTarget: true,
-//   loopAdditionalSlides: 1,
-//   pagination: {
-//     el: '.p-news-slider__pagi',
-//     clickable: true,
-//   },
-//   navigation: {
-//     prevEl: '.p-news-slider__btnPrev',
-//     nextEl: '.p-news-slider__btnNext',
-//   },
-// });
-
-
+});
 var modalSwiper = new Swiper('.js-modal-slider', {
   slidesPerView: 'auto',
   // loop: true,
@@ -82,11 +53,11 @@ var swiper03 = new Swiper('.p-chara__slider', {
   effect: 'slide',
   centeredSlides: true,
   slidesPerView: 1,
-  speed: 1000,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
+  speed: 1000 // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+
 });
 swiper03.on('slideChange', function () {
   $body.attr("data-character", swiper03.realIndex + 1);
@@ -95,7 +66,34 @@ $(".js-chara-tab").on("click", function () {
   $('.p-chara__item--tab').removeClass('is-active');
   $(this).addClass('is-active');
   swiper03.slideTo($(this).attr("data-num"));
-});
+}); // const elmIndexSwiper = document.querySelectorAll('.js-index-slider');
+// const elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
+// const elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
+// const elmIndexPagi = document.querySelectorAll('.js-slider-pagi');
+// if (elmIndexSwiper.length > 0) {
+//   for (let i = 0; i < elmIndexSwiper.length; i++) {
+//     elmIndexSwiper[i].className += i;
+//     elmIndexBtnP[i].className += i;
+//     elmIndexBtnN[i].className += i;
+//     elmIndexPagi[i].className += i;
+//     var swiper01 = new Swiper('.js-index-slider' + i, {
+//       slidesPerView: 'auto',
+//       grabCursor: true,
+//       // loop: true,
+//       touchEventsTarget: true,
+//       loopAdditionalSlides: 1,
+//       pagination: {
+//         el: '.js-slider-pagi' + i,
+//         clickable: true,
+//       },
+//       navigation: {
+//         prevEl: '.js-slider-btnPrev' + i,
+//         nextEl: '.js-slider-btnNext' + i,
+//       },
+//     });
+//   }
+// }
+
 var thumb = document.querySelectorAll('.gallery02 .thumb-media');
 
 var switchThumb = function switchThumb(index) {
@@ -117,14 +115,14 @@ var mySwiper = new Swiper('.gallery02 .swiper', {
     afterInit: function afterInit(swiper) {
       thumb[swiper.realIndex].classList.add('thumb-media-active');
 
-      var _loop = function _loop(_i) {
-        thumb[_i].onclick = function () {
-          swiper.slideTo(_i);
+      var _loop = function _loop(i) {
+        thumb[i].onclick = function () {
+          swiper.slideTo(i);
         };
       };
 
-      for (var _i = 0; _i < thumb.length; _i++) {
-        _loop(_i);
+      for (var i = 0; i < thumb.length; i++) {
+        _loop(i);
       }
     },
     slideChange: function slideChange(swiper) {

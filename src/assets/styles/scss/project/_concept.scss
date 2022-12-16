@@ -6,11 +6,9 @@
     overflow: hidden;
     z-index: 500;
     @include maxWidth(1920px);
-    // min-height: 800px;
-    // height: 600px;
     height: min(vw(360px, 365), 760px);
     padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
-
+    
     @include mq-target(sm) {
         height: min(vw(460px, 768), 800px);
         padding: min(vw(40px, 768), 80px) 0 min(vw(40px, 768), 100px);
@@ -47,7 +45,7 @@
         padding: 0 20px;
 
         @include mq-target(sm) {
-            padding: 0 vw(90px, 768) 0;
+            padding: 60px vw(90px, 768) 0;
         }
 
     }

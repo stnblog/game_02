@@ -1,6 +1,19 @@
 @use "../foundation"as *;
 
+
+.p-cha {
+  &__img {
+    width: 380px;
+    margin: auto;
+    position: absolute;
+    top: 50px;
+    right: -10%;
+  }
+}
+
+
 .p-gallery {
+  padding-top: 100px;
   position: relative;
   overflow: hidden;
   @include flexCenter;
@@ -18,16 +31,16 @@
     @include absAll;
     width: 100%;
     height: 100%;
-    background: rgba($color: $color-black, $alpha: 0.85);
+    // background: rgba($color: $color-black, $alpha: 0.85);
   }
 
   &::before {
     content: "";
     @include absAll;
-    background-image: url(../../assets/images/bg_gallery.jpg);
+    background-image: url(../../assets/images/charaBg_04.jpg);
     background-size: cover;
     background-position: center top;
-    filter: blur(2px);
+    // filter: blur(2px);
   }
 
   .c-sec__ttl {
@@ -46,7 +59,7 @@
   &-slider {
     &__container {
       user-select: none;
-      @include maxWidth(700px);
+      @include maxWidth(1200px);
     }
 
     &__wrap {
@@ -60,6 +73,7 @@
     }
 
     &__slide {
+      position: relative;
       margin: 0 20px;
     }
   }
@@ -150,6 +164,8 @@
 }
 .slide-media img,
 .thumb-media img {
+  transform: perspective(1000px) scale(0.9) rotateX(0deg) rotateY(16deg) rotateZ(0deg);
+  width: 760px !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -224,7 +240,7 @@
   overflow: hidden;
 }
 .gallery02 .swiper {
-  max-width: 860px;
+  max-width: 1000px;
 }
 .gallery02 .thumb-wrapper {
   max-width: 1000px;
