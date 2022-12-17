@@ -24,13 +24,13 @@
             font-weight: 600;
             font-size: min(vw(50px, 365), 90px);
             @include mq-target(sm) {
-                font-size: min(vw(50px, 768), 90px);
+                font-size: min(vw(50px, 768),90px);
             }
             color: $color-white;
             letter-spacing: 0.04em;
             line-height: 1;
             opacity: 0.45;
-            background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+            background-image: linear-gradient(to bottom, #d81c03, #db4016);
             -webkit-background-clip: text;
             color: transparent;
             font-family: 'teko', Arial, sans-serif;
@@ -40,7 +40,7 @@
             height: 100%;
             left: 0;
             right: 0;
-            top: -6px;
+            top: 0;
             // bottom: 25px;
             margin: auto;
             position: absolute;
@@ -48,7 +48,7 @@
             
             font-size: min(vw(18px,365),34px);
             @include mq-target(sm) {
-                font-size: min(vw(18px, 768), 26px);
+                font-size: min(vw(18px, 768), 22px);
             }
             line-height: 1;
             letter-spacing: 2px;

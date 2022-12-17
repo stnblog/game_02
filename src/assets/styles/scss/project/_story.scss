@@ -57,13 +57,12 @@
         padding-top: 4vw;
         &__txt {
             height: 780px;
-            font-family: 'Noto Serif JP', serif;
             // @include flexCenter;
             width: 40vw;
             margin: auto;
 
             h2 {
-                font-family: 'teko', serif;
+                // font-family: 'teko', serif;
                 // margin: 0;
             }
 
@@ -72,8 +71,10 @@
                 width: 300px;
                 margin: auto;
             }
-
+            
             h4 {
+                font-family: 'Noto Serif JP', serif;
+                margin-top: 20px;
                 background-image: linear-gradient(to bottom, #d81c03, #352e2c);
                 -webkit-background-clip: text;
                 color: transparent;
@@ -85,6 +86,7 @@
             }
 
             p {
+                font-family: 'Noto Serif JP', serif;
                 font-size: min(vw(10px, 365), 16px);
                 line-height: 2;
                 margin-top: min(vw(10px, 365), 20px);
