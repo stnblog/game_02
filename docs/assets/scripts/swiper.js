@@ -102,11 +102,11 @@ var switchThumb = function switchThumb(index) {
 };
 
 var mySwiper = new Swiper('.gallery02 .swiper', {
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  speed: 500,
+  effect: 'slide',
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  speed: 800,
   navigation: {
     nextEl: '.gallery02 .swiper-button-next',
     prevEl: '.gallery02 .swiper-button-prev'

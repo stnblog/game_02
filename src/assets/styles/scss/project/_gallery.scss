@@ -61,7 +61,7 @@
     &__list {
       &--thumb {
         @include flex($align:center, $wrap:wrap, $justify:space-between);
-        @include column4(24.5%);
+        @include column4(19.5%);
         margin-left: auto;
 
         @include mq-target(sm) {
@@ -71,10 +71,30 @@
     }
 
     &__item {
+
+
+      &--slide {
+        opacity: 0;
+        transition: opacity 0.5s ease 0s;
+
+        &.swiper-slide-active {
+          opacity: 1 !important;
+          pointer-events: initial !important;
+
+          & .p-cha__img {
+            img {
+              clip-path: polygon(0 -100%, 0 100%, 200% 100%);
+            }
+          }
+        }
+
+
+      }
+
       &--thumb {
         cursor: pointer;
         // width: calc(100% / 4);
-        width: 24.5%;
+        width: 19.5%;
         margin-bottom: 0.5%;
       }
     }
@@ -86,6 +106,11 @@
     margin: auto;
     // top: 60px;
     right: 0;
+
+    img {
+      clip-path: polygon(0 100%, 0 100%, 0 100%);
+      transition: clip-path 1s cubic-bezier(.25, .46, .45, .94), -webkit-clip-path 1s cubic-bezier(.6, .8, .8, 1.2);
+    }
 
     @include mq-target(sm) {
       position: absolute;
@@ -175,33 +200,6 @@
 
 
 
-.p-chara__slider,
-.p-chara__slider--modal {
-  .swiper-slide-active {
-    // cursor: pointer;
-    opacity: 1 !important;
-    pointer-events: initial !important;
-
-
-    img {
-      // transform: scale(1) !important;
-    }
-  }
-
-  .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.5s ease 0s;
-    pointer-events: none;
-
-
-    img {
-      // cursor: pointer;
-      // transition: all 1s ease;
-      // transform: scale(0.7);
-    }
-  }
-
-}
 
 
 
@@ -241,7 +239,7 @@
 .slide-media,
 .thumb-media {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .slide-media img {
@@ -329,7 +327,7 @@
 }
 
 .gallery02 {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .gallery02 .swiper {
@@ -345,15 +343,15 @@
 }
 
 .gallery02 .swiper-fade .swiper-slide {
-  -webkit-transition-property: opacity, -webkit-transform !important;
-  transition-property: opacity, -webkit-transform !important;
-  transition-property: opacity, transform !important;
-  transition-property: opacity, transform, -webkit-transform !important;
-  pointer-events: none;
+  // -webkit-transition-property: opacity, -webkit-transform !important;
+  // transition-property: opacity, -webkit-transform !important;
+  // transition-property: opacity, transform !important;
+  // transition-property: opacity, transform, -webkit-transform !important;
+  // pointer-events: none;
 }
 
 .gallery02 .swiper-fade .swiper-slide-active {
-  pointer-events: auto;
+  // pointer-events: auto;
 }
 
 .gallery02 .swiper-controller {
@@ -384,7 +382,7 @@
 
 .gallery02 .slide {
   display: block;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .gallery02 .slide-media {
@@ -516,3 +514,6 @@
     display: none !important;
   }
 }
+
+
+

@@ -3,7 +3,7 @@
 .p-news {
   position: relative;
   z-index: 50;
-  padding: min(vw(30px, 768), 60px) 0 30px;
+  padding: min(vw(30px, 768), 60px) 0 100px;
 
   &::before {
     content: "";
