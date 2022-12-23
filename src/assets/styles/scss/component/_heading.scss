@@ -24,7 +24,7 @@
             font-weight: 600;
             font-size: min(vw(50px, 365), 90px);
             @include mq-target(sm) {
-                font-size: min(vw(50px, 768),90px);
+                font-size: min(vw(50px, 768),84px);
             }
             color: $color-white;
             letter-spacing: 0.04em;
