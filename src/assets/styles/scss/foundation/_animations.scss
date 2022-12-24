@@ -15,6 +15,38 @@
 }
 
 
+.js-scroll-slideView {
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+  transition: all 0.5s 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+  &.is-anim {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  &-delay {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+    transition: all 0.5s 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    &.is-anim {
+      -webkit-clip-path: inset(0 0 0 0);
+      clip-path: inset(0 0 0 0);
+      @include animation($name: kf-slide-view,
+        $duration: 1s,
+        $timing-function: ease,
+        $fill-mode: both);
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
+  }
+}
+
 
 // fade
 //--------------------------------------------------------------------
@@ -92,17 +124,13 @@ $cover in $covers {
     }
 
     &::before {
-      // background-image: url(../../assets/images/sys_bg.png);
-      // background-size: 100% auto;
-      // background-position: center;
-      // transition-delay: .2s;
-      // z-index: 10;
+      background: $color-black;
+      transition-delay: .2s;
+      z-index: 10;
     }
 
     &::after {
-      background-image: url(../../assets/images/sys_bg.png);
-      background-size: 100% 100%;
-      background-position: center;
+      background: $color-black;
       z-index: 11;
     }
 
