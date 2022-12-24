@@ -34,11 +34,13 @@
 
     &__slide {
       transition: 1.4s 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-      width: 98%;
+      width: 100%;
       margin: auto;
-      margin-right: 20px;
-
+      margin: 0 4px;
+      
       @include mq-target(sm) {
+        margin: 0;
+        margin-right: 20px;
         width: calc((100% - 20px) / 2);
       }
 
@@ -174,7 +176,8 @@
     &__info {
       flex: 1;
       padding: min(vw(12px, 365), 14px);
-      font-family: 'teko', Arial, sans-serif;
+      font-weight: 600;
+      // font-family: 'teko', Arial, sans-serif;
 
       @include mq-target(sm) {
         padding: 4px min(vw(6px, 768), 10px);
@@ -222,6 +225,7 @@
 
     &__heading {
       display: block;
+      font-family: $m1;
       text-align: left;
       font-size: min(vw(12px, 365), 16px);
 

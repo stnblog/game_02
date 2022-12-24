@@ -5,7 +5,6 @@
     position: relative;
     z-index: 3;
     width: 100%;
-
     background: $color-bg;
     // height: 780px;
     // content-visibility: auto;
@@ -35,31 +34,57 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap-reverse;
+        @include mq-target(sm) {
+            flex-wrap: nowrap;
+        }
     }
 
     &__item {
         &--left {
-            width: 60vw;
+            width: 100%;
             overflow: hidden;
-            background: url(../../assets/images/storyBg_01.jpg) no-repeat center center/cover;
-            height: 40.896vw;
+            
+            background: $color-bg;
+            // padding-left: 8vw;
+            padding-top: 2%;
+            padding-left: 4%;
+            padding-bottom: 100px;
+            
+            @include mq-target(sm) {
+                height: min(vw(440px, 768), 740px);
+                width: 50vw;
+            }
+
+
+            @include mq-target(md) {
+                padding-bottom: 0;
+                padding-left: 10.11%;
+            }
+            // width: 100%;
         }
 
         &--right {
-            background: $color-bg;
-            height: 40.896vw;
+            width: 100%;
+            position: relative;
+            background: url(../../assets/images/storyBg_02.jpg) no-repeat center left;
+            background-size: 100% 100%;
+            // width: 100%;
+            height: min(vw(440px, 768), 740px);
             overflow: hidden;
-            width: 40vw;
+            @include mq-target(sm) {
+                width: 50vw;
+            }
         }
     }
 
     &-content {
         padding-top: 4vw;
         &__txt {
-            height: 780px;
             // @include flexCenter;
-            width: 40vw;
+            // width: 40vw;
             margin: auto;
+            text-align: left;
 
             h2 {
                 // font-family: 'teko', serif;
@@ -73,7 +98,7 @@
             }
             
             h4 {
-                font-family: 'Noto Serif JP', serif;
+                font-family: $shippo;
                 margin-top: 20px;
                 background-image: linear-gradient(to bottom, #d81c03, #352e2c);
                 -webkit-background-clip: text;
@@ -86,14 +111,14 @@
             }
 
             p {
-                font-family: 'Noto Serif JP', serif;
+                font-family: $shippo;
                 font-size: min(vw(10px, 365), 16px);
                 line-height: 2;
-                margin-top: min(vw(10px, 365), 20px);
+                // margin-top: min(vw(10px, 365), 20px);
 
                 @include mq-target(sm) {
-                    font-size: min(vw(10px, 768), 16px);
-                    margin-top: min(vw(14px, 768), 24px);
+                    font-size: min(vw(8px, 768), 16px);
+                    margin-top: min(vw(10px, 768), 24px);
                 }
             }
         }
@@ -102,23 +127,24 @@
 
 
     &-movie {
+        height: 100%;
+        width: 80%;
+        margin: auto;
         display: block;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        width: 44vw;
+        @include flexCenter;
+        z-index: 500;
         filter: brightness(1.5);
 
         &__img {
             display: block;
-            height: 100%;
+            // height: 100%;
             position: relative;
             z-index: 10;
-            mask-image: url(../../assets/images/mask.png);
-            mask-mode: alpha;
-            mask-repeat: no-repeat;
-            mask-size: 100% 0%;
-            mask-position: center top;
+            // mask-image: url(../../assets/images/mask.png);
+            // mask-mode: alpha;
+            // mask-repeat: no-repeat;
+            // mask-size: 100% 0%;
+            // mask-position: center top;
             transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 3;
 
@@ -138,12 +164,18 @@
             }
 
             img {
-                width: 560px
+                width: 360px;
+                @include mq-target(md) {
+                    // width: 34vw;
+                    width: 50vw;
+                    height: auto;
+                }
+
             }
         }
 
         &__keyboard {
-            width: 420px;
+            width: 30vw;
             @include absCenter;
             top: 105%;
             z-index: 55;

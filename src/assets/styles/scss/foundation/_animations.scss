@@ -63,7 +63,6 @@ $slide in $slides {
     &.is-anim {
       opacity: 1;
       transform: scale(1) translate(0, 0);
-      filter: blur(0);
     }
   }
 }
@@ -71,7 +70,7 @@ $slide in $slides {
 
 // cover
 //--------------------------------------------------------------------
-$covers:("Up": translateY(100%),
+$covers:("Up": translateY(20%),
   "Down": translateY(-100%),
   "Left": translateX(100%),
   "Right": translateX(-100%));
@@ -82,23 +81,28 @@ $cover in $covers {
   .js-scroll--cover#{$key} {
     overflow: hidden;
 
+
     &::before,
     &::after {
       content: '';
       @include absolute($left:0, $top:0);
       height: 100%;
       width: 100%;
-      transition: all cubic-bezier(0.33, 1, 0.8, 1) .8s .4s;
+      transition: all cubic-bezier(0.33, 1, 0.8, 1) 1s .8s;
     }
 
     &::before {
-      background: $color-black;
-      transition-delay: .2s;
-      z-index: 10;
+      // background-image: url(../../assets/images/sys_bg.png);
+      // background-size: 100% auto;
+      // background-position: center;
+      // transition-delay: .2s;
+      // z-index: 10;
     }
 
     &::after {
-      background: $color-black;
+      background-image: url(../../assets/images/sys_bg.png);
+      background-size: 100% 100%;
+      background-position: center;
       z-index: 11;
     }
 

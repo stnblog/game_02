@@ -6,6 +6,7 @@
     @include flexCenter;
 
     &__ttl {
+        display: inline-block;
         position: relative;
         // @include maxWidth(840px);
         margin-bottom: min(vw(8px, 365),20px);
@@ -48,7 +49,7 @@
             
             font-size: min(vw(18px,365),34px);
             @include mq-target(sm) {
-                font-size: min(vw(18px, 768), 22px);
+                font-size: min(vw(18px, 768), 28px);
             }
             line-height: 1;
             letter-spacing: 2px;

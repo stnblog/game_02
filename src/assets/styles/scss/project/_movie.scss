@@ -1,0 +1,78 @@
+@use "../foundation"as *;
+
+
+.p-about {
+    // background: #000;
+    position: relative;
+    z-index: 500;
+    @include flexCenter;
+    min-height: 700px;
+
+    &__wrap {
+        @include flex($justify:space-between);
+        @include maxWidth(1000px);
+        align-items: center;
+    }
+
+    &__txt {
+        position: absolute;
+        font-family: 'Shippori Mincho B1', serif;
+        font-weight: 800;
+        font-size: 16px;
+        margin-bottom: 24px;
+    //     writing-mode: vertical-rl;
+    //     writing-mode: vertical-rl;
+    // text-orientation: upright;
+        text-align: left;
+        // flex: 1;
+        display: flex;
+        align-items: center;
+        // align-items: flex-end;
+    }
+
+    &__monitor {
+        width: 64%;
+        // margin: 0 40px;
+        margin: auto;
+    }
+
+
+    &-monitor {
+        &__img {
+            // margin-top: 40px;
+            position: relative;
+            display: block;
+            height: 100%;
+            // z-index: 10;
+            mask-image: url(../../assets/images/mask.png);
+            mask-mode: alpha;
+            mask-repeat: no-repeat;
+            mask-size: 100% 0%;
+            mask-position: center top;
+            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 3;
+
+            &.is-anim {
+                -webkit-mask-size: 100% 300%;
+                transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+            
+            &::after {
+                content: "";
+                display: block;
+                @include absAll;
+                margin: auto;
+                background: url(../../assets/images/play.png) 50% 50% no-repeat;
+                background-size: 15% auto;
+                opacity: 1;
+            }
+        }
+
+        &__keyboard {
+            width: 500px;
+            @include absCenter;
+            top: 105%;
+            z-index: 55;
+        }
+    }
+}
