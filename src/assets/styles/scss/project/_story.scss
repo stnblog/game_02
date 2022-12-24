@@ -52,8 +52,8 @@
             padding-bottom: 60px;
             
             @include mq-target(sm) {
-                height: min(vw(440px, 768), 740px);
-                width: 50vw;
+                height: min(vw(400px, 768), 740px);
+                width: 46vw;
             }
 
 
@@ -70,10 +70,10 @@
             background: url(../../assets/images/storyBg_02.jpg) no-repeat center right;
             background-size: 100% auto;
             // width: 100%;
-            height: min(vw(440px, 768), 740px);
             overflow: hidden;
+            height: min(vw(440px, 768), 740px);
             @include mq-target(sm) {
-                width: 50vw;
+                width: 54vw;
             }
         }
     }
@@ -100,7 +100,6 @@
             
             h4 {
                 font-family: $shippo;
-                margin-top: 20px;
                 background-image: linear-gradient(to bottom, #d81c03, #352e2c);
                 -webkit-background-clip: text;
                 color: transparent;
@@ -162,7 +161,7 @@
                 @include absAll;
                 margin: auto;
                 background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 15% auto;
+                background-size: 20% auto;
                 opacity: 1;
             }
 
