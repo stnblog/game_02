@@ -114,6 +114,7 @@
                 font-family: $shippo;
                 font-size: min(vw(10px, 365), 16px);
                 line-height: 2;
+                margin-top: 20px;
                 // margin-top: min(vw(10px, 365), 20px);
 
                 @include mq-target(sm) {
