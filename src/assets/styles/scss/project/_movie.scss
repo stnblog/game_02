@@ -14,21 +14,6 @@
         align-items: center;
     }
 
-    &__txt {
-        position: absolute;
-        font-family: 'Shippori Mincho B1', serif;
-        font-weight: 800;
-        font-size: 16px;
-        margin-bottom: 24px;
-    //     writing-mode: vertical-rl;
-    //     writing-mode: vertical-rl;
-    // text-orientation: upright;
-        text-align: left;
-        // flex: 1;
-        display: flex;
-        align-items: center;
-        // align-items: flex-end;
-    }
 
     &__monitor {
         width: 64%;
@@ -94,9 +79,12 @@
     &__inner {
       z-index: 50;
       position: relative;
+      padding: 0 4%;
       // @include maxWidth(1280px);
       @include maxWidth(1400px);
-      padding: 0 64px;
+      @include mq-target(sm) {
+          padding: 0 64px;
+      }
     }
   
     &-slider {

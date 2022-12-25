@@ -5,7 +5,10 @@
 
   &__inner {
     @include maxWidth(1400px);
-    padding: 0 64px;
+    padding: 0 4%;
+    @include mq-target(sm) {
+      padding: 0 64px;
+    }
   }
 
   &__list {
@@ -44,14 +47,16 @@
 
       &::after {
         position: absolute;
-        top: 50%;
+        top: 30%;
         right: 12px;
-        border-right: 2px solid #fff;
-        border-top: 2px solid #fff;
+        // border-right: 2px solid #fff;
+        // border-top: 2px solid #fff;
+        background-image: url(../../assets/images/arrow_next.png);
+        background-position: center;
+        background-size: cover;
         content: "";
-        height: 7px;
-        transform: translate(0, -50%) rotate(45deg);
-        width: 7px;
+        height: min(vw(26px, 365), 40px);
+        width: min(vw(26px, 365), 40px);
       }
     }
 
@@ -62,7 +67,7 @@
     }
 
     h2 {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
     }
   }
