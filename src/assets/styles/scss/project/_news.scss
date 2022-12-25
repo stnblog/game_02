@@ -17,11 +17,12 @@
     @include maxWidth(1400px);
     padding: 60px 4%;
     @include mq-target(sm) {
-      padding: 60px 64px 100px;
+      padding: 60px min(vw(40px, 768), 64px) 100px;
     }
   }
 
   &__list {
+    position: relative;
     border-bottom: 2px solid #333333;
     @include mq-target(sm) {
       border-bottom: initial;
@@ -57,7 +58,7 @@
 
       &::after {
         position: absolute;
-        top: 30%;
+        top: 24%;
         right: 12px;
         // border-right: 2px solid #fff;
         // border-top: 2px solid #fff;

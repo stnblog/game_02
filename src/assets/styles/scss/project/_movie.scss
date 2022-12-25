@@ -84,7 +84,7 @@
       // @include maxWidth(1280px);
       @include maxWidth(1400px);
       @include mq-target(sm) {
-          padding: 0 64px;
+          padding: 0 min(vw(40px, 768), 64px) ;
       }
     }
   
