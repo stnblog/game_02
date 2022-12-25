@@ -55,7 +55,7 @@
             letter-spacing: 2px;
             @include flex($justify:center,$align:center);
             font-weight: 600;
-            filter: drop-shadow(0 0 4px rgba(255,255,255,0.45));
+            filter: drop-shadow(0 0 12px rgba(254, 233, 46, 0.45));
         }
 
 

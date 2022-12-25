@@ -1,17 +1,17 @@
 "use strict";
 
-const swiper01 = new Swiper('.p-news-slider__container', {
+const swiper01 = new Swiper('.p-movie-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
   touchEventsTarget: true,
   loopAdditionalSlides: 1,
   pagination: {
-    el: '.p-news-slider__pagi',
+    el: '.p-movie-slider__pagi',
     clickable: true,
   },
   navigation: {
-    prevEl: '.p-news-slider__btnPrev',
-    nextEl: '.p-news-slider__btnNext',
+    prevEl: '.p-movie-slider__btnPrev',
+    nextEl: '.p-movie-slider__btnNext',
   },
 });
 
