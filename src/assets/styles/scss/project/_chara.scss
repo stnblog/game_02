@@ -31,7 +31,7 @@
 
     &__slider {
         @include maxWidth(1400px);
-        height: 700px;
+        height: 800px;
         z-index: 20;
         user-select: none;
         position: relative;
@@ -45,8 +45,8 @@
     &__tab {
         text-align: left;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 20px;
+        left: 40px;
         // top: 140px;
 
         h3 {
@@ -71,7 +71,7 @@
                 top: 30px;
                 height: 2px;
                 left: 34px;
-                width: 180px;
+                width: min(vw(120px, 768), 180px);
                 background: rgba(255,255,255,.5);
             }
         }
@@ -85,7 +85,7 @@
     &__list {
         &--contents {
             padding: 4% 0;
-            @include flex($justify:space-between, $wrap:wrap);
+            @include flex($justify:center, $wrap:wrap);
         }
 
         &--tab {
@@ -108,7 +108,7 @@
             height: 100%;
             background: url(../../assets/images/charaBg_01.jpg) 50% 50% no-repeat;
             background-size: cover;
-            // filter: blur(2px);
+            filter: blur(2px);
 
             &02 {
                 background: url(../../assets/images/charaBg_04.jpg) 50% 50% no-repeat;
@@ -134,8 +134,7 @@
             &-R {
                 position: relative;
                 // padding-top: 20px;
-                width: 29%;
-                text-align: right;
+                // text-align: right;
 
                 dl {
                     display: flex;
@@ -146,7 +145,7 @@
 
                     dt {
                         background: rgba($color: #520505, $alpha: 0.25);
-                        text-align: right;
+                        // text-align: right;
                         border: 1px solid #fff;
                         // background: #000;
                         padding: 5px;
@@ -156,7 +155,7 @@
                     }
 
                     dd {
-                        text-align: left;
+                        // text-align: right;
                         border: 1px solid #fff;
                         width: 138px;
                         // background: #000;
@@ -179,7 +178,7 @@
             transition-delay: .1s;
             // transition: opacity 0.2s ease;
             font-weight: 900;
-            font-size: 20px;
+            font-size: min(vw(14px, 768), 20px);
             text-align: left;
             opacity: 0.5;
             letter-spacing: 0.2em;
@@ -219,8 +218,9 @@
         -webkit-background-clip: text;
         color: transparent;
         text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-        font-size: 44px;
+        font-size: min(vw(34px, 768), 44px);
         font-weight: 900;
+
     }
 
     &__cv {
@@ -229,11 +229,11 @@
     }
 
     &__txt {
+        margin-top: 20px;
         // width: 280px;
         // max-width: 300px;
         font-weight: 700;
-        text-align: left;
-        font-size: 14px;
+        font-size: min(vw(10px, 768), 15px);
         line-height: 1.8;
         margin-left: auto;
     }

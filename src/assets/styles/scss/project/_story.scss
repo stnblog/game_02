@@ -71,7 +71,7 @@
             background-size: 100% auto;
             // width: 100%;
             overflow: hidden;
-            height: min(vw(440px, 768), 740px);
+            height: min(vw(400px, 768), 740px);
             @include mq-target(sm) {
                 width: 54vw;
             }
@@ -181,14 +181,6 @@
             @include absCenter;
             top: 105%;
             z-index: 55;
-        }
-
-        a {
-            position: relative;
-            z-index: 600;
-            display: block;
-            @include flexCenter;
-            height: 780px;
         }
     }
 

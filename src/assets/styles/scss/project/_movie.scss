@@ -64,17 +64,18 @@
 
 
 .p-movie {
+    background: #000;
     position: relative;
     z-index: 50;
-    padding: min(vw(30px, 768), 60px) 0 100px;
+    padding: min(vw(30px, 768), 60px) 0 0;
   
-    &::before {
-      content: "";
-      @include absAll;
-      background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
-      background-position: center;
-      background-size: cover;
-    }
+    // &::before {
+    //   content: "";
+    //   @include absAll;
+    //   background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
+    //   background-position: center;
+    //   background-size: cover;
+    // }
   
     &__inner {
       z-index: 50;

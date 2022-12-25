@@ -1,13 +1,23 @@
 @use "../foundation"as *;
 
 .p-news {
-  background: $color-bg;
+  position: relative;
+  z-index: 500;
+  // background: $color-bg;
+
+  &::before {
+    content: "";
+    @include absAll;
+    background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 
   &__inner {
     @include maxWidth(1400px);
-    padding: 0 4%;
+    padding: 60px 4%;
     @include mq-target(sm) {
-      padding: 0 64px;
+      padding: 60px 64px 100px;
     }
   }
 
