@@ -23,6 +23,7 @@
     }
 
     &__inner {
+        padding-top: 60px;
         // padding-top: 80px;
         overflow: hidden;
         position: relative;
@@ -31,7 +32,7 @@
 
     &__slider {
         @include maxWidth(1400px);
-        height: 800px;
+        // height: 800px;
         z-index: 20;
         user-select: none;
         position: relative;
@@ -43,11 +44,15 @@
     }
 
     &__tab {
-        text-align: left;
-        position: absolute;
-        top: 20px;
-        left: 40px;
         // top: 140px;
+        
+        @include mq-target(sm) {
+            
+            text-align: left;
+            position: absolute;
+            top: 0;
+            left: 40px;
+        }
 
         h3 {
             position: relative;
@@ -55,25 +60,29 @@
             font-size: 14px;
             opacity: 0.65;
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 30px;
-                left: 0;
-                width: 30px;
-                height: 2px;
-                background: #fff;
+            @include mq-target(sm) {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 30px;
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                    background: #fff;
+                }
+    
+                &::after {
+                    content: "";
+                    @include absAll;
+                    top: 30px;
+                    height: 2px;
+                    left: 34px;
+                    width: min(vw(120px, 768), 180px);
+                    background: rgba(255,255,255,.5);
+                }
             }
 
-            &::after {
-                content: "";
-                @include absAll;
-                top: 30px;
-                height: 2px;
-                left: 34px;
-                width: min(vw(120px, 768), 180px);
-                background: rgba(255,255,255,.5);
-            }
+
         }
     }
 
@@ -84,16 +93,24 @@
 
     &__list {
         &--contents {
-            padding: 4% 0;
+            padding: 4% 0 25%;
+            @include mq-target(sm) {
+                padding: 10% 0 25%;
+            }
             @include flex($justify:center, $wrap:wrap);
         }
 
         &--tab {
             position: relative;
-            @include maxWidth(220px);
-            margin: 20px auto 0;
+            @include maxWidth(360px);
             // top: 0;
-            @include flex($justify:space-between, $wrap:wrap);
+            display: flex;
+            justify-content: center;
+            @include mq-target(sm) {
+                @include maxWidth(220px);
+                margin: 20px auto 0;
+                @include flex($justify:space-between, $wrap:wrap);
+            }
             // margin: 14px auto 0;
         }
     }
@@ -170,7 +187,12 @@
 
         &--tab {
             // width: 50%;
-            width: 100%;
+            text-align: center;
+            width: 30%;
+            @include mq-target(sm) {
+                width: 100%;
+                text-align: left;
+            }
             // margin: 0 4px;
             // margin: 0 -2%;
             cursor: pointer;
@@ -178,8 +200,7 @@
             transition-delay: .1s;
             // transition: opacity 0.2s ease;
             font-weight: 900;
-            font-size: min(vw(14px, 768), 20px);
-            text-align: left;
+            font-size: min(vw(12px, 768), 20px);
             opacity: 0.5;
             letter-spacing: 0.2em;
             line-height: 1.9;
@@ -217,6 +238,7 @@
         background-image: linear-gradient(to bottom, #d81c03, #352e2c);
         -webkit-background-clip: text;
         color: transparent;
+        // text-align: right;
         text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
         font-size: min(vw(34px, 768), 44px);
         font-weight: 900;
@@ -225,10 +247,12 @@
 
     &__cv {
         font-size: 18px;
+        // text-align: right;
         margin: 20px 0 30px;
     }
 
     &__txt {
+        // text-align: left;
         margin-top: 20px;
         // width: 280px;
         // max-width: 300px;
