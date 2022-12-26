@@ -9,14 +9,13 @@
     min-height: 140vw;
     // height: min(vw(360px, 365), 760px);
     // padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
-    
+
     @include mq-target(md) {
         // min-height: 703.326px;
         min-height: 54.948vw;
     }
 
-    @include mq-target(lg) {
-    }
+    @include mq-target(lg) {}
 
     // &__bg {
     //     @include absAll;
@@ -37,9 +36,9 @@
     &::before {
         content: "";
         @include absAll;
-        background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_04.jpg");
+        background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_01.jpg");
         background-position: center;
-        background-size: auto 100%;
+        background-size: cover;
     }
 
     &__inner {
@@ -54,7 +53,7 @@
         z-index: 50;
 
         img {
-            width: 11.396vw;
+            width: 10.396vw;
             height: auto;
         }
     }
@@ -64,9 +63,9 @@
         top: 22vw;
         left: 2%;
         z-index: 50;
-        
-        @include mq-target(sm) {            
-            margin-left: 22.646vw;
+
+        @include mq-target(sm) {
+            margin-left: 28.646vw;
             left: 50%;
             top: 8.333vw;
         }
@@ -74,6 +73,7 @@
         span {
             img {
                 width: 24.598vw;
+
                 @include mq-target(sm) {
                     width: 10.396vw;
                 }
@@ -84,22 +84,43 @@
     &__kv {
         position: absolute;
         width: 100vw;
-        top: 30.852vw;
+        top: 17.852vw;
         display: flex;
         justify-content: center;
-        
+
         @include mq-target(md) {
-        top: 10vw;
-    }
+            top: 6vw;
+        }
 
-    img {
-        width: 100vw;
-    @include mq-target(md) {
+        span {
+            display: block;
+            height: 100%;
+            position: relative;
+            mask-image: url(../../assets/images/mask.png);
+            mask-mode: alpha;
+            mask-repeat: no-repeat;
+            mask-size: 100% 0%;
+            mask-position: center top;
+            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-        width: 46.333vw;
-    }
+            &.is-anim {
+                -webkit-mask-size: 100% 300%;
+                transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transition-delay: 3s;
+            }
+        }
 
-    }
+
+
+        img {
+            width: 80vw;
+
+            @include mq-target(md) {
+
+                width: 34.333vw;
+            }
+
+        }
     }
 
 
@@ -127,7 +148,7 @@
         @include mq-target(sm) {
             padding: 60px 6% 0;
         }
-        
+
         @include mq-target(md) {
             padding: 100px vw(60px, 768) 0;
 
@@ -174,8 +195,7 @@
             width: 700px;
         }
 
-        @include mq-target(md) {
-        }
+        @include mq-target(md) {}
 
         &__img {
             display: block;
