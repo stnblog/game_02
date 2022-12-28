@@ -269,12 +269,12 @@
         // width: 280px;
         font-size: min(vw(10px, 365), 14px);
         // max-width: 300px;
-        font-weight: 400;
+        font-weight: 800;
         line-height: 1.8;
         margin-left: auto;
         
         @include mq-target(sm) {
-            font-size: min(vw(12px, 768), 16px);
+            font-size: min(vw(12px, 768), 14px);
         }
     }
 

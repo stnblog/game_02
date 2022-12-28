@@ -1,5 +1,35 @@
 "use strict";
 
+var sliderWrap = document.querySelectorAll('.js-slider-wrap');
+var sliderThumb = document.querySelectorAll('.js-slider-thumb');
+var sliderMain = document.querySelectorAll('.js-slider-main');
+
+for (var i = 0; i < sliderWrap.length; i++) {
+  var num = ('00' + (i + 1)).slice(-2);
+  sliderWrap[i].className += num;
+  sliderThumb[i].className += num;
+  sliderMain[i].className += num;
+  var swiperThumb = new Swiper('.js-slider-thumb' + num, {
+    slidesPerView: 'auto'
+  });
+  var prev = sliderWrap[i].querySelector('.js-slider-btnPrev');
+  var next = sliderWrap[i].querySelector('.js-slider-btnNext');
+  var swiperMain = new Swiper('.js-slider-main' + num, {
+    slidesPerView: 'auto',
+    effect: 'slide',
+    grabCursor: true,
+    touchEventsTarget: true,
+    loopAdditionalSlides: 1,
+    navigation: {
+      nextEl: next,
+      prevEl: prev
+    },
+    thumbs: {
+      swiper: swiperThumb
+    }
+  });
+}
+
 var swiper01 = new Swiper('.p-movie-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
@@ -66,34 +96,7 @@ $(".js-chara-tab").on("click", function () {
   $('.p-chara__item--tab').removeClass('is-active');
   $(this).addClass('is-active');
   swiper03.slideTo($(this).attr("data-num"));
-}); // const elmIndexSwiper = document.querySelectorAll('.js-index-slider');
-// const elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
-// const elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
-// const elmIndexPagi = document.querySelectorAll('.js-slider-pagi');
-// if (elmIndexSwiper.length > 0) {
-//   for (let i = 0; i < elmIndexSwiper.length; i++) {
-//     elmIndexSwiper[i].className += i;
-//     elmIndexBtnP[i].className += i;
-//     elmIndexBtnN[i].className += i;
-//     elmIndexPagi[i].className += i;
-//     var swiper01 = new Swiper('.js-index-slider' + i, {
-//       slidesPerView: 'auto',
-//       grabCursor: true,
-//       // loop: true,
-//       touchEventsTarget: true,
-//       loopAdditionalSlides: 1,
-//       pagination: {
-//         el: '.js-slider-pagi' + i,
-//         clickable: true,
-//       },
-//       navigation: {
-//         prevEl: '.js-slider-btnPrev' + i,
-//         nextEl: '.js-slider-btnNext' + i,
-//       },
-//     });
-//   }
-// }
-
+});
 var thumb = document.querySelectorAll('.gallery02 .thumb-media');
 
 var switchThumb = function switchThumb(index) {
@@ -115,14 +118,14 @@ var mySwiper = new Swiper('.gallery02 .swiper', {
     afterInit: function afterInit(swiper) {
       thumb[swiper.realIndex].classList.add('thumb-media-active');
 
-      var _loop = function _loop(i) {
-        thumb[i].onclick = function () {
-          swiper.slideTo(i);
+      var _loop = function _loop(_i) {
+        thumb[_i].onclick = function () {
+          swiper.slideTo(_i);
         };
       };
 
-      for (var i = 0; i < thumb.length; i++) {
-        _loop(i);
+      for (var _i = 0; _i < thumb.length; _i++) {
+        _loop(_i);
       }
     },
     slideChange: function slideChange(swiper) {

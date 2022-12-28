@@ -1,5 +1,38 @@
 "use strict";
 
+const sliderWrap = document.querySelectorAll('.js-slider-wrap');
+const sliderThumb = document.querySelectorAll('.js-slider-thumb');
+const sliderMain = document.querySelectorAll('.js-slider-main');
+for (let i = 0; i < sliderWrap.length; i++) {
+  const num = ('00' + (i + 1)).slice(-2);
+  sliderWrap[i].className += (num);
+  sliderThumb[i].className += (num);
+  sliderMain[i].className += (num);
+  const swiperThumb = new Swiper('.js-slider-thumb' + (num), {
+    slidesPerView: 'auto',
+  });
+
+
+  let prev = sliderWrap[i].querySelector('.js-slider-btnPrev');
+  let next = sliderWrap[i].querySelector('.js-slider-btnNext');
+
+  var swiperMain = new Swiper('.js-slider-main' + (num), {
+    slidesPerView: 'auto',
+    effect: 'slide',
+    grabCursor: true,
+    touchEventsTarget: true,
+    loopAdditionalSlides: 1,
+    navigation: {
+      nextEl: next,
+      prevEl: prev,
+    },
+    thumbs: {
+      swiper: swiperThumb,
+    },
+  });
+}
+
+
 const swiper01 = new Swiper('.p-movie-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
@@ -80,41 +113,6 @@ $(".js-chara-tab").on("click", function () {
   $(this).addClass('is-active');
   swiper03.slideTo($(this).attr("data-num"));
 });
-
-
-// const elmIndexSwiper = document.querySelectorAll('.js-index-slider');
-// const elmIndexBtnP = document.querySelectorAll('.js-slider-btnPrev');
-// const elmIndexBtnN = document.querySelectorAll('.js-slider-btnNext');
-// const elmIndexPagi = document.querySelectorAll('.js-slider-pagi');
-
-// if (elmIndexSwiper.length > 0) {
-//   for (let i = 0; i < elmIndexSwiper.length; i++) {
-
-//     elmIndexSwiper[i].className += i;
-
-//     elmIndexBtnP[i].className += i;
-//     elmIndexBtnN[i].className += i;
-//     elmIndexPagi[i].className += i;
-
-//     var swiper01 = new Swiper('.js-index-slider' + i, {
-//       slidesPerView: 'auto',
-//       grabCursor: true,
-//       // loop: true,
-//       touchEventsTarget: true,
-//       loopAdditionalSlides: 1,
-//       pagination: {
-//         el: '.js-slider-pagi' + i,
-//         clickable: true,
-//       },
-//       navigation: {
-//         prevEl: '.js-slider-btnPrev' + i,
-//         nextEl: '.js-slider-btnNext' + i,
-//       },
-//     });
-//   }
-// }
-
-
 
 
 const thumb = document.querySelectorAll('.gallery02 .thumb-media');
