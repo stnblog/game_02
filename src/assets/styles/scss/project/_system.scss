@@ -70,10 +70,10 @@
             margin-bottom: 20px;
             @include mq-target(xs) {
                 width: 48%;
-                transform: rotate(-2deg);
-                &:nth-child(2) {
-                    transform: rotate(4deg);
-                }
+                // transform: rotate(-2deg);
+                // &:nth-child(2) {
+                //     transform: rotate(4deg);
+                // }
             }
 
         }
