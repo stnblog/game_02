@@ -38,6 +38,17 @@ const swiper01 = new Swiper('.p-movie-slider__container', {
   grabCursor: true,
   touchEventsTarget: true,
   loopAdditionalSlides: 1,
+  navigation: {
+    prevEl: '.p-movie-slider__btnPrev',
+    nextEl: '.p-movie-slider__btnNext',
+  },
+});
+
+const swiper02 = new Swiper('.p-galley-slider__container', {
+  slidesPerView: 'auto',
+  grabCursor: true,
+  touchEventsTarget: true,
+  loopAdditionalSlides: 1,
   pagination: {
     el: '.p-movie-slider__pagi',
     clickable: true,

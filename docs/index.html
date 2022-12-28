@@ -393,7 +393,8 @@
 
             <p class="p-concept__kv">
                 <span class="inview">
-                    <img src="./assets/images/test_03_beta.png" alt="" class="js-rellax" data-rellax-speed="2" data-rellax-percentage="1">
+                    <img src="./assets/images/test_03_beta.png" alt="">
+                    <!-- <img src="./assets/images/test_03_beta.png" alt="" class="js-rellax" data-rellax-speed="2" data-rellax-percentage="1"> -->
                 </span>
             </p>
 
@@ -424,14 +425,19 @@
     <section class="c-sec p-movie">
         <div class="smoke smoke__top"></div>
         <div class="p-movie__inner">
-            <div class="inview js-scroll--scaleUp" style="text-align: left;">
-                <h2 class="c-sec__ttl">
+            <div class="inview js-scroll--scaleUp p-movie__header" style="text-align: left;">
+                <h2 class="c-sec__ttl" style="margin: 0;">
                     <span class="-en">movie</span>
                     <span class="-ja">映像情報</span>
                 </h2>
+                <div class="p-movie-slider__btn">
+                    <div class="p-movie-slider__btnPrev"></div>
+                    <div class="p-movie-slider__btnNext"></div>
+                </div>
+
             </div>
 
-            <div class="swiper-container p-movie-slider__container">
+            <div class="swiper p-movie-slider__container">
                 <ul class="swiper-wrapper p-movie-slider__wrap">
                     <li class="swiper-slide p-movie-slider__slide">
                         <a href="/work/detail" class="inview p-movie-figure__link">
@@ -525,7 +531,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="swiper-controller p-movie-slider__controller">
+                <!-- <div class="swiper-controller p-movie-slider__controller">
                     <div class="swiper-pagination p-movie-slider__pagi" style="width: 30%"></div>
                     <a href="" class="p-movie__btn">
                         <img src="./assets/images/btn2.png" alt="">
@@ -534,7 +540,7 @@
                         <div class="p-movie-slider__btnNext"></div>
                         <div class="p-movie-slider__btnPrev"></div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="smoke smoke__bottom"></div>
