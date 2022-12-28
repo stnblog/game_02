@@ -60,22 +60,22 @@
 
     &__catch {
         position: absolute;
-        top: 22vw;
-        left: 2%;
+        top: 50vw;
+        right: 2%;
         z-index: 50;
 
         @include mq-target(sm) {
-            margin-left: 28.646vw;
+            margin-left: 4.646vw;
             left: 50%;
-            top: 8.333vw;
+            top: 16.333vw;
         }
 
         span {
             img {
-                width: 24.598vw;
+                width: 44.598vw;
 
                 @include mq-target(sm) {
-                    width: 10.396vw;
+                    width: 26.396vw;
                 }
             }
         }
