@@ -46,12 +46,13 @@
         }
 
         &__txt {
-            font-size: 14px;
+            font-size: min(vw(10px, 365), 14px);
             text-align: left;
             line-height: 2;
 
             margin: 20px 0;
             @include mq-target(sm) {
+                font-size: min(vw(10px, 365), 14px);
                 margin: 20px 0 40px;
             }
         }
@@ -67,9 +68,8 @@
         &__img {
             transition-delay: .2s;
             width: 100%;
-            margin-bottom: 20px;
+            width: 48%;
             @include mq-target(xs) {
-                width: 48%;
                 // transform: rotate(-2deg);
                 // &:nth-child(2) {
                 //     transform: rotate(4deg);
