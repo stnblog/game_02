@@ -50,10 +50,10 @@
 
 // fade
 //--------------------------------------------------------------------
-$fades:("Up": translateY(20%),
-  "Down": translateY(-20%),
-  "Left": translateX(20%),
-  "Right": translateX(-20%));
+$fades:("Up": translateY(20px),
+  "Down": translateY(-20px),
+  "Left": translateX(20px),
+  "Right": translateX(-20px));
 
 @each $key,
 $fade in $fades {

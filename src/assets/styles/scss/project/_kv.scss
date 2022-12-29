@@ -2,44 +2,64 @@
 
 .p-kv {
     position: relative;
-    background: $color-bg;
     overflow: hidden;
+    background: $color-bg;
 
     &::before {
         content: "";
         @include absAll;
-        background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_01.jpg");
-        background-position: center;
-        background-size: contain;
+        background: url("../../assets/images/kv_sp.jpg") top center / contain;
         width: 100vw;
-        height: 144vw;
+        height: 140vw;
+        
+        @include mq-target(sm) {
+            height: 54.948vw;
+            background: url("../../assets/images/kv_pc.jpg") top center / contain;
+        }
+    }
+
+    &__inner {
+        height: 140vw;
 
         @include mq-target(sm) {
             height: 54.948vw;
         }
     }
 
-    &__inner {
-        height: 144vw;
+    &__movie {
+        position: absolute;
+        top: 6vw;
+        right: 4%;
+        // left: calc(50% - vw(300px, 769));
+        z-index: 50;
 
-        @include mq-target(sm) {
-            height: 54.948vw;
+        &::after {
+            content: "";
+            @include absAll;
+            background: url(../../assets/images/play.png) center no-repeat;
+            background-size: 25% auto;
+        }
+
+        img {
+            width: 15vw;
         }
     }
 
     &__catch {
         position: absolute;
-        top: 50vw;
+        top: 60vw;
         left: calc(50% - vw(-10px, 365));
         z-index: 50;
+        transition-delay: 2s;
 
         @include mq-target(sm) {
+            left: calc(50% - vw(-100px, 769));
             top: 16.333vw;
         }
 
         span {
             img {
-                width: 50.598vw;
+                width: 44.598vw;
 
                 @include mq-target(sm) {
                     width: 24.396vw;
@@ -48,7 +68,7 @@
         }
     }
 
-    &__object {
+    &__chara {
         position: absolute;
         width: 100vw;
         top: 17.852vw;

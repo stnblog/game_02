@@ -16,7 +16,7 @@
 @use './scss/component/button';
 @use './scss/component/slider';
 @use './scss/component/modal';
-@use './scss/component/box';
+@use './scss/component/line';
 @use './scss/component/picture';
 @use './scss/component/smoke';
 
@@ -47,8 +47,8 @@
 //  --------------------
 //  project
 //  --------------------
+@use './scss/project/kv';
 @use './scss/project/movie';
-@use './scss/project/concept';
 @use './scss/project/story';
 @use './scss/project/about';
 @use './scss/project/system';

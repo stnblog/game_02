@@ -1,17 +1,19 @@
 @use "sass:math";
 
 $mq-breakpoints-min: ('xxs': '0px',
-  'xs': '480px',
-  'sm': '768px',
-  'md': '991px',
-  'lg': '1199px',
-) !default;
-
-$mq-breakpoints-max: ('xxs': '440px',
   'xs': '481px',
   'sm': '769px',
   'md': '992px',
   'lg': '1200px',
+  'xl': '1900px',
+) !default;
+
+$mq-breakpoints-max: ('xxs': '440px',
+  'xs': '480px',
+  'sm': '768px',
+  'md': '991px',
+  'lg': '1199px',
+  'xl': '1199px',
 ) !default;
 
 @mixin mq-target($breakpoint: md) {
@@ -27,7 +29,7 @@ $mq-breakpoints-max: ('xxs': '440px',
 }
 
 // $vw-viewport: 1920;
-@function vw($size,$vw-viewport){
+@function vw($size, $vw-viewport) {
   $vw-context: $vw-viewport * 0.01 * 1px;
   @return math.div($size, $vw-context) * 1vw;
   @return $size;

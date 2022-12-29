@@ -1,380 +1,288 @@
 @use "../foundation"as *;
 
+.p-movie {
+  background: $color-bg;
+  position: relative;
+  z-index: 50;
+  padding: vw(20px, 768) 0;
 
-.p-about {
-    // background: #000;
+  @include mq-target(sm) {
+    padding: vw(60px, 1920) 0 vw(40px, 1920);
+  }
+
+  &__inner {
     position: relative;
-    z-index: 500;
-    @include flexCenter;
-    min-height: 700px;
+    width: 90%;
+    margin: auto;
+    @include mq-target(sm) {
+      width: 96%;
+    }
 
+    @include mq-target(md) {
+      width: vw(1420px, 1920);
+    }
+  }
 
+  &__header {
+    margin-bottom: 14px;
+    @include flex($align:center);
+    margin-bottom: vw(30px, 1920);
+  }
+
+  &-slider {
+    &__container {
+      overflow: visible;
+    }
 
     &__wrap {
-        @include flex($justify:space-between);
-        @include maxWidth(1000px);
-        align-items: center;
-    }
+      box-sizing: content-box;
 
-
-    &__monitor {
-        width: 64%;
-        // margin: 0 40px;
-        margin: auto;
-    }
-
-
-    &-monitor {
-        &__img {
-            // margin-top: 40px;
-            position: relative;
-            display: block;
-            height: 100%;
-            // z-index: 10;
-            mask-image: url(../../assets/images/mask.png);
-            mask-mode: alpha;
-            mask-repeat: no-repeat;
-            mask-size: 100% 0%;
-            mask-position: center top;
-            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: 3;
-
-            &.is-anim {
-                -webkit-mask-size: 100% 300%;
-                transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            }
-            
-            &::after {
-                content: "";
-                display: block;
-                @include absAll;
-                margin: auto;
-                background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 15% auto;
-                opacity: 1;
-            }
-        }
-
-        &__keyboard {
-            width: 500px;
-            @include absCenter;
-            top: 105%;
-            z-index: 55;
-        }
-    }
-}
-
-
-.p-movie {
-    background: #000;
-    position: relative;
-    z-index: 50;
-    padding: min(vw(30px, 768), 60px) 0 0;
-  
-    // &::before {
-    //   content: "";
-    //   @include absAll;
-    //   background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
-    //   background-position: center;
-    //   background-size: cover;
-    // }
-
-    &__header {
-      align-items: center;
-    display: flex;
-    margin-bottom: min(vw(10px, 365),20px);
-    }
-  
-    &__inner {
-      z-index: 50;
-      position: relative;
-      padding: 0 4%;
-      // @include maxWidth(1280px);
-      @include maxWidth(1400px);
       @include mq-target(sm) {
-          padding: 0 min(vw(40px, 768), 64px) ;
+        width: 100%;
+        box-sizing: border-box;
       }
     }
-  
-    &-slider {
 
-      &__container {
-        overflow: visible;
+    &__slide {
+      width: 100%;
+      margin-right: 2%;
+
+      @include mq-target(xs) {
+        width: 48%;
       }
-      &__wrap {
-        width: 98%;
-        box-sizing: content-box;
-  
-        @include mq-target(sm) {
-          width: 100%;
-          box-sizing: border-box;
-        }
+
+      @include mq-target(sm) {
+        margin-right: 1%;
+        width: 32%;
       }
-  
-      &__slide {
-        transition: 1.4s 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-        width: 100%;
-        margin: auto;
-        margin: 0 4px;
-        
-        @include mq-target(sm) {
-          margin: 0;
-          margin-right: 20px;
-          width: calc((100% - 20px) / 2);
-        }
-  
-        @include mq-target(md) {
-          margin-right: 16px;
-          // width: calc((100% - 48px) / 4);
-          width: calc((100% - 48px) / 3);
-        }
-  
-        &:last-child {
-          margin-right: 0;
-        }
-  
-        &:nth-child(1),
-        &:nth-child(2) {
-          a {
-            figcaption {
-              ul {
-                .date {
-                  &::after {
-                    content: "";
-                    @include absCenter;
-                    background: #10b475;
-                    border-radius: 100%;
-                    display: block;
-                    height: 6px;
-                    position: absolute;
-                    transform: translateX(-50%);
-                    width: 6px;
-                    z-index: 1;
-                    top: 40%;
-                    left: -4%;
+
+      @include mq-target(md) {}
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        a {
+          display: block;
+
+          figcaption {
+            ul {
+              .date {
+                &::after {
+                  content: "";
+                  @include absCenter;
+                  background: #10b475;
+                  border-radius: 100%;
+                  display: block;
+                  transform: translateX(-50%);
+                  height: 6px;
+                  width: 6px;
+                  @include mq-target(sm) {
+                    height: vw(6px, 1920);
+                    width: vw(6px, 1920);
                   }
+                  z-index: 1;
+                  top: 40%;
+                  left: -4%;
                 }
               }
             }
           }
         }
       }
+    }
 
-      &__btn {
-        display: flex;
-        margin-left: min(vw(10px, 365), 30px);
-      }
-  
-      &__controller {
-        margin: min(vw(15px, 768), 30px) 0 0;
-        @include flex($align:center, $justify:space-between);
-      }
-  
-      &__pagi {
-        position: relative;
-        bottom: initial !important;
-        @include flex($align:center, $wrap:wrap);
-        // margin: 0 auto 0 0;
-  
-        .swiper-pagination-bullet {
-          background: $color-main;
-          width: min(vw(10px, 365), 20px);
-          height: 3px;
-          border-radius: 0;
-          transition: width .8s cubic-bezier(.2, 1, .2, 1);
-          @include mq-target(sm) {
-            width: min(vw(20px, 768), 40px);
-          }
-        }
-  
-        .swiper-pagination-bullet-active {
-          width: min(vw(20px, 365), 40px);
-          background: $color-red;
-  
-          @include mq-target(sm) {
-            width: min(vw(40px, 768), 80px);
-          }
-        }
-      }
-  
-      &__btnPrev,
-      &__btnNext {
-        flex-shrink: 0;
-        margin: 0;
-        left: initial;
-        right: initial;
-        display: grid;
-        place-content: center;
-        position: relative;
-        overflow: visible;
-        // width: 60px;
-        // height: 60px;
-        border-radius: 50%;
-  
-        width: min(vw(36px, 365), 50px);
-        height: min(vw(36px, 365), 50px);
-  
-        &::after {
-          content: "";
-          width: min(vw(36px, 365), 50px);
-          height: min(vw(36px, 365), 50px);
-          // content: "";
-          background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
-        }
-      }
-  
-      &__btnPrev {
-        margin-right: 4px;
-        &::after {
-          background: url(../../assets/images/arrow_prev.png) no-repeat center/contain;
-        }
-      }
-    }
-  
-    &-figure {
-      &__link {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        &:hover {
-          transform: translate3d(0, 0.2rem, 0);
-        }
-  
-        &::after {
-          content: "";
-          @include absAll;
-          display: block;
-          background: url(../../assets/images/frame.png) no-repeat left top/contain;
-          background-size: 100% auto;
-        }
-      }
-  
-      &__img {
-        width: 99%;
-        margin: auto;
-        position: relative;
-        overflow: hidden;
-  
-      }
-  
-      &__info {
-        flex: 1;
-        padding: min(vw(12px, 365), 14px);
-        font-weight: 600;
-        // font-family: 'teko', Arial, sans-serif;
-  
-        @include mq-target(sm) {
-          padding: 4px min(vw(6px, 768), 10px);
-        }
-      }
-  
-      &__labels {
-        position: relative;
-        @include flex($wrap:wrap);
-        align-items: center;
-        overflow: hidden;
-        margin: 0 -8px 0;
-        padding: 0 8px 0;
-        font-size: min(vw(10px, 365), 14px);
-  
-        @include mq-target(sm) {
-          font-size: min(vw(8px, 768), 10px);
-        }
-  
-        li {
-          @include flex($align:center, $justify:center);
-          margin: 0 8px 0 0;
-          padding: 2px 8px;
-          border: 0.1rem solid transparent;
-          // background-color: #71131b;
-          // font-family: 'teko';
-          filter: brightness(1.5);
-  
-  
-        }
-  
-        .date {
-          position: relative;
-          top: 2px;
-          font-size: 32px;
-  
-        }
-  
-        .info {
-          background-color: transparent;
-          border-color:$color-red;
-          color:$color-red;
-        }
-      }
-  
-      &__heading {
-        display: block;
-        text-align: left;
-        font-size: min(vw(12px, 365), 16px);
-  
-        @include mq-target(sm) {
-          font-size: min(vw(10px, 768), 14px);
-        }
-      }
-    }
-  
     &__btn {
-      position: relative;
-      display: block;
-      line-height: 1;
-      // filter: drop-shadow(0 0 2px rgba(247, 247, 247, 0.45));
-      width: min(vw(90px, 365), 200px);
-  
-      &:hover {
-        opacity: 0.35;
-  
-        span::after {
-          transform: rotate(90deg);
-        }
+      cursor: pointer;
+      display: flex;
+      margin-left: 10px;
+      @include mq-target(sm) {
+        margin-left: vw(16px, 1920);
       }
-  
-      span {
-        width: min(vw(30px, 365), 40px);
-        height: min(vw(28px, 365), 38px);
-  
+    }
+
+    // &__controller {
+    //   margin: min(vw(15px, 768), 30px) 0 0;
+    //   @include flex($align:center, $justify:space-between);
+    // }
+
+    // &__pagi {
+    //   position: relative;
+    //   bottom: initial !important;
+    //   @include flex($align:center, $wrap:wrap);
+    //   .swiper-pagination-bullet {
+    //     background: $color-main;
+    //     width: min(vw(10px, 365), 20px);
+    //     height: 3px;
+    //     border-radius: 0;
+    //     transition: width .8s cubic-bezier(.2, 1, .2, 1);
+
+    //     @include mq-target(sm) {
+    //       width: min(vw(20px, 768), 40px);
+    //     }
+    //   }
+
+    //   .swiper-pagination-bullet-active {
+    //     width: min(vw(20px, 365), 40px);
+    //     background: $color-red;
+
+    //     @include mq-target(sm) {
+    //       width: min(vw(40px, 768), 80px);
+    //     }
+    //   }
+    // }
+
+    &__btnPrev,
+    &__btnNext {
+      flex-shrink: 0;
+      margin: 0;
+      left: initial;
+      right: initial;
+      display: grid;
+      place-content: center;
+      position: relative;
+      overflow: visible;
+      width: 40px;
+      height: 40px;
+
+      @include mq-target(sm) {
+        width: vw(50px, 1920);
+        height: vw(50px, 1920);
+      }
+
+      &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
         @include mq-target(sm) {
-          width: 40px;
-          height: 38px;
+          width: vw(50px, 1920);
+          height: vw(50px, 1920);
         }
-  
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        // top: -1px;
-  
-        &::before,
-        &::after {
-          content: "";
-          transition: all 0.3s ease;
-          position: absolute;
-          background: #fff;
-          display: block;
-          height: 1px;
-          width: 100%;
-          // top: 50%;
-        }
-  
-        &::before {
-          height: 1px;
-          width: 100%;
-          top: 50%;
-        }
-  
-        &::after {
-          width: 1px;
-          height: 100%;
-          left: 50%;
-        }
+
+        // content: "";
+        background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
+      }
+    }
+
+    &__btnPrev {
+      margin-right: 4px;
+      @include mq-target(sm) {
+        margin-right: vw(4px, 1920);
+      }
+
+      &::after {
+        background: url(../../assets/images/arrow_prev.png) no-repeat center/contain;
       }
     }
   }
-  
-  
-  .swiper-button-disabled {
-    opacity: 0.35 !important;
+
+  &-content {
+    &__link {
+      transition: all .2s ease;
+      position: relative;
+      overflow: hidden;
+      display: block;
+
+      &:hover {
+        transform: translate3d(0, 0.2rem, 0);
+      }
+
+      &::after {
+        content: "";
+        @include absAll;
+        display: block;
+        background: url(../../assets/images/frame.png) no-repeat left top / contain;
+        // background-size: 100% auto;
+      }
+    }
+
+    &__img {
+      width: 99%;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    &__cap {
+      flex: 1;
+      padding: min(vw(12px, 365), 14px);
+      font-weight: 600;
+      padding: 6px 14px;
+      @include mq-target(sm) {
+        padding: 4px vw(14px, 1920);
+      }
+    }
+
+    &__labels {
+      position: relative;
+      @include flex($wrap:wrap);
+      align-items: center;
+      overflow: hidden;
+      margin: 0 -8px 0;
+      padding: 0 8px 0;
+      @include mq-target(sm) {
+        margin: 0 vw(-8px, 1920) 0;
+        padding: 0 vw(8px, 1920) 0;
+      }
+
+
+      li {
+        @include flex($align:center, $justify:center);
+        margin: 0 4px 0 0;
+        padding: 2px 8px;
+        border: 1px solid transparent;
+        filter: brightness(1.5);
+        @include mq-target(sm) {
+          margin: 0 vw(8px, 1920) 0 0;
+          padding: vw(2px, 1920) vw(8px, 1920);
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      .date {
+        position: relative;
+        font-weight: 400;
+        top: 2px;
+        font-size: 30px;
+        @include mq-target(sm) {
+          top: vw(2px, 1920);
+          font-size: vw(42px, 1920);
+        }
+      }
+
+      .info {
+        background-color: transparent;
+        border-color: $color-red;
+        color: $color-red;
+        font-size: 10px;
+        @include mq-target(sm) {
+          font-size: vw(12px, 1920);
+        }
+      }
+    }
+
+    &__heading {
+      display: -webkit-box;
+      text-align: left;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden; 
+      font-size: 12px;
+
+      @include mq-target(sm) {
+        font-size: vw(16px, 1920);
+      }
+    }
   }
+}
+
+
+.swiper-button-disabled {
+  opacity: 0.35 !important;
+}

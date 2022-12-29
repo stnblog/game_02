@@ -118,7 +118,7 @@
                 // margin-top: min(vw(10px, 365), 20px);
 
                 @include mq-target(sm) {
-                    font-size: min(vw(8px, 768), 16px);
+                    font-size: min(vw(8px, 768), 14px);
                     margin-top: min(vw(10px, 768), 24px);
                 }
             }

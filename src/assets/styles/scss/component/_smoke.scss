@@ -1,9 +1,9 @@
 @use "../foundation" as *;
 
-.smoke {
+.c-smoke {
   position: absolute;
   padding-top: 3.25%;
-  background: linear-gradient(180deg, rgba(6, 6, 9, 0), #000 50%);
+  background: linear-gradient(180deg, rgba(6, 6, 9, 0), $color-bg 50%);
   z-index: 30;
   display: block;
   height: 30px;
@@ -21,12 +21,12 @@
 
   &__top {
     top: 0;
-    background: linear-gradient(360deg, rgba(9, 8, 6, 0), #000 80%);
+    background: linear-gradient(360deg, rgba(9, 8, 6, 0), $color-bg 80%);
   }
 
   &__bottom {
     bottom: 0;
-    background: linear-gradient(180deg, rgba(9, 8, 6, 0), #000 80%);
+    background: linear-gradient(180deg, rgba(9, 8, 6, 0), $color-bg 80%);
   
   }
 }

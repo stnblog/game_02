@@ -27,6 +27,9 @@
     position: relative;
     @include flex($align:center, $justify:space-between);
     height: min(2.8125vw, 80px);
+    @include mq-target(sm) {
+      height: vw(60px, 1920);
+    }
   }
 
   &__logo {
