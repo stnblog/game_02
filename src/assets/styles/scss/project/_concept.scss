@@ -1,94 +1,61 @@
 @use "../foundation"as *;
 
-.p-concept {
-    background: $color-bg;
+.p-kv {
     position: relative;
+    background: $color-bg;
     overflow: hidden;
-    z-index: 500;
-    @include maxWidth(1920px);
-    min-height: 140vw;
-    // height: min(vw(360px, 365), 760px);
-    // padding: min(vw(40px, 365), 80px) 0 min(vw(20px, 365), 40px);
-
-    @include mq-target(md) {
-        // min-height: 703.326px;
-        min-height: 54.948vw;
-    }
-
-    @include mq-target(lg) {}
-
-    // &__bg {
-    //     @include absAll;
-    //     background-image: linear-gradient(rgba($color-bg, 0)), url("../../assets/images/fence.png");
-    //     // background-position: center;
-    //     background-size: auto 100%;
-    //     background-repeat: repeat-x;
-    //     z-index: 3;
-    //     transition: all 2s linear;
-    //     opacity: 0;
-
-    //     &.is-anim {
-    //         opacity: 1;
-    //         background-position: 150% 0;
-    //     }
-    // }
 
     &::before {
         content: "";
         @include absAll;
         background-image: linear-gradient(rgba($color-bg, 0.45)), url("../../assets/images/charaBg_01.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: contain;
+        width: 100vw;
+        height: 144vw;
+
+        @include mq-target(sm) {
+            height: 54.948vw;
+        }
     }
 
     &__inner {
-        position: relative;
-    }
+        height: 144vw;
 
-    &__ttl {
-        position: absolute;
-        top: 8.333vw;
-        right: 50%;
-        margin-right: 28.646vw;
-        z-index: 50;
-
-        img {
-            width: 10.396vw;
-            height: auto;
+        @include mq-target(sm) {
+            height: 54.948vw;
         }
     }
 
     &__catch {
         position: absolute;
         top: 50vw;
-        right: 2%;
+        left: calc(50% - vw(-10px, 365));
         z-index: 50;
 
         @include mq-target(sm) {
-            margin-left: 4.646vw;
-            left: 50%;
             top: 16.333vw;
         }
 
         span {
             img {
-                width: 44.598vw;
+                width: 50.598vw;
 
                 @include mq-target(sm) {
-                    width: 26.396vw;
+                    width: 24.396vw;
                 }
             }
         }
     }
 
-    &__kv {
+    &__object {
         position: absolute;
         width: 100vw;
         top: 17.852vw;
         display: flex;
         justify-content: center;
 
-        @include mq-target(md) {
+        @include mq-target(sm) {
             top: 6vw;
         }
 
@@ -115,133 +82,12 @@
         img {
             width: 80vw;
 
-            @include mq-target(md) {
+            @include mq-target(sm) {
 
                 width: 34.333vw;
             }
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    &__wrap {
-        position: relative;
-        @include maxWidth(1400px);
-        padding: 0 20px;
-
-        @include mq-target(sm) {
-            padding: 60px 6% 0;
-        }
-
-        @include mq-target(md) {
-            padding: 100px vw(60px, 768) 0;
-
-        }
-
-    }
-
-    &-ttl {
-        &__wrap {
-            position: relative;
-            z-index: 500;
-            transition-delay: 2.6s !important;
-            @include flex($align:flex-start, $justify:space-between);
-        }
-
-        &__heading {
-            width: min(vw(90px, 365), 146px);
-
-            @include mq-target(sm) {
-                width: min(vw(156px, 768), 200px);
-            }
-        }
-
-        &__txt {
-            position: relative;
-            width: min(vw(90px, 365), 144px);
-
-            @include mq-target(sm) {
-                width: min(vw(154px, 768), 200px);
-            }
-        }
-    }
-
-    &-monitor {
-        @include absCenter;
-        width: min(vw(360px, 365), 700px);
-        margin: auto;
-        top: 560px;
-        left: 48%;
-
-        @include mq-target(sm) {
-            // top: 33vw;
-            // top: 28vw;
-            width: 700px;
-        }
-
-        @include mq-target(md) {}
-
-        &__img {
-            display: block;
-            height: 100%;
-            position: relative;
-            z-index: 10;
-            mask-image: url(../../assets/images/mask.png);
-            mask-mode: alpha;
-            mask-repeat: no-repeat;
-            mask-size: 100% 0%;
-            mask-position: center top;
-            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-            &::after {
-                content: "";
-                display: block;
-                @include absAll;
-                margin: auto;
-                // background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 50% auto;
-                opacity: 1;
-            }
-
-            &.is-anim {
-                -webkit-mask-size: 100% 300%;
-                transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                transition-delay: 3s;
-            }
-        }
-
-        &__txt {
-            display: inline-block;
-            width: 100%;
-            z-index: 500;
-            font-size: min(vw(10px, 768), 14px);
-            @include absCenter;
-        }
-    }
-
-    &-keyboard {
-        position: relative;
-        width: min(vw(280px, 365), 500px);
-        margin: -20px auto;
-
-        @include mq-target(sm) {
-            width: min(vw(470px, 768), 640px);
-        }
-    }
 }
+

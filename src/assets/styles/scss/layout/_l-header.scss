@@ -1,52 +1,72 @@
 @use "../foundation"as *;
 
 .l-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  // background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(235, 235, 235, 0.1));
+  z-index: 999;
+  padding: 6.266666666666667vw 5.333333333333334vw 0;
+  @include mq-target(sm) {
+    padding: vw(10px, 769) vw(60px, 769) 0;
+  }
+
+
+  &__gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+    height: 10.980966325036604vw;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.828) 80%, #000 100%);
+  }
 
   &__inner {
-    @include flex($align:center, $justify:space-between);
     position: relative;
-    z-index: 1;
-    width: min(88.5416666667vw, 1500px);
-    height: min(7.8125vw, 97px);
-    margin: 0 auto;
+    @include flex($align:center, $justify:space-between);
+    height: min(2.8125vw, 80px);
   }
 
   &__logo {
-    width: 200px;
-    width: min(vw(130px, 768), 200px);
-
+    width: vw(50px, 365);
+    @include mq-target(sm) {
+      width: vw(40px, 769);
+    }
     a {
-      img {
-        margin-top: 0.6vw;
-        vertical-align: middle;
+      display: block;
+    }
+  }
+
+  &__wrap {
+    &--pc {
+      position: relative;
+      @include flexCenter;
+      z-index: 5;
+      display: none;
+      @include mq-target(sm) {
+        display: block;
+      }
+    }
+
+    &--sp {
+      display: block;
+      @include mq-target(sm) {
+        display: none;
       }
     }
   }
 
-  &__nav {
-    display: flex;
-  }
 
-  &__list {
-    // @include absCenter;
-    @include flex($align:center);
-    a {
-      font-weight: 700;
+  &-nav {
+    &__list {
       @include flex($align:center);
-      height: min(7.8125vw, 97px);
-      padding: 0 min(1.5625vw, 20px);
-      font-size: min(vw(12px, 768), 16px);
-      cursor: pointer;
-      position: relative;
-      white-space: nowrap;
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.25));
+    }
+    &__item {
+      margin-left: vw(14px, 769);
+      font-size: vw(7px, 769);
+      font-weight: 700;
     }
   }
-
 }

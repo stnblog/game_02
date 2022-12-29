@@ -1,46 +1,45 @@
-@use "../foundation" as *;
+@use "../foundation"as *;
 
 .l-drawer {
   &__trigger {
-    position: fixed;
-    top: 28px;
-    right: 2.3%;
-    background: $color-main;
-    border-radius: 50%;
+    position: relative;
+    z-index: 999;
+    // position: fixed;
+    // top: 28px;
+    // right: 2.3%;
     cursor: pointer;
-    height: 60px;
-    width: 60px;
-    z-index: 2000;
-    box-shadow: 0 2em 10em 0em rgb(0 0 0 / 25%), 0 0 4px 4px rgb(0 0 0 / 25%);
+    width: 8.133333333333333vw;
+    height: 2.933333333333333vw;
+    margin-left: 2.666666666666667vw;
     @include flex($align:center, $justify:center);
-
-    // display: none;
 
     .-line {
       display: block;
-      // background: $color-black;
+      background: $color-main;
       height: 1px;
       position: relative;
+      z-index: 999;
       transition: 0.1s background-color cubic-bezier(0.32, 0, 0.67, 0);
-      width: 24px;
+      height: 0.266666666666667vw;
+      width: 100%;
 
       &::before,
       &::after {
         content: '';
         display: block;
         @include absolute($left:0);
-        background: $color-black;
+        background: $color-main;
         height: 100%;
         width: 100%;
         transition: 0.2s all cubic-bezier(0.12, 0, 0.39, 0);
       }
 
       &::before {
-        top: -6px;
+        top: vw(-5px, 365);
       }
 
       &::after {
-        top: 6px;
+        top: vw(5px, 365);
       }
     }
 
@@ -74,10 +73,11 @@
     transition: 0.6s;
     background: $color-black;
     // transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    z-index: 1000;
+    z-index: 600;
 
     background-image: url(../../assets/images/charaBg_04.jpg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 100% auto;
     pointer-events: none;
 
@@ -98,7 +98,7 @@
     width: 100%;
     // @include flex($align:center,$justify:center);
     // transform: translateX(100%);
-    z-index: 1002;
+    z-index: 998;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     @include flexCenter;
     opacity: 0;
@@ -118,7 +118,7 @@
   }
 
   &__logo {
-    width: 600px;
+    width: 300px;
   }
 
   &__list {
@@ -144,6 +144,7 @@
   &__item {
     color: $color-white;
     width: 33%;
+
     &:not(:last-of-type) {
       padding: 0 0 20px;
       margin: 0 0 16px;
@@ -175,7 +176,7 @@
         font-size: 18px;
         display: none;
       }
-      
+
       .-ja {
         display: block;
         font-size: 18px;

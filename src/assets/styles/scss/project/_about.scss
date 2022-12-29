@@ -166,10 +166,10 @@
             }
 
             img {
-                width: 360px;
+                width: 20vw;
                 @include mq-target(md) {
                     // width: 34vw;
-                    width: 50vw;
+                    width: 20vw;
                     height: auto;
                 }
 
