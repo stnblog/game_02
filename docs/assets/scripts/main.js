@@ -29,6 +29,16 @@ $(document).ready(function () {
       $('.sc-inview').removeClass('is-anim');
     }
   });
+  var loading = $("#js-loading");
+  $(window).on("load", function () {
+    var windowHeight = $(window).height();
+    $(".mv").height(windowHeight);
+    loading.delay("1000").fadeOut("2000");
+  }); //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+
+  setTimeout(function () {
+    loading.fadeOut("3000");
+  }, 8000);
   $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
 });
 document.addEventListener('DOMContentLoaded', function () {

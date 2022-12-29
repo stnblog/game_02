@@ -127,9 +127,9 @@ html {
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat;
-  /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
-  box-sizing: inherit;
+	background-repeat: no-repeat;
+	/* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+	box-sizing: inherit;
 }
 
 html,
@@ -185,8 +185,8 @@ figure {
 
 img,
 video {
-  font-size: 0;
-  line-height: 0;
+	font-size: 0;
+	line-height: 0;
 }
 
 button {
@@ -202,40 +202,72 @@ textarea {
 
 .u-dp-pc {
 	display: block;
-  
+
 	@include mq(md) {
-	  display: none;
-	}
-  
-	&--sm {
-	  display: block;
-	  @include mq(sm) {
 		display: none;
-	  }
 	}
-  }
-  
-  
-  .u-dp-sp {
-	display: none;
-  
-	@include mq(md) {
-	  display: block;
-	}
-  
+
 	&--sm {
-	  display: none;
-	  @include mq(sm) {
 		display: block;
-	  }
+
+		@include mq(sm) {
+			display: none;
+		}
 	}
-  }
-  
-  
-  .u-flexbox {
+}
+
+
+.u-dp-sp {
+	display: none;
+
+	@include mq(md) {
+		display: block;
+	}
+
+	&--sm {
+		display: none;
+
+		@include mq(sm) {
+			display: block;
+		}
+	}
+}
+
+
+.u-flexbox {
 	display: flex;
-  }
-  
-  .u-flexbox-wrap {
+}
+
+.u-flexbox-wrap {
 	flex-wrap: wrap;
-  }
+}
+
+
+/*--------------------------------
+ ローディング
+---------------------------------*/
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	width: 100vw;
+	height: 100%;
+    background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.loading-animation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	margin: 0;
+	transform: translate(-50%, -50%);
+}
+
+.loading-text {
+	color: $color-red;
+	margin-top: 10px;
+}
