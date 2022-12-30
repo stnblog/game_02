@@ -28,10 +28,10 @@ $(document).ready(function () {
     }
   })
 
-  var loading = $("#js-loading");
+  const loading = $("#js-loading");
 
   $(window).on("load", function () {
-    var windowHeight = $(window).height();
+    let windowHeight = $(window).height();
     $(".mv").height(windowHeight);
     loading.delay("1000").fadeOut("2000");
   });

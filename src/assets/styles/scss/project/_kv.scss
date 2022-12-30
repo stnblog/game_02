@@ -88,11 +88,10 @@
             mask-repeat: no-repeat;
             mask-size: 100% 0%;
             mask-position: center top;
-            transition: 9s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: 9s 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
             &.is-anim {
                 -webkit-mask-size: 100% 300%;
-                transition: 9s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                 // transition-delay: 3s;
             }
         }

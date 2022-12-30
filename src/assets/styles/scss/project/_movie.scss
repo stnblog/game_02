@@ -19,7 +19,7 @@
     }
 
     @include mq-target(md) {
-      width: vw(1420px, 1920);
+      width: vw(1280px, 1920);
     }
   }
 
@@ -249,6 +249,7 @@
         position: relative;
         font-weight: 400;
         top: 2px;
+        line-height: 1;
         font-size: 30px;
         @include mq-target(sm) {
           top: vw(2px, 1920);
@@ -276,7 +277,7 @@
       font-size: 12px;
 
       @include mq-target(sm) {
-        font-size: vw(16px, 1920);
+        font-size: vw(14px, 1920);
       }
     }
   }
