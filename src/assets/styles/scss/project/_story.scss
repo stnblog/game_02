@@ -1,534 +1,208 @@
 @use "../foundation"as *;
 
-.p-chara {
-    background: $color-black;
+.p-story {
+    overflow: hidden;
     position: relative;
-    z-index: 500;
+    z-index: 3;
+    width: 100%;
+    background: $color-bg;
+    // height: 780px;
+    // content-visibility: auto;
+    // contain-intrinsic-size: 780px;
 
 
-
-    .c-sec__ttl {
-        // position: relative;
-        // // position: absolute;
-        // // @include absCenter;
-        margin-bottom: 10px;
-        // z-index: 500;
-        // // right: 14%;
-        // top: 20px;
-        // text-align: center;
-    }
 
     &__bg {
-        @include absAll;
-        top: 0;
-        z-index: 4;
+        position: relative;
+        z-index: 50;
+        width: 100%;
+        padding-top: 12.375%;
+        margin-bottom: -1%;
+        background-size: 100% auto;
+        background-position: bottom;
+        // background-repeat: repeat-x;
+        background-image: url(../../assets/images/smoke.webp);
     }
+
 
     &__inner {
-        // padding-top: 60px;
-        // padding-top: 80px;
-        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
         position: relative;
-        // @include maxWidth(1260px);
-        @include flexCenter;
-        // height: 900px;
-
-        // padding: 4% 0 25%;
-        // @include mq-target(sm) {
-        //     padding: 6% 0 10%;
-        // }
-    }
-
-    &__slider {
-        @include maxWidth(1400px);
-        z-index: 20;
-        user-select: none;
-        position: relative;
-    }
-
-    &__slide {
-        opacity: 0 !important;
-        transition: opacity 0.2s ease 0s;
-    }
-
-    &__tab {
-        // top: 140px;
-        
+        width: 90%;
+        margin: auto;
         @include mq-target(sm) {
-            
-            text-align: left;
-            position: absolute;
-            top: 0;
-            left: 40px;
+          width: 96%;
         }
-
-        h3 {
-            position: relative;
-            line-height: 1.9;
-            font-size: 14px;
-            opacity: 0.65;
-            margin: 30px 0 10px;
-            @include mq-target(sm) {
-                margin: 20px 0 0;
-            }
-
-            @include mq-target(sm) {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 30px;
-                    left: 0;
-                    width: 30px;
-                    height: 2px;
-                    background: #fff;
-                }
     
-                &::after {
-                    content: "";
-                    @include absAll;
-                    top: 30px;
-                    height: 2px;
-                    left: 34px;
-                    width: min(vw(120px, 768), 180px);
-                    background: rgba(255,255,255,.5);
-                }
-            }
-
-
+        @include mq-target(md) {
+          width: vw(1280px, 1920);
         }
-    }
-
-    &__contents {
-        position: relative;
-        padding: 0 8%;
-
     }
 
     &__list {
-        &--contents {
-            @include flex($justify:center, $wrap:wrap);
-        }
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
 
-        &--tab {
-            position: relative;
-            @include maxWidth(600px);
-            // top: 0;
-            display: flex;
-            justify-content: center;
-            @include mq-target(sm) {
-                @include maxWidth(220px);
-                margin: 20px auto 0;
-                @include flex($justify:space-between, $wrap:wrap);
-            }
-            // margin: 14px auto 0;
+        @include mq-target(sm) {
+            flex-wrap: nowrap;
         }
     }
 
     &__item {
-        &--bg {
-            @include absCenter;
-            // @include maxWidth(1600px);
-            opacity: 0;
-            transition: opacity 0.5s ease;
+        &--left {
             width: 100%;
-            height: 100%;
-            background: url(../../assets/images/story_bg02.jpg) center no-repeat;
-            background-size: contain;
-            // filter: blur(2px);
+            overflow: hidden;
 
-            &02 {
-                background: url(../../assets/images/charaBg_04.jpg) 50% 50% no-repeat;
-                background-size: cover;
+            background: $color-bg;
+            // padding-left: 8vw;
+            // padding-top: 2%;
+            padding-bottom: 60px;
+
+            @include mq-target(sm) {
+                height: min(vw(400px, 768), 640px);
+                width: 40vw;
             }
 
-            &03 {
-                background: url(../../assets/images/charaBg_01.jpg) 50% 50% no-repeat;
-                background-size: cover;
+
+            @include mq-target(md) {
+                padding-bottom: 0;
+                // padding-left: 17.11%;
             }
 
-            &::after {
-                @include absAll;
-                content: "";
-                background: rgba($color: #000000, $alpha: 0.5);
-            }
+            // width: 100%;
         }
 
-        &--contents {
+        &--right {
+            width: 100%;
+            position: relative;
+            background: url(../../assets/images/storyBg_01.jpg) no-repeat center right;
+            background-size: 100% auto;
+            // width: 100%;
+            overflow: hidden;
+            height: min(vw(400px, 768), 640px);
 
-            &-L {
-                position: relative;
-                width: 16%;
-                // -ms-writing-mode: tb-rl;
-                // writing-mode: vertical-rl;
-                // font-size: 30px;
+            @include mq-target(sm) {
+                width: 60vw;
+            }
+        }
+    }
+
+    &-content {
+        padding-top: 4vw;
+        position: relative;
+
+        &__txt {
+            // @include flexCenter;
+            // width: 40vw;
+            margin: auto;
+            text-align: left;
+
+            h2 {
+                // font-family: 'teko', serif;
+                // margin: 0;
             }
 
-            &-R {
-                position: relative;
-                // padding-top: 20px;
-                // text-align: right;
+            h3 {
+                line-height: 0;
+                width: 300px;
+                margin: auto;
+            }
 
-                dl {
-                    display: flex;
-                    justify-content: flex-end;
-                    flex-wrap: wrap;
-                    font-size: 14px;
-                    margin-top: 30px;
+            h4 {
+                font-family: $shippo;
+                background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+                -webkit-background-clip: text;
+                color: transparent;
+                font-size: min(vw(32px, 365), 62px);
 
-                    dt {
-                        background: rgba($color: #520505, $alpha: 0.25);
-                        // text-align: right;
-                        border: 1px solid #fff;
-                        // background: #000;
-                        padding: 5px;
-                        width: 80px;
-                        margin: 0 5px 5px 0;
-
-                    }
-
-                    dd {
-                        // text-align: right;
-                        border: 1px solid #fff;
-                        width: 138px;
-                        // background: #000;
-                        padding: 5px;
-                        margin-bottom: 5px;
-                    }
+                @include mq-target(sm) {
+                    font-size: min(vw(22px, 768), 34px);
                 }
             }
 
+            p {
+                font-family: $shippo;
+                font-size: min(vw(10px, 365), 16px);
+                line-height: 2;
+                margin-top: 20px;
+                // margin-top: min(vw(10px, 365), 20px);
 
-        }
-
-        &--tab {
-            // width: 50%;
-            text-align: center;
-            width: 30%;
-            font-size: min(vw(20px, 768), 26px);
-            @include mq-target(sm) {
-                width: 100%;
-                text-align: left;
-                font-size: min(vw(12px, 768), 20px);
+                @include mq-target(sm) {
+                    // font-size: min(vw(8px, 768), 14px);
+                    // margin-top: min(vw(10px, 768), 24px);
+                    font-size: vw(14px, 1920);
+                }
             }
-            // margin: 0 4px;
-            // margin: 0 -2%;
-            cursor: pointer;
+        }
+    }
+
+
+
+    &-movie {
+        height: 100%;
+        width: min(vw(180px, 768), 340px);
+        margin: auto;
+        display: block;
+        @include flexCenter;
+        z-index: 500;
+        filter: brightness(1.5);
+        // animation: cm_chara_2 6.5s infinite;
+
+        &__img {
+            top: 4vw;
+            display: block;
+            // height: 100%;
             position: relative;
-            transition-delay: .1s;
-            // transition: opacity 0.2s ease;
-            font-weight: 900;
+            z-index: 10;
+            // mask-image: url(../../assets/images/mask.png);
+            // mask-mode: alpha;
+            // mask-repeat: no-repeat;
+            // mask-size: 100% 0%;
+            // mask-position: center top;
+            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: 3;
 
-            opacity: 0.5;
-            letter-spacing: 0.2em;
-            line-height: 1.9;
+            // &.is-anim {
+            //     -webkit-mask-size: 100% 300%;
+            //     transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            // }
 
-            &.is-active {
+            &::after {
+                content: "";
+                display: block;
+                @include absAll;
+                margin: auto;
+                // background: url(../../assets/images/play.png) 50% 50% no-repeat;
+                background-size: 20% auto;
                 opacity: 1;
             }
+
+            img {
+                width: 20vw;
+
+                @include mq-target(md) {
+                    // width: 34vw;
+                    width: 22vw;
+                    height: auto;
+                }
+
+            }
+        }
+
+        &__keyboard {
+            width: 30vw;
+            @include absCenter;
+            top: 105%;
+            z-index: 55;
         }
     }
 
-    &__img {
-        @include absCenter;
-        top: 460px;
-        
-        &--one {
-            top: 580px;
-            width: 750px;
-            left: calc(50% - 2.2%);
-        }
-
-        &--second {
-            width: 390px;
-            top: 660px;
-            left: calc(50% - 1%);
-        }
-
-        &--three {
-            width: 390px;
-            top: 660px;
-            left: calc(50% - 1%);
-        }
-    }
-
-    &__name {
-        background-image: linear-gradient(to bottom, #d81c03, #352e2c);
-        -webkit-background-clip: text;
-        color: transparent;
-        // text-align: right;
-        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-        font-size: min(vw(34px, 768), 44px);
-        font-weight: 900;
-
-    }
-
-    &__cv {
-        font-size: 18px;
-        // text-align: right;
-        margin: 20px 0 30px;
-    }
-
-    &__txt {
-        // text-align: left;
-        margin-top: 30px;
-        // width: 280px;
-        font-size: min(vw(8px, 365), 14px);
-        // max-width: 300px;
-        font-weight: 400;
-        line-height: 1.8;
-        margin-left: auto;
-        
-        @include mq-target(sm) {
-            font-size: min(vw(12px, 768), 15px);
-        }
-    }
-
-    // &__head {
-    //     position: absolute;
-    //     text-align: left;
-    //     right: 24%;
-    //     z-index: 2;
-    //     // overflow: hidden;
-    //     top: 100px;
-    //     // display: none;
-    // }
-
-    // &__foot {
-    //     width: 40%;
-    //     display: none;
-    //     // @include absAll;
-    //     top: 260px;
-    //     position: absolute;
-    //     // margin-left: 2%;
-    //     text-align: left;
-    //     left: 12%;
-    //     z-index: 3;
-    //     // width: ;
-
-    //     p {
-    //         text-shadow: 0 0 0.4em #000, 0 0 0.4em #000;
-    //     }
-    // }
-
-    // &__tab {
-    //     // position: relative;
-    //     z-index: 100;
-    //     @include absCenter;
-    //     bottom: -130px;
-    //     top: initial;
-    //     // top: 140px;
-    // }
-
-    // &__list {
-    //     &--tab {
-    //         position: relative;
-    //         @include maxWidth(700px);
-    //         // margin: 20px auto 0;
-    //         // top: 0;
-    //         @include flex($justify:space-between);
-    //         // margin: 14px auto 0;
-    //     }
-
-    //     &--info {
-    //         display: none;
-    //         top: 600px;
-    //         right: 6%;
-    //         position: absolute;
-    //         // margin-top: 20px;
-    //         // display: flex;
-    //         // flex-wrap: wrap;
-    //         // justify-content: space-between;
-    //     }
-
-    //     &--thumb {
-    //         // width: 500px;
-    //         margin-top: 20px;
-    //         display: flex;
-    //         justify-content: space-between;
-    //     }
-    // }
-
-    // &__item {
-
-    //     &--bg {
-    //         // width: 1262px;
-    //         // height: 1240px;
-    //         @include maxWidth(1600px);
-    //         --chara-bg-opacity: 0.8;
-    //         opacity: 0;
-    //         @include absCenter;
-    //         // top: -40px;
-    //         transition: opacity 0.5s ease;
-    //         width: 100%;
-    //         height: 100%;
-    //         background: url(../../assets/images/story_bg.jpg) 50% 50% no-repeat;
-    //         background-size: cover;
-    //         // filter: blur(2px);
-    //         // filter: blur(2px);
-    //         // transform: rotate(-24deg);
-
-    //         &::before {
-    //             content: "";
-    //             @include absAll;
-    //             background: rgba($color: #000000, $alpha: 0.35);
-    //         }
-
-    //         &::after {
-    //             content: "";
-    //             @include absCenter;
-    //             top: 38%;
-    //             // background-image: url(../../assets/images/chara_obj.png);
-    //             width: 1240px;
-    //             height: 891px;
-    //             display: block;
-    //             background-repeat: no-repeat;
-    //             background-position: 0 0;
-    //             background-position: center;
-    //             background-size: 1240px 891px;
-    //             opacity: 0.65;
-    //         }
-
-
-    //         &02 {
-    //             background: url(../../assets/images/charaBg_01.jpg) 50% 50% no-repeat;
-    //             background-size: cover;
-    //         }
-
-    //         &03 {
-    //             background: url(../../assets/images/charaBg_03.jpg) 50% 50% no-repeat;
-    //             background-size: cover;
-    //         }
-    //     }
-
-    //     &--tab {
-    //         width: 22%;
-    //         // margin: 0 4px;
-    //         margin: 0 -2%;
-    //         cursor: pointer;
-    //         position: relative;
-    //         transition-delay: .1s;
-    //         // transition: opacity 0.2s ease;
-    //     }
-
-    //     &--info {
-    //         // width: 49%;
-    //         display: flex;
-    //         // flex-wrap: wrap;
-    //         align-items: center;
-
-    //         & .-right {
-    //             display: block;
-    //             width: 110px;
-    //             padding: min(0.1041666667vw, 2px) min(0.5208333333vw, 10px);
-    //             margin: 0 min(0.2604166667vw, 5px) min(0.5208333333vw, 10px) 0;
-    //             background: rgb(42, 42, 42);
-    //             box-sizing: border-box;
-    //             // background: rgb(235, 6, 6);
-    //             font-size: 16px;
-    //             text-align: right;
-    //         }
-
-    //         & .-left {
-    //             flex: 1;
-    //             display: block;
-    //             margin: 0 0 min(0.5208333333vw, 10px);
-    //             padding: min(0.1041666667vw, 2px) min(0.5208333333vw, 10px);
-    //             background: #000;
-    //             box-sizing: border-box;
-    //             color: #fff;
-    //             font-size: 16px;
-    //             text-align: left;
-    //         }
-    //     }
-
-    //     &--thumb {
-    //         width: 49%
-    //     }
-
-    // }
-
-    // &__img {
-    //     &--thumb {
-    //         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-    //         position: relative;
-
-    //         &::before {
-    //             display: block;
-    //             content: "";
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             right: 0;
-    //             bottom: 0;
-    //             border: 1px solid #ffffff;
-    //             z-index: 2;
-    //             opacity: 0.4;
-    //         }
-    //     }
-    // }
-
-    // &__heading {
-    //     &--name {
-    //         // text-align: center;
-    //         // @include maxWidth(370px);
-    //         // width: 460px;
-    //         text-align: left;
-    //         width: 98%;
-    //         padding-bottom: 4px;
-    //         z-index: 2;
-    //         // text-align: left;
-    //         font-size: 30px;
-    //         // letter-spacing: 0.12em;
-    //         font-weight: 600;
-    //         // text-transform: capitalize;
-    //         line-height: 1;
-    //         // text-shadow: 1px 8px 12px rgb(0, 0, 0);
-    //         border-bottom: 1px solid $color-white;
-
-    //         span {
-    //             display: block;
-    //             // text-transform: capitalize;
-    //             margin: 10px 0 10px;
-    //             position: relative;
-    //             // line-height: 2;
-    //             opacity: 0.65;
-    //             // font-weight: 400;
-    //             font-size: 16px;
-    //             letter-spacing: 0.1em;
-    //             // text-shadow: 1px 2px 4px rgb(0, 0, 0);
-    //         }
-    //     }
-    // }
-
-    // &__txt {
-    //     // padding-left: 3%;
-    //     position: relative;
-    //     // color: #dd0909;
-    //     // text-align: center;
-    //     text-align: left;
-    //     // text-transform:lowercase;
-    //     margin: 10px 0 10px;
-    //     font-size: 18px;
-    //     line-height: 1.4;
-    //     font-weight: 400;
-    //     // font-weight: 600;
-    //     // text-align: center;
-    //     &::before {
-    //         content: "";
-    //         position: absolute;
-    //         top: 0;
-    //         left: -10px;
-    //         width: 0.8px;
-    //         height: 100%;
-    //         // background: $color-white;
-    //     }
-    // }
 }
-
-
-
-
-
 
 
 

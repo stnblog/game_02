@@ -7,7 +7,7 @@ function setScrollText(){
       trigger: '#heading1',
       toggleActions: 'play reverse play reverse',
       start: '0s',
-      end: '+=1000s',
+      end: '+=500s',
     },
     opacity: 1,
   });
@@ -16,21 +16,21 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '#heading2',
       toggleActions: 'play reverse play reverse',
-      start: '+=1000s',
-      end: '+=1000s',
+      start: '+=500s',
+      end: '+=500s',
     },
     opacity: 1,
   });
 
-  // gsap.to('#heading3', {
-  //   scrollTrigger: {
-  //     trigger: '#heading3',
-  //     toggleActions: 'play reverse play reverse',
-  //     start: '+=2000s',
-  //     end: '+=1000s',
-  //   },
-  //   opacity: 1,
-  // });
+  gsap.to('#heading3', {
+    scrollTrigger: {
+      trigger: '#heading3',
+      toggleActions: 'play reverse play reverse',
+      start: '+=1000s',
+      end: '+=3000s',
+    },
+    opacity: 1,
+  });
 
   // gsap.to('#heading4', {
   //   scrollTrigger: {
@@ -57,10 +57,10 @@ function setScrollText(){
 
 
 
-gsap.to('.head', {
+gsap.to('.p-about__wrap', {
   scrollTrigger: {
-    pin: '.head',
-    end: '+=2000s',
+    pin: '.p-about__wrap',
+    end: '+=1200s',
     pinSpacing: true,
   },
 });
