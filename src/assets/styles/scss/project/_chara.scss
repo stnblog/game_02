@@ -180,7 +180,7 @@
       z-index: 10;
 
       @include mq-target(sm) {
-        width: vw(580px, 1920);
+        width: vw(740px, 1920);
         right: 8.342606149341142vw;
         bottom: 0.294289897510981vw;
       }
@@ -196,8 +196,8 @@
       }
 
       &--third {
+        bottom: vw(40px, 1920);
         right: 4.342606149341142vw;
-        width: 28.218155197657396vw;
       }
     }
 
