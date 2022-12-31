@@ -44,7 +44,7 @@
             line-height: 2;
 
             @include mq-target(sm) {
-                font-size: vw(18px, 769);
+                font-size: vw(14px, 769);
             }
 
             @include mq-target(md) {

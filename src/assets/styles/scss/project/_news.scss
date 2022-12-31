@@ -28,7 +28,7 @@
     }
 
     @include mq-target(md) {
-      width: vw(1280px, 1920);
+      width: 80%;
     }
   }
 
@@ -108,7 +108,7 @@
       font-size: 12px;
       font-weight: 500;
       @include mq-target(sm) {
-        font-size: vw(18px, 1920);
+        font-size: vw(16px, 1920);
       }
     }
   }

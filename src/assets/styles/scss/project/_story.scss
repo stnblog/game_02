@@ -38,7 +38,7 @@
         }
     
         @include mq-target(md) {
-          width: vw(1280px, 1920);
+          width: 80%;
         }
     }
 
@@ -64,7 +64,7 @@
             padding-bottom: 60px;
 
             @include mq-target(sm) {
-                height: min(vw(400px, 768), 640px);
+                height: min(vw(400px, 768), 540px);
                 width: 40vw;
             }
 
@@ -84,7 +84,7 @@
             background-size: 100% auto;
             // width: 100%;
             overflow: hidden;
-            height: min(vw(400px, 768), 640px);
+            height: min(vw(400px, 768), 540px);
 
             @include mq-target(sm) {
                 width: 60vw;
@@ -154,7 +154,7 @@
         // animation: cm_chara_2 6.5s infinite;
 
         &__img {
-            top: 4vw;
+            top: 2vw;
             display: block;
             // height: 100%;
             position: relative;

@@ -71,6 +71,35 @@
             // margin-bottom: min(vw(20px, 768),30px);
         }
     }
+
+    &__heading {
+        @include flex($align:center, $wrap:wrap);
+
+        p {
+          position: relative;
+          top: 2px;
+          font-size: 34px;
+          background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+          -webkit-background-clip: text;
+          color: transparent;
+          font-weight: 700;
+          @include mq-target(sm) {
+            font-size: vw(34px,1920);
+          }
+        }
+  
+        h3 {
+          border-left: 1px solid $color-red;
+          margin-left: 12px;
+          padding-left: 12px;
+          font-size: 24px;
+          position: relative;
+          z-index: 1;
+          @include mq-target(sm) {
+            font-size: vw(24px,1920);
+          }
+        }
+    }
 }
 
 

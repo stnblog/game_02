@@ -60,7 +60,7 @@ function setScrollText(){
 gsap.to('.p-about__wrap', {
   scrollTrigger: {
     pin: '.p-about__wrap',
-    end: '+=1200s',
+    end: '+=1500s',
     pinSpacing: true,
   },
 });

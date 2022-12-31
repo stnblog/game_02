@@ -119,10 +119,20 @@
     width: min(vw(42px, 365), 66px);
     height: min(vw(42px, 365), 66px);
 
+    @include mq-target(sm) {
+      width: vw(66px, 1920);
+      height: vw(66px, 1920);
+    }
+
     &::after {
       content: "";
       width: min(vw(42px, 365), 66px);
       height: min(vw(42px, 365), 66px);
+
+      @include mq-target(sm) {
+        width: vw(66px, 1920);
+        height: vw(66px, 1920);
+      }
       // content: "";
       background: url(../../assets/images/arrow_next.png) no-repeat center/contain;
     }
