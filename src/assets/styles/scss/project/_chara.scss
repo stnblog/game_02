@@ -4,6 +4,7 @@
   background: $color-bg;
   position: relative;
   z-index: 500;
+  padding: 60px 0 80px;
 
   @include mq-target(sm) {
     padding: vw(100px, 1920) 0 vw(80px, 1920);
@@ -12,11 +13,13 @@
 
   &-header {
     @include flex($align:center, $justify:space-between, $wrap:wrap);
+    flex-direction: column;
     width: 90%;
     margin: auto;
     margin-bottom: 30px;
 
     @include mq-target(sm) {
+      flex-direction: row;
       width: 92%;
     }
 
@@ -42,6 +45,14 @@
 
     @include mq-target(md) {
       width: 80%
+    }
+
+    &__thumb {
+      width: 100%;
+
+      @include mq-target(sm) {
+        width: 50%;
+      }
     }
 
     &__list {
@@ -85,6 +96,7 @@
       }
 
     }
+
   }
 
   &-content {
@@ -95,11 +107,12 @@
 
     &__list {
       @include flex($justify:space-between);
-      flex-direction: row-reverse;
+      flex-direction: column;
 
       // height: vw(900px, 1920);
       @include mq-target(sm) {
         height: vw(760px, 1920);
+        flex-direction: row-reverse;
       }
     }
 
@@ -112,16 +125,18 @@
         writing-mode: vertical-rl;
         text-align: left;
         z-index: 100;
+        display: none;
 
         @include mq-target(sm) {
-          right: vw(100px, 1920);
+          right: vw(200px, 1920);
           top: vw(40px, 1920);
+          display: block;
         }
 
 
         p {
           font-weight: 400;
-          font-size: vw(20px, 1920);
+          font-size: vw(22px, 1920);
           display: inline-block;
           margin-left: 1%;
         }
@@ -134,8 +149,9 @@
 
       &--chara {
         position: relative;
-
-        // width: 26.0416666667vw;
+        width: 90%;
+        margin: auto;
+        height: vw(700px,768);
         @include mq-target(sm) {
           width: 43.58125915080527vw;
         }
@@ -145,9 +161,11 @@
         position: relative;
         @include flexCenter;
         flex-direction: column;
+        z-index: 20;
 
         @include mq-target(sm) {
           top: -2vw;
+          z-index: 5;
           // padding-left: 15.197657393850659vw;
           padding-left: vw(100px, 1920);
           width: vw(900px, 1920);
@@ -161,10 +179,12 @@
       opacity: 0;
       overflow: hidden;
       transform: translateX(20%);
-      padding: vw(40px, 1920);
       margin: auto;
-
-      @include mq-target(md) {}
+      padding: vw(40px, 768) vw(30px,768) vw(80px,768);
+      
+      @include mq-target(sm) {
+        padding: vw(40px, 1920);
+      }
 
       background: url(../../assets/images/charaBg04.jpg);
       background-size: 100% 100%;
@@ -174,14 +194,14 @@
 
     &__img {
       position: relative;
-      width: 30.218155197657396vw;
+      width: 90%;
       // height: 67.05710102489019vw;
       margin: auto;
       z-index: 10;
 
       @include mq-target(sm) {
         width: vw(740px, 1920);
-        right: 8.342606149341142vw;
+        right: 6.342606149341142vw;
         bottom: 0.294289897510981vw;
       }
 
@@ -190,14 +210,25 @@
         transition: clip-path 0.8s cubic-bezier(.25, .46, .45, .94), -webkit-clip-path 1s cubic-bezier(.6, .8, .8, 1.2);
       }
 
+      &--first {
+        @include mq(sm) {
+          right: 2.342606149341142vw;
+          bottom: 0;
+        }
+      }
+
       &--second {
         bottom: vw(-10px, 1920);
-        right: 7.342606149341142vw;
+        @include mq-target(sm) {
+          right: 5.342606149341142vw;
+        }
       }
 
       &--third {
         bottom: vw(40px, 1920);
-        right: 4.342606149341142vw;
+        @include mq-target(sm) {
+          right: 3.342606149341142vw;
+        }
       }
     }
 
@@ -208,7 +239,7 @@
         background-image: linear-gradient(to bottom, #d81c03, #352e2c);
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 52px;
+        font-size: min(vw(42px, 365), 52px);
         font-weight: 400;
         line-height: 1;
 
@@ -218,6 +249,7 @@
       }
 
       p {
+        font-size: min(vw(12px, 365), 16px);
         @include mq-target(sm) {
           font-size: vw(16px, 1920);
         }
@@ -225,7 +257,7 @@
     }
 
     &__txt {
-      font-size: min(vw(10px, 365), 14px);
+      font-size: min(vw(10px, 365), 16px);
       text-align: left;
       line-height: 1.714285714285714;
       // margin: 20px 0;
@@ -249,6 +281,8 @@
 
     &__switch {
       @include flex($align:center);
+      margin: 10px 0;
+      justify-content: center;
 
       @include mq-target(sm) {
         margin: vw(14px, 1920) 0 vw(20px, 1920);
@@ -257,15 +291,20 @@
 
     &__btn {
       position: relative;
-      @include flex($align:center,$justify:center);
+      @include flex($align:center, $justify:center);
       font-family: $shippo;
       cursor: pointer;
-      width: 10.35212298682284vw;
-      height: 3.543923865300147vw;
+      width: 100px;
+      height: 50px;
       line-height: 1;
-
       @include mq-target(sm) {
-        // line-height: 1;
+        width: 10.35212298682284vw;
+        height: 4.543923865300147vw;
+      }
+
+      @include mq-target(md) {
+        width: 8.35212298682284vw;
+        height: 3.243923865300147vw;
       }
 
       div {
@@ -274,6 +313,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
+
         &::before {
           content: '';
           @include absAll;
@@ -286,9 +326,11 @@
       }
 
       span {
+        top: -3px;
         position: relative;
+        font-size: 14px;
         @include mq-target(sm) {
-          top: vw(-3px,1920);
+          top: vw(-3px, 1920);
           font-size: vw(16px, 1920);
         }
       }
