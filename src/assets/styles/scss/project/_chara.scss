@@ -69,6 +69,15 @@
         cursor: pointer;
         width: 24.5%;
         margin-bottom: 0.5%;
+
+        &.swiper-slide-thumb-active img {
+          filter: grayscale(0);
+        }
+
+        img {
+          filter: grayscale(1);
+          transition: filter 0.4s ease;
+        }
       }
 
       &--slide {
@@ -151,7 +160,8 @@
         position: relative;
         width: 90%;
         margin: auto;
-        height: vw(700px,768);
+        height: vw(700px, 768);
+
         @include mq-target(sm) {
           width: 43.58125915080527vw;
         }
@@ -180,8 +190,8 @@
       overflow: hidden;
       transform: translateX(20%);
       margin: auto;
-      padding: vw(40px, 768) vw(30px,768) vw(80px,768);
-      
+      padding: vw(40px, 768) vw(30px, 768) vw(80px, 768);
+
       @include mq-target(sm) {
         padding: vw(40px, 1920);
       }
@@ -200,7 +210,7 @@
       z-index: 10;
 
       @include mq-target(sm) {
-        width: vw(740px, 1920);
+        width: vw(660px, 1920);
         right: 8.342606149341142vw;
         bottom: 0.294289897510981vw;
       }
@@ -219,6 +229,7 @@
 
       &--second {
         bottom: vw(-10px, 1920);
+
         @include mq-target(sm) {
           right: 6.342606149341142vw;
         }
@@ -226,6 +237,7 @@
 
       &--third {
         bottom: vw(40px, 1920);
+
         @include mq-target(sm) {
           right: 5.342606149341142vw;
         }
@@ -250,6 +262,7 @@
 
       p {
         font-size: min(vw(12px, 365), 16px);
+
         @include mq-target(sm) {
           font-size: vw(16px, 1920);
         }
@@ -297,6 +310,7 @@
       width: 100px;
       height: 50px;
       line-height: 1;
+
       @include mq-target(sm) {
         width: 10.35212298682284vw;
         height: 4.543923865300147vw;
@@ -329,6 +343,7 @@
         top: -3px;
         position: relative;
         font-size: 14px;
+
         @include mq-target(sm) {
           top: vw(-3px, 1920);
           font-size: vw(16px, 1920);

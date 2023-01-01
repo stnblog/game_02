@@ -132,6 +132,10 @@ html {
 	box-sizing: inherit;
 }
 
+// html::-webkit-scrollbar{
+// 	display:none;
+//   }
+
 html,
 body {
 	height: 100%;
@@ -198,6 +202,8 @@ input,
 textarea {
 	border-radius: 0;
 }
+
+.content
 
 
 .u-dp-pc {

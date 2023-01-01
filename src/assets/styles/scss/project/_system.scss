@@ -2,6 +2,7 @@
 
 .p-sys {
     position: relative;
+    padding-top: 80px;
     &__inner {
         margin-top: 20px;
         @include maxWidth(1000px);
