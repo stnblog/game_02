@@ -33,6 +33,7 @@
             -webkit-background-clip: text;
             color: transparent;
             font-size: 60px;
+            font-size: min(vw(52px,365),60px);
             font-weight: 600;
             @include mq-target(sm) {
                 top: vw(5px, 1920);
@@ -50,6 +51,7 @@
             position: absolute;
             text-align: center;
             font-size: 18px;
+            font-size: min(vw(16px,365),18px);
             @include mq-target(sm) {
                 top: vw(2px, 1920);
                 font-size: vw(24px , 1920);

@@ -36,27 +36,26 @@ for (let i = 0; i < sliderWrap.length; i++) {
 const swiper01 = new Swiper('.p-movie-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
-  touchEventsTarget: true,
-  loopAdditionalSlides: 1,
   navigation: {
     prevEl: '.p-movie-slider__btnPrev',
     nextEl: '.p-movie-slider__btnNext',
   },
 });
 
-const swiper02 = new Swiper('.p-galley-slider__container', {
-  slidesPerView: 'auto',
-  grabCursor: true,
-  touchEventsTarget: true,
+const swiper02 = new Swiper('.p-story-slider__container', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  loop: true,
   loopAdditionalSlides: 1,
-  pagination: {
-    el: '.p-movie-slider__pagi',
-    clickable: true,
+  speed: 2000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    waitForTransition: false,
   },
-  navigation: {
-    prevEl: '.p-movie-slider__btnPrev',
-    nextEl: '.p-movie-slider__btnNext',
-  },
+  followFinger: false,
 });
 
 

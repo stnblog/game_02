@@ -201,7 +201,7 @@
 
       @include mq-target(sm) {
         width: vw(740px, 1920);
-        right: 6.342606149341142vw;
+        right: 8.342606149341142vw;
         bottom: 0.294289897510981vw;
       }
 
@@ -220,14 +220,14 @@
       &--second {
         bottom: vw(-10px, 1920);
         @include mq-target(sm) {
-          right: 5.342606149341142vw;
+          right: 6.342606149341142vw;
         }
       }
 
       &--third {
         bottom: vw(40px, 1920);
         @include mq-target(sm) {
-          right: 3.342606149341142vw;
+          right: 5.342606149341142vw;
         }
       }
     }

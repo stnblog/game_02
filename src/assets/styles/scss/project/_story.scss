@@ -1,208 +1,324 @@
 @use "../foundation"as *;
 
+
 .p-story {
     overflow: hidden;
     position: relative;
     z-index: 3;
     width: 100%;
+    position: relative;
+    width: 100%;
     background: $color-bg;
-    // height: 780px;
-    // content-visibility: auto;
-    // contain-intrinsic-size: 780px;
+    padding: 100px 0 0;
 
-
-
-    &__bg {
-        position: relative;
-        z-index: 50;
-        width: 100%;
-        padding-top: 12.375%;
-        margin-bottom: -1%;
-        background-size: 100% auto;
-        background-position: bottom;
-        // background-repeat: repeat-x;
-        background-image: url(../../assets/images/smoke.webp);
+    @include mq-target(sm) {
+        padding: vw(0px, 1920) 0 vw(40px, 1920);
     }
-
 
     &__inner {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-
-        position: relative;
+        height: vw(500px, 768);
+        // position: relative;
         width: 90%;
         margin: auto;
-        @include mq-target(sm) {
-          width: 96%;
-        }
-    
-        @include mq-target(md) {
-          width: 80%;
-        }
-    }
-
-    &__list {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap-reverse;
 
         @include mq-target(sm) {
-            flex-wrap: nowrap;
-        }
-    }
-
-    &__item {
-        &--left {
-            width: 100%;
-            overflow: hidden;
-
-            background: $color-bg;
-            // padding-left: 8vw;
-            // padding-top: 2%;
-            padding-bottom: 60px;
-
-            @include mq-target(sm) {
-                height: min(vw(400px, 768), 540px);
-                width: 40vw;
-            }
-
-
-            @include mq-target(md) {
-                padding-bottom: 0;
-                // padding-left: 17.11%;
-            }
-
-            // width: 100%;
-        }
-
-        &--right {
-            width: 100%;
-            position: relative;
-            background: url(../../assets/images/storyBg_01.jpg) no-repeat center right;
-            background-size: 100% auto;
-            // width: 100%;
-            overflow: hidden;
-            height: min(vw(400px, 768), 540px);
-
-            @include mq-target(sm) {
-                width: 60vw;
-            }
-        }
-    }
-
-    &-content {
-        padding-top: 4vw;
-        position: relative;
-
-        &__txt {
+            height: vw(900px, 1920);
             // @include flexCenter;
-            // width: 40vw;
-            margin: auto;
-            text-align: left;
-
-            h2 {
-                // font-family: 'teko', serif;
-                // margin: 0;
-            }
-
-            h3 {
-                line-height: 0;
-                width: 300px;
-                margin: auto;
-            }
-
-            h4 {
-                font-family: $shippo;
-                background-image: linear-gradient(to bottom, #d81c03, #352e2c);
-                -webkit-background-clip: text;
-                color: transparent;
-                font-size: min(vw(32px, 365), 62px);
-
-                @include mq-target(sm) {
-                    font-size: min(vw(22px, 768), 34px);
-                }
-            }
-
-            p {
-                font-family: $shippo;
-                font-size: min(vw(10px, 365), 16px);
-                line-height: 2;
-                margin-top: 20px;
-                // margin-top: min(vw(10px, 365), 20px);
-
-                @include mq-target(sm) {
-                    // font-size: min(vw(8px, 768), 14px);
-                    // margin-top: min(vw(10px, 768), 24px);
-                    font-size: vw(14px, 1920);
-                }
-            }
         }
+
+        // @include mq-target(sm) {
+        //     width: 96%;
+        // }
+
+        // @include mq-target(md) {
+        //     width: 80%;
+        // }
     }
 
+    &__movie {
+        position: absolute;
+        top: vw(660px, 1920);
+        right: vw(500px, 1920);
+        width: vw(200px, 1920);
 
+        &::after {
+            content: "";
+            @include absAll;
+            background: url(../../assets/images/play.png) center no-repeat;
+            background-size: 25% auto;
+        }
 
-    &-movie {
-        height: 100%;
-        width: min(vw(180px, 768), 340px);
-        margin: auto;
-        display: block;
-        @include flexCenter;
-        z-index: 500;
-        filter: brightness(1.5);
-        // animation: cm_chara_2 6.5s infinite;
-
-        &__img {
-            top: 2vw;
-            display: block;
-            // height: 100%;
-            position: relative;
-            z-index: 10;
-            // mask-image: url(../../assets/images/mask.png);
-            // mask-mode: alpha;
-            // mask-repeat: no-repeat;
-            // mask-size: 100% 0%;
-            // mask-position: center top;
-            transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: 3;
-
-            // &.is-anim {
-            //     -webkit-mask-size: 100% 300%;
-            //     transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            // }
-
-            &::after {
-                content: "";
-                display: block;
-                @include absAll;
-                margin: auto;
-                // background: url(../../assets/images/play.png) 50% 50% no-repeat;
-                background-size: 20% auto;
-                opacity: 1;
-            }
-
+        figure {
             img {
-                width: 20vw;
-
-                @include mq-target(md) {
-                    // width: 34vw;
-                    width: 22vw;
-                    height: auto;
-                }
+                animation: cm_chara_2 6.5s infinite;
 
             }
         }
+    }
 
-        &__keyboard {
-            width: 30vw;
-            @include absCenter;
-            top: 105%;
-            z-index: 55;
+    &__bg {
+        @include absAll;
+        z-index: 0;
+        height: auto;
+
+        img {
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: auto;
+            @include mq-target(sm) {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                width: vw(1500px, 1920);
+                perspective-origin: 50% 50%;
+                transform-origin: center;
+                transform: translate(50%, 16%);
+                transform: translate(vw(740px, 1920), vw(60px, 1920)) rotate(356deg) rotateY(355deg) rotateX(12deg);
+            }
         }
     }
 
+    &__txt {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        top: vw(50px, 365);
+
+        @include mq-target(sm) {
+            width: vw(900px, 1920);
+            top: vw(520px, 1920);
+            position: absolute;
+            left: calc(50% - min(39.3229166667vw, 755px));
+        }
+
+        @include mq-target(md) {
+            left: vw(300px, 1920);
+        }
+
+        .c-sec__ttl {
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: min(vw(10px, 365), 12px);
+            font-family: $shippo;
+            text-align: left;
+            font-weight: 400;
+            margin-top: 10px;
+
+            @include mq-target(sm) {
+                margin-top: vw(10px, 1920);
+                font-size: vw(16px, 1920);
+            }
+        }
+    }
 }
+
+
+// .p-story {
+//     overflow: hidden;
+//     position: relative;
+//     z-index: 3;
+//     width: 100%;
+//     background: $color-bg;
+//     // height: 780px;
+//     // content-visibility: auto;
+//     // contain-intrinsic-size: 780px;
+
+
+
+//     &__bg {
+//         position: relative;
+//         z-index: 50;
+//         width: 100%;
+//         padding-top: 12.375%;
+//         margin-bottom: -1%;
+//         background-size: 100% auto;
+//         background-position: bottom;
+//         // background-repeat: repeat-x;
+//         background-image: url(../../assets/images/smoke.webp);
+//     }
+
+
+//     &__inner {
+//         display: flex;
+//         flex-direction: row;
+//         width: 100%;
+
+//         position: relative;
+//         width: 90%;
+//         margin: auto;
+//         @include mq-target(sm) {
+//           width: 96%;
+//         }
+
+//         @include mq-target(md) {
+//           width: 80%;
+//         }
+//     }
+
+//     &__list {
+//         width: 100%;
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap-reverse;
+
+//         @include mq-target(sm) {
+//             flex-wrap: nowrap;
+//         }
+//     }
+
+//     &__item {
+//         &--left {
+//             width: 100%;
+//             overflow: hidden;
+
+//             background: $color-bg;
+//             // padding-left: 8vw;
+//             // padding-top: 2%;
+//             padding-bottom: 60px;
+
+//             @include mq-target(sm) {
+//                 height: min(vw(400px, 768), 540px);
+//                 width: 40vw;
+//             }
+
+
+//             @include mq-target(md) {
+//                 padding-bottom: 0;
+//                 // padding-left: 17.11%;
+//             }
+
+//             // width: 100%;
+//         }
+
+//         &--right {
+//             width: 100%;
+//             position: relative;
+//             background: url(../../assets/images/storyBg_01.jpg) no-repeat center right;
+//             background-size: 100% auto;
+//             // width: 100%;
+//             overflow: hidden;
+//             height: min(vw(400px, 768), 540px);
+
+//             @include mq-target(sm) {
+//                 width: 60vw;
+//             }
+//         }
+//     }
+
+//     &-content {
+//         padding-top: 4vw;
+//         position: relative;
+
+//         &__txt {
+//             // @include flexCenter;
+//             // width: 40vw;
+//             margin: auto;
+//             text-align: left;
+
+//             h2 {
+//                 // font-family: 'teko', serif;
+//                 // margin: 0;
+//             }
+
+//             h3 {
+//                 line-height: 0;
+//                 width: 300px;
+//                 margin: auto;
+//             }
+
+//             h4 {
+//                 font-family: $shippo;
+//                 background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+//                 -webkit-background-clip: text;
+//                 color: transparent;
+//                 font-size: min(vw(32px, 365), 62px);
+
+//                 @include mq-target(sm) {
+//                     font-size: min(vw(22px, 768), 34px);
+//                 }
+//             }
+
+//             p {
+//                 font-family: $shippo;
+//                 font-size: min(vw(10px, 365), 16px);
+//                 line-height: 2;
+//                 margin-top: 20px;
+//                 // margin-top: min(vw(10px, 365), 20px);
+
+//                 @include mq-target(sm) {
+//                     // font-size: min(vw(8px, 768), 14px);
+//                     // margin-top: min(vw(10px, 768), 24px);
+//                     font-size: vw(14px, 1920);
+//                 }
+//             }
+//         }
+//     }
+
+
+
+//     &-movie {
+//         height: 100%;
+//         width: min(vw(180px, 768), 340px);
+//         margin: auto;
+//         display: block;
+//         @include flexCenter;
+//         z-index: 500;
+//         filter: brightness(1.5);
+//         // animation: cm_chara_2 6.5s infinite;
+
+//         &__img {
+//             top: 2vw;
+//             display: block;
+//             // height: 100%;
+//             position: relative;
+//             z-index: 10;
+//             // mask-image: url(../../assets/images/mask.png);
+//             // mask-mode: alpha;
+//             // mask-repeat: no-repeat;
+//             // mask-size: 100% 0%;
+//             // mask-position: center top;
+//             transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//             z-index: 3;
+
+//             // &.is-anim {
+//             //     -webkit-mask-size: 100% 300%;
+//             //     transition: 9s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//             // }
+
+//             &::after {
+//                 content: "";
+//                 display: block;
+//                 @include absAll;
+//                 margin: auto;
+//                 // background: url(../../assets/images/play.png) 50% 50% no-repeat;
+//                 background-size: 20% auto;
+//                 opacity: 1;
+//             }
+
+//             img {
+//                 width: 20vw;
+
+//                 @include mq-target(md) {
+//                     // width: 34vw;
+//                     width: 22vw;
+//                     height: auto;
+//                 }
+
+//             }
+//         }
+
+//         &__keyboard {
+//             width: 30vw;
+//             @include absCenter;
+//             top: 105%;
+//             z-index: 55;
+//         }
+//     }
+
+// }
 
 
 

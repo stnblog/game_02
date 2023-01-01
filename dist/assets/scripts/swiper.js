@@ -33,26 +33,25 @@ for (var i = 0; i < sliderWrap.length; i++) {
 var swiper01 = new Swiper('.p-movie-slider__container', {
   slidesPerView: 'auto',
   grabCursor: true,
-  touchEventsTarget: true,
-  loopAdditionalSlides: 1,
   navigation: {
     prevEl: '.p-movie-slider__btnPrev',
     nextEl: '.p-movie-slider__btnNext'
   }
 });
-var swiper02 = new Swiper('.p-galley-slider__container', {
-  slidesPerView: 'auto',
-  grabCursor: true,
-  touchEventsTarget: true,
-  loopAdditionalSlides: 1,
-  pagination: {
-    el: '.p-movie-slider__pagi',
-    clickable: true
+var swiper02 = new Swiper('.p-story-slider__container', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
   },
-  navigation: {
-    prevEl: '.p-movie-slider__btnPrev',
-    nextEl: '.p-movie-slider__btnNext'
-  }
+  loop: true,
+  loopAdditionalSlides: 1,
+  speed: 2000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    waitForTransition: false
+  },
+  followFinger: false
 }); // (function() {
 //   const mySwiper_sub = new Swiper('.flow01 .swiper-sub', {
 //     spaceBetween: 24,
