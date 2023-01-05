@@ -191,7 +191,7 @@
       transform: translateX(20%);
       margin: auto;
       padding: vw(40px, 768) vw(30px, 768) vw(80px, 768);
-      width: vw(600px, 1920);
+      // width: vw(600px, 1920);
 
       @include mq-target(sm) {
         padding: vw(40px, 1920);
