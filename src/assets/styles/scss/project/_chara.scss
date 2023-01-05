@@ -137,7 +137,7 @@
         display: none;
 
         @include mq-target(sm) {
-          right: vw(200px, 1920);
+          right: vw(260px, 1920);
           top: vw(40px, 1920);
           display: block;
         }
@@ -191,6 +191,7 @@
       transform: translateX(20%);
       margin: auto;
       padding: vw(40px, 768) vw(30px, 768) vw(80px, 768);
+      width: vw(600px, 1920);
 
       @include mq-target(sm) {
         padding: vw(40px, 1920);
@@ -228,18 +229,18 @@
       }
 
       &--second {
-        bottom: vw(-10px, 1920);
+        bottom: vw(-40px, 1920);
 
         @include mq-target(sm) {
-          right: 6.342606149341142vw;
+          right: 9.342606149341142vw;
         }
       }
 
       &--third {
-        bottom: vw(40px, 1920);
+        bottom: vw(-30px, 1920);
 
         @include mq-target(sm) {
-          right: 5.342606149341142vw;
+          right: 8.342606149341142vw;
         }
       }
     }
@@ -254,6 +255,7 @@
         font-size: min(vw(42px, 365), 52px);
         font-weight: 400;
         line-height: 1;
+        text-transform: uppercase;
 
         @include mq-target(sm) {
           font-size: vw(52px, 1920);
