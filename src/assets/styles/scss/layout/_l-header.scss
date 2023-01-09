@@ -35,7 +35,7 @@
   &__logo {
     width: vw(50px, 365);
     @include mq-target(sm) {
-      width: vw(40px, 769);
+      width: vw(46px, 769);
     }
     a {
       display: block;
